@@ -1,0 +1,12 @@
+Description
+This is a python module and a script to mange the 
+Digital Loggers Web Power switch.
+              
+The module provides a python class named
+powerswitch that allows managing the web power
+switch from python programs.
+When run as a script this acts as a command
+line utilty to manage the DLI Power switch.
+
+Author: Dwight Hubbard
+
