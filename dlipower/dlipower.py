@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import time,re,BeautifulSoup,optparse, urllib2, base64
+import os,socket,time,re,BeautifulSoup,optparse, urllib2, base64, json
 ###############################################################
 # Digital Loggers Web Power Switch management
 ###############################################################
@@ -21,14 +21,63 @@ import time,re,BeautifulSoup,optparse, urllib2, base64
 # Timeout in seconds
 TIMEOUT=5
 CYCLETIME=1.5
+CONFIG_DEFAULTS={'timeout':TIMEOUT,'cycletime':CYCLETIME,'userid':'admin','password':'4321','hostname':'192.168.0.100'}
+CONFIG_FILE=os.path.expanduser('~/.dlipower.conf')
 
 class powerswitch:
     """ Manage the DLI Web power switch """
-    def __init__(self,userid='admin',password='4321',hostname='192.168.0.100'):
-        self.userid=userid
-        self.password=password
-        self.hostname=hostname
-        self.contents=''
+    def __init__(self,userid=None,password=None,hostname=None,timeout=None):
+        CONFIG=self.load_configuration()
+        if userid:
+            self.userid=userid
+        else:
+            self.userid=CONFIG['userid']
+        if password:
+            self.password=password
+        else:
+            self.password=CONFIG['password']
+        if hostname:
+            self.hostname=hostname
+        else:
+            self.hostname=CONFIG['hostname']
+        if timeout:
+            self.timeout=float(timeout)
+        else:
+            self.timeout=CONFIG['timeout']
+    def load_configuration(self):
+        """ Return a configuration dictionary """
+        if os.path.isfile(CONFIG_FILE):
+            fh=open(CONFIG_FILE,'r')
+            try:
+              CONFIG=json.load(fh)
+            except ValueError:
+              # Failed
+              return CONFIG_DEFAULTS
+            fh.close()
+            return CONFIG
+        return CONFIG_DEFAULTS
+    def save_configuration(self):
+        """ Update the configuration file with the object's settings """
+        # Get the configuration from the config file or set to the defaults
+        CONFIG=self.load_configuration()
+            
+        # Overwrite the objects configuration over the existing config values
+        CONFIG['userid']=self.userid
+        CONFIG['password']=self.password
+        CONFIG['hostname']=self.hostname
+        CONFIG['timeout']=self.timeout
+        
+        # Write it to disk
+        fh=open(CONFIG_FILE,'w')
+        # Make sure the file perms are correct before we write data
+        # that can include the password into it.
+        os.fchmod(fh.fileno(),0600)
+        if fh:
+            json.dump(CONFIG,fh,sort_keys=True, indent=4)
+            fh.close()
+        else:
+            return True
+        return False
     def verify(self):
         """ Verify we can reach the switch, returns true if ok """
         return self.geturl()
@@ -37,7 +86,10 @@ class powerswitch:
         request = urllib2.Request("http://%s/%s" % (self.hostname,url))
         base64string = base64.encodestring('%s:%s' % (self.userid, self.password)).replace('\n', '')
         request.add_header("Authorization", "Basic %s" % base64string)   
-        result = urllib2.urlopen(request).read()
+        try:
+            result = urllib2.urlopen(request,timeout=self.timeout).read()
+        except urllib2.URLError,timeout:
+            return None
         return result
     def off(self,outlet=0):
         """ Turn off a power to an outlet """
@@ -89,12 +141,16 @@ class powerswitch:
 if __name__ == "__main__":
     usage = "usage: %prog [options] [status|on|off|cycle] [arg]"
     parser = optparse.OptionParser(usage=usage)
-    parser.add_option('--hostname',dest='hostname',default="192.168.0.100",help="hostname/ip of the power switch (default %default)")
-    parser.add_option('--user',    dest='user',    default="admin"        ,help="userid to connect with (default %default)"         )
-    parser.add_option('--password',dest='password',default="4321"         ,help="password (default %default)"                       )
+    parser.add_option('--hostname',dest='hostname',default=None,help="hostname/ip of the power switch (default %default)")
+    parser.add_option('--timeout',dest='timeout',default=None,help="Timeout for value for power switch communication (default %default)")
+    parser.add_option('--user',    dest='user',    default=None        ,help="userid to connect with (default %default)"         )
+    parser.add_option('--password',dest='password',default=None         ,help="password (default %default)"                       )
+    parser.add_option('--save_settings',dest='save_settings',default=False,action='store_true',help='Save the settings to the configuration file')
     (options, args) = parser.parse_args()
 
-    switch=powerswitch(userid=options.user,password=options.password,hostname=options.hostname)
+    switch=powerswitch(userid=options.user,password=options.password,hostname=options.hostname,timeout=options.timeout)
+    if options.save_settings:
+        switch.save_configuration()
     if len(args):
         if len(args) == 2:
             if args[0].lower() in ['on','poweron']:
