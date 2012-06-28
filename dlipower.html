@@ -1,0 +1,75 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module dlipower</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>dlipower</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/dhubbard/dev/git/python-dlipower/dlipower/dlipower.py">/home/dhubbard/dev/git/python-dlipower/dlipower/dlipower.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="BeautifulSoup.html">BeautifulSoup</a><br>
+<a href="optparse.html">optparse</a><br>
+</td><td width="25%" valign=top><a href="pycurl.html">pycurl</a><br>
+<a href="re.html">re</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="dlipower.html#powerswitch">powerswitch</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="powerswitch">class <strong>powerswitch</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Manage&nbsp;the&nbsp;DLI&nbsp;Web&nbsp;power&nbsp;switch<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="powerswitch-__init__"><strong>__init__</strong></a>(self, userid<font color="#909090">='admin'</font>, password<font color="#909090">='4321'</font>, hostname<font color="#909090">='192.168.0.100'</font>)</dt></dl>
+
+<dl><dt><a name="powerswitch-body_callback"><strong>body_callback</strong></a>(self, buf)</dt></dl>
+
+<dl><dt><a name="powerswitch-cycle"><strong>cycle</strong></a>(self, outlet<font color="#909090">=0</font>)</dt><dd><tt>Cycle&nbsp;power&nbsp;to&nbsp;an&nbsp;outlet</tt></dd></dl>
+
+<dl><dt><a name="powerswitch-geturl"><strong>geturl</strong></a>(self, url<font color="#909090">='index.htm'</font>)</dt></dl>
+
+<dl><dt><a name="powerswitch-off"><strong>off</strong></a>(self, outlet<font color="#909090">=0</font>)</dt><dd><tt>Turn&nbsp;off&nbsp;a&nbsp;power&nbsp;to&nbsp;an&nbsp;outlet</tt></dd></dl>
+
+<dl><dt><a name="powerswitch-on"><strong>on</strong></a>(self, outlet<font color="#909090">=0</font>)</dt><dd><tt>Turn&nbsp;on&nbsp;power&nbsp;to&nbsp;an&nbsp;outlet</tt></dd></dl>
+
+<dl><dt><a name="powerswitch-printstatus"><strong>printstatus</strong></a>(self)</dt><dd><tt>Print&nbsp;the&nbsp;status&nbsp;off&nbsp;all&nbsp;the&nbsp;outlets&nbsp;as&nbsp;a&nbsp;table&nbsp;to&nbsp;stdout</tt></dd></dl>
+
+<dl><dt><a name="powerswitch-status"><strong>status</strong></a>(self, outlet<font color="#909090">=1</font>)</dt><dd><tt>Return&nbsp;the&nbsp;status&nbsp;of&nbsp;an&nbsp;outlet,&nbsp;returned&nbsp;value&nbsp;will&nbsp;be&nbsp;one&nbsp;of:&nbsp;On,&nbsp;Off,&nbsp;Unknown</tt></dd></dl>
+
+<dl><dt><a name="powerswitch-statuslist"><strong>statuslist</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;status&nbsp;of&nbsp;all&nbsp;outlets&nbsp;in&nbsp;a&nbsp;list,&nbsp;<br>
+each&nbsp;item&nbsp;will&nbsp;contain&nbsp;3&nbsp;items&nbsp;plugnumber,&nbsp;hostname&nbsp;and&nbsp;state</tt></dd></dl>
+
+<dl><dt><a name="powerswitch-verify"><strong>verify</strong></a>(self)</dt><dd><tt>Verify&nbsp;we&nbsp;can&nbsp;reach&nbsp;the&nbsp;switch,&nbsp;returns&nbsp;true&nbsp;if&nbsp;ok</tt></dd></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>CYCLETIME</strong> = 1.5<br>
+<strong>TIMEOUT</strong> = 5</td></tr></table>
+</body></html>

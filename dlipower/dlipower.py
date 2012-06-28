@@ -1,10 +1,9 @@
 #!/usr/bin/python
-import time,re,pycurl,BeautifulSoup,optparse
+import time,re,BeautifulSoup,optparse,pycurl
 
 ###############################################################
 # Digital Loggers Web Power Switch management
 ###############################################################
-# Version: 0.02
 # Description: This is both a module and a script
 #              
 #              The module provides a python class named
@@ -37,7 +36,8 @@ class powerswitch:
     def body_callback(self,buf):
         self.contents=self.contents+buf
     def geturl(self,url='index.htm') :
-        self.contents=''
+        """ Get a URL from the userid/password protected powerswitch page """
+        self.contents=''        
         curl = pycurl.Curl()
         curl.setopt(curl.TIMEOUT,TIMEOUT)
         curl.setopt(curl.URL, 'http://%s:%s@%s/%s' % (self.userid,self.password,self.hostname,url))
