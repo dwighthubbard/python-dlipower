@@ -1,6 +1,5 @@
 #!/usr/bin/python
-import time,re,BeautifulSoup,optparse,pycurl
-
+import time,re,BeautifulSoup,optparse, urllib2, base64
 ###############################################################
 # Digital Loggers Web Power Switch management
 ###############################################################
@@ -33,21 +32,13 @@ class powerswitch:
     def verify(self):
         """ Verify we can reach the switch, returns true if ok """
         return self.geturl()
-    def body_callback(self,buf):
-        self.contents=self.contents+buf
     def geturl(self,url='index.htm') :
         """ Get a URL from the userid/password protected powerswitch page """
-        self.contents=''        
-        curl = pycurl.Curl()
-        curl.setopt(curl.TIMEOUT,TIMEOUT)
-        curl.setopt(curl.URL, 'http://%s:%s@%s/%s' % (self.userid,self.password,self.hostname,url))
-        curl.setopt(curl.WRITEFUNCTION, self.body_callback)
-        try:
-            curl.perform()
-            curl.close()
-        except pycurl.error:
-            return None
-        return self.contents
+        request = urllib2.Request("http://%s/%s" % (self.hostname,url))
+        base64string = base64.encodestring('%s:%s' % (self.userid, self.password)).replace('\n', '')
+        request.add_header("Authorization", "Basic %s" % base64string)   
+        result = urllib2.urlopen(request).read()
+        return result
     def off(self,outlet=0):
         """ Turn off a power to an outlet """
         self.geturl(url= 'outlet?%d=OFF' % outlet)
