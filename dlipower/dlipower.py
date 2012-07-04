@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import os,socket,time,re,BeautifulSoup,optparse, urllib2, base64, json
+import os,sys,socket,time,re,BeautifulSoup,optparse, urllib2, base64, json
 ###############################################################
 # Digital Loggers Web Power Switch management
 ###############################################################
@@ -25,7 +25,7 @@ CONFIG_DEFAULTS={'timeout':TIMEOUT,'cycletime':CYCLETIME,'userid':'admin','passw
 CONFIG_FILE=os.path.expanduser('~/.dlipower.conf')
 
 class powerswitch:
-    """ Manage the DLI Web power switch """
+    """ Manage the Digital Loggers Web power switch """
     def __init__(self,userid=None,password=None,hostname=None,timeout=None):
         CONFIG=self.load_configuration()
         if userid:
@@ -94,14 +94,18 @@ class powerswitch:
     def off(self,outlet=0):
         """ Turn off a power to an outlet """
         self.geturl(url= 'outlet?%d=OFF' % outlet)
+        return self.status(outlet) != 'OFF'
     def on(self,outlet=0):
         """ Turn on power to an outlet """
         self.geturl(url= 'outlet?%d=ON' % outlet)
+        return self.status(outlet) != 'ON'
     def cycle(self,outlet=0):
         """ Cycle power to an outlet """
+        start_status=self.status(outlet)
         self.off(outlet)
         time.sleep(CYCLETIME)
         self.on(outlet)
+        return self.status(outlet) != start_status
     def statuslist(self):
         """ Return the status of all outlets in a list, 
         each item will contain 3 items plugnumber, hostname and state  """
@@ -154,11 +158,11 @@ if __name__ == "__main__":
     if len(args):
         if len(args) == 2:
             if args[0].lower() in ['on','poweron']:
-                switch.on(int(args[1]))
+                sys.exit(switch.on(int(args[1])))
             if args[0].lower() in ['off','poweroff']:
-                switch.off(int(args[1]))
+                sys.exit(switch.off(int(args[1])))
             if args[0].lower() in ['cycle']:
-                switch.cycle(int(args[1]))
+                sys.exit(switch.cycle(int(args[1])))
             if args[0].lower() in ['status']:
                 print switch.status(int(args[1]))
     else:
