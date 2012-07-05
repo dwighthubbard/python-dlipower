@@ -1,5 +1,4 @@
 #!/usr/bin/python
-import os,sys,socket,time,re,BeautifulSoup,optparse, urllib2, base64, json
 ###############################################################
 # Digital Loggers Web Power Switch management
 ###############################################################
@@ -10,12 +9,20 @@ import os,sys,socket,time,re,BeautifulSoup,optparse, urllib2, base64, json
 #              switch from python programs.
 # 
 #              When run as a script this acts as a command
-#              line utilty to manage the DLI Power switch.
+#              line utility to manage the DLI Power switch.
 # Author: Dwight Hubbard d@dhub.me
 # Copyright: This module may be used for any use personal
 #            or commercial as long as the author and copyright
 #            notice are included in full.
 ###############################################################
+import os
+import sys
+import time
+import optparse
+import base64
+import json
+import urllib2
+import BeautifulSoup
 
 # Global settings
 # Timeout in seconds
@@ -71,7 +78,7 @@ class powerswitch:
         fh=open(CONFIG_FILE,'w')
         # Make sure the file perms are correct before we write data
         # that can include the password into it.
-        os.fchmod(fh.fileno(),0600)
+        os.fchmod(fh.fileno(),0o0600)
         if fh:
             json.dump(CONFIG,fh,sort_keys=True, indent=4)
             fh.close()
@@ -88,7 +95,7 @@ class powerswitch:
         request.add_header("Authorization", "Basic %s" % base64string)   
         try:
             result = urllib2.urlopen(request,timeout=self.timeout).read()
-        except urllib2.URLError,timeout:
+        except urllib2.URLError:
             return None
         return result
     def off(self,outlet=0):
@@ -128,11 +135,12 @@ class powerswitch:
     def printstatus(self):
         """ Print the status off all the outlets as a table to stdout """
         if not self.statuslist():
-            print "Unable to communicte to the Web power switch at %s" % self.hostname
+            print("Unable to communicate to the Web power switch at %s" % self.hostname)
             return None
-        print 'Outlet\t%-15.15s\tState' % 'Hostname'
+        print('Outlet\t%-15.15s\tState' % 'Hostname')
         for item in self.statuslist():
-            print '%d\t%-15.15s\t%s' % (item[0],item[1],item[2])
+            print('%d\t%-15.15s\t%s' % (item[0],item[1],item[2]))
+        return
     def status(self,outlet=1):
         """ Return the status of an outlet, returned value will be one of: On, Off, Unknown """
         outlets=self.statuslist()
@@ -164,6 +172,6 @@ if __name__ == "__main__":
             if args[0].lower() in ['cycle']:
                 sys.exit(switch.cycle(int(args[1])))
             if args[0].lower() in ['status']:
-                print switch.status(int(args[1]))
+                print(switch.status(int(args[1])))
     else:
         switch.printstatus()
