@@ -101,6 +101,8 @@ class powerswitch:
             result = urllib2.urlopen(request,timeout=self.timeout).read()
         except urllib2.URLError:
             return None
+        except timeout:
+            return None
         return result
     def off(self,outlet=0):
         """ Turn off a power to an outlet """
@@ -125,16 +127,19 @@ class powerswitch:
         if not url:
             return None
         soup=BeautifulSoup.BeautifulSoup(url)
+        # Get the root of the table containing the port status info
         try:
-            powertable=soup.findAll('table')[5]
+            root=soup.findAll('td',text='1')[0].parent.parent.parent
         except IndexError:
             return None
-        for temp in powertable.findAll('tr')[2:]:
+        for temp in root.findAll('tr'):
             columns=temp.findAll('td')
-            plugnumber=columns[0].string
-            hostname=columns[1].string
-            state=columns[2].find('font').string
-            outlets.append([int(plugnumber),hostname,state])
+            #print len(columns)
+            if len(columns) == 5:
+                plugnumber=columns[0].string
+                hostname=columns[1].string
+                state=columns[2].find('font').string
+                outlets.append([int(plugnumber),hostname,state])
         return outlets
     def printstatus(self):
         """ Print the status off all the outlets as a table to stdout """
