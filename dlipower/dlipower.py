@@ -1,20 +1,23 @@
 #!/usr/bin/python
+"""
 ###############################################################
-# Digital Loggers Web Power Switch management
+Digital Loggers Web Power Switch management
 ###############################################################
-# Description: This is both a module and a script
-#              
-#              The module provides a python class named
-#              powerswitch that allows managing the web power
-#              switch from python programs.
-# 
-#              When run as a script this acts as a command
-#              line utility to manage the DLI Power switch.
-# Author: Dwight Hubbard d@dhub.me
-# Copyright: This module may be used for any use personal
-#            or commercial as long as the author and copyright
-#            notice are included in full.
-###############################################################
+ Description: This is both a module and a script
+
+              The module provides a python class named
+              powerswitch that allows managing the web power
+              switch from python programs.
+
+              When run as a script this acts as a command
+              line utility to manage the DLI Power switch.
+ Author: Dwight Hubbard d@dhub.me
+ Copyright: This module may be used for any use personal
+            or commercial as long as the author and copyright
+            notice are included in full.
+"""
+
+# Python built in modules
 import os
 import sys
 import time
@@ -22,17 +25,18 @@ import optparse
 import base64
 import json
 import urllib2
+
+# External modules
 import BeautifulSoup
 
 # Global settings
-# Timeout in seconds
 TIMEOUT=5
 CYCLETIME=1.5
 CONFIG_DEFAULTS={'timeout':TIMEOUT,'cycletime':CYCLETIME,'userid':'admin','password':'4321','hostname':'192.168.0.100'}
 CONFIG_FILE=os.path.expanduser('~/.dlipower.conf')
 
 class powerswitch:
-    """ Manage the Digital Loggers Web power switch """
+    """ Powerswitch class to manage the Digital Loggers Web power switch """
     def __init__(self,userid=None,password=None,hostname=None,timeout=None):
         CONFIG=self.load_configuration()
         if userid:
