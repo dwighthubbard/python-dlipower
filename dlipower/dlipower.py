@@ -153,7 +153,7 @@ class powerswitch:
     def status(self,outlet=1):
         """ Return the status of an outlet, returned value will be one of: On, Off, Unknown """
         outlets=self.statuslist()
-        if outlet:
+        if outlets and outlet:
             for plug in outlets:
                 if plug[0] == outlet:
                     return plug[2]
