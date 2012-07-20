@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
   name="dlipower",
-  version="0.2.14",
+  version="0.2.22",
   author="Dwight Hubbard",
   author_email="dwight@dwighthubbard.com",
   url="http://pypi.python.org/pypi/dlipower/",

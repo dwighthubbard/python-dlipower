@@ -30,7 +30,7 @@ import urllib2
 import BeautifulSoup
 
 # Global settings
-TIMEOUT=5
+TIMEOUT=30
 CYCLETIME=3
 CONFIG_DEFAULTS={'timeout':TIMEOUT,'cycletime':CYCLETIME,'userid':'admin','password':'4321','hostname':'192.168.0.100'}
 CONFIG_FILE=os.path.expanduser('~/.dlipower.conf')
@@ -55,10 +55,10 @@ class powerswitch:
             self.timeout=float(timeout)
         else:
             self.timeout=CONFIG['timeout']
-        if cycle_time:
-            self.cycle_time=float(cycle_time)
+        if cycletime:
+            self.cycletime=float(cycletime)
         else:
-            self.cycle_time=CONFIG['cycletime']
+            self.cycletime=CONFIG['cycletime']
     def load_configuration(self):
         """ Return a configuration dictionary """
         if os.path.isfile(CONFIG_FILE):
@@ -115,7 +115,7 @@ class powerswitch:
             False = Success
             True = Fail
         """
-        self.geturl(url= 'outlet?%d=OFF' % outlet)
+        self.geturl(url= 'outlet?%d=OFF' % int(outlet))
         return self.status(outlet) != 'OFF'
     def on(self,outlet=0):
         """ Turn on power to an outlet 
@@ -126,21 +126,15 @@ class powerswitch:
         return self.status(outlet) != 'ON'
     def cycle(self,outlet=0):
         """ Cycle power to an outlet 
-            False = Success
-            True = Fail
+            False = Power off Success
+            True = Power off Fail
+            Note, does not return any status info about the power on part of the operation by design
         """        
-        start_status=self.status(outlet)
-        if start_status == 'OFF':
-          return False
-        if start_status == 'Unknown':
+        if self.off(outlet):
           return True
-        else:
-          if self.off(outlet):
-            return True
-          time.sleep(CYCLETIME)
-          if self.on(outlet):
-            return True
-        return self.status(outlet) != start_status
+        time.sleep(self.cycletime)
+        self.on(outlet)
+        return False
     def statuslist(self):
         """ Return the status of all outlets in a list, 
         each item will contain 3 items plugnumber, hostname and state  """
