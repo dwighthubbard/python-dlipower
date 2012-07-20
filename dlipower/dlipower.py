@@ -31,13 +31,13 @@ import BeautifulSoup
 
 # Global settings
 TIMEOUT=5
-CYCLETIME=1.5
+CYCLETIME=3
 CONFIG_DEFAULTS={'timeout':TIMEOUT,'cycletime':CYCLETIME,'userid':'admin','password':'4321','hostname':'192.168.0.100'}
 CONFIG_FILE=os.path.expanduser('~/.dlipower.conf')
 
 class powerswitch:
     """ Powerswitch class to manage the Digital Loggers Web power switch """
-    def __init__(self,userid=None,password=None,hostname=None,timeout=None):
+    def __init__(self,userid=None,password=None,hostname=None,timeout=None,cycletime=None):
         CONFIG=self.load_configuration()
         if userid:
             self.userid=userid
@@ -55,6 +55,10 @@ class powerswitch:
             self.timeout=float(timeout)
         else:
             self.timeout=CONFIG['timeout']
+        if cycle_time:
+            self.cycle_time=float(cycle_time)
+        else:
+            self.cycle_time=CONFIG['cycletime']
     def load_configuration(self):
         """ Return a configuration dictionary """
         if os.path.isfile(CONFIG_FILE):
@@ -93,7 +97,9 @@ class powerswitch:
         """ Verify we can reach the switch, returns true if ok """
         return self.geturl()
     def geturl(self,url='index.htm') :
-        """ Get a URL from the userid/password protected powerswitch page """
+        """ Get a URL from the userid/password protected powerswitch page 
+            Return None on failure
+        """
         request = urllib2.Request("http://%s/%s" % (self.hostname,url))
         base64string = base64.encodestring('%s:%s' % (self.userid, self.password)).replace('\n', '')
         request.add_header("Authorization", "Basic %s" % base64string)   
@@ -101,23 +107,39 @@ class powerswitch:
             result = urllib2.urlopen(request,timeout=self.timeout).read()
         except urllib2.URLError:
             return None
-        except timeout:
-            return None
+        #except timeout:
+        #    return None
         return result
     def off(self,outlet=0):
-        """ Turn off a power to an outlet """
+        """ Turn off a power to an outlet 
+            False = Success
+            True = Fail
+        """
         self.geturl(url= 'outlet?%d=OFF' % outlet)
         return self.status(outlet) != 'OFF'
     def on(self,outlet=0):
-        """ Turn on power to an outlet """
+        """ Turn on power to an outlet 
+            False = Success
+            True = Fail
+        """
         self.geturl(url= 'outlet?%d=ON' % outlet)
         return self.status(outlet) != 'ON'
     def cycle(self,outlet=0):
-        """ Cycle power to an outlet """
+        """ Cycle power to an outlet 
+            False = Success
+            True = Fail
+        """        
         start_status=self.status(outlet)
-        self.off(outlet)
-        time.sleep(CYCLETIME)
-        self.on(outlet)
+        if start_status == 'OFF':
+          return False
+        if start_status == 'Unknown':
+          return True
+        else:
+          if self.off(outlet):
+            return True
+          time.sleep(CYCLETIME)
+          if self.on(outlet):
+            return True
         return self.status(outlet) != start_status
     def statuslist(self):
         """ Return the status of all outlets in a list, 
@@ -134,11 +156,10 @@ class powerswitch:
             return None
         for temp in root.findAll('tr'):
             columns=temp.findAll('td')
-            #print len(columns)
             if len(columns) == 5:
                 plugnumber=columns[0].string
                 hostname=columns[1].string
-                state=columns[2].find('font').string
+                state=columns[2].find('font').string.upper()
                 outlets.append([int(plugnumber),hostname,state])
         return outlets
     def printstatus(self):
@@ -151,7 +172,7 @@ class powerswitch:
             print('%d\t%-15.15s\t%s' % (item[0],item[1],item[2]))
         return
     def status(self,outlet=1):
-        """ Return the status of an outlet, returned value will be one of: On, Off, Unknown """
+        """ Return the status of an outlet, returned value will be one of: ON, OFF, Unknown """
         outlets=self.statuslist()
         if outlets and outlet:
             for plug in outlets:
@@ -164,12 +185,13 @@ if __name__ == "__main__":
     parser = optparse.OptionParser(usage=usage)
     parser.add_option('--hostname',dest='hostname',default=None,help="hostname/ip of the power switch (default %default)")
     parser.add_option('--timeout',dest='timeout',default=None,help="Timeout for value for power switch communication (default %default)")
+    parser.add_option('--cycletime',dest='cycletime',default=None,type=int,help="Delay betwween off/on states for power cycle operations (default %default)")
     parser.add_option('--user',    dest='user',    default=None        ,help="userid to connect with (default %default)"         )
     parser.add_option('--password',dest='password',default=None         ,help="password (default %default)"                       )
     parser.add_option('--save_settings',dest='save_settings',default=False,action='store_true',help='Save the settings to the configuration file')
     (options, args) = parser.parse_args()
 
-    switch=powerswitch(userid=options.user,password=options.password,hostname=options.hostname,timeout=options.timeout)
+    switch=powerswitch(userid=options.user,password=options.password,hostname=options.hostname,timeout=options.timeout,cycletime=options.cycletime)
     if options.save_settings:
         switch.save_configuration()
     if len(args):
