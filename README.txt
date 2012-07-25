@@ -10,7 +10,7 @@ line utilty to manage the DLI Power switch.
 
 Command line usage
 $ dlipower.py --help
-Usage: dlipower.py [options] [status|on|off|cycle] [arg]
+Usage: dlipower.py [options] [status|on|off|cycle|get_outlet_name] [arg]
 
 Options:
   -h, --help            show this help message and exit
@@ -23,6 +23,8 @@ Options:
   --user=USER           userid to connect with (default none)
   --password=PASSWORD   password (default none)
   --save_settings       Save the settings to the configuration file
+  
+  arg Can be the outlet number or name of the power outlet to operate on.
 
 Author: Dwight Hubbard
 
