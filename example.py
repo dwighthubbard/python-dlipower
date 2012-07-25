@@ -34,12 +34,8 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
-
-import sys,time
-
-# The module needs to be in the python path.  So we'll add the
-# current directory so we can find the dli module
-sys.path.append('.')
+import sys
+import time
 
 #import the DLI module
 import dlipower
