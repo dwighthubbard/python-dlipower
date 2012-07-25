@@ -1,4 +1,4 @@
-Description
+DESCRIPTION
 This is a python module and a script to mange the 
 Digital Loggers Web Power switch.
               
@@ -8,7 +8,16 @@ switch from python programs.
 When run as a script this acts as a command
 line utilty to manage the DLI Power switch.
 
-Command line usage
+SUPPORTED DEVICES
+This module has been tested against the following 
+Digital Loggers Power network power switches:
+  WebPowerSwitch II
+  WebPowerSwitch III
+  WebPowerSwitch IV
+  WebPowerSwitch V
+  Ethernet Power Controller III
+
+COMMAND LINE USAGE
 $ dlipower.py --help
 Usage: dlipower.py [options] [status|on|off|cycle|get_outlet_name] [arg]
 
@@ -16,13 +25,14 @@ Options:
   -h, --help            show this help message and exit
   --hostname=HOSTNAME   hostname/ip of the power switch (default none)
   --timeout=TIMEOUT     Timeout for value for power switch communication
-                        (default none)
+                        (default 30 seconds)
   --cycletime=CYCLETIME
                         Delay betwween off/on states for power cycle
-                        operations (default none)
-  --user=USER           userid to connect with (default none)
-  --password=PASSWORD   password (default none)
-  --save_settings       Save the settings to the configuration file
+                        operations (default 1.5 seconds)
+  --user=USER           userid to connect with (default admin)
+  --password=PASSWORD   password (default 4321)
+  --save_settings       Save the settings to the configuration file so they
+                        don't have to be passed on the command line.
   
   arg Can be the outlet number or name of the power outlet to operate on.
 
