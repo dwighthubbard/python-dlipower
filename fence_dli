@@ -3,10 +3,13 @@
 Stonith Agent for Digital Loggers Network Power Switches
 for Linux HA Clusters 
 
-This agent has been tested against a digital loggers
-WebPowerSwitch III
-WebPowerSwitch IV
-Ethernet Power Controller III
+This agent has been tested against the following Digital Loggers Power 
+network power switches:
+  WebPowerSwitch II
+  WebPowerSwitch III
+  WebPowerSwitch IV
+  WebPowerSwitch V
+  Ethernet Power Controller III
 
 It may work for other models of Digital Loggers power switches as well
 """
@@ -46,7 +49,7 @@ import dlipower
 # This fencing driver uses the dlipower python module to manage the power switch
 # the dlipower package installs a dlipower.py script that provides a command line
 # interface to manage the switch.
-RELEASE_VERSION="0.0.4"
+RELEASE_VERSION="0.0.5"
 
 device_opt = [  "help", "version", "agent", 
 		"action", "ipaddr", "login", "passwd","port", "nodename",

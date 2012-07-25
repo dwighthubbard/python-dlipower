@@ -11,6 +11,15 @@ Digital Loggers Web Power Switch management
 
               When run as a script this acts as a command
               line utility to manage the DLI Power switch.
+
+              This module has been tested against the following 
+              Digital Loggers Power network power switches:
+                WebPowerSwitch II
+                WebPowerSwitch III
+                WebPowerSwitch IV
+                WebPowerSwitch V
+                Ethernet Power Controller III
+              
  Author: Dwight Hubbard d@dhub.me
  Copyright: This module may be used for any use personal
             or commercial as long as the author and copyright
@@ -135,19 +144,39 @@ class powerswitch:
         #except timeout:
         #    return None
         return result
+    def determine_outlet(self,outlet=None):
+        """ Get the correct outlet number from the outlet passed in, this
+            allows specifying the outlet by the name and making sure the
+            returned outlet is an int 
+        """
+        outlets=self.statuslist()
+        if outlet and outlets and type(outlet) is str:
+            for plug in outlets:
+                if plug[1].strip() == outlet.strip():
+                    return int(plug[0])
+        return int(outlet)
+    def get_outlet_name(self,outlet=0):
+        """ Return the name of the outlet """
+        outlet=self.determine_outlet(outlet)
+        outlets=self.statuslist()
+        if outlets and outlet:
+            for plug in outlets:
+                if int(plug[0]) == outlet:
+                    return plug[1]
+        return 'Unknown'
     def off(self,outlet=0):
         """ Turn off a power to an outlet 
             False = Success
             True = Fail
         """
-        self.geturl(url= 'outlet?%d=OFF' % int(outlet))
+        self.geturl(url= 'outlet?%d=OFF' % self.determine_outlet(outlet))
         return self.status(outlet) != 'OFF'
     def on(self,outlet=0):
         """ Turn on power to an outlet 
             False = Success
             True = Fail
         """
-        self.geturl(url= 'outlet?%d=ON' % outlet)
+        self.geturl(url= 'outlet?%d=ON' % self.determine_outlet(outlet))
         return self.status(outlet) != 'ON'
     def cycle(self,outlet=0):
         """ Cycle power to an outlet 
@@ -192,6 +221,7 @@ class powerswitch:
         return
     def status(self,outlet=1):
         """ Return the status of an outlet, returned value will be one of: ON, OFF, Unknown """
+        outlet=self.determine_outlet(outlet)
         outlets=self.statuslist()
         if outlets and outlet:
             for plug in outlets:
@@ -200,7 +230,7 @@ class powerswitch:
         return 'Unknown'
 
 if __name__ == "__main__":
-    usage = "usage: %prog [options] [status|on|off|cycle] [arg]"
+    usage = "usage: %prog [options] [status|on|off|cycle|get_outlet_name] [arg]"
     parser = optparse.OptionParser(usage=usage)
     parser.add_option('--hostname',dest='hostname',default=None,help="hostname/ip of the power switch (default %default)")
     parser.add_option('--timeout',dest='timeout',default=None,help="Timeout for value for power switch communication (default %default)")
@@ -216,12 +246,16 @@ if __name__ == "__main__":
     if len(args):
         if len(args) == 2:
             if args[0].lower() in ['on','poweron']:
-                sys.exit(switch.on(int(args[1])))
-            if args[0].lower() in ['off','poweroff']:
-                sys.exit(switch.off(int(args[1])))
-            if args[0].lower() in ['cycle']:
-                sys.exit(switch.cycle(int(args[1])))
-            if args[0].lower() in ['status']:
-                print(switch.status(int(args[1])))
+                sys.exit(switch.on(args[1]))
+            elif args[0].lower() in ['off','poweroff']:
+                sys.exit(switch.off(args[1]))
+            elif args[0].lower() in ['cycle']:
+                sys.exit(switch.cycle(args[1]))
+            elif args[0].lower() in ['status']:
+                print(switch.status(args[1]))
+            elif args[0].lower() in ['get_name','getname','get_outlet_name','getoutletname']:
+                print(switch.get_outlet_name(args[1]))
+            else:
+                print("Unknown argument %s" % args[0])
     else:
         switch.printstatus()
