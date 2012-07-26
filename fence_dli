@@ -75,8 +75,8 @@ if __name__ == "__main__":
             print >> sys.stderr,'Unknown options, ignoring: ',' '.join(unknown_options)
 
     # Make sure we got all the needed options to do the action requested
-    if not {'ipaddr', 'login', 'passwd', 'action'}.issubset(set(options)):
-        print >> sys.stderr,'Did not receive all required options, missing',' '.join(list({'ipaddr', 'login', 'passwd', 'action'}.difference(set(options))))
+    if not set(['ipaddr','login','passwd','action']).issubset(set(options)):
+        print >> sys.stderr,'Did not receive all required options, missing',' '.join(list(set(['ipaddr','login','passwd','action']).difference(set(options))))
         sys.exit(1)
         	
     if 'port' not in options.keys() and options['action'] in ['off','on','reboot','status']:
