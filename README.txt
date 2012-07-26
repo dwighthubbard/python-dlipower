@@ -6,7 +6,7 @@ The module provides a python class named
 powerswitch that allows managing the web power
 switch from python programs.
 When run as a script this acts as a command
-line utilty to manage the DLI Power switch.
+line utility to manage the DLI Power switch.
 
 SUPPORTED DEVICES
 This module has been tested against the following 
@@ -27,7 +27,7 @@ Options:
   --timeout=TIMEOUT     Timeout for value for power switch communication
                         (default 30 seconds)
   --cycletime=CYCLETIME
-                        Delay betwween off/on states for power cycle
+                        Delay between off/on states for power cycle
                         operations (default 1.5 seconds)
   --user=USER           userid to connect with (default admin)
   --password=PASSWORD   password (default 4321)
