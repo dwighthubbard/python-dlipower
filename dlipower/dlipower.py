@@ -21,11 +21,7 @@ Digital Loggers Web Power Switch management
                 Ethernet Power Controller III
               
  Author: Dwight Hubbard d@dhub.me
- Copyright: This module may be used for any use personal
-            or commercial as long as the author and copyright
-            notice are included in full.
 """
-
 """
 Copyright (c) 2009, Dwight Hubbard
 All rights reserved.
