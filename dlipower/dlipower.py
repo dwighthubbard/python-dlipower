@@ -89,6 +89,7 @@ class powerswitch:
             self.cycletime=float(cycletime)
         else:
             self.cycletime=CONFIG['cycletime']
+        self._is_admin=True
     def load_configuration(self):
         """ Return a configuration dictionary """
         if os.path.isfile(CONFIG_FILE):
@@ -197,7 +198,14 @@ class powerswitch:
         try:
             root=soup.findAll('td',text='1')[0].parent.parent.parent
         except IndexError:
-            return None
+            # Finding the root of the table with the outlet info failed
+            # try again assuming we're seeing the table for a user
+            # account insteaed of the admin account (tables are different)
+            try:
+              self._is_admin=False
+              root=soup.findAll('th',text='#')[0].parent.parent.parent
+            except IndexError:
+              return None
         for temp in root.findAll('tr'):
             columns=temp.findAll('td')
             if len(columns) == 5:
@@ -234,6 +242,7 @@ if __name__ == "__main__":
     parser.add_option('--user',    dest='user',    default=None        ,help="userid to connect with (default %default)"         )
     parser.add_option('--password',dest='password',default=None         ,help="password (default %default)"                       )
     parser.add_option('--save_settings',dest='save_settings',default=False,action='store_true',help='Save the settings to the configuration file')
+    parser.add_option("--quiet",dest="quiet",default=False,action="store_true",help="Be quiet, don't print error messages only return error return codes (default False)")
     (options, args) = parser.parse_args()
 
     switch=powerswitch(userid=options.user,password=options.password,hostname=options.hostname,timeout=options.timeout,cycletime=options.cycletime)
@@ -242,9 +251,14 @@ if __name__ == "__main__":
     if len(args):
         if len(args) == 2:
             if args[0].lower() in ['on','poweron']:
-                sys.exit(switch.on(args[1]))
+                rc=switch.on(args[1])
+                if rc and not options.quiet:
+                  print >> sys.stderr,"Power on operation failed"
+                sys.exit(rc)
             elif args[0].lower() in ['off','poweroff']:
-                sys.exit(switch.off(args[1]))
+                rc=switch.off(args[1])
+                if rc and not options.quiet:
+                  print >> sys.stderr,"Power off operation failed"
             elif args[0].lower() in ['cycle']:
                 sys.exit(switch.cycle(args[1]))
             elif args[0].lower() in ['status']:
