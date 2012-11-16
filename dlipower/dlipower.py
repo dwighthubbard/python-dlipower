@@ -59,6 +59,7 @@ import optparse
 import base64
 import json
 import urllib2
+import multiprocessing
 
 # External modules
 import BeautifulSoup
@@ -68,6 +69,12 @@ TIMEOUT=30
 CYCLETIME=3
 CONFIG_DEFAULTS={'timeout':TIMEOUT,'cycletime':CYCLETIME,'userid':'admin','password':'4321','hostname':'192.168.0.100'}
 CONFIG_FILE=os.path.expanduser('~/.dlipower.conf')
+
+def _call_it(params):
+    instance, name, args=params
+    "indirect caller for instance methods and multiprocessing"    
+    kwargs = {}
+    return getattr(instance, name)(*args, **kwargs)
 
 class powerswitch:
     """ Powerswitch class to manage the Digital Loggers Web power switch """
@@ -228,7 +235,19 @@ class powerswitch:
                 if plug[0] == outlet:
                     return plug[2]
         return 'Unknown'
-
+                    
+    def command_on_outlets(self,command,outlets):
+        """ 
+        If a single outlet is passed, handle it as a single outlet and 
+        pass back the return code.  Otherwise run the operation on multiple
+        outlets in parallel with the return code being undefined.
+        """
+        if len(outlets) == 1:
+            return command(outlets[0])
+        pool=multiprocessing.Pool(processes=len(outlets))
+        result=[value for value in pool.imap(_call_it,[(self,command, (outlet,)) for outlet in outlets],chunksize=1)]
+        return result
+        
 if __name__ == "__main__":
     usage = "usage: %prog [options] [status|on|off|cycle|get_outlet_name] [arg]"
     parser = optparse.OptionParser(usage=usage)
@@ -244,15 +263,16 @@ if __name__ == "__main__":
     if options.save_settings:
         switch.save_configuration()
     if len(args):
-        if len(args) == 2:
+        if len(args) > 1:
+            if args[0].lower() in ['status']:
+                print(','.join(switch.command_on_outlets('status',args[1:])))
+        elif len(args) == 2:
             if args[0].lower() in ['on','poweron']:
                 sys.exit(switch.on(args[1]))
             elif args[0].lower() in ['off','poweroff']:
                 sys.exit(switch.off(args[1]))
             elif args[0].lower() in ['cycle']:
                 sys.exit(switch.cycle(args[1]))
-            elif args[0].lower() in ['status']:
-                print(switch.status(args[1]))
             elif args[0].lower() in ['get_name','getname','get_outlet_name','getoutletname']:
                 print(switch.get_outlet_name(args[1]))
             else:
