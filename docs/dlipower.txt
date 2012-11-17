@@ -4,7 +4,7 @@ NAME
     dlipower
 
 FILE
-    /home/dhubbard/devel/python-dlipower/dlipower/dlipower.py
+    dlipower/dlipower.py
 
 DESCRIPTION
     ###############################################################
