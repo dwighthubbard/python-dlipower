@@ -1,20 +1,25 @@
 #!/bin/bash
 # This script must be run in the application root directory
+function header {
+  python -c "s=\"$1\";print \"--\",s,\"-\"*(78-len(s))"
+}
 
-echo "Testing Power"
+function status_message {
+  echo "    $1"
+}
+
 for host in `grep -v ^# test/test_host_list`
 do
-	echo "Testing $host"
-	echo "Running Status:"
-	./dlipower/dlipower.py --hostname $host
-	echo "Testing power management commands, each line should show the same command on both sides of the : character"
-	echo -n "Forcing power to OFF: "
-	./dlipower/dlipower.py --hostname $host off 1
-	./dlipower/dlipower.py --hostname $host status 1
-        echo -n "Powering ON: "
-        ./dlipower/dlipower.py --hostname $host on 1
-        ./dlipower/dlipower.py --hostname $host status 1	
-        echo -n "Powering OFF: "
-        ./dlipower/dlipower.py --hostname $host off 1
-        ./dlipower/dlipower.py --hostname $host status 1
+	header "Testing $host"
+	status_message "Running Status:"
+	./dlipower/dlipower.py --hostname $host --password "4321" |sed "s/^/    /g"
+	echo
+	status_message "Testing power management commands, each line should show the same command on both sides of the : character"
+	status_message "Forcing power to OFF: `./dlipower/dlipower.py --hostname $host off 1` `./dlipower/dlipower.py --hostname $host status 1`"
+        status_message "Powering ON: `./dlipower/dlipower.py --hostname $host on 1` `./dlipower/dlipower.py --hostname $host status 1`"
+        status_message "Powering OFF: `./dlipower/dlipower.py --hostname $host off 1` `./dlipower/dlipower.py --hostname $host status 1`"
+        echo
+        status_message "Testing configuration commands, each line should show the same result on both sides of the : character"
+        status_message "Setting port name to PYTHON_TEST `./dlipower/dlipower.py --hostname $host set_outlet_name 1 PYTHON_TEST` : `./dlipower/dlipower.py --hostname $host get_outlet_name 1`"
+        echo
 done

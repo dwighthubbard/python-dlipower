@@ -27,7 +27,7 @@ Digital Loggers Web Power Switch management
 """
 
 """
-Copyright (c) 2009, Dwight Hubbard
+Copyright (c) 2009,2010,2011, 2012, Dwight Hubbard
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -58,6 +58,7 @@ import time
 import optparse
 import base64
 import json
+import urllib
 import urllib2
 import multiprocessing
 
@@ -202,6 +203,11 @@ class powerswitch:
                 if int(plug[0]) == outlet:
                     return plug[1]
         return 'Unknown'
+    def set_outlet_name(self,outlet=0,name="Unknown"):
+        """ Set the name of an outlet """
+        self.determine_outlet(outlet)
+        self.geturl(url='unitnames.cgi?outname%s=%s' % (outlet,urllib.quote(name)))
+        return self.get_outlet_name(outlet) == name
     def off(self,outlet=0):
         """ Turn off a power to an outlet 
             False = Success
@@ -271,7 +277,8 @@ class powerswitch:
         """ 
         If a single outlet is passed, handle it as a single outlet and 
         pass back the return code.  Otherwise run the operation on multiple
-        outlets in parallel with the return code being undefined.
+        outlets in parallel the return code will be failure if any operation
+        fails.  Operations that return a string will return a list of strings.
         """
         if len(outlets) == 1:
             result=getattr(self,command)(outlets[0])
@@ -289,7 +296,7 @@ class powerswitch:
         return result
         
 if __name__ == "__main__":
-    usage = "usage: %prog [options] [status|on|off|cycle|get_outlet_name] [arg]"
+    usage = "usage: %prog [options] [status|on|off|cycle|get_outlet_name|set_outlet_name] [range|arg]"
     parser = optparse.OptionParser(usage=usage)
     parser.add_option('--hostname',dest='hostname',default=None,help="hostname/ip of the power switch (default %default)")
     parser.add_option('--timeout',dest='timeout',default=None,help="Timeout for value for power switch communication (default %default)")
@@ -315,7 +322,9 @@ if __name__ == "__main__":
             elif operation in ['cycle']:
                 sys.exit(switch.command_on_outlets('cycle',range))
             elif operation in ['get_name','getname','get_outlet_name','getoutletname']:
-                print(switch.get_outlet_name(args[1]))
+                print(','.join(switch.command_on_outlets('get_outlet_name',range)))
+            elif operation in ['set_name','setname','set_outlet_name','setoutletname']:
+                sys.exit(switch.set_outlet_name(args[1],args[2]))
             else:
                 print("Unknown argument %s" % args[0])
     else:

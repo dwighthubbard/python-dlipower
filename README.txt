@@ -18,23 +18,26 @@ Digital Loggers Power network power switches:
   Ethernet Power Controller III
 
 COMMAND LINE USAGE
-$ dlipower.py --help
-Usage: dlipower.py [options] [status|on|off|cycle|get_outlet_name] [arg]
+  arg Can be the outlet number or name of the power outlet to operate on.
+
+Author: Dwight Hubbard
+
+Usage: dlipower.py [options] [status|on|off|cycle|get_outlet_name|set_outlet_name] [range] [newname]
 
 Options:
   -h, --help            show this help message and exit
   --hostname=HOSTNAME   hostname/ip of the power switch (default none)
   --timeout=TIMEOUT     Timeout for value for power switch communication
-                        (default 30 seconds)
+                        (default none)
   --cycletime=CYCLETIME
                         Delay betwween off/on states for power cycle
-                        operations (default 1.5 seconds)
-  --user=USER           userid to connect with (default admin)
-  --password=PASSWORD   password (default 4321)
-  --save_settings       Save the settings to the configuration file so they
-                        don't have to be passed on the command line.
-  
-  arg Can be the outlet number or name of the power outlet to operate on.
+                        operations (default none)
+  --user=USER           userid to connect with (default none)
+  --password=PASSWORD   password (default none)
+  --save_settings       Save the settings to the configuration file
 
-Author: Dwight Hubbard
-
+Arguments:
+  range - One or more ports seperated by commas
+    Example: 
+      1,3,5-9 (Refers to outlets 1,3,5,6,7,8,9)
+  newname - The name to rename the outlet to
