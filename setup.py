@@ -21,7 +21,7 @@ def version(filename='package.version',increment_minor=True,increment_major=Fals
   
 setup(
   name="dlipower",
-  version=version(),
+  version=version(increment_minor=True),
   author="Dwight Hubbard",
   author_email="dwight@dwighthubbard.com",
   url="http://pypi.python.org/pypi/dlipower/",
