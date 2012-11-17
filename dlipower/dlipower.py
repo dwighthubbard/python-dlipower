@@ -76,6 +76,39 @@ def _call_it(params):
     kwargs = {}
     return getattr(instance, name)(*args, **kwargs)
 
+def _block_to_list(block):
+  """ Convert a range block into a numeric list 
+      input "1-3,17,19-20"
+      output=[1,2,3,17,19,20]
+  """
+  block+=','
+  result=[]
+  val=''
+  in_range=False
+  for letter in block:
+    if letter in [',','-']:
+      if in_range:
+        val2=val
+        val2_len=len(val2)
+        #result+=range(int(val1),int(val2)+1)
+        for value in range(int(val1),int(val2)+1):
+          result.append(str(value).zfill(val2_len))
+        val=''
+        val1=None
+        in_range=False
+      else:
+        val1=val
+        val1_len=len(val1)
+        val=''
+      if letter == ',':
+        if val1 != None:
+          result.append(val1.zfill(val1_len))
+      else:
+        in_range=True
+    else:
+      val+=letter
+  return result
+
 class powerswitch:
     """ Powerswitch class to manage the Digital Loggers Web power switch """
     def __init__(self,userid=None,password=None,hostname=None,timeout=None,cycletime=None):
@@ -148,8 +181,6 @@ class powerswitch:
             result = urllib2.urlopen(request,timeout=self.timeout).read()
         except urllib2.URLError:
             return None
-        #except timeout:
-        #    return None
         return result
     def determine_outlet(self,outlet=None):
         """ Get the correct outlet number from the outlet passed in, this
@@ -243,9 +274,18 @@ class powerswitch:
         outlets in parallel with the return code being undefined.
         """
         if len(outlets) == 1:
-            return command(outlets[0])
+            result=getattr(self,command)(outlets[0])
+            if isinstance(result,bool):
+              return result
+            else:
+              return [result]
         pool=multiprocessing.Pool(processes=len(outlets))
         result=[value for value in pool.imap(_call_it,[(self,command, (outlet,)) for outlet in outlets],chunksize=1)]
+        if isinstance(result[0],bool):
+          for value in result:
+            if value:
+              return True    
+          return result[0]
         return result
         
 if __name__ == "__main__":
@@ -263,17 +303,18 @@ if __name__ == "__main__":
     if options.save_settings:
         switch.save_configuration()
     if len(args):
+        operation=args[0].lower()
+        range=_block_to_list(','.join(args[1:]))
         if len(args) > 1:
-            if args[0].lower() in ['status']:
-                print(','.join(switch.command_on_outlets('status',args[1:])))
-        elif len(args) == 2:
-            if args[0].lower() in ['on','poweron']:
-                sys.exit(switch.on(args[1]))
-            elif args[0].lower() in ['off','poweroff']:
-                sys.exit(switch.off(args[1]))
-            elif args[0].lower() in ['cycle']:
-                sys.exit(switch.cycle(args[1]))
-            elif args[0].lower() in ['get_name','getname','get_outlet_name','getoutletname']:
+            if operation in ['status']:
+                print(','.join(switch.command_on_outlets('status',range)))
+            elif operation in ['on','poweron']:
+                sys.exit(switch.command_on_outlets('on',range))
+            elif operation in ['off','poweroff']:
+                sys.exit(switch.command_on_outlets('off',range))
+            elif operation in ['cycle']:
+                sys.exit(switch.command_on_outlets('cycle',range))
+            elif operation in ['get_name','getname','get_outlet_name','getoutletname']:
                 print(switch.get_outlet_name(args[1]))
             else:
                 print("Unknown argument %s" % args[0])
