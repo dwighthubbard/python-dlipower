@@ -8,7 +8,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>dlipower</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:python-dlipower/dlipower/dlipower.py">python-dlipower/dlipower/dlipower.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/dhubbard/devel/python-dlipower/dlipower/dlipower.py">/home/dhubbard/devel/python-dlipower/dlipower/dlipower.py</a></font></td></tr></table>
     <p><tt>###############################################################<br>
 Digital&nbsp;Loggers&nbsp;Web&nbsp;Power&nbsp;Switch&nbsp;management<br>
 ###############################################################<br>
@@ -20,10 +20,16 @@ Digital&nbsp;Loggers&nbsp;Web&nbsp;Power&nbsp;Switch&nbsp;management<br>
 &nbsp;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;run&nbsp;as&nbsp;a&nbsp;script&nbsp;this&nbsp;acts&nbsp;as&nbsp;a&nbsp;command<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;utility&nbsp;to&nbsp;manage&nbsp;the&nbsp;DLI&nbsp;Power&nbsp;switch.<br>
-&nbsp;Author:&nbsp;Dwight&nbsp;Hubbard&nbsp;d@dhub.me<br>
-&nbsp;Copyright:&nbsp;This&nbsp;module&nbsp;may&nbsp;be&nbsp;used&nbsp;for&nbsp;any&nbsp;use&nbsp;personal<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;commercial&nbsp;as&nbsp;long&nbsp;as&nbsp;the&nbsp;author&nbsp;and&nbsp;copyright<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;notice&nbsp;are&nbsp;included&nbsp;in&nbsp;full.</tt></p>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;module&nbsp;has&nbsp;been&nbsp;tested&nbsp;against&nbsp;the&nbsp;following&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Digital&nbsp;Loggers&nbsp;Power&nbsp;network&nbsp;power&nbsp;switches:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WebPowerSwitch&nbsp;II<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WebPowerSwitch&nbsp;III<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WebPowerSwitch&nbsp;IV<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WebPowerSwitch&nbsp;V<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ethernet&nbsp;Power&nbsp;Controller&nbsp;III<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;Author:&nbsp;Dwight&nbsp;Hubbard&nbsp;d@dhub.me</tt></p>
 <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#aa55cc">
@@ -33,12 +39,14 @@ Digital&nbsp;Loggers&nbsp;Web&nbsp;Power&nbsp;Switch&nbsp;management<br>
 <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="BeautifulSoup.html">BeautifulSoup</a><br>
 <a href="base64.html">base64</a><br>
-</td><td width="25%" valign=top><a href="json.html">json</a><br>
+<a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="multiprocessing.html">multiprocessing</a><br>
 <a href="optparse.html">optparse</a><br>
-</td><td width="25%" valign=top><a href="os.html">os</a><br>
-<a href="sys.html">sys</a><br>
-</td><td width="25%" valign=top><a href="time.html">time</a><br>
-<a href="urllib2.html">urllib2</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+<a href="time.html">time</a><br>
+<a href="urllib.html">urllib</a><br>
+</td><td width="25%" valign=top><a href="urllib2.html">urllib2</a><br>
 </td></tr></table></td></tr></table><p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#ee77aa">
@@ -61,10 +69,21 @@ Digital&nbsp;Loggers&nbsp;Web&nbsp;Power&nbsp;Switch&nbsp;management<br>
 <td width="100%">Methods defined here:<br>
 <dl><dt><a name="powerswitch-__init__"><strong>__init__</strong></a>(self, userid<font color="#909090">=None</font>, password<font color="#909090">=None</font>, hostname<font color="#909090">=None</font>, timeout<font color="#909090">=None</font>, cycletime<font color="#909090">=None</font>)</dt></dl>
 
+<dl><dt><a name="powerswitch-command_on_outlets"><strong>command_on_outlets</strong></a>(self, command, outlets)</dt><dd><tt>If&nbsp;a&nbsp;single&nbsp;outlet&nbsp;is&nbsp;passed,&nbsp;handle&nbsp;it&nbsp;as&nbsp;a&nbsp;single&nbsp;outlet&nbsp;and&nbsp;<br>
+pass&nbsp;back&nbsp;the&nbsp;return&nbsp;code.&nbsp;&nbsp;Otherwise&nbsp;run&nbsp;the&nbsp;operation&nbsp;on&nbsp;multiple<br>
+outlets&nbsp;in&nbsp;parallel&nbsp;the&nbsp;return&nbsp;code&nbsp;will&nbsp;be&nbsp;failure&nbsp;if&nbsp;any&nbsp;operation<br>
+fails.&nbsp;&nbsp;Operations&nbsp;that&nbsp;return&nbsp;a&nbsp;string&nbsp;will&nbsp;return&nbsp;a&nbsp;list&nbsp;of&nbsp;strings.</tt></dd></dl>
+
 <dl><dt><a name="powerswitch-cycle"><strong>cycle</strong></a>(self, outlet<font color="#909090">=0</font>)</dt><dd><tt>Cycle&nbsp;power&nbsp;to&nbsp;an&nbsp;outlet&nbsp;<br>
 False&nbsp;=&nbsp;Power&nbsp;off&nbsp;Success<br>
 True&nbsp;=&nbsp;Power&nbsp;off&nbsp;Fail<br>
 Note,&nbsp;does&nbsp;not&nbsp;return&nbsp;any&nbsp;status&nbsp;info&nbsp;about&nbsp;the&nbsp;power&nbsp;on&nbsp;part&nbsp;of&nbsp;the&nbsp;operation&nbsp;by&nbsp;design</tt></dd></dl>
+
+<dl><dt><a name="powerswitch-determine_outlet"><strong>determine_outlet</strong></a>(self, outlet<font color="#909090">=None</font>)</dt><dd><tt>Get&nbsp;the&nbsp;correct&nbsp;outlet&nbsp;number&nbsp;from&nbsp;the&nbsp;outlet&nbsp;passed&nbsp;in,&nbsp;this<br>
+allows&nbsp;specifying&nbsp;the&nbsp;outlet&nbsp;by&nbsp;the&nbsp;name&nbsp;and&nbsp;making&nbsp;sure&nbsp;the<br>
+returned&nbsp;outlet&nbsp;is&nbsp;an&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="powerswitch-get_outlet_name"><strong>get_outlet_name</strong></a>(self, outlet<font color="#909090">=0</font>)</dt><dd><tt>Return&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;outlet</tt></dd></dl>
 
 <dl><dt><a name="powerswitch-geturl"><strong>geturl</strong></a>(self, url<font color="#909090">='index.htm'</font>)</dt><dd><tt>Get&nbsp;a&nbsp;URL&nbsp;from&nbsp;the&nbsp;userid/password&nbsp;protected&nbsp;<a href="#powerswitch">powerswitch</a>&nbsp;page&nbsp;<br>
 Return&nbsp;None&nbsp;on&nbsp;failure</tt></dd></dl>
@@ -82,6 +101,8 @@ True&nbsp;=&nbsp;Fail</tt></dd></dl>
 <dl><dt><a name="powerswitch-printstatus"><strong>printstatus</strong></a>(self)</dt><dd><tt>Print&nbsp;the&nbsp;status&nbsp;off&nbsp;all&nbsp;the&nbsp;outlets&nbsp;as&nbsp;a&nbsp;table&nbsp;to&nbsp;stdout</tt></dd></dl>
 
 <dl><dt><a name="powerswitch-save_configuration"><strong>save_configuration</strong></a>(self)</dt><dd><tt>Update&nbsp;the&nbsp;configuration&nbsp;file&nbsp;with&nbsp;the&nbsp;object's&nbsp;settings</tt></dd></dl>
+
+<dl><dt><a name="powerswitch-set_outlet_name"><strong>set_outlet_name</strong></a>(self, outlet<font color="#909090">=0</font>, name<font color="#909090">='Unknown'</font>)</dt><dd><tt>Set&nbsp;the&nbsp;name&nbsp;of&nbsp;an&nbsp;outlet</tt></dd></dl>
 
 <dl><dt><a name="powerswitch-status"><strong>status</strong></a>(self, outlet<font color="#909090">=1</font>)</dt><dd><tt>Return&nbsp;the&nbsp;status&nbsp;of&nbsp;an&nbsp;outlet,&nbsp;returned&nbsp;value&nbsp;will&nbsp;be&nbsp;one&nbsp;of:&nbsp;ON,&nbsp;OFF,&nbsp;Unknown</tt></dd></dl>
 
