@@ -6,7 +6,7 @@ The module provides a python class named
 powerswitch that allows managing the web power
 switch from python programs.
 When run as a script this acts as a command
-line utilty to manage the DLI Power switch.
+line utility to manage the DLI Power switch.
 
 SUPPORTED DEVICES
 This module has been tested against the following 
@@ -18,10 +18,6 @@ Digital Loggers Power network power switches:
   Ethernet Power Controller III
 
 COMMAND LINE USAGE
-  arg Can be the outlet number or name of the power outlet to operate on.
-
-Author: Dwight Hubbard
-
 Usage: dlipower.py [options] [status|on|off|cycle|get_outlet_name|set_outlet_name] [range] [newname]
 
 Options:
@@ -35,6 +31,7 @@ Options:
   --user=USER           userid to connect with (default none)
   --password=PASSWORD   password (default none)
   --save_settings       Save the settings to the configuration file
+  --quiet               Suppress error output
 
 Arguments:
   range - One or more ports seperated by commas

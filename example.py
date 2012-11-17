@@ -55,7 +55,7 @@ switch=dlipower.powerswitch(hostname=SWITCHIP,userid=USER,password=PASSWORD)
 
 # Verify we can talk to the switch
 if not switch.verify():
-  print "Can't talk to the switch"
+  print("Can't talk to the switch")
   sys.exit(1)
 
 # Print the current state of all the outlets
@@ -65,7 +65,7 @@ switch.printstatus()
 switch.on(8)
 
 # Get the state of outlet 8 is and print it
-print 'Outlet #8 is',switch.status(8)
+print('Outlet #8 is',switch.status(8))
 
 # Wait a few seconds
 time.sleep(5)
@@ -74,4 +74,4 @@ time.sleep(5)
 switch.off(8)
 
 # Print the current state outlet 8 again
-print 'Outlet #8 is',switch.status(8)
+print('Outlet #8 is',switch.status(8))

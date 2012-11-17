@@ -21,11 +21,7 @@ Digital Loggers Web Power Switch management
                 Ethernet Power Controller III
               
  Author: Dwight Hubbard d@dhub.me
- Copyright: This module may be used for any use personal
-            or commercial as long as the author and copyright
-            notice are included in full.
 """
-
 """
 Copyright (c) 2009,2010,2011, 2012, Dwight Hubbard
 All rights reserved.
@@ -134,6 +130,7 @@ class powerswitch:
             self.cycletime=float(cycletime)
         else:
             self.cycletime=CONFIG['cycletime']
+        self._is_admin=True
     def load_configuration(self):
         """ Return a configuration dictionary """
         if os.path.isfile(CONFIG_FILE):
@@ -245,7 +242,14 @@ class powerswitch:
         try:
             root=soup.findAll('td',text='1')[0].parent.parent.parent
         except IndexError:
-            return None
+            # Finding the root of the table with the outlet info failed
+            # try again assuming we're seeing the table for a user
+            # account insteaed of the admin account (tables are different)
+            try:
+              self._is_admin=False
+              root=soup.findAll('th',text='#')[0].parent.parent.parent
+            except IndexError:
+              return None
         for temp in root.findAll('tr'):
             columns=temp.findAll('td')
             if len(columns) == 5:
@@ -304,6 +308,7 @@ if __name__ == "__main__":
     parser.add_option('--user',    dest='user',    default=None        ,help="userid to connect with (default %default)"         )
     parser.add_option('--password',dest='password',default=None         ,help="password (default %default)"                       )
     parser.add_option('--save_settings',dest='save_settings',default=False,action='store_true',help='Save the settings to the configuration file')
+    parser.add_option("--quiet",dest="quiet",default=False,action="store_true",help="Be quiet, don't print error messages only return error return codes (default False)")
     (options, args) = parser.parse_args()
 
     switch=powerswitch(userid=options.user,password=options.password,hostname=options.hostname,timeout=options.timeout,cycletime=options.cycletime)
@@ -316,9 +321,14 @@ if __name__ == "__main__":
             if operation in ['status']:
                 print(','.join(switch.command_on_outlets('status',range)))
             elif operation in ['on','poweron']:
-                sys.exit(switch.command_on_outlets('on',range))
+                rc=switch.command_on_outlets('on',range)
+                if rc and not options.quiet:
+                  print >> sys.stderr,"Power on operation failed"
+                sys.exit(rc)                
             elif operation in ['off','poweroff']:
-                sys.exit(switch.command_on_outlets('off',range))
+                rc=switch.command_on_outlets('off',range)
+                if rc and not options.quiet:
+                  print >> sys.stderr,"Power off operation failed"
             elif operation in ['cycle']:
                 sys.exit(switch.command_on_outlets('cycle',range))
             elif operation in ['get_name','getname','get_outlet_name','getoutletname']:

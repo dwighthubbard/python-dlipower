@@ -481,7 +481,7 @@ class TestPowerswitch(unittest.TestCase):
         status=self.p.status(1)
         self.assertEqual(status, 'ON')
 
-def tearDown(self):
+    def tearDown(self):
         """ Clean up the Mock objects """
         pass
 
