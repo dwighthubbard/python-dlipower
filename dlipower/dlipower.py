@@ -300,42 +300,5 @@ class powerswitch:
         return result
         
 if __name__ == "__main__":
-    usage = "usage: %prog [options] [status|on|off|cycle|get_outlet_name|set_outlet_name] [range|arg]"
-    parser = optparse.OptionParser(usage=usage)
-    parser.add_option('--hostname',dest='hostname',default=None,help="hostname/ip of the power switch (default %default)")
-    parser.add_option('--timeout',dest='timeout',default=None,help="Timeout for value for power switch communication (default %default)")
-    parser.add_option('--cycletime',dest='cycletime',default=None,type=int,help="Delay betwween off/on states for power cycle operations (default %default)")
-    parser.add_option('--user',    dest='user',    default=None        ,help="userid to connect with (default %default)"         )
-    parser.add_option('--password',dest='password',default=None         ,help="password (default %default)"                       )
-    parser.add_option('--save_settings',dest='save_settings',default=False,action='store_true',help='Save the settings to the configuration file')
-    parser.add_option("--quiet",dest="quiet",default=False,action="store_true",help="Be quiet, don't print error messages only return error return codes (default False)")
-    (options, args) = parser.parse_args()
-
-    switch=powerswitch(userid=options.user,password=options.password,hostname=options.hostname,timeout=options.timeout,cycletime=options.cycletime)
-    if options.save_settings:
-        switch.save_configuration()
-    if len(args):
-        operation=args[0].lower()
-        range=_block_to_list(','.join(args[1:]))
-        if len(args) > 1:
-            if operation in ['status']:
-                print(','.join(switch.command_on_outlets('status',range)))
-            elif operation in ['on','poweron']:
-                rc=switch.command_on_outlets('on',range)
-                if rc and not options.quiet:
-                  print >> sys.stderr,"Power on operation failed"
-                sys.exit(rc)                
-            elif operation in ['off','poweroff']:
-                rc=switch.command_on_outlets('off',range)
-                if rc and not options.quiet:
-                  print >> sys.stderr,"Power off operation failed"
-            elif operation in ['cycle']:
-                sys.exit(switch.command_on_outlets('cycle',range))
-            elif operation in ['get_name','getname','get_outlet_name','getoutletname']:
-                print(','.join(switch.command_on_outlets('get_outlet_name',range)))
-            elif operation in ['set_name','setname','set_outlet_name','setoutletname']:
-                sys.exit(switch.set_outlet_name(args[1],args[2]))
-            else:
-                print("Unknown argument %s" % args[0])
-    else:
-        switch.printstatus()
+    pass
+    

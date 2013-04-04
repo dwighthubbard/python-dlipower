@@ -27,8 +27,8 @@ setup(
   url="http://pypi.python.org/pypi/dlipower/",
   license="LICENSE.txt",
   packages=["dlipower",],
-  scripts=["scripts/example.py","scripts/dlipower","scripts/fence_dli"],
-  long_description=open('README.txt').read(),
+  scripts=["dlipower/dlipower","dlipower/fence_dli"],
+  long_description=open('README.md').read(),
   description="Control digital loggers web power switch",
   requires=["BeautifulSoup"],
 )

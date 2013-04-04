@@ -1,4 +1,5 @@
 DESCRIPTION
+===========
 This is a python module and a script to mange the 
 Digital Loggers Web Power switch.
               
@@ -10,6 +11,7 @@ When run as a script this acts as a command
 line utility to manage the DLI Power switch.
 
 SUPPORTED DEVICES
+=================
 This module has been tested against the following 
 Digital Loggers Power network power switches:
   WebPowerSwitch II
@@ -19,7 +21,8 @@ Digital Loggers Power network power switches:
   Ethernet Power Controller III
 
 COMMAND LINE USAGE
-Usage: dlipower.py [options] [status|on|off|cycle|get_outlet_name|set_outlet_name] [range] [newname]
+==================
+Usage: dlipower [options] [status|on|off|cycle|get_outlet_name|set_outlet_name] [range] [newname]
 
 Options:
   -h, --help            show this help message and exit
@@ -41,6 +44,7 @@ Arguments:
   newname - The name to rename the outlet to
 
 PYTHON USAGE
+============
 NAME
     dlipower
 
@@ -142,9 +146,8 @@ DATA
     CYCLETIME = 3
     TIMEOUT = 30
 
-PYTHON EXAMPLE
-Note, see the example script scripts/example.py for a more detailed example
-
+Example
+=======
 #!/usr/bin/env python
 import dlipower
 
@@ -161,4 +164,3 @@ powerswitch.on(2)
 
 # Rename outlet 1
 powerswitch.set_outlet_name(1,'Traffic light')
-
