@@ -154,10 +154,13 @@ import dlipower
 switch = dlipower.PowerSwitch(hostname="lpc.digital-loggers.com",userid="admin")
 
 # Print the status of the outlets on the PowerSwitch
-print switch.status()
+switch.printstatus()
 
 # Turn off outlet one
 switch.off(1)
+
+# Print the status of outlet one
+print switch.status(1)
 
 # Turn on outlet 2
 switch.on(2)
