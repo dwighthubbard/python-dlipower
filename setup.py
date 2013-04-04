@@ -31,4 +31,5 @@ setup(
   long_description=open('README.md').read(),
   description="Control digital loggers web power switch",
   requires=["BeautifulSoup"],
+  test_suite="test",
 )

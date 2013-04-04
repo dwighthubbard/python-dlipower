@@ -459,23 +459,23 @@ class TestPowerswitch(unittest.TestCase):
         """ Set up the mock objects to do our unit tests """
         my_opener = urllib2.build_opener(MyHTTPHandler)
         urllib2.install_opener(my_opener)
-        self.p=dlipower.powerswitch(hostname='http://lpc.digital-loggers.com')
+        self.p=dlipower.PowerSwitch(hostname='lpc.digital-loggers.com')
 
     def test_status(self):
-        """ Test the status method of the powerswitch object """
+        """ Test the status method of the PowerSwitch object """
         URLS['index.htm']=OFF_HTML
         status=self.p.status(1)
         self.assertEqual(status, 'OFF')
 
     def test_off(self):
-        """ Test the status method of the powerswitch object """
+        """ Test the status method of the PowerSwitch object """
         self.p.off(1)
         URLS['index.htm']=OFF_HTML
         status=self.p.status(1)
         self.assertEqual(status, 'OFF')
 
     def test_on(self):
-        """ Test the status method of the powerswitch object """
+        """ Test the status method of the PowerSwitch object """
         self.p.on(1)
         URLS['index.htm']=ON_HTML
         status=self.p.status(1)

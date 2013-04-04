@@ -1,4 +1,2 @@
 from dlipower import *
 
-
-

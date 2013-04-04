@@ -4,7 +4,7 @@ This is a python module and a script to mange the
 Digital Loggers Web Power switch.
               
 The module provides a python class named
-powerswitch that allows managing the web power
+PowerSwitch that allows managing the web power
 switch from python programs.
 
 When run as a script this acts as a command
@@ -58,7 +58,7 @@ DESCRIPTION
      Description: This is both a module and a script
     
                   The module provides a python class named
-                  powerswitch that allows managing the web power
+                  PowerSwitch that allows managing the web power
                   switch from python programs.
     
                   When run as a script this acts as a command
@@ -75,9 +75,9 @@ DESCRIPTION
      Author: Dwight Hubbard d@dhub.me
 
 CLASSES
-    powerswitch
+    PowerSwitch
     
-    class powerswitch
+    class PowerSwitch
      |  Powerswitch class to manage the Digital Loggers Web power switch
      |  
      |  Methods defined here:
@@ -105,7 +105,7 @@ CLASSES
      |      Return the name of the outlet
      |  
      |  geturl(self, url='index.htm')
-     |      Get a URL from the userid/password protected powerswitch page 
+     |      Get a URL from the userid/password protected PowerSwitch page 
      |      Return None on failure
      |  
      |  load_configuration(self)
@@ -151,16 +151,16 @@ Example
 #!/usr/bin/env python
 import dlipower
 
-powerswitch=dlipower.powerswitch(hostname="lpc.digital-loggers.com",userid="admin")
+switch = dlipower.PowerSwitch(hostname="lpc.digital-loggers.com",userid="admin")
 
-# Print the status of the outlets on the powerswitch
-print powerswitch.status()
+# Print the status of the outlets on the PowerSwitch
+print switch.status()
 
 # Turn off outlet one
-powerswitch.off(1)
+switch.off(1)
 
 # Turn on outlet 2
-powerswitch.on(2)
+switch.on(2)
 
 # Rename outlet 1
-powerswitch.set_outlet_name(1,'Traffic light')
+switch.set_outlet_name(1,'Traffic light')
