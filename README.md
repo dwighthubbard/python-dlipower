@@ -14,14 +14,15 @@ SUPPORTED DEVICES
 =================
 This module has been tested against the following 
 Digital Loggers Power network power switches:
-  WebPowerSwitch II
-  WebPowerSwitch III
-  WebPowerSwitch IV
-  WebPowerSwitch V
-  Ethernet Power Controller III
+* WebPowerSwitch II
+* WebPowerSwitch III
+* WebPowerSwitch IV
+* WebPowerSwitch V
+* Ethernet Power Controller III
 
 COMMAND LINE USAGE
 ==================
+```
 Usage: dlipower [options] [status|on|off|cycle|get_outlet_name|set_outlet_name] [range] [newname]
 
 Options:
@@ -41,17 +42,23 @@ Arguments:
   range - One or more ports seperated by commas
     Example: 
       1,3,5-9 (Refers to outlets 1,3,5,6,7,8,9)
-  newname - The name to rename the outlet to
+  newname - The name to rename the outlet to```
+```
 
 PYTHON USAGE
 ============
+
 NAME
+----
     dlipower
 
 FILE
+----
     dlipower/dlipower.py
 
 DESCRIPTION
+-----------
+```
     ###############################################################
     Digital Loggers Web Power Switch management
     ###############################################################
@@ -73,9 +80,13 @@ DESCRIPTION
                     Ethernet Power Controller III
                   
      Author: Dwight Hubbard d@dhub.me
+```
 
 CLASSES
+=======
+
     PowerSwitch
+    -----------
     
     class PowerSwitch
      |  Powerswitch class to manage the Digital Loggers Web power switch
@@ -148,6 +159,7 @@ DATA
 
 Example
 =======
+```
 #!/usr/bin/env python
 import dlipower
 
@@ -167,3 +179,4 @@ switch.on(2)
 
 # Rename outlet 1
 switch.set_outlet_name(1,'Traffic light')
+```
