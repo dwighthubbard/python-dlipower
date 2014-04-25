@@ -1,8 +1,6 @@
 language: python
-install:
-  - pip install tox
 script:
-  - tox
+  - python test/test_dlipower.py
 branches:
   only:
     - master
