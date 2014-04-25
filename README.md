@@ -10,6 +10,10 @@ switch from python programs.
 When run as a script this acts as a command
 line utility to manage the DLI Power switch.
 
+BUILD STATUS
+============
+[![Build Status](https://travis-ci.org/dwighthubbard/python-dlipower.svg?branch=master)](https://travis-ci.org/dwighthubbard/python-dlipower)
+
 SUPPORTED DEVICES
 =================
 This module has been tested against the following 
