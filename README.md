@@ -159,11 +159,13 @@ DATA
 
 Example
 =======
-```
+```python
 #!/usr/bin/env python
 import dlipower
 
-switch = dlipower.PowerSwitch(hostname="lpc.digital-loggers.com",userid="admin")
+switch = dlipower.PowerSwitch(
+    hostname="lpc.digital-loggers.com", userid="admin"
+)
 
 # Print the status of the outlets on the PowerSwitch
 switch.printstatus()
