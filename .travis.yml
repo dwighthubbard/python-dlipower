@@ -3,7 +3,7 @@ python:
   - "2.7"
   - "3.2"
   - "3.3"
- script:
+script:
   - python test/test_dlipower.py
 branches:
   only:
