@@ -151,11 +151,12 @@ CLASSES
      |  verify(self)
      |      Verify we can reach the switch, returns true if ok
 
-DATA
-    CONFIG_DEFAULTS = {'cycletime': 3, 'hostname': '192.168.0.100', 'passw...
-    CONFIG_FILE = '~/.dlipower.conf'
-    CYCLETIME = 3
-    TIMEOUT = 30
+    DATA
+        CONFIG_DEFAULTS = {'cycletime': 3, 'hostname': '192.168.0.100', 'passw...
+        CONFIG_FILE = '~/.dlipower.conf'
+        CYCLETIME = 3
+        TIMEOUT = 30
+
 
 Example
 =======
