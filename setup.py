@@ -1,6 +1,7 @@
 from setuptools import setup
 import sys
 
+
 def version(filename='package.version', increment_minor=True,
             increment_major=False):
     """
@@ -29,6 +30,10 @@ if sys.version > '3.0.0':
 else:
     print('Python2')
     requires.append('BeautifulSoup')
+
+
+print('Setting up under python version %s' % sys.version)
+print('Requirements: %s' % ','.join(requires))
 
 setup(
     name="dlipower",
