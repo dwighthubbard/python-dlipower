@@ -6,4 +6,3 @@ script:
 branches:
   only:
     - master
-
