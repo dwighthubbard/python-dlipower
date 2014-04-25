@@ -52,14 +52,21 @@ import os
 import time
 import base64
 import json
+import sys
 import urllib
-import urllib2
+#import urllib2
 import multiprocessing
 import logging
 import socket
+import six.moves.urllib.error
+import six.moves.urllib.request as urllib2
+
 
 # External modules
-import BeautifulSoup
+if sys.version > '3.0.0':
+    from bs4 import BeautifulSoup
+else:
+    from BeautifulSoup import BeautifulSoup
 
 # Global settings
 TIMEOUT = 20
@@ -162,10 +169,12 @@ class PowerSwitch:
         """
         request = urllib2.Request("http://%s/%s" % (self.hostname, url))
         base64string = base64.encodestring(
-            '%s:%s' % (
-                self.userid, self.password
+            six.b(
+                '%s:%s' % (
+                    self.userid, self.password
+                )
             )
-        ).replace('\n', '')
+        )[:-1]
         request.add_header("Authorization", "Basic %s" % base64string)
         for i in range(0, self.retries):
             try:
@@ -173,7 +182,7 @@ class PowerSwitch:
             except socket.timeout:
                 logging.debug('Socket timeout attempt %s, retrying', i)
                 result = None
-            except urllib2.URLError:
+            except six.moves.urllib.error.URLError:
                 return None
             if result:
                 break
@@ -245,7 +254,7 @@ class PowerSwitch:
         url = self.geturl('index.htm')
         if not url:
             return None
-        soup = BeautifulSoup.BeautifulSoup(url)
+        soup = BeautifulSoup(url)
         # Get the root of the table containing the port status info
         try:
             root = soup.findAll('td', text='1')[0].parent.parent.parent

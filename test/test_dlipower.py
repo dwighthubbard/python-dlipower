@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 import unittest
-import urllib
-import urllib2
-import StringIO
-import os
+import six.moves.urllib.request as urllib2
+import six
 import sys
 sys.path.insert(0,'../dlipower')
 import dlipower
@@ -445,7 +443,9 @@ URLS={'index.htm':OFF_HTML,'outlet?1=OFF':OFF_HTML,'outlet?1=ON':ON_HTML}
 def mock_response(req):
     url= req.get_full_url().split('/')[-1]
     if url in URLS.keys():
-        resp = urllib2.addinfourl(StringIO.StringIO(URLS[url]), "mock message", req.get_full_url())
+        resp = six.moves.urllib.response.addinfourl(
+            six.StringIO(URLS[url]), "mock message", req.get_full_url()
+        )
         resp.code = 200
         resp.msg = "OK"
         return resp
@@ -454,12 +454,13 @@ class MyHTTPHandler(urllib2.HTTPHandler):
     def http_open(self, req):
         return mock_response(req)
 
+
 class TestPowerswitch(unittest.TestCase):
     def setUp(self):
         """ Set up the mock objects to do our unit tests """
         my_opener = urllib2.build_opener(MyHTTPHandler)
         urllib2.install_opener(my_opener)
-        self.p=dlipower.PowerSwitch(hostname='lpc.digital-loggers.com')
+        self.p = dlipower.PowerSwitch(hostname='lpc.digital-loggers.com')
 
     def test_status(self):
         """ Test the status method of the PowerSwitch object """
