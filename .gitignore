@@ -2,3 +2,5 @@
 .idea
 dist
 build
+.tox
+dlipower.egg-info
