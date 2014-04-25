@@ -22,8 +22,10 @@ Digital Loggers Web Power Switch management
 
  Author: Dwight Hubbard d@dhub.me
 """
+from __future__ import print_function
+
 __copyright__ = """
-Copyright (c) 2009,2010,2011, 2012, Dwight Hubbard
+Copyright (c) 2009-2014, Dwight Hubbard
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -65,8 +67,10 @@ import six.moves.urllib.request as urllib2
 # External modules
 if sys.version > '3.0.0':
     from bs4 import BeautifulSoup
+    from urllib.parse import quote
 else:
     from BeautifulSoup import BeautifulSoup
+    from urllib import quote
 
 # Global settings
 TIMEOUT = 20
@@ -83,7 +87,7 @@ CONFIG_FILE = os.path.expanduser('~/.dlipower.conf')
 
 
 def _call_it(params):
-    "indirect caller for instance methods and multiprocessing"
+    """indirect caller for instance methods and multiprocessing"""
     instance, name, args = params
     kwargs = {}
     return getattr(instance, name)(*args, **kwargs)
@@ -176,6 +180,7 @@ class PowerSwitch:
             )
         )[:-1]
         request.add_header("Authorization", "Basic %s" % base64string)
+        result = None
         for i in range(0, self.retries):
             try:
                 result = urllib2.urlopen(request, timeout=self.timeout).read()
@@ -214,7 +219,7 @@ class PowerSwitch:
         """ Set the name of an outlet """
         self.determine_outlet(outlet)
         self.geturl(
-            url='unitnames.cgi?outname%s=%s' % (outlet, urllib.quote(name))
+            url='unitnames.cgi?outname%s=%s' % (outlet, quote(name))
         )
         return self.get_outlet_name(outlet) == name
 

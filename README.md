@@ -175,6 +175,7 @@ Example
 =======
 ```python
 #!/usr/bin/env python
+from __future__ import print_function
 import dlipower
 
 switch = dlipower.PowerSwitch(
@@ -188,7 +189,7 @@ switch.printstatus()
 switch.off(1)
 
 # Print the status of outlet one
-print switch.status(1)
+print(switch.status(1))
 
 # Turn on outlet 2
 switch.on(2)
