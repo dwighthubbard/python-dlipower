@@ -60,7 +60,7 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: System :: Hardware :: Hardware Drivers',
         'Topic :: System :: Power (UPS)',
-         'License :: Free To Use But Restricted'
+         'License :: OSI Approved :: BSD License'
     ],
     long_description=open('README.md').read(),
     description="Control digital loggers web power switch",

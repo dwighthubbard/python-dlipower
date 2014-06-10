@@ -189,6 +189,8 @@ class PowerSwitch:
                 result = None
             except six.moves.urllib.error.URLError:
                 return None
+            except socket.error:
+                pass
             if result:
                 break
         return result
