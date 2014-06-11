@@ -50,6 +50,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
 # Python built in modules
+import logging
+logging.basicConfig(level=logging.INFO)
 import os
 import time
 import base64
@@ -60,6 +62,7 @@ import urllib
 import multiprocessing
 import logging
 import socket
+#import six
 import six.moves.urllib.error
 import six.moves.urllib.request as urllib2
 
@@ -92,8 +95,49 @@ def _call_it(params):
     kwargs = {}
     return getattr(instance, name)(*args, **kwargs)
 
+class Outlet(object):
+    use_description = False
 
-class PowerSwitch:
+    def __init__(self, switch, outlet_number, description=None, state=None):
+        self.switch = switch
+        self.outlet_number = outlet_number
+        self.description = description
+        self._state = state
+
+    def __unicode__(self):
+        name = None
+        if self.use_description:
+            name = '"%s"' % self.description
+        if not name:
+            name = '%d' % self.outlet_number
+        return '%s:%s' % (name, self._state)
+
+    def __str__(self):
+        return unicode(self).encode('utf-8')
+
+    def __repr__(self):
+        return self.__unicode__()
+
+    @property
+    def state(self):
+        return self._state
+
+    @state.setter
+    def state(self, value):
+        self._state = value
+        if value in ['off', 'OFF', '0']:
+            self.off()
+        if value in ['on', 'ON', '1']:
+            self.on()
+
+    def off(self):
+        return self.switch.off(self.outlet_number)
+
+    def on(self):
+        return self.switch.on(self.outlet_number)
+
+
+class PowerSwitch(object):
     """ Powerswitch class to manage the Digital Loggers Web power switch """
     def __init__(self, userid=None, password=None, hostname=None, timeout=None,
                  cycletime=None, retries=None):
@@ -126,6 +170,19 @@ class PowerSwitch:
         else:
             self.cycletime = config['cycletime']
         self._is_admin = True
+
+    def __getitem__(self, index):
+        outlets = []
+        if isinstance(index, slice):
+            status = self.statuslist()[index.start:index.stop]
+        else:
+            status = [self.statuslist()[index]]
+        for s in status:
+            o = Outlet(switch=self, outlet_number=s[0], description=s[1], state=s[2])
+            outlets.append(o)
+        if len(outlets) == 1:
+            return outlets[0]
+        return outlets
 
     def load_configuration(self):
         """ Return a configuration dictionary """
@@ -172,6 +229,8 @@ class PowerSwitch:
             Return None on failure
         """
         request = urllib2.Request("http://%s/%s" % (self.hostname, url))
+        logging.debug('Calling user: %s', request.get_full_url())
+        logging.debug('Authenticating: %s:%s', self.userid, self.password)
         base64string = base64.encodestring(
             six.b(
                 '%s:%s' % (
@@ -180,17 +239,22 @@ class PowerSwitch:
             )
         )[:-1]
         request.add_header("Authorization", "Basic %s" % base64string)
+        logging.debug('Request headers %s', request.headers)
         result = None
         for i in range(0, self.retries):
             try:
-                result = urllib2.urlopen(request, timeout=self.timeout).read()
+                response = urllib2.urlopen(request, timeout=self.timeout)
+                result = response.read()
+                logging.debug('Got result: %s', result)
             except socket.timeout:
                 logging.debug('Socket timeout attempt %s, retrying', i)
                 result = None
             except six.moves.urllib.error.URLError:
+                logging.debug('URL error')
                 return None
-            except socket.error:
-                pass
+            #except socket.error:
+            #    logging.debug('socket.error')
+            #    pass
             if result:
                 break
         return result
@@ -337,4 +401,5 @@ class PowerSwitch:
 
 
 if __name__ == "__main__":
-    pass
+    t=PowerSwitch()
+    t.printstatus()
