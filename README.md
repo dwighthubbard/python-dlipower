@@ -192,6 +192,7 @@ switch[0].description = 'Traffic light'
 print('The current status of the powerswitch is: %s' % switch)
 ```
 
+```
 Connecting to a DLI PowerSwitch at lpc.digital-loggers.com
 Turning off the first outlet
 The powerstate of the first outlet is currently OFF
@@ -206,3 +207,4 @@ Outlet	Hostname       	State
 6	Shoretel ABC123	ON
 7	Shortel 24V - T	ON
 8	Shortel 24V - T	ON
+```
