@@ -95,8 +95,13 @@ def _call_it(params):
     kwargs = {}
     return getattr(instance, name)(*args, **kwargs)
 
+
+class DLIPowerException(Exception):
+    pass
+
+
 class Outlet(object):
-    use_description = False
+    use_description = True
 
     def __init__(self, switch, outlet_number, description=None, state=None):
         self.switch = switch
@@ -107,7 +112,7 @@ class Outlet(object):
     def __unicode__(self):
         name = None
         if self.use_description:
-            name = '"%s"' % self.description
+            name = '%s' % self.description
         if not name:
             name = '%d' % self.outlet_number
         return '%s:%s' % (name, self._state)
@@ -117,6 +122,14 @@ class Outlet(object):
 
     def __repr__(self):
         return self.__unicode__()
+
+    def _repr_html_(self):
+        return """<table>
+            <tr><th>Description</th><th>Outlet Number</th><th>State</th></tr>
+            <tr><td>%s</td><td>%s</td><td>%s</td></tr>
+            </table>""" % (
+            self.description, self.outlet_number, self.state
+        )
 
     @property
     def state(self):
@@ -136,9 +149,19 @@ class Outlet(object):
     def on(self):
         return self.switch.on(self.outlet_number)
 
+    def rename(self, new_name):
+        """
+        Rename the outlet
+        :param new_name: New name for the outlet
+        :return:
+        """
+        return self.switch.set_outlet_name(self.outlet_number, new_name)
+
 
 class PowerSwitch(object):
     """ Powerswitch class to manage the Digital Loggers Web power switch """
+    __len = 0
+
     def __init__(self, userid=None, password=None, hostname=None, timeout=None,
                  cycletime=None, retries=None):
         """
@@ -171,6 +194,40 @@ class PowerSwitch(object):
             self.cycletime = config['cycletime']
         self._is_admin = True
 
+    def __len__(self):
+        """
+        :return: Number of outlets on the switch
+        """
+        if self.__len == 0:
+            self.__len = len(self.statuslist())
+        return self.__len
+
+    def __repr__(self):
+        if not self.statuslist():
+            return "Digital Loggers Web Powerswitch " \
+                   "%s (UNCONNECTED)" % self.hostname
+        output = 'DLIPowerSwitch at %s\n' \
+                 'Outlet\t%-15.15s\tState\n' % (self.hostname, 'Hostname')
+        for item in self.statuslist():
+            output += '%d\t%-15.15s\t%s\n' % (item[0], item[1], item[2])
+        return output
+
+    def _repr_html_(self):
+        if not self.statuslist():
+            return "Digital Loggers Web Powerswitch " \
+                   "%s (UNCONNECTED)" % self.hostname
+        output = '<table>' \
+                 '<tr><th colspan="3">DLI Web Powerswitch at %s</th></tr>' \
+                 '<tr>' \
+                 '<th>Outlet Number</th>' \
+                 '<th>Outlet Name</th>' \
+                 '<th>Outlet State</th></tr>\n' % self.hostname
+        for item in self.statuslist():
+            output += '<tr><td>%d</td><td>%s</td><td>%s</td></tr>\n' % (
+                item[0], item[1], item[2])
+        output += '</table>\n'
+        return output
+
     def __getitem__(self, index):
         outlets = []
         if isinstance(index, slice):
@@ -178,7 +235,9 @@ class PowerSwitch(object):
         else:
             status = [self.statuslist()[index]]
         for s in status:
-            o = Outlet(switch=self, outlet_number=s[0], description=s[1], state=s[2])
+            o = Outlet(
+                switch=self, outlet_number=s[0], description=s[1], state=s[2]
+            )
             outlets.append(o)
         if len(outlets) == 1:
             return outlets[0]
@@ -217,12 +276,15 @@ class PowerSwitch(object):
             json.dump(config, file_h, sort_keys=True, indent=4)
             file_h.close()
         else:
-            return True
-        return False
+            raise DLIPowerException(
+                'Unable to open configuration file for write'
+            )
 
     def verify(self):
         """ Verify we can reach the switch, returns true if ok """
-        return self.geturl()
+        if self.geturl():
+            return True
+        return False
 
     def geturl(self, url='index.htm'):
         """ Get a URL from the userid/password protected powerswitch page
@@ -345,6 +407,8 @@ class PowerSwitch(object):
                 hostname = columns[1].string
                 state = columns[2].find('font').string.upper()
                 outlets.append([int(plugnumber), hostname, state])
+        if self.__len == 0:
+            self.__len = len(outlets)
         return outlets
 
     def printstatus(self):

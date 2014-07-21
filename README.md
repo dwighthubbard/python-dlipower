@@ -174,26 +174,35 @@ CLASSES
 Example
 =======
 ```python
-#!/usr/bin/env python
 from __future__ import print_function
 import dlipower
 
-switch = dlipower.PowerSwitch(
-    hostname="lpc.digital-loggers.com", userid="admin"
-)
 
-# Print the status of the outlets on the PowerSwitch
-switch.printstatus()
+print('Connecting to a DLI PowerSwitch at lpc.digital-loggers.com')
+switch = dlipower.PowerSwitch(hostname="lpc.digital-loggers.com", userid="admin")
 
-# Turn off outlet one
-switch.off(1)
+print('Turning off the first outlet')
+switch[0].state = 'OFF'
 
-# Print the status of outlet one
-print(switch.status(1))
+print('The powerstate of the first outlet is currently', switch[0].state)
 
-# Turn on outlet 2
-switch.on(2)
+print('Renaming the first outlet as "Traffic light"')
+switch[0].description = 'Traffic light'
 
-# Rename outlet 1
-switch.set_outlet_name(1,'Traffic light')
+print('The current status of the powerswitch is: %s' % switch)
 ```
+
+Connecting to a DLI PowerSwitch at lpc.digital-loggers.com
+Turning off the first outlet
+The powerstate of the first outlet is currently OFF
+Renaming the first outlet as "Traffic light"
+The current status of the powerswitch is: DLIPowerSwitch at lpc.digital-loggers.com
+Outlet	Hostname       	State
+1	Traffic light  	OFF
+2	killer robot   	ON
+3	Buiten verlicti	ON
+4	Meeting Room Li	OFF
+5	Brocade LVM123 	ON
+6	Shoretel ABC123	ON
+7	Shortel 24V - T	ON
+8	Shortel 24V - T	ON
