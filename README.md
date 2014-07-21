@@ -189,7 +189,8 @@ print('The powerstate of the first outlet is currently', switch[0].state)
 print('Renaming the first outlet as "Traffic light"')
 switch[0].description = 'Traffic light'
 
-print('The current status of the powerswitch is: %s' % switch)
+print('The current status of the powerswitch is:')
+print(switch)
 ```
 
 ```
@@ -197,7 +198,8 @@ Connecting to a DLI PowerSwitch at lpc.digital-loggers.com
 Turning off the first outlet
 The powerstate of the first outlet is currently OFF
 Renaming the first outlet as "Traffic light"
-The current status of the powerswitch is: DLIPowerSwitch at lpc.digital-loggers.com
+The current status of the powerswitch is: 
+DLIPowerSwitch at lpc.digital-loggers.com
 Outlet	Hostname       	State
 1	Traffic light  	OFF
 2	killer robot   	ON
