@@ -2,6 +2,10 @@ Digital Loggers Power Management Python Plugin
 **********************************************
 [![Build Status](https://travis-ci.org/dwighthubbard/python-dlipower.svg?branch=master)](https://travis-ci.org/dwighthubbard/python-dlipower)
 [![Coverage Status](https://coveralls.io/repos/dwighthubbard/python-dlipower/badge.svg)](https://coveralls.io/r/dwighthubbard/python-dlipower)
+[![Download Stats](https://pypip.in/download/dlipower/badge.svg)](https://pypi.python.org/pypi/dlipower/)
+[![Version Stats](https://pypip.in/version/dlipower/badge.svg)](https://pypi.python.org/pypi/dlipower)
+[![Python Version Stats](https://pypip.in/py_versions/dlipower/badge.svg)](https://pypi.python.org/pypi/dlipower/)
+[![License Info](https://pypip.in/license/dlipower/badge.svg)](https://pypi.python.org/pypi/dlipower/)
 
 DESCRIPTION
 ===========
