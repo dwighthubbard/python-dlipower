@@ -25,7 +25,7 @@ This script provides a command line interface to the dli power switches.
       --quiet               Suppress error output
 
     Arguments:
-      range - One or more ports seperated by commas
+      range - One or more ports delimited by commas
         Example:
           1,3,5-9 (Refers to outlets 1,3,5,6,7,8,9)
       newname - The name to rename the outlet to```
