@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-redislite's documentation
+dlipower documentation
 =========================
 
 Contents:
@@ -11,7 +11,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   dlipower_module.rst
+   dlipower_module
 
 
 Indices and tables
