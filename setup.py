@@ -101,7 +101,7 @@ setup(
     author="Dwight Hubbard",
     author_email="dwight@dwighthubbard.com",
     url="http://pypi.python.org/pypi/dlipower/",
-    license="LICENSE.txt",
+    license='License :: OSI Approved :: BSD License',
     packages=["dlipower", ],
     scripts=["dlipower/dlipower", "dlipower/fence_dli"],
     classifiers=[
