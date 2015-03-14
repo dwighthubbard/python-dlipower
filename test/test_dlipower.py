@@ -482,9 +482,12 @@ class TestPowerswitch(unittest.TestCase):
         self.assertEqual(status, 'ON')
 
     def test_outlet(self):
-        ol = dlipower.Outlet('foo', 1)
-        self.assertEqual(ol.switch, 'foo')
+        ol = dlipower.Outlet(None, 1, state='OFF')
+        self.assertEqual(ol.switch, None)
         self.assertEqual(ol.outlet_number, 1)
+        self.assertEqual(ol.__str__(), '1:OFF')
+        self.assertEqual(ol.__repr__(), '1:OFF')
+        self.assertEqual(ol.state, 'OFF')
 
     def tearDown(self):
         """ Clean up the Mock objects """

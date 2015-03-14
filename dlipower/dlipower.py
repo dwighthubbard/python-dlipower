@@ -62,16 +62,16 @@ import urllib
 import multiprocessing
 import logging
 import socket
-#import six
 import six.moves.urllib.error
 import six.moves.urllib.request as urllib2
 
 
 # External modules
-if sys.version > '3.0.0':
+if sys.version > '3.0.0':   # pragma: no cover
     from bs4 import BeautifulSoup  # pragma: no cover
     from urllib.parse import quote  # pragma: no cover
 else:  # pragma: no cover
+    # noinspection PyPackageRequirements
     from BeautifulSoup import BeautifulSoup  # pragma: no cover
     from urllib import quote  # pragma: no cover
 
@@ -111,19 +111,19 @@ class Outlet(object):
 
     def __unicode__(self):
         name = None
-        if self.use_description:
+        if self.use_description and self.description:  # pragma: no cover
             name = '%s' % self.description
         if not name:
             name = '%d' % self.outlet_number
         return '%s:%s' % (name, self._state)
 
     def __str__(self):
-        return unicode(self).encode('utf-8')
+        return self.__unicode__()
 
     def __repr__(self):
         return self.__unicode__()
 
-    def _repr_html_(self):
+    def _repr_html_(self):  # pragma: no cover
         return """<table>
             <tr><th>Description</th><th>Outlet Number</th><th>State</th></tr>
             <tr><td>%s</td><td>%s</td><td>%s</td></tr>
