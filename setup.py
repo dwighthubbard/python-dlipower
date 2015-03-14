@@ -1,3 +1,4 @@
+import json
 import os
 from setuptools import setup
 import sys
