@@ -2,6 +2,7 @@ import json
 import os
 
 
+# noinspection PyUnresolvedReferences
 _METADATA_FILE = os.path.join(
     os.path.dirname(__file__),
     'package_metadata.json'
