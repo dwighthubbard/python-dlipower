@@ -123,8 +123,8 @@ setup(
     description="Control digital loggers web power switch",
     requires=requires,
     install_requires=requires,
-    'package_data' = {
+    'package_data'={
         'dlipower': ['package_metadata.json']
     },
-    'include_package_data': True,
+    'include_package_data'=True,
 )
