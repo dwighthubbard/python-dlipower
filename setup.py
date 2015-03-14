@@ -2,25 +2,82 @@ from setuptools import setup
 import sys
 
 
-def version(filename='package.version', increment_minor=True,
-            increment_major=False):
+logger = logging.getLogger(__name__)
+METADATA_FILENAME = 'dlipower/package_metadata.json'
+BASEPATH = os.path.dirname(os.path.abspath(__file__))
+
+
+def readme():
+    with open('README.rst') as f:
+        return f.read()
+
+
+class Git(object):
+    version_list = ['0', '7', '0']
+
+    def __init__(self, version=None):
+        if version:
+            self.version_list = version.split('.')
+
+    @property
+    def version(self):
+        """
+        Generate a Unique version value from the git information
+        :return:
+        """
+        git_rev = len(os.popen('git rev-list HEAD').readlines())
+        if git_rev != 0:
+            self.version_list[-1] = '%d' % git_rev
+        version = '.'.join(self.version_list)
+        return version
+
+    @property
+    def branch(self):
+        """
+        Get the current git branch
+        :return:
+        """
+        return os.popen('git rev-parse --abbrev-ref HEAD').read().strip()
+
+    @property
+    def hash(self):
+        """
+        Return the git hash for the current build
+        :return:
+        """
+        return os.popen('git rev-parse HEAD').read().strip()
+
+    @property
+    def origin(self):
+        """
+        Return the fetch url for the git origin
+        :return:
+        """
+        for item in os.popen('git remote -v'):
+            split_item = item.strip().split()
+            if split_item[0] == 'origin' and split_item[-1] == '(push)':
+                return split_item[1]
+
+
+def get_and_update_metadata():
     """
-    Get the package version, optionally incrementing the minor/major
-    of the version number.
+    Get the package metadata or generate it if missing
+    :return:
     """
-    try:
-        old_version = open(filename).readlines()[0].strip()
-    except IOError:
-        old_version = "0.0.0"
-    split_old_version = old_version.split('.')
-    if len(split_old_version) and increment_minor:
-        split_old_version[-1] = "%d" % (int(split_old_version[-1]) + 1)
-    if len(split_old_version) > 1 and increment_major:
-        split_old_version[-2] = "%d" % (int(split_old_version[-2]) + 1)
-    new_version = '.'.join(split_old_version)
-    if increment_minor or increment_major:
-        open(filename, 'w').write(new_version + '\n')
-    return new_version
+    if not os.path.exists('.git') and os.path.exists(METADATA_FILENAME):
+        with open(METADATA_FILENAME) as fh:
+            metadata = json.load(fh)
+    else:
+        git = Git(version=setup_arguments['version'])
+        metadata = {
+            'version': git.version
+        }
+        with open(METADATA_FILENAME, 'w') as fh:
+            json.dump(metadata, fh)
+    return metadata
+
+
+metadata = get_and_update_metadata()
 
 
 requires = ['six']
@@ -37,7 +94,7 @@ print('Requirements: %s' % ','.join(requires))
 
 setup(
     name="dlipower",
-    version=version(increment_minor=True),
+    version=metadata['version'],
     author="Dwight Hubbard",
     author_email="dwight@dwighthubbard.com",
     url="http://pypi.python.org/pypi/dlipower/",
@@ -65,5 +122,9 @@ setup(
     long_description=open('README.md').read(),
     description="Control digital loggers web power switch",
     requires=requires,
-    install_requires=requires
+    install_requires=requires,
+    'package_data' = {
+        'dlipower': ['package_metadata.json']
+    },
+    'include_package_data': True,
 )
