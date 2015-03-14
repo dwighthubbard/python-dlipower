@@ -85,10 +85,8 @@ metadata = get_and_update_metadata()
 
 requires = ['six']
 if sys.version > '3.0.0':
-    print('Python3')
     requires.append('BeautifulSoup4')
 else:
-    print('Python2')
     requires.append('BeautifulSoup')
 
 
