@@ -6,6 +6,7 @@ Digital Loggers Power Management Python Plugin
 [![Version Stats](https://pypip.in/version/dlipower/badge.svg)](https://pypi.python.org/pypi/dlipower)
 [![Python Version Stats](https://pypip.in/py_versions/dlipower/badge.svg)](https://pypi.python.org/pypi/dlipower/)
 [![License Info](https://pypip.in/license/dlipower/badge.svg)](https://pypi.python.org/pypi/dlipower/)
+[![Documentation Status](https://readthedocs.org/projects/dlipower/badge/?version=latest)](https://readthedocs.org/projects/dlipower/?badge=latest)
 
 DESCRIPTION
 ===========
@@ -29,42 +30,8 @@ Digital Loggers Power network power switches:
 * WebPowerSwitch V
 * Ethernet Power Controller III
 
-COMMAND LINE USAGE
-==================
-The dlipower package provides two scripts.
-
-dlipower script
----------------
-This script provides a command line interface to the dli power switches.
-```
-Usage: dlipower [options] [status|on|off|cycle|get_outlet_name|set_outlet_name] [range] [newname]
-
-Options:
-  -h, --help            show this help message and exit
-  --hostname=HOSTNAME   hostname/ip of the power switch (default none)
-  --timeout=TIMEOUT     Timeout for value for power switch communication
-                        (default none)
-  --cycletime=CYCLETIME
-                        Delay betwween off/on states for power cycle
-                        operations (default none)
-  --user=USER           userid to connect with (default none)
-  --password=PASSWORD   password (default none)
-  --save_settings       Save the settings to the configuration file
-  --quiet               Suppress error output
-
-Arguments:
-  range - One or more ports seperated by commas
-    Example: 
-      1,3,5-9 (Refers to outlets 1,3,5,6,7,8,9)
-  newname - The name to rename the outlet to```
-```
-
-fence_dli
----------
-The fence_dli script is a linux cluster compatible stonith fencing script for
-dlipower switches.
-
-
+Example
+=======
 PYTHON USAGE
 ============
 ```python
@@ -92,7 +59,7 @@ Connecting to a DLI PowerSwitch at lpc.digital-loggers.com
 Turning off the first outlet
 The powerstate of the first outlet is currently OFF
 Renaming the first outlet as "Traffic light"
-The current status of the powerswitch is: 
+The current status of the powerswitch is:
 DLIPowerSwitch at lpc.digital-loggers.com
 Outlet	Hostname       	State
 1	Traffic light  	OFF
@@ -104,3 +71,5 @@ Outlet	Hostname       	State
 7	Shortel 24V - T	ON
 8	Shortel 24V - T	ON
 ```
+
+For more information see the [![Documentation](https://readthedocs.org/projects/dlipower/badge/?version=latest)]

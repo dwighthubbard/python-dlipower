@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
    dlipower_module
+   commandline
 
 
 Indices and tables
