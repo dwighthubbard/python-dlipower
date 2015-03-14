@@ -69,11 +69,11 @@ import six.moves.urllib.request as urllib2
 
 # External modules
 if sys.version > '3.0.0':
-    from bs4 import BeautifulSoup
-    from urllib.parse import quote
-else:
-    from BeautifulSoup import BeautifulSoup
-    from urllib import quote
+    from bs4 import BeautifulSoup  # pragma: no cover
+    from urllib.parse import quote  # pragma: no cover
+else:  # pragma: no cover
+    from BeautifulSoup import BeautifulSoup  # pragma: no cover
+    from urllib import quote  # pragma: no cover
 
 # Global settings
 TIMEOUT = 20
@@ -89,7 +89,7 @@ CONFIG_DEFAULTS = {
 CONFIG_FILE = os.path.expanduser('~/.dlipower.conf')
 
 
-def _call_it(params):
+def _call_it(params):   # pragma: no cover
     """indirect caller for instance methods and multiprocessing"""
     instance, name, args = params
     kwargs = {}

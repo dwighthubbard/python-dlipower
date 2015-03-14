@@ -3,7 +3,6 @@ import unittest
 import six.moves.urllib.request as urllib2
 import six
 import sys
-sys.path.insert(0,'../dlipower')
 import dlipower
 
 __author__ = 'dhubbard'
@@ -481,6 +480,11 @@ class TestPowerswitch(unittest.TestCase):
         URLS['index.htm']=ON_HTML
         status=self.p.status(1)
         self.assertEqual(status, 'ON')
+
+    def test_outlet(self):
+        ol = dlipower.Outlet('foo', 1)
+        self.assertEqual(ol.switch, 'foo')
+        self.assertEqual(ol.outlet_number, 1)
 
     def tearDown(self):
         """ Clean up the Mock objects """
