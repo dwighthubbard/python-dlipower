@@ -8,6 +8,10 @@ function status_message {
   echo "    $1"
 }
 
+virtualenv smoketest
+source smoketest/bin/activate
+pip install .
+
 for host in `grep -v ^# test/test_host_list`
 do
 	header "Testing $host"
@@ -23,3 +27,6 @@ do
         status_message "Setting port name to PYTHON_TEST `./dlipower/dlipower --hostname $host set_outlet_name 1 PYTHON_TEST` : `./dlipower/dlipower --hostname $host get_outlet_name 1`"
         echo
 done
+
+deactivate
+rm -rf smoketest

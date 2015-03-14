@@ -329,7 +329,8 @@ class PowerSwitch(object):
         outlets = self.statuslist()
         if outlet and outlets and type(outlet) is str:
             for plug in outlets:
-                if plug[1].strip() == outlet.strip():
+                plug_name = plug[1]
+                if plug_name and plug_name.strip() == outlet.strip():
                     return int(plug[0])
         return int(outlet)
 
