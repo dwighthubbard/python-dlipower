@@ -71,9 +71,7 @@ Example
     print('The current status of the powerswitch is:')
     print(switch)
 
----
 
-.. code-block::
     Connecting to a DLI PowerSwitch at lpc.digital-loggers.com
     Turning off the first outlet
     The powerstate of the first outlet is currently OFF
