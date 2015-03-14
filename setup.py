@@ -70,7 +70,10 @@ def get_and_update_metadata():
     else:
         git = Git(version=setup_arguments['version'])
         metadata = {
-            'version': git.version
+            'version': git.version,
+            'git_hash': git.hash,
+            'git_origin': git.origin,
+            'git_branch': git.branch
         }
         with open(METADATA_FILENAME, 'w') as fh:
             json.dump(metadata, fh)
@@ -123,8 +126,8 @@ setup(
     description="Control digital loggers web power switch",
     requires=requires,
     install_requires=requires,
-    'package_data'={
+    package_data={
         'dlipower': ['package_metadata.json']
     },
-    'include_package_data'=True,
+    include_package_data=True,
 )
