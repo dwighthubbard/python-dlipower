@@ -4,7 +4,7 @@ Module to manage Digital Loggers Network Power Switches
 The :mod:`dlipower` provides a python api to manage digital loggers networked
 power switches.
 
-.. automodule:: dlipower
+.. automodule:: dlipower.dlipower
     :members:
     :inherited-members:
     :show-inheritance:
@@ -14,5 +14,5 @@ power switches.
 Classes
 =======
 
-.. autoclass:: dlipower.dlipower
+.. autoclass:: dlipower.dlipower.PowerSwitch
    :members:
