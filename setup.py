@@ -128,7 +128,7 @@ setup(
         'Topic :: System :: Hardware :: Hardware Drivers',
         'Topic :: System :: Power (UPS)',
     ],
-    long_description=open('README.md').read(),
+    long_description=readme(),
     description="Control digital loggers web power switch",
     requires=requires,
     install_requires=requires,
@@ -136,4 +136,5 @@ setup(
         'dlipower': ['package_metadata.json']
     },
     include_package_data=True,
+    zip_safe=True,
 )
