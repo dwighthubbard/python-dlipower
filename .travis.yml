@@ -1,12 +1,22 @@
 language: python
-python:
-  - "2.7"
-  - "3.2"
-  - "3.3"
+python: 2.7
+env:
+  - TOX_ENV=py27
+  - TOX_ENV=py34
+  - TOX_ENV=pypy
+matrix:
+  fast_finish: true
+  allow_failures:
+    - env:
+      - TOX_ENV=pypy
+      - TOX_ENV=build_docs
 install:
-  - "pip install ."
+  - sudo apt-get update -qq
+  - pip install --upgrade pip setuptools tox virtualenv coveralls
 script:
-  - python test/test_dlipower.py
-branches:
-  only:
-    - master
+  - tox -v -v -e $TOX_ENV
+after_success:
+  coveralls
+after_failure:
+  - for X in .tox/$TOX_ENV/log/*; do echo "$X\n"; cat "$X"; echo "\n\n"; done
+  - echo "pip.log\n"; cat $HOME/.pip/pip.log
