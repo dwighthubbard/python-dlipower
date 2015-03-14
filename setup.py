@@ -1,8 +1,6 @@
 from setuptools import setup
 import sys
 
-
-logger = logging.getLogger(__name__)
 METADATA_FILENAME = 'dlipower/package_metadata.json'
 BASEPATH = os.path.dirname(os.path.abspath(__file__))
 
