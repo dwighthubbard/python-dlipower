@@ -90,7 +90,3 @@ Example
     7	Shortel 24V - T	ON
     8	Shortel 24V - T	ON
 
-For more information see
-.. image:: https://readthedocs.org/projects/dlipower/badge/?version=latest
-    :target: http://dlipower.readthedocs.org/en/latest/
-    :alt: the documentation
