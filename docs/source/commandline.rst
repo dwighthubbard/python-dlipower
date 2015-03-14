@@ -1,11 +1,13 @@
 COMMAND LINE USAGE
-==================
+******************
 The dlipower package provides two scripts.
 
 dlipower script
----------------
+===============
 This script provides a command line interface to the dli power switches.
-```
+
+.. code-block:: bash
+
 Usage: dlipower [options] [status|on|off|cycle|get_outlet_name|set_outlet_name] [range] [newname]
 
 Options:
@@ -26,9 +28,9 @@ Arguments:
     Example:
       1,3,5-9 (Refers to outlets 1,3,5,6,7,8,9)
   newname - The name to rename the outlet to```
-```
+
 
 fence_dli
----------
+=========
 The fence_dli script is a linux cluster compatible stonith fencing script for
 dlipower switches.
