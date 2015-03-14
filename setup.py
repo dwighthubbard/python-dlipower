@@ -67,7 +67,7 @@ def get_and_update_metadata():
         with open(METADATA_FILENAME) as fh:
             metadata = json.load(fh)
     else:
-        git = Git(version=setup_arguments['version'])
+        git = Git()
         metadata = {
             'version': git.version,
             'git_hash': git.hash,
