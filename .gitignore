@@ -4,3 +4,7 @@ dist
 build
 .tox
 dlipower.egg-info
+.coverage
+cobertura.xml
+nosetests.xml
+dlipower/package_metadata.json
