@@ -332,11 +332,18 @@ class PowerSwitch(object):
                 plug_name = plug[1]
                 if plug_name and plug_name.strip() == outlet.strip():
                     return int(plug[0])
-        return int(outlet)
+        try:
+            return int(outlet)
+        except ValueError:
+            print('Unrecognized outlet name "{}"'.format(outlet));
+            raise
 
     def get_outlet_name(self, outlet=0):
         """ Return the name of the outlet """
-        outlet = self.determine_outlet(outlet)
+        try:
+            outlet = self.determine_outlet(outlet)
+        except ValueError:
+            return 'Unknown'
         outlets = self.statuslist()
         if outlets and outlet:
             for plug in outlets:
@@ -357,16 +364,22 @@ class PowerSwitch(object):
             False = Success
             True = Fail
         """
-        self.geturl(url='outlet?%d=OFF' % self.determine_outlet(outlet))
-        return self.status(outlet) != 'OFF'
+        try:
+            self.geturl(url='outlet?%d=OFF' % self.determine_outlet(outlet))
+            return self.status(outlet) != 'OFF'
+        except ValueError:
+            return False
 
     def on(self, outlet=0):
         """ Turn on power to an outlet
             False = Success
             True = Fail
         """
-        self.geturl(url='outlet?%d=ON' % self.determine_outlet(outlet))
-        return self.status(outlet) != 'ON'
+        try:
+            self.geturl(url='outlet?%d=ON' % self.determine_outlet(outlet))
+            return self.status(outlet) != 'ON'
+        except ValueError:
+            return False
 
     def cycle(self, outlet=0):
         """ Cycle power to an outlet
