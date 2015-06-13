@@ -368,7 +368,7 @@ class PowerSwitch(object):
             self.geturl(url='outlet?%d=OFF' % self.determine_outlet(outlet))
             return self.status(outlet) != 'OFF'
         except ValueError:
-            return True
+            return False
 
     def on(self, outlet=0):
         """ Turn on power to an outlet
@@ -379,7 +379,7 @@ class PowerSwitch(object):
             self.geturl(url='outlet?%d=ON' % self.determine_outlet(outlet))
             return self.status(outlet) != 'ON'
         except ValueError:
-            return True
+            return False
 
     def cycle(self, outlet=0):
         """ Cycle power to an outlet
