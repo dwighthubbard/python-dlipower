@@ -15,4 +15,4 @@ else:
     __version__ = '0.0.0'  # pragma: no cover
 
 
-from .dlipower import Outlet, PowerSwitch
+from .dlipower import Outlet, PowerSwitch, DLIPowerException
