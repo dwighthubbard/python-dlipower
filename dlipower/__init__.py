@@ -1,3 +1,8 @@
+# Copyright (c) 2009-2015, Dwight Hubbard
+# Copyrights licensed under the New BSD License
+# See the accompanying LICENSE.txt file for terms.
+
+from .dlipower import Outlet, PowerSwitch
 import json
 import os
 
@@ -13,6 +18,3 @@ if os.path.exists(_METADATA_FILE):  # pragma: no cover
         __version__ = json.load(fh)['version']
 else:
     __version__ = '0.0.0'  # pragma: no cover
-
-
-from .dlipower import Outlet, PowerSwitch

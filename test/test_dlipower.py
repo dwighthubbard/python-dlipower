@@ -1,11 +1,14 @@
 #!/usr/bin/env python
-import unittest
-import six.moves.urllib.request as urllib2
-import six
-import sys
-import dlipower
+# Copyright (c) 2009-2015, Dwight Hubbard
+# Copyrights licensed under the New BSD License
+# See the accompanying LICENSE.txt file for terms.
 
-__author__ = 'dhubbard'
+
+import logging
+logging.basicConfig(level=logging.DEBUG)
+import requests_mock
+import unittest
+import dlipower
 
 OFF_HTML="""<html>
 <head>
@@ -437,49 +440,43 @@ window.open('http://www.digital-loggers.com/register.html?SN=0000331011');
 </body>
 </html>
 """
-URLS={'index.htm':OFF_HTML,'outlet?1=OFF':OFF_HTML,'outlet?1=ON':ON_HTML}
-
-def mock_response(req):
-    url= req.get_full_url().split('/')[-1]
-    if url in URLS.keys():
-        resp = six.moves.urllib.response.addinfourl(
-            six.StringIO(URLS[url]), "mock message", req.get_full_url()
-        )
-        resp.code = 200
-        resp.msg = "OK"
-        return resp
-
-class MyHTTPHandler(urllib2.HTTPHandler):
-    def http_open(self, req):
-        return mock_response(req)
+URLS = {
+    'index.htm': OFF_HTML,
+    'outlet?1=OFF': OFF_HTML,
+    'outlet?1=ON': ON_HTML
+}
 
 
 class TestPowerswitch(unittest.TestCase):
     def setUp(self):
         """ Set up the mock objects to do our unit tests """
-        my_opener = urllib2.build_opener(MyHTTPHandler)
-        urllib2.install_opener(my_opener)
         self.p = dlipower.PowerSwitch(hostname='lpc.digital-loggers.com')
 
     def test_status(self):
         """ Test the status method of the PowerSwitch object """
-        URLS['index.htm']=OFF_HTML
-        status=self.p.status(1)
-        self.assertEqual(status, 'OFF')
+        with requests_mock.mock() as m:
+            m.get('http://lpc.digital-loggers.com/index.htm', text=OFF_HTML)
+            status = self.p.status(1)
+            print(status)
+            self.assertEqual(status, 'OFF')
 
     def test_off(self):
         """ Test the status method of the PowerSwitch object """
-        self.p.off(1)
-        URLS['index.htm']=OFF_HTML
-        status=self.p.status(1)
-        self.assertEqual(status, 'OFF')
+        with requests_mock.mock() as m:
+            m.get('http://lpc.digital-loggers.com/outlet?1=OFF', text=OFF_HTML)
+            m.get('http://lpc.digital-loggers.com/index.htm', text=OFF_HTML)
+            self.p.off(1)
+            status = self.p.status(1)
+            self.assertEqual(status, 'OFF')
 
     def test_on(self):
         """ Test the status method of the PowerSwitch object """
-        self.p.on(1)
-        URLS['index.htm']=ON_HTML
-        status=self.p.status(1)
-        self.assertEqual(status, 'ON')
+        with requests_mock.mock() as m:
+            m.get('http://lpc.digital-loggers.com/outlet?1=ON', text=ON_HTML)
+            m.get('http://lpc.digital-loggers.com/index.htm', text=ON_HTML)
+            self.p.on(1)
+            status = self.p.status(1)
+            self.assertEqual(status, 'ON')
 
     def test_outlet(self):
         ol = dlipower.Outlet(None, 1, state='OFF')

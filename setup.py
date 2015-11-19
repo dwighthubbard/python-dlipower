@@ -1,3 +1,7 @@
+# Copyright (c) 2009-2015, Dwight Hubbard
+# Copyrights licensed under the New BSD License
+# See the accompanying LICENSE.txt file for terms.
+
 import json
 import os
 from setuptools import setup
@@ -83,11 +87,7 @@ def get_and_update_metadata():
 metadata = get_and_update_metadata()
 
 
-requires = ['six']
-if sys.version > '3.0.0':
-    requires.append('BeautifulSoup4')
-else:
-    requires.append('BeautifulSoup')
+requires = ['six', 'requests', 'beautifulsoup4']
 
 
 print('Setting up under python version %s' % sys.version)

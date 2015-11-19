@@ -1,1 +1,2 @@
 include README.md
+include dlipower/package_metadata.json
