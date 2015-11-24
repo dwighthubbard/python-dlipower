@@ -77,7 +77,8 @@ def get_and_update_metadata():
             'version': git.version,
             'git_hash': git.hash,
             'git_origin': git.origin,
-            'git_branch': git.branch
+            'git_branch': git.branch,
+            'git_version': git.version
         }
         with open(METADATA_FILENAME, 'w') as fh:
             json.dump(metadata, fh)
