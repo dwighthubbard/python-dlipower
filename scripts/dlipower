@@ -24,12 +24,8 @@ Digital Loggers Web Power Switch management
                 WebPowerSwitch V
                 Ethernet Power Controller III
 """
-
-import logging
-# logging.basicConfig(level=logging.DEBUG)
-import os
+from __future__ import print_function
 import sys
-import time
 import optparse
 from dlipower import PowerSwitch
 from dlipower import DLIPowerException
@@ -49,8 +45,8 @@ def _block_to_list(block):
             if in_range:
                 val2 = val
                 val2_len = len(val2)
-                #result+=range(int(val1),int(val2)+1)
-                for value in range(int(val1), int(val2) + 1):
+                # result += range(int(val1),int(val2)+1)
+                for value in outlet_range(int(val1), int(val2) + 1):
                     result.append(str(value).zfill(val2_len))
                 val = ''
                 val1 = None
@@ -68,15 +64,16 @@ def _block_to_list(block):
             val += letter
     return result
 
-def __command_on_outlets(action, range):
+
+def __command_on_outlets(action, outlet_range):
     """ Execute given action on switch with range argument.
         Handle exceptions.
     """
     try:
-        return switch.command_on_outlets(action, range)
-    except DLIPowerException, e:
+        return switch.command_on_outlets(action, outlet_range)
+    except DLIPowerException as e:
         if not options.quiet:
-            print >> sys.stderr, str(e)
+            print(e, file=sys.stderr)
         sys.exit(1)
  
 
@@ -116,25 +113,25 @@ if __name__ == "__main__":
         switch.save_configuration()
     if len(args):
         operation = args[0].lower()
-        range = _block_to_list(','.join(args[1:]))
+        outlet_range = _block_to_list(','.join(args[1:]))
         if len(args) > 1:
             if operation in ['status']:
-                print(','.join(__command_on_outlets('status', range)))
+                print(','.join(__command_on_outlets('status', outlet_range)))
             elif operation in ['on', 'poweron']:
-                rc = __command_on_outlets('on', range)
+                rc = __command_on_outlets('on', outlet_range)
                 if rc and not options.quiet:
-                    print >> sys.stderr, "Power on operation failed"
+                    print("Power on operation failed", file=sys.stderr)
                 sys.exit(rc)
             elif operation in ['off', 'poweroff']:
-                rc = __command_on_outlets('off', range)
+                rc = __command_on_outlets('off', outlet_range)
                 if rc and not options.quiet:
-                    print >> sys.stderr, "Power off operation failed"
+                    print("Power off operation failed", file=sys.stderr)
             elif operation in ['cycle']:
-                sys.exit(__command_on_outlets('cycle', range))
+                sys.exit(__command_on_outlets('cycle', outlet_range))
             elif operation in ['get_name', 'getname', 'get_outlet_name',
                                'getoutletname']:
                 print(','.join(
-                    __command_on_outlets('get_outlet_name', range)))
+                    __command_on_outlets('get_outlet_name', outlet_range)))
             elif operation in ['set_name', 'setname', 'set_outlet_name',
                                'setoutletname']:
                 sys.exit(switch.set_outlet_name(args[1], args[2]))

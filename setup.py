@@ -101,8 +101,8 @@ setup(
     author_email="dwight@dwighthubbard.com",
     url="https://github.com/dwighthubbard/python-dlipower/",
     license='BSD',
-    packages=["dlipower", ],
-    scripts=["dlipower/dlipower", "dlipower/fence_dli"],
+    packages=["dlipower"],
+    scripts=["scripts/dlipower", "scripts/fence_dli"],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
