@@ -478,6 +478,16 @@ class TestPowerswitch(unittest.TestCase):
             status = self.p.status(1)
             self.assertEqual(status, 'ON')
 
+    def test_cycle(self):
+        """ Test the status method of the PowerSwitch object """
+        with requests_mock.mock() as m:
+            m.get('http://lpc.digital-loggers.com/outlet?1=ON', text=ON_HTML)
+            m.get('http://lpc.digital-loggers.com/outlet?1=OFF', text=OFF_HTML)
+            m.get('http://lpc.digital-loggers.com/index.htm', text=ON_HTML)
+            self.p.cycle(1)
+            status = self.p.status(1)
+            self.assertEqual(status, 'ON')
+
     def test_on_state_setter(self):
         """ Test the state setter to turn on an outlet """
         with requests_mock.mock() as m:
@@ -497,10 +507,12 @@ class TestPowerswitch(unittest.TestCase):
             self.assertEqual(status, 'OFF')
 
     def test_powerswitch_user_password(self):
-        r = dlipower.PowerSwitch(userid='foo', password='bar', hostname='goober.com')
+        r = dlipower.PowerSwitch(userid='foo', password='bar', hostname='goober.com', cycletime=10)
         self.assertEqual(r.userid, 'foo')
         self.assertEqual(r.password, 'bar')
         self.assertEqual(r.hostname, 'goober.com')
+        self.assertIsInstance(r.cycletime, float)
+        self.assertEqual(r.cycletime, 10.0)
 
     def test_outlet(self):
         ol = dlipower.Outlet(None, 1, state='OFF')
