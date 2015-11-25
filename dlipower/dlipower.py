@@ -69,6 +69,9 @@ class DLIPowerException(Exception):
 
 
 class Outlet(object):
+    """
+    A power outlet class
+    """
     use_description = True
 
     def __init__(self, switch, outlet_number, description=None, state=None):
@@ -211,11 +214,14 @@ class PowerSwitch(object):
             status = self.statuslist()[index.start:index.stop]
         else:
             status = [self.statuslist()[index]]
-        for s in status:
-            o = Outlet(
-                switch=self, outlet_number=s[0], description=s[1], state=s[2]
+        for outlet_status in status:
+            power_outlet = Outlet(
+                switch=self,
+                outlet_number=outlet_status[0],
+                description=outlet_status[1],
+                state=outlet_status[2]
             )
-            outlets.append(o)
+            outlets.append(power_outlet)
         if len(outlets) == 1:
             return outlets[0]
         return outlets
@@ -289,10 +295,10 @@ class PowerSwitch(object):
                 if plug_name and plug_name.strip() == outlet.strip():
                     return int(plug[0])
         try:
-            outletInt = int(outlet)
-            if outletInt <= 0 or outletInt > self.__len__():
-                raise DLIPowerException('Outlet number %d out of range' % outletInt)
-            return outletInt
+            outlet_int = int(outlet)
+            if outlet_int <= 0 or outlet_int > self.__len__():
+                raise DLIPowerException('Outlet number %d out of range' % outlet_int)
+            return outlet_int
         except ValueError:
             raise DLIPowerException('Outlet name \'%s\' unknown' % outlet)
 
@@ -431,5 +437,4 @@ class PowerSwitch(object):
 
 
 if __name__ == "__main__":
-    t = PowerSwitch()
-    t.printstatus()
+    PowerSwitch().printstatus()
