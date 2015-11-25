@@ -13,7 +13,7 @@ function status_message {
   echo "    $1"
 }
 
-virtualenv -p python2.7 smoketest
+virtualenv -p python3.4 smoketest
 source smoketest/bin/activate
 pip install .
 
@@ -21,15 +21,15 @@ for host in `grep -v ^# test/test_host_list`
 do
 	header "Testing $host"
 	status_message "Running Status:"
-	./dlipower/dlipower --hostname $host --password "4321" |sed "s/^/    /g"
+	dlipower --hostname $host --password "4321" |sed "s/^/    /g"
 	echo
 	status_message "Testing power management commands, each line should show the same command on both sides of the : character"
-	status_message "Forcing power to OFF: `./dlipower/dlipower --hostname $host off 1` `./dlipower/dlipower --hostname $host status 1`"
-        status_message "Powering ON: `./dlipower/dlipower --hostname $host on 1` `./dlipower/dlipower --hostname $host status 1`"
-        status_message "Powering OFF: `./dlipower/dlipower --hostname $host off 1` `./dlipower/dlipower --hostname $host status 1`"
+	status_message "Forcing power to OFF: `dlipower --hostname $host off 1` `dlipower --hostname $host status 1`"
+        status_message "Powering ON: `dlipower --hostname $host on 1` `dlipower --hostname $host status 1`"
+        status_message "Powering OFF: `dlipower --hostname $host off 1` `dlipower --hostname $host status 1`"
         echo
         status_message "Testing configuration commands, each line should show the same result on both sides of the : character"
-        status_message "Setting port name to PYTHON_TEST `./dlipower/dlipower --hostname $host set_outlet_name 1 PYTHON_TEST` : `./dlipower/dlipower --hostname $host get_outlet_name 1`"
+        status_message "Setting port name to PYTHON_TEST `dlipower --hostname $host set_outlet_name 1 PYTHON_TEST` : `dlipower --hostname $host get_outlet_name 1`"
         echo
 done
 
