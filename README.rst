@@ -1,22 +1,22 @@
 Digital Loggers Power Management Python Plugin
 **********************************************
 
-.. image:: https://travis-ci.org/dwighthubbard/python-dlipower.svg?branch=master
-    :target: https://travis-ci.org/dwighthubbard/python-dlipower
+.. image:: https://img.shields.io/travis/dhubbard/python-dlipower.svg
+    :target: https://travis-ci.org/dhubbard/python-dlipower
 
-.. image:: https://coveralls.io/repos/dwighthubbard/python-dlipower/badge.svg
-    :target: https://coveralls.io/r/dwighthubbard/python-dlipower
+.. image:: https://img.shields.io/coveralls/dhubbard/python-dlipower.svg
+  :target: https://coveralls.io/r/dhubbard/python-dlipower
 
-.. image:: https://pypip.in/download/dlipower/badge.svg
+.. image:: https://img.shields.io/pypi/dm/dlipower.svg
     :target: https://pypi.python.org/pypi/dlipower/
 
-.. image:: https://pypip.in/version/dlipower/badge.svg
-    :target: https://pypi.python.org/pypi/dlipower
-
-.. image:: https://pypip.in/py_versions/dlipower/badge.svg
+.. image:: https://img.shields.io/pypi/v/dlipower.svg
     :target: https://pypi.python.org/pypi/dlipower/
 
-.. image:: https://pypip.in/license/dlipower/badge.svg
+.. image:: https://img.shields.io/badge/python-2.7,3.4,3.5,pypy-blue.svg
+    :target: https://pypi.python.org/pypi/dlipower/
+
+.. image:: https://img.shields.io/pypi/l/dlipower.svg
     :target: https://pypi.python.org/pypi/dlipower/
 
 .. image:: https://readthedocs.org/projects/dlipower/badge/?version=latest
@@ -41,6 +41,7 @@ SUPPORTED DEVICES
 =================
 This module has been tested against the following 
 Digital Loggers Power network power switches:
+
 * WebPowerSwitch II
 * WebPowerSwitch III
 * WebPowerSwitch IV
