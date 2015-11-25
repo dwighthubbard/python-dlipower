@@ -496,6 +496,12 @@ class TestPowerswitch(unittest.TestCase):
             status = self.p.status(1)
             self.assertEqual(status, 'OFF')
 
+    def test_powerswitch_user_password(self):
+        r = dlipower.PowerSwitch(userid='foo', password='bar', hostname='goober.com')
+        self.assertEqual(r.userid, 'foo')
+        self.assertEqual(r.password, 'bar')
+        self.assertEqual(r.hostname, 'goober.com')
+
     def test_outlet(self):
         ol = dlipower.Outlet(None, 1, state='OFF')
         self.assertEqual(ol.switch, None)
