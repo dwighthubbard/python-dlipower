@@ -4,12 +4,12 @@
    contain the root `toctree` directive.
 
 dlipower documentation
-=========================
+======================
 
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
 
    dlipower_module
    commandline
