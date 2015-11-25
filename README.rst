@@ -2,10 +2,10 @@ Digital Loggers Power Management Python Plugin
 **********************************************
 
 .. image:: https://img.shields.io/travis/dhubbard/python-dlipower.svg
-    :target: https://travis-ci.org/dhubbard/python-dlipower
+    :target: https://travis-ci.org/dwighthubbard/python-dlipower
 
 .. image:: https://img.shields.io/coveralls/dhubbard/python-dlipower.svg
-  :target: https://coveralls.io/r/dhubbard/python-dlipower
+  :target: https://coveralls.io/r/dwighthubbard/python-dlipower
 
 .. image:: https://img.shields.io/pypi/dm/dlipower.svg
     :target: https://pypi.python.org/pypi/dlipower/
