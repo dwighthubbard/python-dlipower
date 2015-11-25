@@ -288,7 +288,14 @@ class PowerSwitch(object):
                 plug_name = plug[1]
                 if plug_name and plug_name.strip() == outlet.strip():
                     return int(plug[0])
-        return int(outlet)
+        try:
+            outletInt = int(outlet)
+            if outletInt <= 0 or outletInt > self.__len__():
+                raise DLIPowerException('Outlet number %d out of range' % outletInt)
+            return outletInt
+        except ValueError:
+            raise DLIPowerException('Outlet name \'%s\' unknown' % outlet)
+
 
     def get_outlet_name(self, outlet=0):
         """ Return the name of the outlet """
