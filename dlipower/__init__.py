@@ -15,12 +15,12 @@ __git_hash__ = str("")
 __source_url__ = str('')
 
 # noinspection PyUnresolvedReferences
-_metadata_file = os.path.join(
+__metadata_filename__ = os.path.join(
     os.path.dirname(__file__),
     'package_metadata.json'
 )
-if os.path.exists(_metadata_file):  # pragma: no cover
-    with open(_metadata_file) as fh:
+if os.path.exists(__metadata_filename__):  # pragma: no cover
+    with open(__metadata_filename__) as fh:
         _package_metadata = json.load(fh)
         __version__ = str(_package_metadata['version'])
         __git_version__ = str(_package_metadata['git_version'])
