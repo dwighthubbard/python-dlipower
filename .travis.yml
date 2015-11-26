@@ -1,23 +1,30 @@
 language: python
 python: 2.7
 env:
-  - TOX_ENV=py27
-  - TOX_ENV=py34
-  - TOX_ENV=py35
-  - TOX_ENV=pypy
+- TOX_ENV=py27
+- TOX_ENV=py34
+- TOX_ENV=py35
+- TOX_ENV=pypy
 matrix:
   fast_finish: true
   allow_failures:
-    - env:
-      - TOX_ENV=pypy
-      - TOX_ENV=build_docs
+  - env:
+    - TOX_ENV=pypy
+    - TOX_ENV=build_docs
 install:
-  - sudo apt-get update -qq
-  - pip install --upgrade pip setuptools tox virtualenv coveralls
+- sudo apt-get update -qq
+- pip install --upgrade pip setuptools tox virtualenv coveralls
 script:
-  - tox -v -v -e $TOX_ENV
-after_success:
-  coveralls
+- tox -v -v -e $TOX_ENV
+after_success: coveralls
 after_failure:
-  - for X in .tox/$TOX_ENV/log/*; do echo "$X\n"; cat "$X"; echo "\n\n"; done
-  - echo "pip.log\n"; cat $HOME/.pip/pip.log
+- for X in .tox/$TOX_ENV/log/*; do echo "$X\n"; cat "$X"; echo "\n\n"; done
+- echo "pip.log\n"; cat $HOME/.pip/pip.log
+deploy:
+  provider: pypi
+  user: dlipowerci
+  password:
+    secure: gYEgbK74yBOhHP+EWlnR01L9Z+EKkuTbYdgr6tSvL05DuCyB0AGs0aPD+V80+eA1BWlIJq7CfPxkWfHC5vin+eLFL8PBRuEkjI2nz+PFG72UZNkImVdc4ECKwuUVLe2szj/FX8fjBmsTkpggnuWtQPxRzui76EQ+HDrDLz6P95A=
+  on:
+    tags: false
+    branch: master
