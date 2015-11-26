@@ -66,8 +66,10 @@ Example
 
     print('The powerstate of the first outlet is currently', switch[0].state)
 
+    print('Turning on the second outlet')
+    switch[1]
     print('Renaming the first outlet as "Traffic light"')
-    switch[0].description = 'Traffic light'
+    switch[0].name = 'Traffic light'
 
     print('The current status of the powerswitch is:')
     print(switch)

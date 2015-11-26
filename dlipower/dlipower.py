@@ -78,6 +78,8 @@ class Outlet(object):
         self.switch = switch
         self.outlet_number = outlet_number
         self.description = description
+        if not description:
+            self.description = str(outlet_number)
         self._state = state
 
     def __unicode__(self):
@@ -92,7 +94,7 @@ class Outlet(object):
         return self.__unicode__()
 
     def __repr__(self):
-        return self.__unicode__()
+        return "<dlipower_outlet '%s'>" % self.__unicode__()
 
     def _repr_html_(self):  # pragma: no cover
         """ Display representation as an html table when running in ipython """
@@ -130,6 +132,16 @@ class Outlet(object):
         :return:
         """
         return self.switch.set_outlet_name(self.outlet_number, new_name)
+
+    @property
+    def name(self):
+        """ Return the name or description of the outlet """
+        return self.switch.get_outlet_name(self.outlet_number)
+
+    @name.setter
+    def name(self, new_name):
+        """ Set the name of the outlet """
+        self.rename(new_name)
 
 
 class PowerSwitch(object):
@@ -184,7 +196,7 @@ class PowerSwitch(object):
             return "Digital Loggers Web Powerswitch " \
                    "%s (UNCONNECTED)" % self.hostname
         output = 'DLIPowerSwitch at %s\n' \
-                 'Outlet\t%-15.15s\tState\n' % (self.hostname, 'Hostname')
+                 'Outlet\t%-15.15s\tState\n' % (self.hostname, 'Name')
         for item in self.statuslist():
             output += '%d\t%-15.15s\t%s\n' % (item[0], item[1], item[2])
         return output
@@ -389,7 +401,7 @@ class PowerSwitch(object):
                 "switch at %s" % self.hostname
             )
             return None
-        print('Outlet\t%-15.15s\tState' % 'Hostname')
+        print('Outlet\t%-15.15s\tState' % 'Name')
         for item in self.statuslist():
             print('%d\t%-15.15s\t%s' % (item[0], item[1], item[2]))
         return

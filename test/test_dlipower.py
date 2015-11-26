@@ -9,6 +9,8 @@ logging.basicConfig(level=logging.DEBUG)
 import requests_mock
 import unittest
 import dlipower
+import vcr
+
 
 OFF_HTML="""<html>
 <head>
@@ -448,6 +450,7 @@ URLS = {
 
 
 class TestPowerswitch(unittest.TestCase):
+
     def setUp(self):
         """ Set up the mock objects to do our unit tests """
         self.p = dlipower.PowerSwitch(hostname='lpc.digital-loggers.com')
@@ -497,6 +500,15 @@ class TestPowerswitch(unittest.TestCase):
             status = self.p.status(1)
             self.assertEqual(status, 'ON')
 
+    def test_on_outlet(self):
+        """ Test the state setter to turn on an outlet """
+        with requests_mock.mock() as m:
+            m.get('http://lpc.digital-loggers.com/outlet?1=ON', text=ON_HTML)
+            m.get('http://lpc.digital-loggers.com/index.htm', text=ON_HTML)
+            self.p[0].on()
+            status = self.p.status(1)
+            self.assertEqual(status, 'ON')
+
     def test_off_state_setter(self):
         """ Test the state setter to turn off an outlet """
         with requests_mock.mock() as m:
@@ -514,12 +526,53 @@ class TestPowerswitch(unittest.TestCase):
         self.assertIsInstance(r.cycletime, float)
         self.assertEqual(r.cycletime, 10.0)
 
+    @vcr.use_cassette(cassette_library_dir='test/fixtures')
+    def test_powerswitch_repr(self):
+        print(self.p.__repr__())
+        self.assertIn('DLIPowerSwitch at lpc.digital-loggers.com', self.p.__repr__())
+
+    @vcr.use_cassette(cassette_library_dir='test/fixtures')
+    def test_powerswitch_repr_html(self):
+        self.assertIn(
+            '<tr><th colspan="3">DLI Web Powerswitch at lpc.digital-loggers.com</th></tr>',
+            self.p._repr_html_()
+        )
+
+    @vcr.use_cassette(cassette_library_dir='test/fixtures')
+    def test_powerswitch_verify(self):
+        self.p.verify()
+
+    @vcr.use_cassette(cassette_library_dir='test/fixtures')
+    def test_outlet_set_name(self):
+        self.p[0].name='goober'
+        self.assertEqual(self.p.get_outlet_name(1), 'goober')
+
+    @vcr.use_cassette(cassette_library_dir='test/fixtures')
+    def test_determine_outlet(self):
+        self.p[0].name='goober'
+        self.assertEqual(self.p.determine_outlet('goober'), 1)
+
+    @vcr.use_cassette(cassette_library_dir='test/fixtures')
+    def test_cycle(self):
+        self.p[0].off()
+        self.p.cycle(1)
+        self.assertEqual(self.p[0].state, 'ON')
+
+    @unittest.skip
+    @vcr.use_cassette(cassette_library_dir='test/fixtures')
+    def test_command_on_outlets(self):
+        for i in range(0, 5):
+            self.p[i].off()
+        self.p.command_on_outlets('ON', range(1,6))
+        for i in range(0, 5):
+            self.assertEqual(self.p[i].state, 'ON')
+
     def test_outlet(self):
         ol = dlipower.Outlet(None, 1, state='OFF')
         self.assertEqual(ol.switch, None)
         self.assertEqual(ol.outlet_number, 1)
         self.assertEqual(ol.__str__(), '1:OFF')
-        self.assertEqual(ol.__repr__(), '1:OFF')
+        self.assertEqual(ol.__repr__(), "<dlipower_outlet '1:OFF'>")
         self.assertEqual(ol.state, 'OFF')
 
     def tearDown(self):
