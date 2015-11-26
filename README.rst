@@ -1,5 +1,5 @@
-Digital Loggers Power Management Python Plugin
-**********************************************
+Digital Loggers Network Power Switch Python Module
+**************************************************
 
 .. image:: https://img.shields.io/travis/dwighthubbard/python-dlipower.svg
     :target: https://travis-ci.org/dwighthubbard/python-dlipower
