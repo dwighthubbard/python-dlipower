@@ -10,6 +10,7 @@ matrix:
 install:
 - pip install --upgrade pip setuptools detox virtualenv coveralls
 script:
+- git rev-list HEAD|wc -l
 - detox
 after_success: coveralls
 after_failure:
