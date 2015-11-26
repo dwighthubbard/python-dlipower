@@ -24,14 +24,19 @@ class Git(object):
             self.version_list = version.split('.')
 
     @property
+    def revision(self):
+        git_rev = len(os.popen('git rev-list HEAD').readlines())
+        if git_rev == 0:
+            git_rev = self.version_list[-1]
+        return str(git_rev)
+
+    @property
     def version(self):
         """
         Generate a Unique version value from the git information
         :return:
         """
-        git_rev = len(os.popen('git rev-list HEAD').readlines())
-        if git_rev != 0:
-            self.version_list[-1] = '%d' % git_rev
+        self.version_list[-1] = self.revision
         version = '.'.join(self.version_list)
         return version
 
@@ -73,8 +78,12 @@ def get_and_update_metadata():
             metadata = json.load(fh)
     else:
         git = Git()
+        revision = os.environ.get('TRAVIS_BUILD_NUMBER', git.revision)
+        split_version = git.version.split('.')
+        split_version[-1] = revision
+        version = '.'.join(split_version)
         metadata = {
-            'version': git.version,
+            'version': version,
             'git_hash': git.hash,
             'git_origin': git.origin,
             'git_branch': git.branch,
