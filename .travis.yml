@@ -13,6 +13,7 @@ matrix:
     - TOX_ENV=build_docs
 install:
 - sudo apt-get update -qq
+- sudo apt-get install python3.5
 - pip install --upgrade pip setuptools tox virtualenv coveralls
 script:
 - tox -v -v -e $TOX_ENV
@@ -26,5 +27,4 @@ deploy:
   password:
     secure: gYEgbK74yBOhHP+EWlnR01L9Z+EKkuTbYdgr6tSvL05DuCyB0AGs0aPD+V80+eA1BWlIJq7CfPxkWfHC5vin+eLFL8PBRuEkjI2nz+PFG72UZNkImVdc4ECKwuUVLe2szj/FX8fjBmsTkpggnuWtQPxRzui76EQ+HDrDLz6P95A=
   on:
-    tags: false
     branch: master
