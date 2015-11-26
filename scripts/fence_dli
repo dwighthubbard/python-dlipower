@@ -17,7 +17,7 @@ network power switches:
 
 It may work for other models of Digital Loggers power switches as well
 """
-
+from __future__ import print_function
 import dlipower
 import sys
 
@@ -50,11 +50,15 @@ if __name__ == "__main__":
 
         # Print a warning about unknown options that where passed
         if len(unknown_options):
-            print >> sys.stderr,'Unknown options, ignoring: ',' '.join(unknown_options)
+            print('Unknown options, ignoring: ',' '.join(unknown_options), file=sys.stderr)
 
     # Make sure we got all the needed options to do the action requested
     if not set(['ipaddr','login','passwd','action']).issubset(set(options)):
-        print >> sys.stderr,'Did not receive all required options, missing',' '.join(list(set(['ipaddr','login','passwd','action']).difference(set(options))))
+        print(
+            'Did not receive all required options, missing',
+            ' '.join(list(set(['ipaddr','login','passwd','action']).difference(set(options)))),
+            file=sys.stderr
+        )
         sys.exit(1)
         	
     if 'port' not in options.keys() and options['action'] in ['off','on','reboot','status']:
