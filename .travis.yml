@@ -10,9 +10,7 @@ matrix:
 install:
 - pip install --upgrade pip setuptools detox virtualenv coveralls
 script:
-- git branch -v
-- git rev-list HEAD|wc -l
-- detox
+- detox -v
 after_success: coveralls
 after_failure:
 - for X in .tox/$TOX_ENV/log/*; do echo "$X\n"; cat "$X"; echo "\n\n"; done
