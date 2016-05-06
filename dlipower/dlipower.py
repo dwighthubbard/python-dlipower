@@ -3,27 +3,99 @@
 # Copyrights licensed under the New BSD License
 # See the accompanying LICENSE.txt file for terms.
 """
-###############################################################
-Digital Loggers Web Power Switch management
-###############################################################
- Description: This is both a module and a script
+Digital Loggers Web Power Switch Management
 
-              The module provides a python class named
-              powerswitch that allows managing the web power
-              switch from python programs.
+The module provides a python class named
+powerswitch that allows managing the web power
+switch from python programs.
 
-              When run as a script this acts as a command
-              line utility to manage the DLI Power switch.
+When run as a script this acts as a command line utility to 
+manage the DLI Power switch.
 
-              This module has been tested against the following
-              Digital Loggers Power network power switches:
-                WebPowerSwitch II
-                WebPowerSwitch III
-                WebPowerSwitch IV
-                WebPowerSwitch V
-                Ethernet Power Controller III
+Notes
+-----
+This module has been tested against the following
+Digital Loggers Power network power switches:
+  WebPowerSwitch II
+  WebPowerSwitch III
+  WebPowerSwitch IV
+  WebPowerSwitch V
+  Ethernet Power Controller III
 
- Author: Dwight Hubbard d@dhub.me
+Examples
+--------
+
+*Connecting to a Digital Loggers Power switch*
+
+>>> from dlipower import PowerSwitch
+>>> switch = PowerSwitch(hostname='lpc.digital-loggers.com', userid='admin', password='4321')
+
+*Getting the power state (status) from the switch*
+Printing the switch object will print a table with the
+Outlet Number, Name and Power State
+
+>>> switch
+DLIPowerSwitch at lpc.digital-loggers.com
+Outlet	Name           	State
+1	Battery Charger	     OFF
+2	K3 Power ON    	     ON
+3	Cisco Router   	     OFF
+4	WISP access poi	     ON
+5	Shack Computer 	     OFF
+6	Router         	     OFF
+7	2TB Drive      	     ON
+8	Cable Modem1   	     ON
+
+*Getting the name and powerswitch of the first outlet*
+The PowerSwitch has a series of Outlet objects, they
+will display their name and state if printed.
+
+>>> switch[0]
+<dlipower_outlet 'Traffic light:OFF'>
+
+*Renaming the first outlet*
+Changing the "name" attribute of an outlet will
+rename the outlet on the powerswitch.
+
+>>> switch[0].name = 'Battery Charger'
+>>> switch[0]
+<dlipower_outlet 'Battery Charger:OFF'>
+
+*Turning the first outlet on*
+Individual outlets can be accessed uses normal
+list slicing operators.
+
+>>> switch[0].on()
+False
+>>> switch[0]
+<dlipower_outlet 'Battery Charger:ON'>
+
+*Turning all outlets off*
+The PowerSwitch() object supports iterating over
+the available outlets.
+
+>>> for outlet in switch:
+...     outlet.off()
+...
+False
+False
+False
+False
+False
+False
+False
+False
+>>> switch
+DLIPowerSwitch at lpc.digital-loggers.com
+Outlet	Name           	State
+1	Battery Charger	OFF
+2	K3 Power ON    	OFF
+3	Cisco Router   	OFF
+4	WISP access poi	OFF
+5	Shack Computer 	OFF
+6	Router         	OFF
+7	2TB Drive      	OFF
+8	Cable Modem1   	OFF
 """
 
 from __future__ import print_function
