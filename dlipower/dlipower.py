@@ -358,11 +358,17 @@ class PowerSwitch(object):
             Return None on failure
         """
         full_url = "http://%s/%s" % (self.hostname, url)
-        request = requests.get(full_url, auth=(self.userid, self.password,))
         result = None
+        request = None
         for i in range(0, self.retries):
-            result = request.content
+            try:
+                request = requests.get(full_url, auth=(self.userid, self.password,),  timeout=self.timeout)
+            except requests.exceptions.RequestException as e:
+                logger.warning("Request timed out - %d retries left.", self.retries - i - 1)
+                logger.debug("Catched exception %s", str(e))
+                continue
             if request.status_code == 200:
+                result = request.content
                 break
         logger.debug('Response code: %s', request.status_code)
         return result
