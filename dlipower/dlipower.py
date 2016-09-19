@@ -359,18 +359,19 @@ class PowerSwitch(object):
         """
         full_url = "http://%s/%s" % (self.hostname, url)
         result = None
-        request = None
         for i in range(0, self.retries):
             try:
                 request = requests.get(full_url, auth=(self.userid, self.password,),  timeout=self.timeout)
+                logger.debug('Response code: %s', request.status_code)
+                if request.status_code == 200:
+                    result = request.content
+                    break
             except requests.exceptions.RequestException as e:
                 logger.warning("Request timed out - %d retries left.", self.retries - i - 1)
                 logger.debug("Catched exception %s", str(e))
                 continue
-            if request.status_code == 200:
-                result = request.content
-                break
-        logger.debug('Response code: %s', request.status_code)
+        if result is None:
+            raise DLIPowerException('Communication failure')
         return result
 
     def determine_outlet(self, outlet=None):
