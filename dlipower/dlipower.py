@@ -364,8 +364,12 @@ class PowerSwitch(object):
             try:
                 request = requests.get(full_url, auth=(self.userid, self.password,),  timeout=self.timeout)
             except requests.exceptions.RequestException as e:
-                logger.warning("Request timed out - %d retries left.", self.retries - i - 1)
-                logger.debug("Catched exception %s", str(e))
+                if self.retries - i - 1 == 0:
+                    raise DLIPowerException('All {} attempts to Get url "{}" failed.'
+                                            'The last attempt failed with exception:\n{}'
+                                            ''.format(self.retries, full_url, e))  
+                logger.warning('Get url "%s" failed with exception %s - %d retries left.', 
+                               full_url, str(e), self.retries - i - 1)  
                 continue
             if request.status_code == 200:
                 result = request.content
