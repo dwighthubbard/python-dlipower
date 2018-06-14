@@ -13,9 +13,9 @@ function status_message {
   echo "    $1"
 }
 
-virtualenv -p python3.4 smoketest
+python3.6 -m venv --clear smoketest
 source smoketest/bin/activate
-pip install .
+smoketest/bin/pip install --no-cache-dir -U .
 
 for host in `grep -v ^# test/test_host_list`
 do

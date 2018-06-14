@@ -100,6 +100,7 @@ Outlet	Name           	State
 
 from __future__ import print_function
 from bs4 import BeautifulSoup
+import hashlib
 import logging
 import multiprocessing
 import os
@@ -221,7 +222,7 @@ class PowerSwitch(object):
     __len = 0
 
     def __init__(self, userid=None, password=None, hostname=None, timeout=None,
-                 cycletime=None, retries=None):
+                 cycletime=None, retries=None, use_https=False):
         """
         Class initializaton
         """
@@ -250,7 +251,13 @@ class PowerSwitch(object):
             self.cycletime = float(cycletime)
         else:
             self.cycletime = config['cycletime']
+        self.scheme = 'http'
+        if use_https:
+            self.scheme = 'https'
+        self.base_url = '%s://%s' % (self.scheme, self.hostname)
         self._is_admin = True
+        self.session = requests.Session()
+        self.login()
 
     def __len__(self):
         """
@@ -310,6 +317,32 @@ class PowerSwitch(object):
             return outlets[0]
         return outlets
 
+    def login(self):
+        self.secure_login = False
+        self.session = requests.Session()
+        response = self.session.get(self.base_url, verify=False)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        fields = {}
+        for field in soup.find_all('input'):
+            name = field.get('name', None)
+            value = field.get('value', '')
+            if name:
+                fields[name] = value
+
+        fields['Username'] = self.userid
+        fields['Password'] = self.password
+
+        form_response = fields['Challenge'] + fields['Username'] + fields['Password'] + fields['Challenge']
+
+        m = hashlib.md5()
+        m.update(form_response.encode())
+        data = {'Username': 'admin', 'Password': m.hexdigest()}
+        headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+
+        response = self.session.post('%s/login.tgi' % self.base_url, headers=headers, data=data, timeout=self.timeout, verify=False)
+        if response.status_code == 200:
+            self.secure_login = True
+
     def load_configuration(self):
         """ Return a configuration dictionary """
         if os.path.isfile(CONFIG_FILE):
@@ -357,12 +390,15 @@ class PowerSwitch(object):
         """ Get a URL from the userid/password protected powerswitch page
             Return None on failure
         """
-        full_url = "http://%s/%s" % (self.hostname, url)
+        full_url = "%s/%s" % (self.base_url, url)
         result = None
         request = None
         for i in range(0, self.retries):
             try:
-                request = requests.get(full_url, auth=(self.userid, self.password,),  timeout=self.timeout)
+                if self.secure_login:
+                    request = self.session.get(full_url, timeout=self.timeout, verify=False)
+                else:
+                    request = requests.get(full_url, auth=(self.userid, self.password,), timeout=self.timeout, verify=False)
             except requests.exceptions.RequestException as e:
                 logger.warning("Request timed out - %d retries left.", self.retries - i - 1)
                 logger.debug("Catched exception %s", str(e))

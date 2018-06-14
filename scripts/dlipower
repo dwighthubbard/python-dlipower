@@ -97,6 +97,7 @@ if __name__ == "__main__":
     parser.add_option('--save_settings', dest='save_settings', default=False,
                       action='store_true',
                       help='Save the settings to the configuration file')
+    parser.add_option('--ssl', default=False, action='store_true', help='Use ssl to connect to the switch')
     parser.add_option(
         "--quiet", dest="quiet", default=False,
         action="store_true",
@@ -107,7 +108,7 @@ if __name__ == "__main__":
     switch = PowerSwitch(
         userid=options.user, password=options.password,
         hostname=options.hostname, timeout=options.timeout,
-        cycletime=options.cycletime
+        cycletime=options.cycletime, use_https=options.ssl
     )
     if options.save_settings:
         switch.save_configuration()
