@@ -12,6 +12,7 @@ class TestDLIPowerPro(VCRTestCase):
 
     def setUp(self):
         """ Set up the mock objects to do our unit tests """
+        super(TestDLIPowerPro, self).setUp()
         self.p = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password, use_https=self.use_https)
 
     def test__dlipower__statuslist(self):
@@ -78,9 +79,8 @@ class TestDLIPowerPro(VCRTestCase):
 
     def test_on_outlet(self):
         """ Test the state setter to turn on an outlet """
-        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password, use_https=self.use_https)
-        switch[0].on()
-        status = switch.status(1)
+        self.p[0].on()
+        status = self.p.status(1)
         self.assertEqual(status, 'ON')
 
     def test_off_state_setter(self):
@@ -118,6 +118,10 @@ class TestDLIPowerPro(VCRTestCase):
         self.p.command_on_outlets('ON', range(1,6))
         for i in range(0, 5):
             self.assertEqual(self.p[i].state, 'ON')
+
+
+class TestDLIPowerProNoSSL(TestDLIPowerPro):
+    use_https = False
 
 
 class TestDLIPowerLPC(TestDLIPowerPro):

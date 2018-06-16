@@ -42,6 +42,7 @@ SUPPORTED DEVICES
 This module has been tested against the following 
 Digital Loggers Power network power switches:
 
+* ProSwitch
 * WebPowerSwitch II
 * WebPowerSwitch III
 * WebPowerSwitch IV
@@ -54,7 +55,6 @@ Example
 
 .. code-block:: python
 
-    from __future__ import print_function
     import dlipower
 
     print('Connecting to a DLI PowerSwitch at lpc.digital-loggers.com')

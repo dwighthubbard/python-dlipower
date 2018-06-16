@@ -33,7 +33,7 @@ interactions:
         <td><input type=\"password\" name=\"Password\" size=\"16\"></td>\n</tr>\n\
         <tr class=\"right\">\n<td></td>\n<td><input onClick=\"calcResponse(); return\
         \ false;\" type=\"Submit\" value=\"OK\">\n<input type=\"hidden\" name=\"Challenge\"\
-        \ value=\"wupqC4aYnl7GRwxP\">\n</td></tr>\n</table>\n</form>\n</td></tr></table>\n\
+        \ value=\"RoVmX/f2IyC9AWL3\">\n</td></tr>\n</table>\n</form>\n</td></tr></table>\n\
         <script type=\"text/javascript\">\n<!--\ndocument.login.Username.focus();\n\
         //-->\n</script>\n<form name=\"secin\" id=\"secin\" action=\"/login.tgi\"\
         \ method=\"post\" accept-charset=\"UTF-8\">\n<div style=\"display:none\">\n\
@@ -45,7 +45,7 @@ interactions:
       Content-Type: [text/html; charset="utf-8"]
     status: {code: 200, message: OK}
 - request:
-    body: Username=admin&Password=ffe127ee3b4c49ae50e51f361b87b10d
+    body: Username=admin&Password=544a1e9675f99024d0cdddfa973356e9
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -87,7 +87,7 @@ interactions:
       Cache-Control: ['max-age=0, private, must-revalidate']
       Connection: [close]
       Content-Type: [text/html; charset="utf-8"]
-      Set-Cookie: [DLILPC="bWAi8Kp7HVCjU1J9"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="dnzIyMt1uSJlu0uS"; Version=1; Path=/]
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -95,7 +95,97 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="bWAi8Kp7HVCjU1J9"]
+      User-Agent: [python-requests/2.19.1]
+    method: GET
+    uri: http://epcr.digital-loggers.com/
+  response:
+    body: {string: "\n\n\n\n\n\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\
+        \ \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n<head><meta http-equiv=\"\
+        Content-Type\" content=\"text/html; charset=UTF-8\">\n<meta name=\"robots\"\
+        \ content=\"noindex, nofollow\">\n<meta http-equiv=\"refresh\" content=\"\
+        285\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\">\n\
+        <title>Power Controller DLI Controller\n</title>\n<script type=\"text/javascript\"\
+        \ src=\"/md5.js\"></script>\n<script type=\"text/javascript\">\n<!--\nwindow.addEventListener\
+        \ && window.addEventListener(\"pageshow\", function(event)\n{\n    if (event.persisted\
+        \ || (window.performance && window.performance.navigation && window.performance.navigation.type\
+        \ === 2))\n    {\n        /* Reload on attempts to go back to this page to\
+        \ obtain a new challenge. */\n        window.location.reload();\n    }\n});\n\
+        function calcResponse(){\nvar str;\nstr=document.login.Challenge.value+document.login.Username.value+document.login.Password.value+document.login.Challenge.value;\n\
+        document.secin.Password.value = hex_md5(str);\ndocument.secin.Username.value\
+        \ = document.login.Username.value;\ndocument.secin.submit();\n}//-->\n</script>\n\
+        </head>\n<body>\n<noscript>\n<table class=\"compact form\">\n<tr><td class=\"\
+        error border\">&nbsp;</td></tr>\n<tr><td class=\"error message\"><h1>Warning:\
+        \ Insecure Authentication</h1></td></tr>\n<tr><td class=\"error border\">&nbsp;</td></tr></table>\n\
+        </noscript>\n<table class=\"page\"><tr><td>\n<form name=\"login\" id=\"login\"\
+        \ action=\"/login.tgi\" method=\"post\" accept-charset=\"UTF-8\">\n<table\
+        \ class=\"compact form\">\n<tr>\n<td>User Name</td>\n<td><input type=\"text\"\
+        \ name=\"Username\" value=\"\" size=\"16\"></td>\n</tr>\n<tr>\n<td>Password</td>\n\
+        <td><input type=\"password\" name=\"Password\" size=\"16\"></td>\n</tr>\n\
+        <tr class=\"right\">\n<td></td>\n<td><input onClick=\"calcResponse(); return\
+        \ false;\" type=\"Submit\" value=\"OK\">\n<input type=\"hidden\" name=\"Challenge\"\
+        \ value=\"zSzjjcB79b/7pwKC\">\n</td></tr>\n</table>\n</form>\n</td></tr></table>\n\
+        <script type=\"text/javascript\">\n<!--\ndocument.login.Username.focus();\n\
+        //-->\n</script>\n<form name=\"secin\" id=\"secin\" action=\"/login.tgi\"\
+        \ method=\"post\" accept-charset=\"UTF-8\">\n<div style=\"display:none\">\n\
+        <input type=\"hidden\" name=\"Username\">\n<input type=\"hidden\" name=\"\
+        Password\">\n<input type=\"submit\">\n</div>\n</form>\n</body>\n</html>\n"}
+    headers:
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [close]
+      Content-Type: [text/html; charset="utf-8"]
+    status: {code: 200, message: OK}
+- request:
+    body: Username=admin&Password=cc8fa54a75e32616e2bf04af1c5b1bb5
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['56']
+      Content-Type: [application/x-www-form-urlencoded]
+      User-Agent: [python-requests/2.19.1]
+    method: POST
+    uri: http://epcr.digital-loggers.com/login.tgi
+  response:
+    body: {string: '
+
+
+
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+        <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="/style.css">
+
+        <title>Redirecting...</title>
+
+
+        <META HTTP-EQUIV="refresh" content="0; URL=/index.htm">
+
+
+        </head>
+
+
+        <body>
+
+        </body>
+
+
+        </html>
+
+        '}
+    headers:
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [close]
+      Content-Type: [text/html; charset="utf-8"]
+      Set-Cookie: [DLILPC="3GQ87z5a6Gli8wBY"; Version=1; Path=/]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Cookie: [DLILPC="3GQ87z5a6Gli8wBY"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://epcr.digital-loggers.com/index.htm
@@ -111,7 +201,7 @@ interactions:
         <script type=\"text/javascript\">\nvar dli={\n    serialNumber:\"EPCR5020000\"\
         \ ,\n    session: { expiry_time: new Date().getTime()+(1800)*1000 }\n};\n\
         </script>\n<script type=\"text/javascript\" src=\"/core.js\"></script>\n\n\
-        </head>\n<!-- state=fc lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
+        </head>\n<!-- state=e0 lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
         \n<td class=\"navbar\">\n    <!-- menu -->\n    <table class=\"menu\">\n \
         \   <tr><td class=\"item\">\n    <table class=\"menuInner\">\n\n\n    <tr><td\
         \ class=\"centered\">\n    <table><tr><td><a href=\"http://www.digital-loggers.com/O.html\"\
@@ -160,7 +250,7 @@ interactions:
         prot-partial\">Private configuration protection is enabled but ineffective:\n\
         SSH is enabled, which could be used to bypass protection</pre>\n\n       \
         \ </div>\n        </div>\n        </th>\n        </tr>\n\n        <tr class=\"\
-        uptime\">\n        <td>\n        Fri Jun 15 22:31:41 2018 <!-- 817443.63s\
+        uptime\">\n        <td>\n        Sat Jun 16 00:13:13 2018 <!-- 823536.08s\
         \ up -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
         timeout\">00:30:00</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
         \    <!-- /heading table -->\n\n\n    <br>\n\n    <!-- individual control\
@@ -174,32 +264,33 @@ interactions:
         \ -->\n\n\n    <tr class=\"bus\"><th colspan=\"2\" class=\"name\">Bus A:</th><th\
         \ colspan=\"3\" class=\"data\">122.0V 0.0A [ 000000.0 kWh  ]</th></tr>\n\n\
         <!-- RAW VA=0 CA=0 VAH=122 CAH=1.4e-45 -->\n\n<tr class=\"item\"><td class=\"\
-        centered\">1</td>\n<td>PYTHON_TEST</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n\
+        centered\">1</td>\n<td>goober</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n\
         </td><td>\n\n    <a  href=\"outlet?1=ON\">Switch ON</a>\n\n</td><td>\n\n<!--\
         \ \n\n<a  href=\"outlet?1=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n<tr class=\"\
         item\"><td class=\"centered\">2</td>\n<td>CCU 2</td><td>\n\n<b><font color=\"\
         red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?2=ON\">Switch ON</a>\n\
         \n</td><td>\n\n<!-- \n\n<a  href=\"outlet?2=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\
         \n<tr class=\"item\"><td class=\"centered\">3</td>\n<td>CCU 3</td><td>\n\n\
-        <b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?3=OFF\"\
-        >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">4</td>\n<td>CCU 4</td><td>\n\n\
-        <b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?4=OFF\"\
-        >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?4=CCL\">Cycle</a>\n\n</td></tr>\n\
-        \n    <tr class=\"bus\"><th colspan=\"2\" class=\"name\">Bus B:</th><th colspan=\"\
-        3\" class=\"data\">121.0V 0.0A [ 000000.0 kWh  ]</th></tr>\n\n<!-- RAW VB=0\
-        \ CB=0 VBH=121 CBH=5.63e-25 -->\n\n<tr class=\"item\"><td class=\"centered\"\
-        >5</td>\n<td>Decoder</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
-        </td><td>\n\n    <a  href=\"outlet?5=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
-        <a  href=\"outlet?5=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
-        \ class=\"centered\">6</td>\n<td>Encoder</td><td>\n\n<b><font color=\"green\"\
-        >ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\
-        \n</td><td>\n\n<a  href=\"outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"\
-        item\"><td class=\"centered\">7</td>\n<td>Outlet 7</td><td>\n\n<b><font color=\"\
-        green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\
-        \n</td><td>\n\n<a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"\
-        item\"><td class=\"centered\">8</td>\n<td>Outlet 8</td><td>\n\n<b><font color=\"\
-        green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\
+        <b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?3=ON\"\
+        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\
+        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">4</td>\n\
+        <td>CCU 4</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n\
+        \    <a  href=\"outlet?4=ON\">Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"\
+        outlet?4=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n    <tr class=\"bus\"><th\
+        \ colspan=\"2\" class=\"name\">Bus B:</th><th colspan=\"3\" class=\"data\"\
+        >122.0V 0.0A [ 000000.0 kWh  ]</th></tr>\n\n<!-- RAW VB=0 CB=0 VBH=122 CBH=5.99e-12\
+        \ -->\n\n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Decoder</td><td>\n\
+        \n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=ON\"\
+        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\
+        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">6</td>\n\
+        <td>Encoder</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\
+        \n    <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a  href=\"\
+        outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
+        centered\">7</td>\n<td>Outlet 7</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
+        </td><td>\n\n    <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
+        <a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
+        \ class=\"centered\">8</td>\n<td>Outlet 8</td><td>\n\n<b><font color=\"green\"\
+        >ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\
         \n</td><td>\n\n<a  href=\"outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n   \
         \ </table>\n    <!-- /individual control table -->\n\n    <br>\n\n<table class=\"\
         form\">\n<tr><td class=\"header\">Master Control</td></tr>\n<tr><td class=\"\
@@ -221,7 +312,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="bWAi8Kp7HVCjU1J9"]
+      Cookie: [DLILPC="3GQ87z5a6Gli8wBY"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://epcr.digital-loggers.com/outlet?1=ON
@@ -264,7 +355,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="bWAi8Kp7HVCjU1J9"]
+      Cookie: [DLILPC="3GQ87z5a6Gli8wBY"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://epcr.digital-loggers.com/index.htm
@@ -280,7 +371,7 @@ interactions:
         <script type=\"text/javascript\">\nvar dli={\n    serialNumber:\"EPCR5020000\"\
         \ ,\n    session: { expiry_time: new Date().getTime()+(1799)*1000 }\n};\n\
         </script>\n<script type=\"text/javascript\" src=\"/core.js\"></script>\n\n\
-        </head>\n<!-- state=fd lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
+        </head>\n<!-- state=e0 lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
         \n<td class=\"navbar\">\n    <!-- menu -->\n    <table class=\"menu\">\n \
         \   <tr><td class=\"item\">\n    <table class=\"menuInner\">\n\n\n    <tr><td\
         \ class=\"centered\">\n    <table><tr><td><a href=\"http://www.digital-loggers.com/O.html\"\
@@ -329,7 +420,7 @@ interactions:
         prot-partial\">Private configuration protection is enabled but ineffective:\n\
         SSH is enabled, which could be used to bypass protection</pre>\n\n       \
         \ </div>\n        </div>\n        </th>\n        </tr>\n\n        <tr class=\"\
-        uptime\">\n        <td>\n        Fri Jun 15 22:31:42 2018 <!-- 817444.96s\
+        uptime\">\n        <td>\n        Sat Jun 16 00:13:14 2018 <!-- 823537.04s\
         \ up -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
         timeout\">00:29:59</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
         \    <!-- /heading table -->\n\n\n    <br>\n\n    <!-- individual control\
@@ -343,32 +434,33 @@ interactions:
         \ -->\n\n\n    <tr class=\"bus\"><th colspan=\"2\" class=\"name\">Bus A:</th><th\
         \ colspan=\"3\" class=\"data\">122.0V 0.0A [ 000000.0 kWh  ]</th></tr>\n\n\
         <!-- RAW VA=0 CA=0 VAH=122 CAH=1.4e-45 -->\n\n<tr class=\"item\"><td class=\"\
-        centered\">1</td>\n<td>PYTHON_TEST</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
+        centered\">1</td>\n<td>goober</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
         </td><td>\n\n    <a  href=\"outlet?1=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
         <a  href=\"outlet?1=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
         \ class=\"centered\">2</td>\n<td>CCU 2</td><td>\n\n<b><font color=\"red\"\
         >OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?2=ON\">Switch ON</a>\n\
         \n</td><td>\n\n<!-- \n\n<a  href=\"outlet?2=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\
         \n<tr class=\"item\"><td class=\"centered\">3</td>\n<td>CCU 3</td><td>\n\n\
-        <b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?3=OFF\"\
-        >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">4</td>\n<td>CCU 4</td><td>\n\n\
-        <b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?4=OFF\"\
-        >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?4=CCL\">Cycle</a>\n\n</td></tr>\n\
-        \n    <tr class=\"bus\"><th colspan=\"2\" class=\"name\">Bus B:</th><th colspan=\"\
-        3\" class=\"data\">121.0V 0.0A [ 000000.0 kWh  ]</th></tr>\n\n<!-- RAW VB=0\
-        \ CB=0 VBH=121 CBH=6.01e-25 -->\n\n<tr class=\"item\"><td class=\"centered\"\
-        >5</td>\n<td>Decoder</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
-        </td><td>\n\n    <a  href=\"outlet?5=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
-        <a  href=\"outlet?5=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
-        \ class=\"centered\">6</td>\n<td>Encoder</td><td>\n\n<b><font color=\"green\"\
-        >ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\
-        \n</td><td>\n\n<a  href=\"outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"\
-        item\"><td class=\"centered\">7</td>\n<td>Outlet 7</td><td>\n\n<b><font color=\"\
-        green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\
-        \n</td><td>\n\n<a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"\
-        item\"><td class=\"centered\">8</td>\n<td>Outlet 8</td><td>\n\n<b><font color=\"\
-        green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\
+        <b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?3=ON\"\
+        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\
+        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">4</td>\n\
+        <td>CCU 4</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n\
+        \    <a  href=\"outlet?4=ON\">Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"\
+        outlet?4=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n    <tr class=\"bus\"><th\
+        \ colspan=\"2\" class=\"name\">Bus B:</th><th colspan=\"3\" class=\"data\"\
+        >122.0V 0.0A [ 000000.0 kWh  ]</th></tr>\n\n<!-- RAW VB=0 CB=0 VBH=122 CBH=5.99e-12\
+        \ -->\n\n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Decoder</td><td>\n\
+        \n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=ON\"\
+        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\
+        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">6</td>\n\
+        <td>Encoder</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\
+        \n    <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a  href=\"\
+        outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
+        centered\">7</td>\n<td>Outlet 7</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
+        </td><td>\n\n    <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
+        <a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
+        \ class=\"centered\">8</td>\n<td>Outlet 8</td><td>\n\n<b><font color=\"green\"\
+        >ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\
         \n</td><td>\n\n<a  href=\"outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n   \
         \ </table>\n    <!-- /individual control table -->\n\n    <br>\n\n<table class=\"\
         form\">\n<tr><td class=\"header\">Master Control</td></tr>\n<tr><td class=\"\
@@ -390,7 +482,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="bWAi8Kp7HVCjU1J9"]
+      Cookie: [DLILPC="3GQ87z5a6Gli8wBY"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://epcr.digital-loggers.com/index.htm
@@ -406,7 +498,7 @@ interactions:
         <script type=\"text/javascript\">\nvar dli={\n    serialNumber:\"EPCR5020000\"\
         \ ,\n    session: { expiry_time: new Date().getTime()+(1798)*1000 }\n};\n\
         </script>\n<script type=\"text/javascript\" src=\"/core.js\"></script>\n\n\
-        </head>\n<!-- state=fd lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
+        </head>\n<!-- state=e1 lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
         \n<td class=\"navbar\">\n    <!-- menu -->\n    <table class=\"menu\">\n \
         \   <tr><td class=\"item\">\n    <table class=\"menuInner\">\n\n\n    <tr><td\
         \ class=\"centered\">\n    <table><tr><td><a href=\"http://www.digital-loggers.com/O.html\"\
@@ -455,7 +547,7 @@ interactions:
         prot-partial\">Private configuration protection is enabled but ineffective:\n\
         SSH is enabled, which could be used to bypass protection</pre>\n\n       \
         \ </div>\n        </div>\n        </th>\n        </tr>\n\n        <tr class=\"\
-        uptime\">\n        <td>\n        Fri Jun 15 22:31:43 2018 <!-- 817445.59s\
+        uptime\">\n        <td>\n        Sat Jun 16 00:13:15 2018 <!-- 823538.17s\
         \ up -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
         timeout\">00:29:58</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
         \    <!-- /heading table -->\n\n\n    <br>\n\n    <!-- individual control\
@@ -469,32 +561,33 @@ interactions:
         \ -->\n\n\n    <tr class=\"bus\"><th colspan=\"2\" class=\"name\">Bus A:</th><th\
         \ colspan=\"3\" class=\"data\">122.0V 0.0A [ 000000.0 kWh  ]</th></tr>\n\n\
         <!-- RAW VA=0 CA=0 VAH=122 CAH=1.4e-45 -->\n\n<tr class=\"item\"><td class=\"\
-        centered\">1</td>\n<td>PYTHON_TEST</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
+        centered\">1</td>\n<td>goober</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
         </td><td>\n\n    <a  href=\"outlet?1=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
         <a  href=\"outlet?1=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
         \ class=\"centered\">2</td>\n<td>CCU 2</td><td>\n\n<b><font color=\"red\"\
         >OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?2=ON\">Switch ON</a>\n\
         \n</td><td>\n\n<!-- \n\n<a  href=\"outlet?2=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\
         \n<tr class=\"item\"><td class=\"centered\">3</td>\n<td>CCU 3</td><td>\n\n\
-        <b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?3=OFF\"\
-        >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">4</td>\n<td>CCU 4</td><td>\n\n\
-        <b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?4=OFF\"\
-        >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?4=CCL\">Cycle</a>\n\n</td></tr>\n\
-        \n    <tr class=\"bus\"><th colspan=\"2\" class=\"name\">Bus B:</th><th colspan=\"\
-        3\" class=\"data\">121.0V 0.0A [ 000000.0 kWh  ]</th></tr>\n\n<!-- RAW VB=0\
-        \ CB=0 VBH=121 CBH=6.01e-25 -->\n\n<tr class=\"item\"><td class=\"centered\"\
-        >5</td>\n<td>Decoder</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
-        </td><td>\n\n    <a  href=\"outlet?5=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
-        <a  href=\"outlet?5=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
-        \ class=\"centered\">6</td>\n<td>Encoder</td><td>\n\n<b><font color=\"green\"\
-        >ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\
-        \n</td><td>\n\n<a  href=\"outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"\
-        item\"><td class=\"centered\">7</td>\n<td>Outlet 7</td><td>\n\n<b><font color=\"\
-        green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\
-        \n</td><td>\n\n<a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"\
-        item\"><td class=\"centered\">8</td>\n<td>Outlet 8</td><td>\n\n<b><font color=\"\
-        green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\
+        <b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?3=ON\"\
+        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\
+        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">4</td>\n\
+        <td>CCU 4</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n\
+        \    <a  href=\"outlet?4=ON\">Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"\
+        outlet?4=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n    <tr class=\"bus\"><th\
+        \ colspan=\"2\" class=\"name\">Bus B:</th><th colspan=\"3\" class=\"data\"\
+        >122.0V 0.0A [ 000000.0 kWh  ]</th></tr>\n\n<!-- RAW VB=0 CB=0 VBH=122 CBH=4.24e-12\
+        \ -->\n\n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Decoder</td><td>\n\
+        \n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=ON\"\
+        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\
+        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">6</td>\n\
+        <td>Encoder</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\
+        \n    <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a  href=\"\
+        outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
+        centered\">7</td>\n<td>Outlet 7</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
+        </td><td>\n\n    <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
+        <a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
+        \ class=\"centered\">8</td>\n<td>Outlet 8</td><td>\n\n<b><font color=\"green\"\
+        >ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\
         \n</td><td>\n\n<a  href=\"outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n   \
         \ </table>\n    <!-- /individual control table -->\n\n    <br>\n\n<table class=\"\
         form\">\n<tr><td class=\"header\">Master Control</td></tr>\n<tr><td class=\"\
@@ -516,7 +609,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="bWAi8Kp7HVCjU1J9"]
+      Cookie: [DLILPC="3GQ87z5a6Gli8wBY"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://epcr.digital-loggers.com/index.htm
@@ -532,7 +625,7 @@ interactions:
         <script type=\"text/javascript\">\nvar dli={\n    serialNumber:\"EPCR5020000\"\
         \ ,\n    session: { expiry_time: new Date().getTime()+(1797)*1000 }\n};\n\
         </script>\n<script type=\"text/javascript\" src=\"/core.js\"></script>\n\n\
-        </head>\n<!-- state=fd lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
+        </head>\n<!-- state=e1 lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
         \n<td class=\"navbar\">\n    <!-- menu -->\n    <table class=\"menu\">\n \
         \   <tr><td class=\"item\">\n    <table class=\"menuInner\">\n\n\n    <tr><td\
         \ class=\"centered\">\n    <table><tr><td><a href=\"http://www.digital-loggers.com/O.html\"\
@@ -581,7 +674,7 @@ interactions:
         prot-partial\">Private configuration protection is enabled but ineffective:\n\
         SSH is enabled, which could be used to bypass protection</pre>\n\n       \
         \ </div>\n        </div>\n        </th>\n        </tr>\n\n        <tr class=\"\
-        uptime\">\n        <td>\n        Fri Jun 15 22:31:44 2018 <!-- 817446.81s\
+        uptime\">\n        <td>\n        Sat Jun 16 00:13:16 2018 <!-- 823538.72s\
         \ up -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
         timeout\">00:29:57</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
         \    <!-- /heading table -->\n\n\n    <br>\n\n    <!-- individual control\
@@ -595,32 +688,33 @@ interactions:
         \ -->\n\n\n    <tr class=\"bus\"><th colspan=\"2\" class=\"name\">Bus A:</th><th\
         \ colspan=\"3\" class=\"data\">122.0V 0.0A [ 000000.0 kWh  ]</th></tr>\n\n\
         <!-- RAW VA=0 CA=0 VAH=122 CAH=1.4e-45 -->\n\n<tr class=\"item\"><td class=\"\
-        centered\">1</td>\n<td>PYTHON_TEST</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
+        centered\">1</td>\n<td>goober</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
         </td><td>\n\n    <a  href=\"outlet?1=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
         <a  href=\"outlet?1=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
         \ class=\"centered\">2</td>\n<td>CCU 2</td><td>\n\n<b><font color=\"red\"\
         >OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?2=ON\">Switch ON</a>\n\
         \n</td><td>\n\n<!-- \n\n<a  href=\"outlet?2=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\
         \n<tr class=\"item\"><td class=\"centered\">3</td>\n<td>CCU 3</td><td>\n\n\
-        <b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?3=OFF\"\
-        >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">4</td>\n<td>CCU 4</td><td>\n\n\
-        <b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?4=OFF\"\
-        >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?4=CCL\">Cycle</a>\n\n</td></tr>\n\
-        \n    <tr class=\"bus\"><th colspan=\"2\" class=\"name\">Bus B:</th><th colspan=\"\
-        3\" class=\"data\">121.0V 0.0A [ 000000.0 kWh  ]</th></tr>\n\n<!-- RAW VB=0\
-        \ CB=0 VBH=121 CBH=6.41e-25 -->\n\n<tr class=\"item\"><td class=\"centered\"\
-        >5</td>\n<td>Decoder</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
-        </td><td>\n\n    <a  href=\"outlet?5=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
-        <a  href=\"outlet?5=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
-        \ class=\"centered\">6</td>\n<td>Encoder</td><td>\n\n<b><font color=\"green\"\
-        >ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\
-        \n</td><td>\n\n<a  href=\"outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"\
-        item\"><td class=\"centered\">7</td>\n<td>Outlet 7</td><td>\n\n<b><font color=\"\
-        green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\
-        \n</td><td>\n\n<a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"\
-        item\"><td class=\"centered\">8</td>\n<td>Outlet 8</td><td>\n\n<b><font color=\"\
-        green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\
+        <b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?3=ON\"\
+        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\
+        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">4</td>\n\
+        <td>CCU 4</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n\
+        \    <a  href=\"outlet?4=ON\">Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"\
+        outlet?4=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n    <tr class=\"bus\"><th\
+        \ colspan=\"2\" class=\"name\">Bus B:</th><th colspan=\"3\" class=\"data\"\
+        >122.0V 0.0A [ 000000.0 kWh  ]</th></tr>\n\n<!-- RAW VB=0 CB=0 VBH=122 CBH=4.24e-12\
+        \ -->\n\n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Decoder</td><td>\n\
+        \n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=ON\"\
+        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\
+        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">6</td>\n\
+        <td>Encoder</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\
+        \n    <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a  href=\"\
+        outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
+        centered\">7</td>\n<td>Outlet 7</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
+        </td><td>\n\n    <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
+        <a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
+        \ class=\"centered\">8</td>\n<td>Outlet 8</td><td>\n\n<b><font color=\"green\"\
+        >ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\
         \n</td><td>\n\n<a  href=\"outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n   \
         \ </table>\n    <!-- /individual control table -->\n\n    <br>\n\n<table class=\"\
         form\">\n<tr><td class=\"header\">Master Control</td></tr>\n<tr><td class=\"\
@@ -642,7 +736,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="bWAi8Kp7HVCjU1J9"]
+      Cookie: [DLILPC="3GQ87z5a6Gli8wBY"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://epcr.digital-loggers.com/index.htm
@@ -656,9 +750,9 @@ interactions:
         \ src=\"/md5.js\"></script>\n<script type=\"text/javascript\" src=\"/jquery.js\"\
         ></script>\n<script type=\"text/javascript\" src=\"/jquery.json.js\"></script>\n\
         <script type=\"text/javascript\">\nvar dli={\n    serialNumber:\"EPCR5020000\"\
-        \ ,\n    session: { expiry_time: new Date().getTime()+(1796)*1000 }\n};\n\
+        \ ,\n    session: { expiry_time: new Date().getTime()+(1797)*1000 }\n};\n\
         </script>\n<script type=\"text/javascript\" src=\"/core.js\"></script>\n\n\
-        </head>\n<!-- state=fd lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
+        </head>\n<!-- state=e1 lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
         \n<td class=\"navbar\">\n    <!-- menu -->\n    <table class=\"menu\">\n \
         \   <tr><td class=\"item\">\n    <table class=\"menuInner\">\n\n\n    <tr><td\
         \ class=\"centered\">\n    <table><tr><td><a href=\"http://www.digital-loggers.com/O.html\"\
@@ -707,9 +801,9 @@ interactions:
         prot-partial\">Private configuration protection is enabled but ineffective:\n\
         SSH is enabled, which could be used to bypass protection</pre>\n\n       \
         \ </div>\n        </div>\n        </th>\n        </tr>\n\n        <tr class=\"\
-        uptime\">\n        <td>\n        Fri Jun 15 22:31:45 2018 <!-- 817447.36s\
+        uptime\">\n        <td>\n        Sat Jun 16 00:13:16 2018 <!-- 823539.23s\
         \ up -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
-        timeout\">00:29:56</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
+        timeout\">00:29:57</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
         \    <!-- /heading table -->\n\n\n    <br>\n\n    <!-- individual control\
         \ table -->\n    <table class=\"form\">\n        <colgroup width=\"5%\"></colgroup>\n\
         \        <colgroup width=\"35%\"></colgroup>\n        <colgroup span=\"3\"\
@@ -721,32 +815,33 @@ interactions:
         \ -->\n\n\n    <tr class=\"bus\"><th colspan=\"2\" class=\"name\">Bus A:</th><th\
         \ colspan=\"3\" class=\"data\">122.0V 0.0A [ 000000.0 kWh  ]</th></tr>\n\n\
         <!-- RAW VA=0 CA=0 VAH=122 CAH=1.4e-45 -->\n\n<tr class=\"item\"><td class=\"\
-        centered\">1</td>\n<td>PYTHON_TEST</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
+        centered\">1</td>\n<td>goober</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
         </td><td>\n\n    <a  href=\"outlet?1=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
         <a  href=\"outlet?1=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
         \ class=\"centered\">2</td>\n<td>CCU 2</td><td>\n\n<b><font color=\"red\"\
         >OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?2=ON\">Switch ON</a>\n\
         \n</td><td>\n\n<!-- \n\n<a  href=\"outlet?2=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\
         \n<tr class=\"item\"><td class=\"centered\">3</td>\n<td>CCU 3</td><td>\n\n\
-        <b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?3=OFF\"\
-        >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">4</td>\n<td>CCU 4</td><td>\n\n\
-        <b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?4=OFF\"\
-        >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?4=CCL\">Cycle</a>\n\n</td></tr>\n\
-        \n    <tr class=\"bus\"><th colspan=\"2\" class=\"name\">Bus B:</th><th colspan=\"\
-        3\" class=\"data\">121.0V 0.0A [ 000000.0 kWh  ]</th></tr>\n\n<!-- RAW VB=0\
-        \ CB=0 VBH=121 CBH=6.41e-25 -->\n\n<tr class=\"item\"><td class=\"centered\"\
-        >5</td>\n<td>Decoder</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
-        </td><td>\n\n    <a  href=\"outlet?5=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
-        <a  href=\"outlet?5=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
-        \ class=\"centered\">6</td>\n<td>Encoder</td><td>\n\n<b><font color=\"green\"\
-        >ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\
-        \n</td><td>\n\n<a  href=\"outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"\
-        item\"><td class=\"centered\">7</td>\n<td>Outlet 7</td><td>\n\n<b><font color=\"\
-        green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\
-        \n</td><td>\n\n<a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"\
-        item\"><td class=\"centered\">8</td>\n<td>Outlet 8</td><td>\n\n<b><font color=\"\
-        green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\
+        <b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?3=ON\"\
+        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\
+        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">4</td>\n\
+        <td>CCU 4</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n\
+        \    <a  href=\"outlet?4=ON\">Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"\
+        outlet?4=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n    <tr class=\"bus\"><th\
+        \ colspan=\"2\" class=\"name\">Bus B:</th><th colspan=\"3\" class=\"data\"\
+        >122.0V 0.0A [ 000000.0 kWh  ]</th></tr>\n\n<!-- RAW VB=0 CB=0 VBH=122 CBH=4.24e-12\
+        \ -->\n\n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Decoder</td><td>\n\
+        \n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=ON\"\
+        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\
+        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">6</td>\n\
+        <td>Encoder</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\
+        \n    <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a  href=\"\
+        outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
+        centered\">7</td>\n<td>Outlet 7</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
+        </td><td>\n\n    <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
+        <a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
+        \ class=\"centered\">8</td>\n<td>Outlet 8</td><td>\n\n<b><font color=\"green\"\
+        >ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\
         \n</td><td>\n\n<a  href=\"outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n   \
         \ </table>\n    <!-- /individual control table -->\n\n    <br>\n\n<table class=\"\
         form\">\n<tr><td class=\"header\">Master Control</td></tr>\n<tr><td class=\"\

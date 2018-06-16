@@ -1,6 +1,6 @@
 language: python
 sudo: false
-python: 2.7
+python: 3.6
 matrix:
   fast_finish: true
   allow_failures:
@@ -8,11 +8,11 @@ matrix:
     - TOX_ENV=pypy
     - TOX_ENV=build_docs
 install:
-- pip install --upgrade pip setuptools detox virtualenv coveralls
+- pip install --upgrade pip setuptools tox virtualenv coveralls
 script:
 - git branch -v
 - git rev-list HEAD|wc -l
-- detox
+- tox
 after_success: coveralls
 after_failure:
 - for X in .tox/$TOX_ENV/log/*; do echo "$X\n"; cat "$X"; echo "\n\n"; done
