@@ -7,13 +7,10 @@ Digital Loggers Network Power Switch Python Module
 .. image:: https://img.shields.io/coveralls/dwighthubbard/python-dlipower.svg
   :target: https://coveralls.io/r/dwighthubbard/python-dlipower
 
-.. image:: https://img.shields.io/pypi/dm/dlipower.svg
-    :target: https://pypi.python.org/pypi/dlipower/
-
 .. image:: https://img.shields.io/pypi/v/dlipower.svg
     :target: https://pypi.python.org/pypi/dlipower/
 
-.. image:: https://img.shields.io/badge/python-2.7,3.4,3.5,pypy-blue.svg
+.. image:: https://img.shields.io/badge/python-3.4,3.5,3.6-blue.svg
     :target: https://pypi.python.org/pypi/dlipower/
 
 .. image:: https://img.shields.io/pypi/l/dlipower.svg
