@@ -107,10 +107,12 @@ import os
 import json
 import requests
 import time
+import urllib3
 from six.moves.urllib.parse import quote
 
 
 logger = logging.getLogger(__name__)
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 # Global settings

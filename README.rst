@@ -54,7 +54,6 @@ Example
 
 .. code-block:: python
 
-    from __future__ import print_function
     import dlipower
 
     print('Connecting to a DLI PowerSwitch at lpc.digital-loggers.com')

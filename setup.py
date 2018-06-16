@@ -17,7 +17,7 @@ def readme():
 
 
 class Git(object):
-    version_list = ['0', '7', '0']
+    version_list = ['1', '0', '0']
 
     def __init__(self, version=None):
         if version:
@@ -125,8 +125,6 @@ setup(
         'Operating System :: MacOS :: MacOS X',
         'Operating System :: POSIX :: BSD :: FreeBSD',
         'Operating System :: POSIX :: SunOS/Solaris',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',

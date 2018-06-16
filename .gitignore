@@ -8,4 +8,5 @@ dlipower.egg-info
 .coverage
 cobertura.xml
 nosetests.xml
+/venv
 dlipower/package_metadata.json
