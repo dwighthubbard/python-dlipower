@@ -17,10 +17,3 @@ after_success: coveralls
 after_failure:
 - for X in .tox/$TOX_ENV/log/*; do echo "$X\n"; cat "$X"; echo "\n\n"; done
 - echo "pip.log\n"; cat $HOME/.pip/pip.log
-deploy:
-  provider: pypi
-  user: dlipowerci
-  password:
-    secure: gYEgbK74yBOhHP+EWlnR01L9Z+EKkuTbYdgr6tSvL05DuCyB0AGs0aPD+V80+eA1BWlIJq7CfPxkWfHC5vin+eLFL8PBRuEkjI2nz+PFG72UZNkImVdc4ECKwuUVLe2szj/FX8fjBmsTkpggnuWtQPxRzui76EQ+HDrDLz6P95A=
-  on:
-    branch: master
