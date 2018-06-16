@@ -42,6 +42,7 @@ SUPPORTED DEVICES
 This module has been tested against the following 
 Digital Loggers Power network power switches:
 
+* ProSwitch
 * WebPowerSwitch II
 * WebPowerSwitch III
 * WebPowerSwitch IV

@@ -12,6 +12,7 @@ class TestDLIPowerPro(VCRTestCase):
 
     def setUp(self):
         """ Set up the mock objects to do our unit tests """
+        super(TestDLIPowerPro, self).setUp()
         self.p = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password, use_https=self.use_https)
 
     def test__dlipower__statuslist(self):
