@@ -7,7 +7,7 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.19.1]
     method: GET
-    uri: http://pro.digital-loggers.com/
+    uri: https://pro.digital-loggers.com/
   response:
     body: {string: "\n\n\n\n\n\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\
         \ \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n<head><meta http-equiv=\"\
@@ -33,7 +33,7 @@ interactions:
         <td><input type=\"password\" name=\"Password\" size=\"16\"></td>\n</tr>\n\
         <tr class=\"right\">\n<td></td>\n<td><input onClick=\"calcResponse(); return\
         \ false;\" type=\"Submit\" value=\"OK\">\n<input type=\"hidden\" name=\"Challenge\"\
-        \ value=\"fjBMXb5VWPI2JQJr\">\n</td></tr>\n</table>\n</form>\n</td></tr></table>\n\
+        \ value=\"D87Kszg3SP3USvP6\">\n</td></tr>\n</table>\n</form>\n</td></tr></table>\n\
         <script type=\"text/javascript\">\n<!--\ndocument.login.Username.focus();\n\
         //-->\n</script>\n<form name=\"secin\" id=\"secin\" action=\"/login.tgi\"\
         \ method=\"post\" accept-charset=\"UTF-8\">\n<div style=\"display:none\">\n\
@@ -45,7 +45,7 @@ interactions:
       Content-Type: [text/html; charset="utf-8"]
     status: {code: 200, message: OK}
 - request:
-    body: Username=admin&Password=2533db5a4976960e4e5f6a9d54d792f6
+    body: Username=admin&Password=9ff61f797651954f4941b94ac5685ef7
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -54,7 +54,7 @@ interactions:
       Content-Type: [application/x-www-form-urlencoded]
       User-Agent: [python-requests/2.19.1]
     method: POST
-    uri: http://pro.digital-loggers.com/login.tgi
+    uri: https://pro.digital-loggers.com/login.tgi
   response:
     body: {string: '
 
@@ -87,6 +87,6 @@ interactions:
       Cache-Control: ['max-age=0, private, must-revalidate']
       Connection: [close]
       Content-Type: [text/html; charset="utf-8"]
-      Set-Cookie: [DLILPC="Heic7d0IntCkJF4X"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="l4x/JQkBfe5g07XS"; Version=1; Path=/]
     status: {code: 200, message: OK}
 version: 1

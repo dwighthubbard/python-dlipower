@@ -24,7 +24,7 @@ interactions:
         \ TYPE=\"password\" NAME=\"Password\" SIZE=16 MAXLENGTH=32></TD>\n</TR>\n\
         <TR ALIGN=RIGHT>\n<TD></TD>\n<TD><INPUT onClick=\"calcResponse(); return false;\"\
         \ TYPE=\"Submit\" VALUE=\"OK\">\n \n<input type=\"hidden\" name=\"Challenge\"\
-        \ value=\"MTU0PjhnehlxTnT\">\n \n</TD></TR>\n</TABLE>\n</FORM>\n<script language=\"\
+        \ value=\"noeO91i6eVIxCOm\">\n \n</TD></TR>\n</TABLE>\n</FORM>\n<script language=\"\
         javascript\">\n<!--\ndocument.login.Username.focus();\n//-->\n</script>\n\
         <FORM NAME=\"secin\" ID=\"secin\" ACTION=\"/login.tgi\" METHOD=post style=\"\
         display:none\">\n<INPUT TYPE=\"hidden\" NAME=\"Username\">\n<INPUT TYPE=\"\
@@ -38,7 +38,7 @@ interactions:
       Set-Cookie: [DLILPC=""; Version=1; Max-Age=0; Path=/]
     status: {code: 200, message: OK}
 - request:
-    body: Username=admin&Password=0e7a10e14e901fa144ae47f16cc12992
+    body: Username=admin&Password=24c94ca427fed51b69d3037ba60ca891
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -64,7 +64,7 @@ interactions:
       Content-Type: [text/html]
       Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
       Pragma: [no-cache]
-      Set-Cookie: [DLILPC="ViTB+ADD9bSqzHp"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="YPozuUeYRCclo0g"; Version=1; Path=/]
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -72,74 +72,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      User-Agent: [python-requests/2.19.1]
-    method: GET
-    uri: http://lpc.digital-loggers.com/
-  response:
-    body: {string: "<html>\n<head>\n<META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"\
-        >\n \n<title>Power Controller </title>\n \n<script language=\"javascript\"\
-        \ src=\"/md5.js\"></script>\n<script language=\"javascript\">\n<!--\nfunction\
-        \ calcResponse(){\nvar str;\nstr=document.login.Challenge.value+document.login.Username.value+document.login.Password.value+document.login.Challenge.value;\n\
-        document.secin.Password.value = hex_md5(str);\ndocument.secin.Username.value\
-        \ = document.login.Username.value;\ndocument.secin.submit();\n}//-->\n</script>\n\
-        </head>\n<body>\n<noscript>\n<table width=\"100%\" border=0>\n<tr><td bgcolor=red>&nbsp;</td></tr>\n\
-        <tr><td align=center><h1>Warning: Insecure Authentication</h1></td></tr>\n\
-        <tr><td bgcolor=red>&nbsp;</td></tr></table>\n</noscript>\n<FORM NAME=\"login\"\
-        \ ID=\"login\" ACTION=\"/login.tgi\" METHOD=post>\n<TABLE BORDER=\"0\">\n\
-        <TR> \n<TD>User Name</TD>\n<TD><INPUT TYPE=\"text\" NAME=\"Username\" VALUE=\"\
-        \" SIZE=16 MAXLENGTH=32></TD>\n</TR>\n<TR> \n<TD>Password</TD>\n<TD><INPUT\
-        \ TYPE=\"password\" NAME=\"Password\" SIZE=16 MAXLENGTH=32></TD>\n</TR>\n\
-        <TR ALIGN=RIGHT>\n<TD></TD>\n<TD><INPUT onClick=\"calcResponse(); return false;\"\
-        \ TYPE=\"Submit\" VALUE=\"OK\">\n \n<input type=\"hidden\" name=\"Challenge\"\
-        \ value=\"lyIYUtQ3hGSiq/I\">\n \n</TD></TR>\n</TABLE>\n</FORM>\n<script language=\"\
-        javascript\">\n<!--\ndocument.login.Username.focus();\n//-->\n</script>\n\
-        <FORM NAME=\"secin\" ID=\"secin\" ACTION=\"/login.tgi\" METHOD=post style=\"\
-        display:none\">\n<INPUT TYPE=\"hidden\" NAME=\"Username\">\n<INPUT TYPE=\"\
-        hidden\" NAME=\"Password\">\n<INPUT TYPE=\"Submit\">\n</FORM>\n</body>\n</html>\n"}
-    headers:
-      Cache-Control: ['No-cache, no-store, must-revalidate, max-age=0']
-      Connection: [close]
-      Content-Type: [text/html]
-      Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
-      Pragma: [no-cache]
-      Set-Cookie: [DLILPC=""; Version=1; Max-Age=0; Path=/]
-    status: {code: 200, message: OK}
-- request:
-    body: Username=admin&Password=91debc86f8208d139113f77a6bc8e404
-    headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      Content-Length: ['56']
-      Content-Type: [application/x-www-form-urlencoded]
-      User-Agent: [python-requests/2.19.1]
-    method: POST
-    uri: http://lpc.digital-loggers.com/login.tgi
-  response:
-    body: {string: '<HTML><HEAD>
-
-
-        <META HTTP-EQUIV="refresh" content="0; URL=/index.htm">
-
-
-        </HEAD><BODY></BODY>
-
-        </HTML>'}
-    headers:
-      Cache-Control: ['No-cache, no-store, must-revalidate, max-age=0']
-      Connection: [close]
-      Content-Type: [text/html]
-      Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
-      Pragma: [no-cache]
-      Set-Cookie: [DLILPC="h6/MjXpYeWK5gbz"; Version=1; Path=/]
-    status: {code: 200, message: OK}
-- request:
-    body: null
-    headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      Cookie: [DLILPC="h6/MjXpYeWK5gbz"]
+      Cookie: [DLILPC="YPozuUeYRCclo0g"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://lpc.digital-loggers.com/index.htm
@@ -148,7 +81,7 @@ interactions:
         >\n\n<META HTTP-EQUIV=\"Refresh\" CONTENT=\"60\">\n<title>Outlet Control \
         \ - PDU 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
         \ {\nwindow.open('http://www.digital-loggers.com/register.html?SN=LPC612010');\n\
-        }\n//-->\n</script>\n</head>\n<!-- state=e0 lock=00 -->\n\n<body alink=\"\
+        }\n//-->\n</script>\n</head>\n<!-- state=e1 lock=00 -->\n\n<body alink=\"\
         #0000FF\" vlink=\"#0000FF\">\n<FONT FACE=\"Arial, Helvetica, Sans-Serif\"\
         >\n<table width=\"100%\" cellspacing=0 cellpadding=0>\n<tr>\n<td valign=top\
         \ width=\"17%\" height=\"100%\">\n\n    <table width=\"100%\" height=\"100%\"\
@@ -178,7 +111,7 @@ interactions:
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\t\n        <tr>\n\
         \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: PDU 1\n\
         \        </th>\n        </tr>\n\n        <tr bgcolor=\"#FFFFFF\" align=left>\n\
-        \        <td>\n        Fri Jun 15 23:13:40 2018 <!-- 11614051s up -->\n  \
+        \        <td>\n        Fri Jun 15 23:14:14 2018 <!-- 11614085s up -->\n  \
         \      </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\n        <tr>\n\
         \        <td bgcolor=\"#DDDDFF\" colspan=5 align=left>\n        Individual\
@@ -186,8 +119,8 @@ interactions:
         >\n        <th>#</th>\n        <th align=left>Name</th>\n        <th align=left>State</th>\n\
         \        <th align=left colspan=2>Action</th>\n        </tr>\n\n\n\n\n<tr\
         \ bgcolor=\"#F4F4F4\"><td align=center>1</td>\n<td>goober</td><td>\n<b><font\
-        \ color=red>OFF</font></b></td><td>\n<a  href=outlet?1=ON>Switch ON</a>\n\
-        </td><td>\n<!-- <a  href=outlet?1=CCL>Cycle</a> -->\n</td></tr>\n\n\n<tr bgcolor=\"\
+        \ color=green>ON</font></b></td><td>\n<a  href=outlet?1=OFF>Switch OFF</a>\n\
+        </td><td>\n<a  href=outlet?1=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
         #F4F4F4\"><td align=center>2</td>\n<td>Router</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
         <a  href=outlet?2=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?2=CCL>Cycle</a>\
         \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>3</td>\n<td>UBNT\
@@ -221,7 +154,7 @@ interactions:
       Content-Type: [text/html]
       Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
       Pragma: [no-cache]
-      Set-Cookie: [DLILPC="h6/MjXpYeWK5gbz"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="YPozuUeYRCclo0g"; Version=1; Path=/]
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -229,7 +162,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="h6/MjXpYeWK5gbz"]
+      Cookie: [DLILPC="YPozuUeYRCclo0g"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://lpc.digital-loggers.com/index.htm
@@ -238,7 +171,7 @@ interactions:
         >\n\n<META HTTP-EQUIV=\"Refresh\" CONTENT=\"60\">\n<title>Outlet Control \
         \ - PDU 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
         \ {\nwindow.open('http://www.digital-loggers.com/register.html?SN=LPC612010');\n\
-        }\n//-->\n</script>\n</head>\n<!-- state=e0 lock=00 -->\n\n<body alink=\"\
+        }\n//-->\n</script>\n</head>\n<!-- state=e1 lock=00 -->\n\n<body alink=\"\
         #0000FF\" vlink=\"#0000FF\">\n<FONT FACE=\"Arial, Helvetica, Sans-Serif\"\
         >\n<table width=\"100%\" cellspacing=0 cellpadding=0>\n<tr>\n<td valign=top\
         \ width=\"17%\" height=\"100%\">\n\n    <table width=\"100%\" height=\"100%\"\
@@ -268,7 +201,7 @@ interactions:
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\t\n        <tr>\n\
         \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: PDU 1\n\
         \        </th>\n        </tr>\n\n        <tr bgcolor=\"#FFFFFF\" align=left>\n\
-        \        <td>\n        Fri Jun 15 23:13:41 2018 <!-- 11614052s up -->\n  \
+        \        <td>\n        Fri Jun 15 23:14:14 2018 <!-- 11614085s up -->\n  \
         \      </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\n        <tr>\n\
         \        <td bgcolor=\"#DDDDFF\" colspan=5 align=left>\n        Individual\
@@ -276,8 +209,8 @@ interactions:
         >\n        <th>#</th>\n        <th align=left>Name</th>\n        <th align=left>State</th>\n\
         \        <th align=left colspan=2>Action</th>\n        </tr>\n\n\n\n\n<tr\
         \ bgcolor=\"#F4F4F4\"><td align=center>1</td>\n<td>goober</td><td>\n<b><font\
-        \ color=red>OFF</font></b></td><td>\n<a  href=outlet?1=ON>Switch ON</a>\n\
-        </td><td>\n<!-- <a  href=outlet?1=CCL>Cycle</a> -->\n</td></tr>\n\n\n<tr bgcolor=\"\
+        \ color=green>ON</font></b></td><td>\n<a  href=outlet?1=OFF>Switch OFF</a>\n\
+        </td><td>\n<a  href=outlet?1=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
         #F4F4F4\"><td align=center>2</td>\n<td>Router</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
         <a  href=outlet?2=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?2=CCL>Cycle</a>\
         \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>3</td>\n<td>UBNT\
@@ -311,6 +244,6 @@ interactions:
       Content-Type: [text/html]
       Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
       Pragma: [no-cache]
-      Set-Cookie: [DLILPC="h6/MjXpYeWK5gbz"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="YPozuUeYRCclo0g"; Version=1; Path=/]
     status: {code: 200, message: OK}
 version: 1
