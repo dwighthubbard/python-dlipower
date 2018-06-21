@@ -222,6 +222,7 @@ class Outlet(object):
 class PowerSwitch(object):
     """ Powerswitch class to manage the Digital Loggers Web power switch """
     __len = 0
+    login_timeout = 1.0
 
     def __init__(self, userid=None, password=None, hostname=None, timeout=None,
                  cycletime=None, retries=None, use_https=False):
@@ -322,7 +323,7 @@ class PowerSwitch(object):
     def login(self):
         self.secure_login = False
         self.session = requests.Session()
-        response = self.session.get(self.base_url, verify=False)
+        response = self.session.get(self.base_url, verify=False, timeout=self.login_timeout)
         soup = BeautifulSoup(response.text, 'html.parser')
         fields = {}
         for field in soup.find_all('input'):
