@@ -557,6 +557,8 @@ class PowerSwitch(object):
                 chunksize=1
             )
         ]
+        pool.close()
+        pool.join()
         if isinstance(result[0], bool):
             for value in result:
                 if value:
