@@ -5,3 +5,4 @@ cover_pylib = False
 
 [report]
 ignore_errors = True
+show_missing = True

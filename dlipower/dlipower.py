@@ -106,6 +106,7 @@ import multiprocessing
 import os
 import json
 import requests
+import requests.exceptions
 import time
 import urllib3
 from six.moves.urllib.parse import quote
@@ -323,7 +324,11 @@ class PowerSwitch(object):
     def login(self):
         self.secure_login = False
         self.session = requests.Session()
-        response = self.session.get(self.base_url, verify=False, timeout=self.login_timeout)
+        try:
+            response = self.session.get(self.base_url, verify=False, timeout=self.login_timeout)
+        except (requests.exceptions.ConnectTimeout, requests.exceptions.ConnectionError):
+            self.session = None
+            return
         soup = BeautifulSoup(response.text, 'html.parser')
         fields = {}
         for field in soup.find_all('input'):
@@ -342,7 +347,11 @@ class PowerSwitch(object):
         data = {'Username': 'admin', 'Password': m.hexdigest()}
         headers = {'Content-Type': 'application/x-www-form-urlencoded'}
 
-        response = self.session.post('%s/login.tgi' % self.base_url, headers=headers, data=data, timeout=self.timeout, verify=False)
+        try:
+            response = self.session.post('%s/login.tgi' % self.base_url, headers=headers, data=data, timeout=self.timeout, verify=False)
+        except requests.exceptions.ConnectTimeout:
+            return
+
         if response.status_code == 200:
             self.secure_login = True
 
@@ -513,10 +522,7 @@ class PowerSwitch(object):
     def printstatus(self):
         """ Print the status off all the outlets as a table to stdout """
         if not self.statuslist():
-            print(
-                "Unable to communicate to the Web power "
-                "switch at %s" % self.hostname
-            )
+            print("Unable to communicate to the Web power switch at %s" % self.hostname)
             return None
         print('Outlet\t%-15.15s\tState' % 'Name')
         for item in self.statuslist():
@@ -565,5 +571,5 @@ class PowerSwitch(object):
         return result
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     PowerSwitch().printstatus()
