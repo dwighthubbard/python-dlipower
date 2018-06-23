@@ -111,7 +111,17 @@ class TestDLIPowerPro(VCRTestCase):
         self.p[0].name='goober'
         self.assertEqual(self.p.determine_outlet('goober'), 1)
 
-    @skip
+    def test__outlet__unicode__magic(self):
+        outlet = self.p[0]
+        result = outlet.__unicode__()
+        self.assertEqual(result, '%s:%s' % (outlet.name, outlet.state))
+
+    def test__outlet__str__magic(self):
+        outlet = self.p[0]
+        result = outlet.__str__()
+        self.assertEqual(result, '%s:%s' % (outlet.name, outlet.state))
+
+    @skip('Does not work with unittest')
     def test_command_on_outlets(self):
         for i in range(0, 5):
             self.p[i].off()
@@ -132,3 +142,22 @@ class TestDLIPowerLPC(TestDLIPowerPro):
 class TestDLIPowerEPCR(TestDLIPowerPro):
     switch_hostname = 'epcr.digital-loggers.com'
     use_https = False
+
+
+class TestDLIPowerMissing(VCRTestCase):
+    switch_hostname = '127.1.0.99'
+    userid = 'admin'
+    password = '4321'
+
+    new_episodes = 'new_episodes'
+
+    def _get_vcr_kwargs(self):
+        kwargs = super()._get_vcr_kwargs()
+        kwargs['record_mode'] = 'new_episodes'
+        return kwargs
+
+    def test__missing__https(self):
+        PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password, use_https=True)
+
+    def test__missing__http(self):
+        PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password, use_https=False)

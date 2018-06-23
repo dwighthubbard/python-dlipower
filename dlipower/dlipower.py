@@ -326,7 +326,7 @@ class PowerSwitch(object):
         self.session = requests.Session()
         try:
             response = self.session.get(self.base_url, verify=False, timeout=self.login_timeout)
-        except requests.exceptions.ConnectTimeout:
+        except (requests.exceptions.ConnectTimeout, requests.exceptions.ConnectionError):
             self.session = None
             return
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -522,10 +522,7 @@ class PowerSwitch(object):
     def printstatus(self):
         """ Print the status off all the outlets as a table to stdout """
         if not self.statuslist():
-            print(
-                "Unable to communicate to the Web power "
-                "switch at %s" % self.hostname
-            )
+            print("Unable to communicate to the Web power switch at %s" % self.hostname)
             return None
         print('Outlet\t%-15.15s\tState' % 'Name')
         for item in self.statuslist():
@@ -574,5 +571,5 @@ class PowerSwitch(object):
         return result
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     PowerSwitch().printstatus()
