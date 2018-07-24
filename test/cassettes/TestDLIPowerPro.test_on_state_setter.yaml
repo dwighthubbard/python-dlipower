@@ -14,7 +14,7 @@ interactions:
         Content-Type\" content=\"text/html; charset=UTF-8\">\n<meta name=\"robots\"\
         \ content=\"noindex, nofollow\">\n<meta http-equiv=\"refresh\" content=\"\
         285\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\">\n\
-        <title>Power Controller Closets  4430\n</title>\n<script type=\"text/javascript\"\
+        <title>Power Controller Controller\n</title>\n<script type=\"text/javascript\"\
         \ src=\"/md5.js\"></script>\n<script type=\"text/javascript\">\n<!--\nwindow.addEventListener\
         \ && window.addEventListener(\"pageshow\", function(event)\n{\n    if (event.persisted\
         \ || (window.performance && window.performance.navigation && window.performance.navigation.type\
@@ -33,7 +33,7 @@ interactions:
         <td><input type=\"password\" name=\"Password\" size=\"16\"></td>\n</tr>\n\
         <tr class=\"right\">\n<td></td>\n<td><input onClick=\"calcResponse(); return\
         \ false;\" type=\"Submit\" value=\"OK\">\n<input type=\"hidden\" name=\"Challenge\"\
-        \ value=\"44zpbidLYyXVsWis\">\n</td></tr>\n</table>\n</form>\n</td></tr></table>\n\
+        \ value=\"gs9drxs/jBiuGPge\">\n</td></tr>\n</table>\n</form>\n</td></tr></table>\n\
         <script type=\"text/javascript\">\n<!--\ndocument.login.Username.focus();\n\
         //-->\n</script>\n<form name=\"secin\" id=\"secin\" action=\"/login.tgi\"\
         \ method=\"post\" accept-charset=\"UTF-8\">\n<div style=\"display:none\">\n\
@@ -45,7 +45,7 @@ interactions:
       Content-Type: [text/html; charset="utf-8"]
     status: {code: 200, message: OK}
 - request:
-    body: Username=admin&Password=8f3d7bed54c8f4d6913040f500654c48
+    body: Username=admin&Password=44c60dda5612430450fc22c20e32852e
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -87,7 +87,7 @@ interactions:
       Cache-Control: ['max-age=0, private, must-revalidate']
       Connection: [close]
       Content-Type: [text/html; charset="utf-8"]
-      Set-Cookie: [DLILPC="IgjcYqh23W4kuQ1y"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="GpneuTg7nbq4RGIc"; Version=1; Path=/]
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -104,7 +104,7 @@ interactions:
         Content-Type\" content=\"text/html; charset=UTF-8\">\n<meta name=\"robots\"\
         \ content=\"noindex, nofollow\">\n<meta http-equiv=\"refresh\" content=\"\
         285\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\">\n\
-        <title>Power Controller Closets  4430\n</title>\n<script type=\"text/javascript\"\
+        <title>Power Controller Controller\n</title>\n<script type=\"text/javascript\"\
         \ src=\"/md5.js\"></script>\n<script type=\"text/javascript\">\n<!--\nwindow.addEventListener\
         \ && window.addEventListener(\"pageshow\", function(event)\n{\n    if (event.persisted\
         \ || (window.performance && window.performance.navigation && window.performance.navigation.type\
@@ -123,7 +123,7 @@ interactions:
         <td><input type=\"password\" name=\"Password\" size=\"16\"></td>\n</tr>\n\
         <tr class=\"right\">\n<td></td>\n<td><input onClick=\"calcResponse(); return\
         \ false;\" type=\"Submit\" value=\"OK\">\n<input type=\"hidden\" name=\"Challenge\"\
-        \ value=\"yzhSGgfA8USXzkgU\">\n</td></tr>\n</table>\n</form>\n</td></tr></table>\n\
+        \ value=\"YCGt3/Jfj70iaLNd\">\n</td></tr>\n</table>\n</form>\n</td></tr></table>\n\
         <script type=\"text/javascript\">\n<!--\ndocument.login.Username.focus();\n\
         //-->\n</script>\n<form name=\"secin\" id=\"secin\" action=\"/login.tgi\"\
         \ method=\"post\" accept-charset=\"UTF-8\">\n<div style=\"display:none\">\n\
@@ -135,7 +135,7 @@ interactions:
       Content-Type: [text/html; charset="utf-8"]
     status: {code: 200, message: OK}
 - request:
-    body: Username=admin&Password=aee4af7b1ce3b75fe455fe9aaab28984
+    body: Username=admin&Password=f20638f7434b8ecce4ee76bc6bda03fe
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -177,7 +177,7 @@ interactions:
       Cache-Control: ['max-age=0, private, must-revalidate']
       Connection: [close]
       Content-Type: [text/html; charset="utf-8"]
-      Set-Cookie: [DLILPC="I2KvFjcvWnwzWzYa"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="XZgOB7EKPstp0G8y"; Version=1; Path=/]
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -185,7 +185,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="I2KvFjcvWnwzWzYa"]
+      Cookie: [DLILPC="XZgOB7EKPstp0G8y"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: https://pro.digital-loggers.com/index.htm
@@ -195,13 +195,13 @@ interactions:
         \ http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n<meta\
         \ name=\"robots\" content=\"noindex, nofollow\">\n<meta http-equiv=\"refresh\"\
         \ content=\"60\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\"\
-        >\n<title>Outlet Control  - Closets  4430</title>\n\n<script type=\"text/javascript\"\
+        >\n<title>Outlet Control  - Controller</title>\n\n<script type=\"text/javascript\"\
         \ src=\"/md5.js\"></script>\n<script type=\"text/javascript\" src=\"/jquery.js\"\
         ></script>\n<script type=\"text/javascript\" src=\"/jquery.json.js\"></script>\n\
         <script type=\"text/javascript\">\nvar dli={\n    serialNumber:\"LPC92203000348\"\
         \ ,\n    session: { expiry_time: new Date().getTime()+(1799)*1000 }\n};\n\
         </script>\n<script type=\"text/javascript\" src=\"/core.js\"></script>\n\n\
-        </head>\n<!-- state=e1 lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
+        </head>\n<!-- state=fb lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
         \n<td class=\"navbar\">\n    <!-- menu -->\n    <table class=\"menu\">\n \
         \   <tr><td class=\"item\">\n    <table class=\"menuInner\">\n\n\n    <tr><td\
         \ class=\"centered\">\n    <table><tr><td><a href=\"http://www.digital-loggers.com/O.html\"\
@@ -232,12 +232,12 @@ interactions:
         >\n    <small>S/N:LPC92203000348</small>\n    </td></tr>\n\n    </table>\n\
         \    <!-- /menu -->\n</td>\n\n<td class=\"content\">\n\n\n    <!-- heading\
         \ table -->\n    <table class=\"heading\">\n\t\n        <tr>\n        <th\
-        \ class=\"header\">\n        Controller: Closets  4430\n        <div id=\"\
-        protection_status\">\n\n        <span class=\"icon imageReplaced prot-off\"\
-        \ title=\"No protection bits effective\"></span>\n        <div class=\"details\"\
-        >\n\n        <pre class=\"prot-partial\">Firmware protection is enabled but\
-        \ ineffective:\nSSH is enabled, which could be used to bypass protection</pre>\n\
-        \n        <pre class=\"prot-off\">Notification settings protection is disabled</pre>\n\
+        \ class=\"header\">\n        Controller: Controller\n        <div id=\"protection_status\"\
+        >\n\n        <span class=\"icon imageReplaced prot-off\" title=\"No protection\
+        \ bits effective\"></span>\n        <div class=\"details\">\n\n        <pre\
+        \ class=\"prot-partial\">Firmware protection is enabled but ineffective:\n\
+        SSH is enabled, which could be used to bypass protection</pre>\n\n       \
+        \ <pre class=\"prot-off\">Notification settings protection is disabled</pre>\n\
         \n        <pre class=\"prot-partial\">Protection from restore from backup\
         \ is enabled but ineffective:\nSSH is enabled, which could be used to bypass\
         \ protection</pre>\n\n        <pre class=\"prot-partial\">Maintenance mode\
@@ -250,8 +250,8 @@ interactions:
         prot-partial\">Private configuration protection is enabled but ineffective:\n\
         SSH is enabled, which could be used to bypass protection</pre>\n\n       \
         \ </div>\n        </div>\n        </th>\n        </tr>\n\n        <tr class=\"\
-        uptime\">\n        <td>\n        Sat Jun 16 00:15:15 2018 <!-- 49356.18s up\
-        \ -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
+        uptime\">\n        <td>\n        Tue Jul 24 08:12:14 2018 <!-- 2748411.33s\
+        \ up -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
         timeout\">00:29:59</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
         \    <!-- /heading table -->\n\n\n    <br>\n\n    <!-- individual control\
         \ table -->\n    <table class=\"form\">\n        <colgroup width=\"5%\"></colgroup>\n\
@@ -264,38 +264,49 @@ interactions:
         \ -->\n\n\n<tr class=\"item\"><td class=\"centered\">1</td>\n<td>goober</td><td>\n\
         \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?1=OFF\"\
         >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?1=CCL\">Cycle</a>\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">2</td>\n<td>Switch</td><td>\n\n\
-        <b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?2=ON\"\
-        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?2=CCL\">Cycle</a>\n\
-        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">3</td>\n\
-        <td>Camera</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n\
-        \    <a  href=\"outlet?3=ON\">Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"\
-        outlet?3=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
-        centered\">4</td>\n<td>Cradlepoint Verizon</td><td>\n\n<b><font color=\"red\"\
-        >OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?4=ON\">Switch ON</a>\n\
-        \n</td><td>\n\n<!-- \n\n<a  href=\"outlet?4=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Fan</td><td>\n\n<b><font\
-        \ color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=ON\"\
-        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\
-        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">6</td>\n\
-        <td>Cool</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n\
-        \    <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a  href=\"\
+        \n<tr class=\"item\"><td class=\"centered\">2</td>\n<td>Router</td><td>\n\n\
+        <b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"return\
+        \ confirm('You are going to switch Outlet 2 [Router] OFF. Continue?')\"\n\
+        \ href=\"outlet?2=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 2 [Router]. Continue?')\"\n href=\"\
+        outlet?2=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
+        centered\">3</td>\n<td>Server</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n\
+        </td><td>\n\n    <a  href=\"outlet?3=ON\">Switch ON</a>\n\n</td><td>\n\n<!--\
+        \ \n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n<tr class=\"\
+        item\"><td class=\"centered\">4</td>\n<td>AP</td><td>\n\n<b><font color=\"\
+        green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"return confirm('You\
+        \ are going to switch Outlet 4 [AP] OFF. Continue?')\"\n href=\"outlet?4=OFF\"\
+        >Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return confirm('You are going\
+        \ to cycle Outlet 4 [AP]. Continue?')\"\n href=\"outlet?4=CCL\">Cycle</a>\n\
+        \n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Cradlepoint</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=OFF\"\
+        >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\n</td></tr>\n\
+        \n<tr class=\"item\"><td class=\"centered\">6</td>\n<td>Something7</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"\
+        return confirm('You are going to switch Outlet 6 [Something7] OFF. Continue?')\"\
+        \n href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 6 [Something7]. Continue?')\"\n href=\"\
         outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
-        centered\">7</td>\n<td>Demo</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
-        </td><td>\n\n    <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
-        <a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
-        \ class=\"centered\">8</td>\n<td>Bro</td><td>\n\n<b><font color=\"green\"\
-        >ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\
-        \n</td><td>\n\n<a  href=\"outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n   \
-        \ </table>\n    <!-- /individual control table -->\n\n    <br>\n\n<table class=\"\
-        form\">\n<tr><td class=\"header\">Master Control</td></tr>\n<tr><td class=\"\
-        item\">\n<a \nonclick=\"return confirm('You are going to switch all outlets\
-        \ OFF. Continue?')\"\n href=\"outlet?a=OFF\">All outlets OFF</a>\n</td></tr>\n\
-        <tr><td class=\"item\">\n    <a href=\"outlet?a=ON\">All outlets ON</a>\n\
-        </td></tr>\n<tr><td class=\"item\">\n<a \nonclick=\"return confirm('You are\
-        \ going to cycle all outlets. Continue?')\"\n href=\"outlet?a=CCL\">Cycle\
-        \ all outlets</a>\n</td></tr>\n<tr><td class=\"centered\">Sequence delay:\
-        \ 5 sec.</td></tr>\n\n</table>\n\n</td>\n</tr>\n</table>\n\n</body>\n</html>\n"}
+        centered\">7</td>\n<td>Something8</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
+        </td><td>\n\n    <a \nonclick=\"return confirm('You are going to switch Outlet\
+        \ 7 [Something8] OFF. Continue?')\"\n href=\"outlet?7=OFF\">Switch OFF</a>\n\
+        \n</td><td>\n\n<a \nonclick=\"return confirm('You are going to cycle Outlet\
+        \ 7 [Something8]. Continue?')\"\n href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\
+        \n<tr class=\"item\"><td class=\"centered\">8</td>\n<td>Something9</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"\
+        return confirm('You are going to switch Outlet 8 [Something9] OFF. Continue?')\"\
+        \n href=\"outlet?8=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 8 [Something9]. Continue?')\"\n href=\"\
+        outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n    </table>\n    <!-- /individual\
+        \ control table -->\n\n    <br>\n\n<table class=\"form\">\n<tr><td class=\"\
+        header\">Master Control</td></tr>\n<tr><td class=\"item\">\n<a \nonclick=\"\
+        return confirm('You are going to switch all outlets OFF. Continue?')\"\n href=\"\
+        outlet?a=OFF\">All outlets OFF</a>\n</td></tr>\n<tr><td class=\"item\">\n\
+        \    <a href=\"outlet?a=ON\">All outlets ON</a>\n</td></tr>\n<tr><td class=\"\
+        item\">\n<a \nonclick=\"return confirm('You are going to cycle all outlets.\
+        \ Continue?')\"\n href=\"outlet?a=CCL\">Cycle all outlets</a>\n</td></tr>\n\
+        <tr><td class=\"centered\">Sequence delay: 2 sec.</td></tr>\n\n</table>\n\n\
+        </td>\n</tr>\n</table>\n\n</body>\n</html>\n"}
     headers:
       Cache-Control: ['max-age=0, private, must-revalidate']
       Connection: [close]
@@ -307,7 +318,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="I2KvFjcvWnwzWzYa"]
+      Cookie: [DLILPC="XZgOB7EKPstp0G8y"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: https://pro.digital-loggers.com/index.htm
@@ -317,13 +328,13 @@ interactions:
         \ http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n<meta\
         \ name=\"robots\" content=\"noindex, nofollow\">\n<meta http-equiv=\"refresh\"\
         \ content=\"60\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\"\
-        >\n<title>Outlet Control  - Closets  4430</title>\n\n<script type=\"text/javascript\"\
+        >\n<title>Outlet Control  - Controller</title>\n\n<script type=\"text/javascript\"\
         \ src=\"/md5.js\"></script>\n<script type=\"text/javascript\" src=\"/jquery.js\"\
         ></script>\n<script type=\"text/javascript\" src=\"/jquery.json.js\"></script>\n\
         <script type=\"text/javascript\">\nvar dli={\n    serialNumber:\"LPC92203000348\"\
-        \ ,\n    session: { expiry_time: new Date().getTime()+(1798)*1000 }\n};\n\
+        \ ,\n    session: { expiry_time: new Date().getTime()+(1796)*1000 }\n};\n\
         </script>\n<script type=\"text/javascript\" src=\"/core.js\"></script>\n\n\
-        </head>\n<!-- state=e1 lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
+        </head>\n<!-- state=fb lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
         \n<td class=\"navbar\">\n    <!-- menu -->\n    <table class=\"menu\">\n \
         \   <tr><td class=\"item\">\n    <table class=\"menuInner\">\n\n\n    <tr><td\
         \ class=\"centered\">\n    <table><tr><td><a href=\"http://www.digital-loggers.com/O.html\"\
@@ -354,12 +365,12 @@ interactions:
         >\n    <small>S/N:LPC92203000348</small>\n    </td></tr>\n\n    </table>\n\
         \    <!-- /menu -->\n</td>\n\n<td class=\"content\">\n\n\n    <!-- heading\
         \ table -->\n    <table class=\"heading\">\n\t\n        <tr>\n        <th\
-        \ class=\"header\">\n        Controller: Closets  4430\n        <div id=\"\
-        protection_status\">\n\n        <span class=\"icon imageReplaced prot-off\"\
-        \ title=\"No protection bits effective\"></span>\n        <div class=\"details\"\
-        >\n\n        <pre class=\"prot-partial\">Firmware protection is enabled but\
-        \ ineffective:\nSSH is enabled, which could be used to bypass protection</pre>\n\
-        \n        <pre class=\"prot-off\">Notification settings protection is disabled</pre>\n\
+        \ class=\"header\">\n        Controller: Controller\n        <div id=\"protection_status\"\
+        >\n\n        <span class=\"icon imageReplaced prot-off\" title=\"No protection\
+        \ bits effective\"></span>\n        <div class=\"details\">\n\n        <pre\
+        \ class=\"prot-partial\">Firmware protection is enabled but ineffective:\n\
+        SSH is enabled, which could be used to bypass protection</pre>\n\n       \
+        \ <pre class=\"prot-off\">Notification settings protection is disabled</pre>\n\
         \n        <pre class=\"prot-partial\">Protection from restore from backup\
         \ is enabled but ineffective:\nSSH is enabled, which could be used to bypass\
         \ protection</pre>\n\n        <pre class=\"prot-partial\">Maintenance mode\
@@ -372,9 +383,9 @@ interactions:
         prot-partial\">Private configuration protection is enabled but ineffective:\n\
         SSH is enabled, which could be used to bypass protection</pre>\n\n       \
         \ </div>\n        </div>\n        </th>\n        </tr>\n\n        <tr class=\"\
-        uptime\">\n        <td>\n        Sat Jun 16 00:15:16 2018 <!-- 49356.97s up\
-        \ -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
-        timeout\">00:29:58</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
+        uptime\">\n        <td>\n        Tue Jul 24 08:12:17 2018 <!-- 2748413.52s\
+        \ up -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
+        timeout\">00:29:56</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
         \    <!-- /heading table -->\n\n\n    <br>\n\n    <!-- individual control\
         \ table -->\n    <table class=\"form\">\n        <colgroup width=\"5%\"></colgroup>\n\
         \        <colgroup width=\"35%\"></colgroup>\n        <colgroup span=\"3\"\
@@ -386,38 +397,49 @@ interactions:
         \ -->\n\n\n<tr class=\"item\"><td class=\"centered\">1</td>\n<td>goober</td><td>\n\
         \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?1=OFF\"\
         >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?1=CCL\">Cycle</a>\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">2</td>\n<td>Switch</td><td>\n\n\
-        <b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?2=ON\"\
-        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?2=CCL\">Cycle</a>\n\
-        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">3</td>\n\
-        <td>Camera</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n\
-        \    <a  href=\"outlet?3=ON\">Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"\
-        outlet?3=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
-        centered\">4</td>\n<td>Cradlepoint Verizon</td><td>\n\n<b><font color=\"red\"\
-        >OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?4=ON\">Switch ON</a>\n\
-        \n</td><td>\n\n<!-- \n\n<a  href=\"outlet?4=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Fan</td><td>\n\n<b><font\
-        \ color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=ON\"\
-        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\
-        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">6</td>\n\
-        <td>Cool</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n\
-        \    <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a  href=\"\
+        \n<tr class=\"item\"><td class=\"centered\">2</td>\n<td>Router</td><td>\n\n\
+        <b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"return\
+        \ confirm('You are going to switch Outlet 2 [Router] OFF. Continue?')\"\n\
+        \ href=\"outlet?2=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 2 [Router]. Continue?')\"\n href=\"\
+        outlet?2=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
+        centered\">3</td>\n<td>Server</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n\
+        </td><td>\n\n    <a  href=\"outlet?3=ON\">Switch ON</a>\n\n</td><td>\n\n<!--\
+        \ \n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n<tr class=\"\
+        item\"><td class=\"centered\">4</td>\n<td>AP</td><td>\n\n<b><font color=\"\
+        green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"return confirm('You\
+        \ are going to switch Outlet 4 [AP] OFF. Continue?')\"\n href=\"outlet?4=OFF\"\
+        >Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return confirm('You are going\
+        \ to cycle Outlet 4 [AP]. Continue?')\"\n href=\"outlet?4=CCL\">Cycle</a>\n\
+        \n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Cradlepoint</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=OFF\"\
+        >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\n</td></tr>\n\
+        \n<tr class=\"item\"><td class=\"centered\">6</td>\n<td>Something7</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"\
+        return confirm('You are going to switch Outlet 6 [Something7] OFF. Continue?')\"\
+        \n href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 6 [Something7]. Continue?')\"\n href=\"\
         outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
-        centered\">7</td>\n<td>Demo</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
-        </td><td>\n\n    <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
-        <a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
-        \ class=\"centered\">8</td>\n<td>Bro</td><td>\n\n<b><font color=\"green\"\
-        >ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\
-        \n</td><td>\n\n<a  href=\"outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n   \
-        \ </table>\n    <!-- /individual control table -->\n\n    <br>\n\n<table class=\"\
-        form\">\n<tr><td class=\"header\">Master Control</td></tr>\n<tr><td class=\"\
-        item\">\n<a \nonclick=\"return confirm('You are going to switch all outlets\
-        \ OFF. Continue?')\"\n href=\"outlet?a=OFF\">All outlets OFF</a>\n</td></tr>\n\
-        <tr><td class=\"item\">\n    <a href=\"outlet?a=ON\">All outlets ON</a>\n\
-        </td></tr>\n<tr><td class=\"item\">\n<a \nonclick=\"return confirm('You are\
-        \ going to cycle all outlets. Continue?')\"\n href=\"outlet?a=CCL\">Cycle\
-        \ all outlets</a>\n</td></tr>\n<tr><td class=\"centered\">Sequence delay:\
-        \ 5 sec.</td></tr>\n\n</table>\n\n</td>\n</tr>\n</table>\n\n</body>\n</html>\n"}
+        centered\">7</td>\n<td>Something8</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
+        </td><td>\n\n    <a \nonclick=\"return confirm('You are going to switch Outlet\
+        \ 7 [Something8] OFF. Continue?')\"\n href=\"outlet?7=OFF\">Switch OFF</a>\n\
+        \n</td><td>\n\n<a \nonclick=\"return confirm('You are going to cycle Outlet\
+        \ 7 [Something8]. Continue?')\"\n href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\
+        \n<tr class=\"item\"><td class=\"centered\">8</td>\n<td>Something9</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"\
+        return confirm('You are going to switch Outlet 8 [Something9] OFF. Continue?')\"\
+        \n href=\"outlet?8=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 8 [Something9]. Continue?')\"\n href=\"\
+        outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n    </table>\n    <!-- /individual\
+        \ control table -->\n\n    <br>\n\n<table class=\"form\">\n<tr><td class=\"\
+        header\">Master Control</td></tr>\n<tr><td class=\"item\">\n<a \nonclick=\"\
+        return confirm('You are going to switch all outlets OFF. Continue?')\"\n href=\"\
+        outlet?a=OFF\">All outlets OFF</a>\n</td></tr>\n<tr><td class=\"item\">\n\
+        \    <a href=\"outlet?a=ON\">All outlets ON</a>\n</td></tr>\n<tr><td class=\"\
+        item\">\n<a \nonclick=\"return confirm('You are going to cycle all outlets.\
+        \ Continue?')\"\n href=\"outlet?a=CCL\">Cycle all outlets</a>\n</td></tr>\n\
+        <tr><td class=\"centered\">Sequence delay: 2 sec.</td></tr>\n\n</table>\n\n\
+        </td>\n</tr>\n</table>\n\n</body>\n</html>\n"}
     headers:
       Cache-Control: ['max-age=0, private, must-revalidate']
       Connection: [close]
@@ -429,7 +451,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="I2KvFjcvWnwzWzYa"]
+      Cookie: [DLILPC="XZgOB7EKPstp0G8y"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: https://pro.digital-loggers.com/outlet?1=ON
@@ -472,7 +494,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="I2KvFjcvWnwzWzYa"]
+      Cookie: [DLILPC="XZgOB7EKPstp0G8y"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: https://pro.digital-loggers.com/index.htm
@@ -482,13 +504,13 @@ interactions:
         \ http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n<meta\
         \ name=\"robots\" content=\"noindex, nofollow\">\n<meta http-equiv=\"refresh\"\
         \ content=\"60\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\"\
-        >\n<title>Outlet Control  - Closets  4430</title>\n\n<script type=\"text/javascript\"\
+        >\n<title>Outlet Control  - Controller</title>\n\n<script type=\"text/javascript\"\
         \ src=\"/md5.js\"></script>\n<script type=\"text/javascript\" src=\"/jquery.js\"\
         ></script>\n<script type=\"text/javascript\" src=\"/jquery.json.js\"></script>\n\
         <script type=\"text/javascript\">\nvar dli={\n    serialNumber:\"LPC92203000348\"\
-        \ ,\n    session: { expiry_time: new Date().getTime()+(1797)*1000 }\n};\n\
+        \ ,\n    session: { expiry_time: new Date().getTime()+(1793)*1000 }\n};\n\
         </script>\n<script type=\"text/javascript\" src=\"/core.js\"></script>\n\n\
-        </head>\n<!-- state=e1 lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
+        </head>\n<!-- state=fb lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
         \n<td class=\"navbar\">\n    <!-- menu -->\n    <table class=\"menu\">\n \
         \   <tr><td class=\"item\">\n    <table class=\"menuInner\">\n\n\n    <tr><td\
         \ class=\"centered\">\n    <table><tr><td><a href=\"http://www.digital-loggers.com/O.html\"\
@@ -519,12 +541,12 @@ interactions:
         >\n    <small>S/N:LPC92203000348</small>\n    </td></tr>\n\n    </table>\n\
         \    <!-- /menu -->\n</td>\n\n<td class=\"content\">\n\n\n    <!-- heading\
         \ table -->\n    <table class=\"heading\">\n\t\n        <tr>\n        <th\
-        \ class=\"header\">\n        Controller: Closets  4430\n        <div id=\"\
-        protection_status\">\n\n        <span class=\"icon imageReplaced prot-off\"\
-        \ title=\"No protection bits effective\"></span>\n        <div class=\"details\"\
-        >\n\n        <pre class=\"prot-partial\">Firmware protection is enabled but\
-        \ ineffective:\nSSH is enabled, which could be used to bypass protection</pre>\n\
-        \n        <pre class=\"prot-off\">Notification settings protection is disabled</pre>\n\
+        \ class=\"header\">\n        Controller: Controller\n        <div id=\"protection_status\"\
+        >\n\n        <span class=\"icon imageReplaced prot-off\" title=\"No protection\
+        \ bits effective\"></span>\n        <div class=\"details\">\n\n        <pre\
+        \ class=\"prot-partial\">Firmware protection is enabled but ineffective:\n\
+        SSH is enabled, which could be used to bypass protection</pre>\n\n       \
+        \ <pre class=\"prot-off\">Notification settings protection is disabled</pre>\n\
         \n        <pre class=\"prot-partial\">Protection from restore from backup\
         \ is enabled but ineffective:\nSSH is enabled, which could be used to bypass\
         \ protection</pre>\n\n        <pre class=\"prot-partial\">Maintenance mode\
@@ -537,9 +559,9 @@ interactions:
         prot-partial\">Private configuration protection is enabled but ineffective:\n\
         SSH is enabled, which could be used to bypass protection</pre>\n\n       \
         \ </div>\n        </div>\n        </th>\n        </tr>\n\n        <tr class=\"\
-        uptime\">\n        <td>\n        Sat Jun 16 00:15:17 2018 <!-- 49358.37s up\
-        \ -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
-        timeout\">00:29:57</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
+        uptime\">\n        <td>\n        Tue Jul 24 08:12:20 2018 <!-- 2748416.82s\
+        \ up -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
+        timeout\">00:29:53</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
         \    <!-- /heading table -->\n\n\n    <br>\n\n    <!-- individual control\
         \ table -->\n    <table class=\"form\">\n        <colgroup width=\"5%\"></colgroup>\n\
         \        <colgroup width=\"35%\"></colgroup>\n        <colgroup span=\"3\"\
@@ -551,38 +573,49 @@ interactions:
         \ -->\n\n\n<tr class=\"item\"><td class=\"centered\">1</td>\n<td>goober</td><td>\n\
         \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?1=OFF\"\
         >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?1=CCL\">Cycle</a>\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">2</td>\n<td>Switch</td><td>\n\n\
-        <b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?2=ON\"\
-        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?2=CCL\">Cycle</a>\n\
-        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">3</td>\n\
-        <td>Camera</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n\
-        \    <a  href=\"outlet?3=ON\">Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"\
-        outlet?3=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
-        centered\">4</td>\n<td>Cradlepoint Verizon</td><td>\n\n<b><font color=\"red\"\
-        >OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?4=ON\">Switch ON</a>\n\
-        \n</td><td>\n\n<!-- \n\n<a  href=\"outlet?4=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Fan</td><td>\n\n<b><font\
-        \ color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=ON\"\
-        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\
-        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">6</td>\n\
-        <td>Cool</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n\
-        \    <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a  href=\"\
+        \n<tr class=\"item\"><td class=\"centered\">2</td>\n<td>Router</td><td>\n\n\
+        <b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"return\
+        \ confirm('You are going to switch Outlet 2 [Router] OFF. Continue?')\"\n\
+        \ href=\"outlet?2=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 2 [Router]. Continue?')\"\n href=\"\
+        outlet?2=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
+        centered\">3</td>\n<td>Server</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n\
+        </td><td>\n\n    <a  href=\"outlet?3=ON\">Switch ON</a>\n\n</td><td>\n\n<!--\
+        \ \n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n<tr class=\"\
+        item\"><td class=\"centered\">4</td>\n<td>AP</td><td>\n\n<b><font color=\"\
+        green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"return confirm('You\
+        \ are going to switch Outlet 4 [AP] OFF. Continue?')\"\n href=\"outlet?4=OFF\"\
+        >Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return confirm('You are going\
+        \ to cycle Outlet 4 [AP]. Continue?')\"\n href=\"outlet?4=CCL\">Cycle</a>\n\
+        \n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Cradlepoint</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=OFF\"\
+        >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\n</td></tr>\n\
+        \n<tr class=\"item\"><td class=\"centered\">6</td>\n<td>Something7</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"\
+        return confirm('You are going to switch Outlet 6 [Something7] OFF. Continue?')\"\
+        \n href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 6 [Something7]. Continue?')\"\n href=\"\
         outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
-        centered\">7</td>\n<td>Demo</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
-        </td><td>\n\n    <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
-        <a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
-        \ class=\"centered\">8</td>\n<td>Bro</td><td>\n\n<b><font color=\"green\"\
-        >ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\
-        \n</td><td>\n\n<a  href=\"outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n   \
-        \ </table>\n    <!-- /individual control table -->\n\n    <br>\n\n<table class=\"\
-        form\">\n<tr><td class=\"header\">Master Control</td></tr>\n<tr><td class=\"\
-        item\">\n<a \nonclick=\"return confirm('You are going to switch all outlets\
-        \ OFF. Continue?')\"\n href=\"outlet?a=OFF\">All outlets OFF</a>\n</td></tr>\n\
-        <tr><td class=\"item\">\n    <a href=\"outlet?a=ON\">All outlets ON</a>\n\
-        </td></tr>\n<tr><td class=\"item\">\n<a \nonclick=\"return confirm('You are\
-        \ going to cycle all outlets. Continue?')\"\n href=\"outlet?a=CCL\">Cycle\
-        \ all outlets</a>\n</td></tr>\n<tr><td class=\"centered\">Sequence delay:\
-        \ 5 sec.</td></tr>\n\n</table>\n\n</td>\n</tr>\n</table>\n\n</body>\n</html>\n"}
+        centered\">7</td>\n<td>Something8</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
+        </td><td>\n\n    <a \nonclick=\"return confirm('You are going to switch Outlet\
+        \ 7 [Something8] OFF. Continue?')\"\n href=\"outlet?7=OFF\">Switch OFF</a>\n\
+        \n</td><td>\n\n<a \nonclick=\"return confirm('You are going to cycle Outlet\
+        \ 7 [Something8]. Continue?')\"\n href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\
+        \n<tr class=\"item\"><td class=\"centered\">8</td>\n<td>Something9</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"\
+        return confirm('You are going to switch Outlet 8 [Something9] OFF. Continue?')\"\
+        \n href=\"outlet?8=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 8 [Something9]. Continue?')\"\n href=\"\
+        outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n    </table>\n    <!-- /individual\
+        \ control table -->\n\n    <br>\n\n<table class=\"form\">\n<tr><td class=\"\
+        header\">Master Control</td></tr>\n<tr><td class=\"item\">\n<a \nonclick=\"\
+        return confirm('You are going to switch all outlets OFF. Continue?')\"\n href=\"\
+        outlet?a=OFF\">All outlets OFF</a>\n</td></tr>\n<tr><td class=\"item\">\n\
+        \    <a href=\"outlet?a=ON\">All outlets ON</a>\n</td></tr>\n<tr><td class=\"\
+        item\">\n<a \nonclick=\"return confirm('You are going to cycle all outlets.\
+        \ Continue?')\"\n href=\"outlet?a=CCL\">Cycle all outlets</a>\n</td></tr>\n\
+        <tr><td class=\"centered\">Sequence delay: 2 sec.</td></tr>\n\n</table>\n\n\
+        </td>\n</tr>\n</table>\n\n</body>\n</html>\n"}
     headers:
       Cache-Control: ['max-age=0, private, must-revalidate']
       Connection: [close]
@@ -594,7 +627,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="I2KvFjcvWnwzWzYa"]
+      Cookie: [DLILPC="XZgOB7EKPstp0G8y"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: https://pro.digital-loggers.com/index.htm
@@ -604,13 +637,13 @@ interactions:
         \ http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n<meta\
         \ name=\"robots\" content=\"noindex, nofollow\">\n<meta http-equiv=\"refresh\"\
         \ content=\"60\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\"\
-        >\n<title>Outlet Control  - Closets  4430</title>\n\n<script type=\"text/javascript\"\
+        >\n<title>Outlet Control  - Controller</title>\n\n<script type=\"text/javascript\"\
         \ src=\"/md5.js\"></script>\n<script type=\"text/javascript\" src=\"/jquery.js\"\
         ></script>\n<script type=\"text/javascript\" src=\"/jquery.json.js\"></script>\n\
         <script type=\"text/javascript\">\nvar dli={\n    serialNumber:\"LPC92203000348\"\
-        \ ,\n    session: { expiry_time: new Date().getTime()+(1796)*1000 }\n};\n\
+        \ ,\n    session: { expiry_time: new Date().getTime()+(1791)*1000 }\n};\n\
         </script>\n<script type=\"text/javascript\" src=\"/core.js\"></script>\n\n\
-        </head>\n<!-- state=e1 lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
+        </head>\n<!-- state=fb lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
         \n<td class=\"navbar\">\n    <!-- menu -->\n    <table class=\"menu\">\n \
         \   <tr><td class=\"item\">\n    <table class=\"menuInner\">\n\n\n    <tr><td\
         \ class=\"centered\">\n    <table><tr><td><a href=\"http://www.digital-loggers.com/O.html\"\
@@ -641,12 +674,12 @@ interactions:
         >\n    <small>S/N:LPC92203000348</small>\n    </td></tr>\n\n    </table>\n\
         \    <!-- /menu -->\n</td>\n\n<td class=\"content\">\n\n\n    <!-- heading\
         \ table -->\n    <table class=\"heading\">\n\t\n        <tr>\n        <th\
-        \ class=\"header\">\n        Controller: Closets  4430\n        <div id=\"\
-        protection_status\">\n\n        <span class=\"icon imageReplaced prot-off\"\
-        \ title=\"No protection bits effective\"></span>\n        <div class=\"details\"\
-        >\n\n        <pre class=\"prot-partial\">Firmware protection is enabled but\
-        \ ineffective:\nSSH is enabled, which could be used to bypass protection</pre>\n\
-        \n        <pre class=\"prot-off\">Notification settings protection is disabled</pre>\n\
+        \ class=\"header\">\n        Controller: Controller\n        <div id=\"protection_status\"\
+        >\n\n        <span class=\"icon imageReplaced prot-off\" title=\"No protection\
+        \ bits effective\"></span>\n        <div class=\"details\">\n\n        <pre\
+        \ class=\"prot-partial\">Firmware protection is enabled but ineffective:\n\
+        SSH is enabled, which could be used to bypass protection</pre>\n\n       \
+        \ <pre class=\"prot-off\">Notification settings protection is disabled</pre>\n\
         \n        <pre class=\"prot-partial\">Protection from restore from backup\
         \ is enabled but ineffective:\nSSH is enabled, which could be used to bypass\
         \ protection</pre>\n\n        <pre class=\"prot-partial\">Maintenance mode\
@@ -659,9 +692,9 @@ interactions:
         prot-partial\">Private configuration protection is enabled but ineffective:\n\
         SSH is enabled, which could be used to bypass protection</pre>\n\n       \
         \ </div>\n        </div>\n        </th>\n        </tr>\n\n        <tr class=\"\
-        uptime\">\n        <td>\n        Sat Jun 16 00:15:18 2018 <!-- 49359.16s up\
-        \ -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
-        timeout\">00:29:56</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
+        uptime\">\n        <td>\n        Tue Jul 24 08:12:22 2018 <!-- 2748418.42s\
+        \ up -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
+        timeout\">00:29:51</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
         \    <!-- /heading table -->\n\n\n    <br>\n\n    <!-- individual control\
         \ table -->\n    <table class=\"form\">\n        <colgroup width=\"5%\"></colgroup>\n\
         \        <colgroup width=\"35%\"></colgroup>\n        <colgroup span=\"3\"\
@@ -673,38 +706,49 @@ interactions:
         \ -->\n\n\n<tr class=\"item\"><td class=\"centered\">1</td>\n<td>goober</td><td>\n\
         \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?1=OFF\"\
         >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?1=CCL\">Cycle</a>\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">2</td>\n<td>Switch</td><td>\n\n\
-        <b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?2=ON\"\
-        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?2=CCL\">Cycle</a>\n\
-        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">3</td>\n\
-        <td>Camera</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n\
-        \    <a  href=\"outlet?3=ON\">Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"\
-        outlet?3=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
-        centered\">4</td>\n<td>Cradlepoint Verizon</td><td>\n\n<b><font color=\"red\"\
-        >OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?4=ON\">Switch ON</a>\n\
-        \n</td><td>\n\n<!-- \n\n<a  href=\"outlet?4=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Fan</td><td>\n\n<b><font\
-        \ color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=ON\"\
-        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\
-        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">6</td>\n\
-        <td>Cool</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n\
-        \    <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a  href=\"\
+        \n<tr class=\"item\"><td class=\"centered\">2</td>\n<td>Router</td><td>\n\n\
+        <b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"return\
+        \ confirm('You are going to switch Outlet 2 [Router] OFF. Continue?')\"\n\
+        \ href=\"outlet?2=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 2 [Router]. Continue?')\"\n href=\"\
+        outlet?2=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
+        centered\">3</td>\n<td>Server</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n\
+        </td><td>\n\n    <a  href=\"outlet?3=ON\">Switch ON</a>\n\n</td><td>\n\n<!--\
+        \ \n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n<tr class=\"\
+        item\"><td class=\"centered\">4</td>\n<td>AP</td><td>\n\n<b><font color=\"\
+        green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"return confirm('You\
+        \ are going to switch Outlet 4 [AP] OFF. Continue?')\"\n href=\"outlet?4=OFF\"\
+        >Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return confirm('You are going\
+        \ to cycle Outlet 4 [AP]. Continue?')\"\n href=\"outlet?4=CCL\">Cycle</a>\n\
+        \n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Cradlepoint</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=OFF\"\
+        >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\n</td></tr>\n\
+        \n<tr class=\"item\"><td class=\"centered\">6</td>\n<td>Something7</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"\
+        return confirm('You are going to switch Outlet 6 [Something7] OFF. Continue?')\"\
+        \n href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 6 [Something7]. Continue?')\"\n href=\"\
         outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
-        centered\">7</td>\n<td>Demo</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
-        </td><td>\n\n    <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
-        <a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
-        \ class=\"centered\">8</td>\n<td>Bro</td><td>\n\n<b><font color=\"green\"\
-        >ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\
-        \n</td><td>\n\n<a  href=\"outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n   \
-        \ </table>\n    <!-- /individual control table -->\n\n    <br>\n\n<table class=\"\
-        form\">\n<tr><td class=\"header\">Master Control</td></tr>\n<tr><td class=\"\
-        item\">\n<a \nonclick=\"return confirm('You are going to switch all outlets\
-        \ OFF. Continue?')\"\n href=\"outlet?a=OFF\">All outlets OFF</a>\n</td></tr>\n\
-        <tr><td class=\"item\">\n    <a href=\"outlet?a=ON\">All outlets ON</a>\n\
-        </td></tr>\n<tr><td class=\"item\">\n<a \nonclick=\"return confirm('You are\
-        \ going to cycle all outlets. Continue?')\"\n href=\"outlet?a=CCL\">Cycle\
-        \ all outlets</a>\n</td></tr>\n<tr><td class=\"centered\">Sequence delay:\
-        \ 5 sec.</td></tr>\n\n</table>\n\n</td>\n</tr>\n</table>\n\n</body>\n</html>\n"}
+        centered\">7</td>\n<td>Something8</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
+        </td><td>\n\n    <a \nonclick=\"return confirm('You are going to switch Outlet\
+        \ 7 [Something8] OFF. Continue?')\"\n href=\"outlet?7=OFF\">Switch OFF</a>\n\
+        \n</td><td>\n\n<a \nonclick=\"return confirm('You are going to cycle Outlet\
+        \ 7 [Something8]. Continue?')\"\n href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\
+        \n<tr class=\"item\"><td class=\"centered\">8</td>\n<td>Something9</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"\
+        return confirm('You are going to switch Outlet 8 [Something9] OFF. Continue?')\"\
+        \n href=\"outlet?8=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 8 [Something9]. Continue?')\"\n href=\"\
+        outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n    </table>\n    <!-- /individual\
+        \ control table -->\n\n    <br>\n\n<table class=\"form\">\n<tr><td class=\"\
+        header\">Master Control</td></tr>\n<tr><td class=\"item\">\n<a \nonclick=\"\
+        return confirm('You are going to switch all outlets OFF. Continue?')\"\n href=\"\
+        outlet?a=OFF\">All outlets OFF</a>\n</td></tr>\n<tr><td class=\"item\">\n\
+        \    <a href=\"outlet?a=ON\">All outlets ON</a>\n</td></tr>\n<tr><td class=\"\
+        item\">\n<a \nonclick=\"return confirm('You are going to cycle all outlets.\
+        \ Continue?')\"\n href=\"outlet?a=CCL\">Cycle all outlets</a>\n</td></tr>\n\
+        <tr><td class=\"centered\">Sequence delay: 2 sec.</td></tr>\n\n</table>\n\n\
+        </td>\n</tr>\n</table>\n\n</body>\n</html>\n"}
     headers:
       Cache-Control: ['max-age=0, private, must-revalidate']
       Connection: [close]
@@ -716,7 +760,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="I2KvFjcvWnwzWzYa"]
+      Cookie: [DLILPC="XZgOB7EKPstp0G8y"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: https://pro.digital-loggers.com/index.htm
@@ -726,13 +770,13 @@ interactions:
         \ http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n<meta\
         \ name=\"robots\" content=\"noindex, nofollow\">\n<meta http-equiv=\"refresh\"\
         \ content=\"60\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\"\
-        >\n<title>Outlet Control  - Closets  4430</title>\n\n<script type=\"text/javascript\"\
+        >\n<title>Outlet Control  - Controller</title>\n\n<script type=\"text/javascript\"\
         \ src=\"/md5.js\"></script>\n<script type=\"text/javascript\" src=\"/jquery.js\"\
         ></script>\n<script type=\"text/javascript\" src=\"/jquery.json.js\"></script>\n\
         <script type=\"text/javascript\">\nvar dli={\n    serialNumber:\"LPC92203000348\"\
-        \ ,\n    session: { expiry_time: new Date().getTime()+(1796)*1000 }\n};\n\
+        \ ,\n    session: { expiry_time: new Date().getTime()+(1790)*1000 }\n};\n\
         </script>\n<script type=\"text/javascript\" src=\"/core.js\"></script>\n\n\
-        </head>\n<!-- state=e1 lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
+        </head>\n<!-- state=fb lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
         \n<td class=\"navbar\">\n    <!-- menu -->\n    <table class=\"menu\">\n \
         \   <tr><td class=\"item\">\n    <table class=\"menuInner\">\n\n\n    <tr><td\
         \ class=\"centered\">\n    <table><tr><td><a href=\"http://www.digital-loggers.com/O.html\"\
@@ -763,12 +807,12 @@ interactions:
         >\n    <small>S/N:LPC92203000348</small>\n    </td></tr>\n\n    </table>\n\
         \    <!-- /menu -->\n</td>\n\n<td class=\"content\">\n\n\n    <!-- heading\
         \ table -->\n    <table class=\"heading\">\n\t\n        <tr>\n        <th\
-        \ class=\"header\">\n        Controller: Closets  4430\n        <div id=\"\
-        protection_status\">\n\n        <span class=\"icon imageReplaced prot-off\"\
-        \ title=\"No protection bits effective\"></span>\n        <div class=\"details\"\
-        >\n\n        <pre class=\"prot-partial\">Firmware protection is enabled but\
-        \ ineffective:\nSSH is enabled, which could be used to bypass protection</pre>\n\
-        \n        <pre class=\"prot-off\">Notification settings protection is disabled</pre>\n\
+        \ class=\"header\">\n        Controller: Controller\n        <div id=\"protection_status\"\
+        >\n\n        <span class=\"icon imageReplaced prot-off\" title=\"No protection\
+        \ bits effective\"></span>\n        <div class=\"details\">\n\n        <pre\
+        \ class=\"prot-partial\">Firmware protection is enabled but ineffective:\n\
+        SSH is enabled, which could be used to bypass protection</pre>\n\n       \
+        \ <pre class=\"prot-off\">Notification settings protection is disabled</pre>\n\
         \n        <pre class=\"prot-partial\">Protection from restore from backup\
         \ is enabled but ineffective:\nSSH is enabled, which could be used to bypass\
         \ protection</pre>\n\n        <pre class=\"prot-partial\">Maintenance mode\
@@ -781,9 +825,9 @@ interactions:
         prot-partial\">Private configuration protection is enabled but ineffective:\n\
         SSH is enabled, which could be used to bypass protection</pre>\n\n       \
         \ </div>\n        </div>\n        </th>\n        </tr>\n\n        <tr class=\"\
-        uptime\">\n        <td>\n        Sat Jun 16 00:15:18 2018 <!-- 49359.9s up\
-        \ -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
-        timeout\">00:29:56</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
+        uptime\">\n        <td>\n        Tue Jul 24 08:12:23 2018 <!-- 2748420.31s\
+        \ up -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
+        timeout\">00:29:50</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
         \    <!-- /heading table -->\n\n\n    <br>\n\n    <!-- individual control\
         \ table -->\n    <table class=\"form\">\n        <colgroup width=\"5%\"></colgroup>\n\
         \        <colgroup width=\"35%\"></colgroup>\n        <colgroup span=\"3\"\
@@ -795,38 +839,49 @@ interactions:
         \ -->\n\n\n<tr class=\"item\"><td class=\"centered\">1</td>\n<td>goober</td><td>\n\
         \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?1=OFF\"\
         >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?1=CCL\">Cycle</a>\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">2</td>\n<td>Switch</td><td>\n\n\
-        <b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?2=ON\"\
-        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?2=CCL\">Cycle</a>\n\
-        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">3</td>\n\
-        <td>Camera</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n\
-        \    <a  href=\"outlet?3=ON\">Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"\
-        outlet?3=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
-        centered\">4</td>\n<td>Cradlepoint Verizon</td><td>\n\n<b><font color=\"red\"\
-        >OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?4=ON\">Switch ON</a>\n\
-        \n</td><td>\n\n<!-- \n\n<a  href=\"outlet?4=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Fan</td><td>\n\n<b><font\
-        \ color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=ON\"\
-        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\
-        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">6</td>\n\
-        <td>Cool</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n\
-        \    <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a  href=\"\
+        \n<tr class=\"item\"><td class=\"centered\">2</td>\n<td>Router</td><td>\n\n\
+        <b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"return\
+        \ confirm('You are going to switch Outlet 2 [Router] OFF. Continue?')\"\n\
+        \ href=\"outlet?2=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 2 [Router]. Continue?')\"\n href=\"\
+        outlet?2=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
+        centered\">3</td>\n<td>Server</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n\
+        </td><td>\n\n    <a  href=\"outlet?3=ON\">Switch ON</a>\n\n</td><td>\n\n<!--\
+        \ \n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n<tr class=\"\
+        item\"><td class=\"centered\">4</td>\n<td>AP</td><td>\n\n<b><font color=\"\
+        green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"return confirm('You\
+        \ are going to switch Outlet 4 [AP] OFF. Continue?')\"\n href=\"outlet?4=OFF\"\
+        >Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return confirm('You are going\
+        \ to cycle Outlet 4 [AP]. Continue?')\"\n href=\"outlet?4=CCL\">Cycle</a>\n\
+        \n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Cradlepoint</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=OFF\"\
+        >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\n</td></tr>\n\
+        \n<tr class=\"item\"><td class=\"centered\">6</td>\n<td>Something7</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"\
+        return confirm('You are going to switch Outlet 6 [Something7] OFF. Continue?')\"\
+        \n href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 6 [Something7]. Continue?')\"\n href=\"\
         outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
-        centered\">7</td>\n<td>Demo</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
-        </td><td>\n\n    <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
-        <a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
-        \ class=\"centered\">8</td>\n<td>Bro</td><td>\n\n<b><font color=\"green\"\
-        >ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\
-        \n</td><td>\n\n<a  href=\"outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n   \
-        \ </table>\n    <!-- /individual control table -->\n\n    <br>\n\n<table class=\"\
-        form\">\n<tr><td class=\"header\">Master Control</td></tr>\n<tr><td class=\"\
-        item\">\n<a \nonclick=\"return confirm('You are going to switch all outlets\
-        \ OFF. Continue?')\"\n href=\"outlet?a=OFF\">All outlets OFF</a>\n</td></tr>\n\
-        <tr><td class=\"item\">\n    <a href=\"outlet?a=ON\">All outlets ON</a>\n\
-        </td></tr>\n<tr><td class=\"item\">\n<a \nonclick=\"return confirm('You are\
-        \ going to cycle all outlets. Continue?')\"\n href=\"outlet?a=CCL\">Cycle\
-        \ all outlets</a>\n</td></tr>\n<tr><td class=\"centered\">Sequence delay:\
-        \ 5 sec.</td></tr>\n\n</table>\n\n</td>\n</tr>\n</table>\n\n</body>\n</html>\n"}
+        centered\">7</td>\n<td>Something8</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
+        </td><td>\n\n    <a \nonclick=\"return confirm('You are going to switch Outlet\
+        \ 7 [Something8] OFF. Continue?')\"\n href=\"outlet?7=OFF\">Switch OFF</a>\n\
+        \n</td><td>\n\n<a \nonclick=\"return confirm('You are going to cycle Outlet\
+        \ 7 [Something8]. Continue?')\"\n href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\
+        \n<tr class=\"item\"><td class=\"centered\">8</td>\n<td>Something9</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"\
+        return confirm('You are going to switch Outlet 8 [Something9] OFF. Continue?')\"\
+        \n href=\"outlet?8=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 8 [Something9]. Continue?')\"\n href=\"\
+        outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n    </table>\n    <!-- /individual\
+        \ control table -->\n\n    <br>\n\n<table class=\"form\">\n<tr><td class=\"\
+        header\">Master Control</td></tr>\n<tr><td class=\"item\">\n<a \nonclick=\"\
+        return confirm('You are going to switch all outlets OFF. Continue?')\"\n href=\"\
+        outlet?a=OFF\">All outlets OFF</a>\n</td></tr>\n<tr><td class=\"item\">\n\
+        \    <a href=\"outlet?a=ON\">All outlets ON</a>\n</td></tr>\n<tr><td class=\"\
+        item\">\n<a \nonclick=\"return confirm('You are going to cycle all outlets.\
+        \ Continue?')\"\n href=\"outlet?a=CCL\">Cycle all outlets</a>\n</td></tr>\n\
+        <tr><td class=\"centered\">Sequence delay: 2 sec.</td></tr>\n\n</table>\n\n\
+        </td>\n</tr>\n</table>\n\n</body>\n</html>\n"}
     headers:
       Cache-Control: ['max-age=0, private, must-revalidate']
       Connection: [close]
@@ -838,7 +893,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="I2KvFjcvWnwzWzYa"]
+      Cookie: [DLILPC="XZgOB7EKPstp0G8y"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: https://pro.digital-loggers.com/index.htm
@@ -848,13 +903,13 @@ interactions:
         \ http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n<meta\
         \ name=\"robots\" content=\"noindex, nofollow\">\n<meta http-equiv=\"refresh\"\
         \ content=\"60\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\"\
-        >\n<title>Outlet Control  - Closets  4430</title>\n\n<script type=\"text/javascript\"\
+        >\n<title>Outlet Control  - Controller</title>\n\n<script type=\"text/javascript\"\
         \ src=\"/md5.js\"></script>\n<script type=\"text/javascript\" src=\"/jquery.js\"\
         ></script>\n<script type=\"text/javascript\" src=\"/jquery.json.js\"></script>\n\
         <script type=\"text/javascript\">\nvar dli={\n    serialNumber:\"LPC92203000348\"\
-        \ ,\n    session: { expiry_time: new Date().getTime()+(1795)*1000 }\n};\n\
+        \ ,\n    session: { expiry_time: new Date().getTime()+(1787)*1000 }\n};\n\
         </script>\n<script type=\"text/javascript\" src=\"/core.js\"></script>\n\n\
-        </head>\n<!-- state=e1 lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
+        </head>\n<!-- state=fb lock=00 -->\n<body>\n<table class=\"page\">\n<tr>\n\
         \n<td class=\"navbar\">\n    <!-- menu -->\n    <table class=\"menu\">\n \
         \   <tr><td class=\"item\">\n    <table class=\"menuInner\">\n\n\n    <tr><td\
         \ class=\"centered\">\n    <table><tr><td><a href=\"http://www.digital-loggers.com/O.html\"\
@@ -885,12 +940,12 @@ interactions:
         >\n    <small>S/N:LPC92203000348</small>\n    </td></tr>\n\n    </table>\n\
         \    <!-- /menu -->\n</td>\n\n<td class=\"content\">\n\n\n    <!-- heading\
         \ table -->\n    <table class=\"heading\">\n\t\n        <tr>\n        <th\
-        \ class=\"header\">\n        Controller: Closets  4430\n        <div id=\"\
-        protection_status\">\n\n        <span class=\"icon imageReplaced prot-off\"\
-        \ title=\"No protection bits effective\"></span>\n        <div class=\"details\"\
-        >\n\n        <pre class=\"prot-partial\">Firmware protection is enabled but\
-        \ ineffective:\nSSH is enabled, which could be used to bypass protection</pre>\n\
-        \n        <pre class=\"prot-off\">Notification settings protection is disabled</pre>\n\
+        \ class=\"header\">\n        Controller: Controller\n        <div id=\"protection_status\"\
+        >\n\n        <span class=\"icon imageReplaced prot-off\" title=\"No protection\
+        \ bits effective\"></span>\n        <div class=\"details\">\n\n        <pre\
+        \ class=\"prot-partial\">Firmware protection is enabled but ineffective:\n\
+        SSH is enabled, which could be used to bypass protection</pre>\n\n       \
+        \ <pre class=\"prot-off\">Notification settings protection is disabled</pre>\n\
         \n        <pre class=\"prot-partial\">Protection from restore from backup\
         \ is enabled but ineffective:\nSSH is enabled, which could be used to bypass\
         \ protection</pre>\n\n        <pre class=\"prot-partial\">Maintenance mode\
@@ -903,9 +958,9 @@ interactions:
         prot-partial\">Private configuration protection is enabled but ineffective:\n\
         SSH is enabled, which could be used to bypass protection</pre>\n\n       \
         \ </div>\n        </div>\n        </th>\n        </tr>\n\n        <tr class=\"\
-        uptime\">\n        <td>\n        Sat Jun 16 00:15:19 2018 <!-- 49360.62s up\
-        \ -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
-        timeout\">00:29:55</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
+        uptime\">\n        <td>\n        Tue Jul 24 08:12:26 2018 <!-- 2748422.39s\
+        \ up -->\n\n        <div id=\"session_timer\">Session expires in <span class=\"\
+        timeout\">00:29:47</span></div>\n\n        </td>\n        </tr>\n\n    </table>\n\
         \    <!-- /heading table -->\n\n\n    <br>\n\n    <!-- individual control\
         \ table -->\n    <table class=\"form\">\n        <colgroup width=\"5%\"></colgroup>\n\
         \        <colgroup width=\"35%\"></colgroup>\n        <colgroup span=\"3\"\
@@ -917,38 +972,49 @@ interactions:
         \ -->\n\n\n<tr class=\"item\"><td class=\"centered\">1</td>\n<td>goober</td><td>\n\
         \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?1=OFF\"\
         >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?1=CCL\">Cycle</a>\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">2</td>\n<td>Switch</td><td>\n\n\
-        <b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?2=ON\"\
-        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?2=CCL\">Cycle</a>\n\
-        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">3</td>\n\
-        <td>Camera</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n\
-        \    <a  href=\"outlet?3=ON\">Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"\
-        outlet?3=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
-        centered\">4</td>\n<td>Cradlepoint Verizon</td><td>\n\n<b><font color=\"red\"\
-        >OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?4=ON\">Switch ON</a>\n\
-        \n</td><td>\n\n<!-- \n\n<a  href=\"outlet?4=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\
-        \n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Fan</td><td>\n\n<b><font\
-        \ color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=ON\"\
-        >Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\
-        \n -->\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">6</td>\n\
-        <td>Cool</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n\
-        \    <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a  href=\"\
+        \n<tr class=\"item\"><td class=\"centered\">2</td>\n<td>Router</td><td>\n\n\
+        <b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"return\
+        \ confirm('You are going to switch Outlet 2 [Router] OFF. Continue?')\"\n\
+        \ href=\"outlet?2=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 2 [Router]. Continue?')\"\n href=\"\
+        outlet?2=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
+        centered\">3</td>\n<td>Server</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n\
+        </td><td>\n\n    <a  href=\"outlet?3=ON\">Switch ON</a>\n\n</td><td>\n\n<!--\
+        \ \n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n<tr class=\"\
+        item\"><td class=\"centered\">4</td>\n<td>AP</td><td>\n\n<b><font color=\"\
+        green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"return confirm('You\
+        \ are going to switch Outlet 4 [AP] OFF. Continue?')\"\n href=\"outlet?4=OFF\"\
+        >Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return confirm('You are going\
+        \ to cycle Outlet 4 [AP]. Continue?')\"\n href=\"outlet?4=CCL\">Cycle</a>\n\
+        \n</td></tr>\n\n<tr class=\"item\"><td class=\"centered\">5</td>\n<td>Cradlepoint</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=OFF\"\
+        >Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\n</td></tr>\n\
+        \n<tr class=\"item\"><td class=\"centered\">6</td>\n<td>Something7</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"\
+        return confirm('You are going to switch Outlet 6 [Something7] OFF. Continue?')\"\
+        \n href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 6 [Something7]. Continue?')\"\n href=\"\
         outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td class=\"\
-        centered\">7</td>\n<td>Demo</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
-        </td><td>\n\n    <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\n</td><td>\n\n\
-        <a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n<tr class=\"item\"><td\
-        \ class=\"centered\">8</td>\n<td>Bro</td><td>\n\n<b><font color=\"green\"\
-        >ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\
-        \n</td><td>\n\n<a  href=\"outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n   \
-        \ </table>\n    <!-- /individual control table -->\n\n    <br>\n\n<table class=\"\
-        form\">\n<tr><td class=\"header\">Master Control</td></tr>\n<tr><td class=\"\
-        item\">\n<a \nonclick=\"return confirm('You are going to switch all outlets\
-        \ OFF. Continue?')\"\n href=\"outlet?a=OFF\">All outlets OFF</a>\n</td></tr>\n\
-        <tr><td class=\"item\">\n    <a href=\"outlet?a=ON\">All outlets ON</a>\n\
-        </td></tr>\n<tr><td class=\"item\">\n<a \nonclick=\"return confirm('You are\
-        \ going to cycle all outlets. Continue?')\"\n href=\"outlet?a=CCL\">Cycle\
-        \ all outlets</a>\n</td></tr>\n<tr><td class=\"centered\">Sequence delay:\
-        \ 5 sec.</td></tr>\n\n</table>\n\n</td>\n</tr>\n</table>\n\n</body>\n</html>\n"}
+        centered\">7</td>\n<td>Something8</td><td>\n\n<b><font color=\"green\">ON</font></b>\n\
+        </td><td>\n\n    <a \nonclick=\"return confirm('You are going to switch Outlet\
+        \ 7 [Something8] OFF. Continue?')\"\n href=\"outlet?7=OFF\">Switch OFF</a>\n\
+        \n</td><td>\n\n<a \nonclick=\"return confirm('You are going to cycle Outlet\
+        \ 7 [Something8]. Continue?')\"\n href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\
+        \n<tr class=\"item\"><td class=\"centered\">8</td>\n<td>Something9</td><td>\n\
+        \n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a \nonclick=\"\
+        return confirm('You are going to switch Outlet 8 [Something9] OFF. Continue?')\"\
+        \n href=\"outlet?8=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a \nonclick=\"return\
+        \ confirm('You are going to cycle Outlet 8 [Something9]. Continue?')\"\n href=\"\
+        outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n    </table>\n    <!-- /individual\
+        \ control table -->\n\n    <br>\n\n<table class=\"form\">\n<tr><td class=\"\
+        header\">Master Control</td></tr>\n<tr><td class=\"item\">\n<a \nonclick=\"\
+        return confirm('You are going to switch all outlets OFF. Continue?')\"\n href=\"\
+        outlet?a=OFF\">All outlets OFF</a>\n</td></tr>\n<tr><td class=\"item\">\n\
+        \    <a href=\"outlet?a=ON\">All outlets ON</a>\n</td></tr>\n<tr><td class=\"\
+        item\">\n<a \nonclick=\"return confirm('You are going to cycle all outlets.\
+        \ Continue?')\"\n href=\"outlet?a=CCL\">Cycle all outlets</a>\n</td></tr>\n\
+        <tr><td class=\"centered\">Sequence delay: 2 sec.</td></tr>\n\n</table>\n\n\
+        </td>\n</tr>\n</table>\n\n</body>\n</html>\n"}
     headers:
       Cache-Control: ['max-age=0, private, must-revalidate']
       Connection: [close]

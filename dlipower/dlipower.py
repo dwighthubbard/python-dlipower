@@ -223,7 +223,8 @@ class Outlet(object):
 class PowerSwitch(object):
     """ Powerswitch class to manage the Digital Loggers Web power switch """
     __len = 0
-    login_timeout = 1.0
+    login_timeout = 2.0
+    secure_login = False
 
     def __init__(self, userid=None, password=None, hostname=None, timeout=None,
                  cycletime=None, retries=None, use_https=False):
@@ -350,10 +351,13 @@ class PowerSwitch(object):
         try:
             response = self.session.post('%s/login.tgi' % self.base_url, headers=headers, data=data, timeout=self.timeout, verify=False)
         except requests.exceptions.ConnectTimeout:
+            self.secure_login = False
+            self.session = None
             return
 
         if response.status_code == 200:
-            self.secure_login = True
+            if 'Set-Cookie' in response.headers:
+                self.secure_login = True
 
     def load_configuration(self):
         """ Return a configuration dictionary """
@@ -388,9 +392,7 @@ class PowerSwitch(object):
             json.dump(config, file_h, sort_keys=True, indent=4)
             file_h.close()
         else:
-            raise DLIPowerException(
-                'Unable to open configuration file for write'
-            )
+            raise DLIPowerException('Unable to open configuration file for write')
 
     def verify(self):
         """ Verify we can reach the switch, returns true if ok """
@@ -407,13 +409,13 @@ class PowerSwitch(object):
         request = None
         for i in range(0, self.retries):
             try:
-                if self.secure_login:
+                if self.secure_login and self.session:
                     request = self.session.get(full_url, timeout=self.timeout, verify=False)
                 else:
                     request = requests.get(full_url, auth=(self.userid, self.password,), timeout=self.timeout, verify=False)
             except requests.exceptions.RequestException as e:
                 logger.warning("Request timed out - %d retries left.", self.retries - i - 1)
-                logger.debug("Catched exception %s", str(e))
+                logger.exception("Caught exception %s", str(e))
                 continue
             if request.status_code == 200:
                 result = request.content

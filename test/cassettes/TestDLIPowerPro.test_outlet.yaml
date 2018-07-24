@@ -14,7 +14,7 @@ interactions:
         Content-Type\" content=\"text/html; charset=UTF-8\">\n<meta name=\"robots\"\
         \ content=\"noindex, nofollow\">\n<meta http-equiv=\"refresh\" content=\"\
         285\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\">\n\
-        <title>Power Controller Closets  4430\n</title>\n<script type=\"text/javascript\"\
+        <title>Power Controller Controller\n</title>\n<script type=\"text/javascript\"\
         \ src=\"/md5.js\"></script>\n<script type=\"text/javascript\">\n<!--\nwindow.addEventListener\
         \ && window.addEventListener(\"pageshow\", function(event)\n{\n    if (event.persisted\
         \ || (window.performance && window.performance.navigation && window.performance.navigation.type\
@@ -33,7 +33,7 @@ interactions:
         <td><input type=\"password\" name=\"Password\" size=\"16\"></td>\n</tr>\n\
         <tr class=\"right\">\n<td></td>\n<td><input onClick=\"calcResponse(); return\
         \ false;\" type=\"Submit\" value=\"OK\">\n<input type=\"hidden\" name=\"Challenge\"\
-        \ value=\"D87Kszg3SP3USvP6\">\n</td></tr>\n</table>\n</form>\n</td></tr></table>\n\
+        \ value=\"07bu6rqyGLwaTvEr\">\n</td></tr>\n</table>\n</form>\n</td></tr></table>\n\
         <script type=\"text/javascript\">\n<!--\ndocument.login.Username.focus();\n\
         //-->\n</script>\n<form name=\"secin\" id=\"secin\" action=\"/login.tgi\"\
         \ method=\"post\" accept-charset=\"UTF-8\">\n<div style=\"display:none\">\n\
@@ -45,7 +45,7 @@ interactions:
       Content-Type: [text/html; charset="utf-8"]
     status: {code: 200, message: OK}
 - request:
-    body: Username=admin&Password=9ff61f797651954f4941b94ac5685ef7
+    body: Username=admin&Password=647884bb06330944f3da41a9b1cb40fe
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -87,6 +87,6 @@ interactions:
       Cache-Control: ['max-age=0, private, must-revalidate']
       Connection: [close]
       Content-Type: [text/html; charset="utf-8"]
-      Set-Cookie: [DLILPC="l4x/JQkBfe5g07XS"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="iez1h1RUuSh/AWLH"; Version=1; Path=/]
     status: {code: 200, message: OK}
 version: 1

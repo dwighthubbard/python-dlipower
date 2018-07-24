@@ -24,7 +24,7 @@ interactions:
         \ TYPE=\"password\" NAME=\"Password\" SIZE=16 MAXLENGTH=32></TD>\n</TR>\n\
         <TR ALIGN=RIGHT>\n<TD></TD>\n<TD><INPUT onClick=\"calcResponse(); return false;\"\
         \ TYPE=\"Submit\" VALUE=\"OK\">\n \n<input type=\"hidden\" name=\"Challenge\"\
-        \ value=\"NwgQopgparskS8o\">\n \n</TD></TR>\n</TABLE>\n</FORM>\n<script language=\"\
+        \ value=\"jUDvDSQuaQV1II5\">\n \n</TD></TR>\n</TABLE>\n</FORM>\n<script language=\"\
         javascript\">\n<!--\ndocument.login.Username.focus();\n//-->\n</script>\n\
         <FORM NAME=\"secin\" ID=\"secin\" ACTION=\"/login.tgi\" METHOD=post style=\"\
         display:none\">\n<INPUT TYPE=\"hidden\" NAME=\"Username\">\n<INPUT TYPE=\"\
@@ -38,7 +38,7 @@ interactions:
       Set-Cookie: [DLILPC=""; Version=1; Max-Age=0; Path=/]
     status: {code: 200, message: OK}
 - request:
-    body: Username=admin&Password=2fa55fb8cce183ca8882c21bb53287d4
+    body: Username=admin&Password=67f0bc2c0d362f839cf7f708478fd8db
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -64,7 +64,7 @@ interactions:
       Content-Type: [text/html]
       Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
       Pragma: [no-cache]
-      Set-Cookie: [DLILPC="l/C80zG1VB9E+mP"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="83I70nGZ7n3okqV"; Version=1; Path=/]
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -91,7 +91,7 @@ interactions:
         \ TYPE=\"password\" NAME=\"Password\" SIZE=16 MAXLENGTH=32></TD>\n</TR>\n\
         <TR ALIGN=RIGHT>\n<TD></TD>\n<TD><INPUT onClick=\"calcResponse(); return false;\"\
         \ TYPE=\"Submit\" VALUE=\"OK\">\n \n<input type=\"hidden\" name=\"Challenge\"\
-        \ value=\"qJGTQiCj70DjMEX\">\n \n</TD></TR>\n</TABLE>\n</FORM>\n<script language=\"\
+        \ value=\"omwITVfeu3Cvqkj\">\n \n</TD></TR>\n</TABLE>\n</FORM>\n<script language=\"\
         javascript\">\n<!--\ndocument.login.Username.focus();\n//-->\n</script>\n\
         <FORM NAME=\"secin\" ID=\"secin\" ACTION=\"/login.tgi\" METHOD=post style=\"\
         display:none\">\n<INPUT TYPE=\"hidden\" NAME=\"Username\">\n<INPUT TYPE=\"\
@@ -105,7 +105,7 @@ interactions:
       Set-Cookie: [DLILPC=""; Version=1; Max-Age=0; Path=/]
     status: {code: 200, message: OK}
 - request:
-    body: Username=admin&Password=851a19161a0c43f6c0e01a5315f64a11
+    body: Username=admin&Password=7ccea9555477977857ea7cde7c8fad37
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -131,7 +131,7 @@ interactions:
       Content-Type: [text/html]
       Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
       Pragma: [no-cache]
-      Set-Cookie: [DLILPC="btVjY1kqhS4pHHl"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="6UqIOgQm84ISPgl"; Version=1; Path=/]
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -139,16 +139,16 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="btVjY1kqhS4pHHl"]
+      Cookie: [DLILPC="6UqIOgQm84ISPgl"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://lpc.digital-loggers.com/index.htm
   response:
     body: {string: "<html>\n<head>\n<META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"\
         >\n\n<META HTTP-EQUIV=\"Refresh\" CONTENT=\"60\">\n<title>Outlet Control \
-        \ - PDU 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
+        \ - LPC7 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
         \ {\nwindow.open('http://www.digital-loggers.com/register.html?SN=LPC612010');\n\
-        }\n//-->\n</script>\n</head>\n<!-- state=e0 lock=00 -->\n\n<body alink=\"\
+        }\n//-->\n</script>\n</head>\n<!-- state=f6 lock=00 -->\n\n<body alink=\"\
         #0000FF\" vlink=\"#0000FF\">\n<FONT FACE=\"Arial, Helvetica, Sans-Serif\"\
         >\n<table width=\"100%\" cellspacing=0 cellpadding=0>\n<tr>\n<td valign=top\
         \ width=\"17%\" height=\"100%\">\n\n    <table width=\"100%\" height=\"100%\"\
@@ -176,10 +176,10 @@ interactions:
         100%\" bgcolor=\"#F4F4F4\">\n    <small>S/N:LPC612010</small>\n    </td></tr>\n\
         \n    </table>\n\n</td>\n<td valign=top width=\"83%\">\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\t\n        <tr>\n\
-        \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: PDU 1\n\
+        \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: LPC7 1\n\
         \        </th>\n        </tr>\n\n        <tr bgcolor=\"#FFFFFF\" align=left>\n\
-        \        <td>\n        Fri Jun 15 23:13:44 2018 <!-- 11614055s up -->\n  \
-        \      </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
+        \        <td>\n        Tue Jul 24 08:15:50 2018 <!-- 1127271s up -->\n   \
+        \     </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\n        <tr>\n\
         \        <td bgcolor=\"#DDDDFF\" colspan=5 align=left>\n        Individual\
         \ Control\n        </td>\n        </tr>\n\n        <tr bgcolor=\"#DDDDDD\"\
@@ -188,23 +188,24 @@ interactions:
         \ bgcolor=\"#F4F4F4\"><td align=center>1</td>\n<td>goober</td><td>\n<b><font\
         \ color=red>OFF</font></b></td><td>\n<a  href=outlet?1=ON>Switch ON</a>\n\
         </td><td>\n<!-- <a  href=outlet?1=CCL>Cycle</a> -->\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>2</td>\n<td>Router</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
-        <a  href=outlet?2=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?2=CCL>Cycle</a>\
-        \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>3</td>\n<td>UBNT\
-        \ WiFi AP</td><td>\n<b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?3=ON>Switch\
-        \ ON</a>\n</td><td>\n<!-- <a  href=outlet?3=CCL>Cycle</a> -->\n</td></tr>\n\
-        \n\n<tr bgcolor=\"#F4F4F4\"><td align=center>4</td>\n<td>Server 1</td><td>\n\
-        <b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?4=ON>Switch ON</a>\n\
-        </td><td>\n<!-- <a  href=outlet?4=CCL>Cycle</a> -->\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>5</td>\n<td>Network Switch</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
-        <a  href=outlet?5=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?5=CCL>Cycle</a>\
-        \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>6</td>\n<td>Alexa\
-        \ Device 1</td><td>\n<b><font color=green>ON</font></b></td><td>\n<a  href=outlet?6=OFF>Switch\
+        #F4F4F4\"><td align=center>2</td>\n<td>DMA - Automation</td><td>\n<b><font\
+        \ color=green>ON</font></b></td><td>\n<a  href=outlet?2=OFF>Switch OFF</a>\n\
+        </td><td>\n<a  href=outlet?2=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
+        #F4F4F4\"><td align=center>3</td>\n<td>UBNT WiFi AP</td><td>\n<b><font color=green>ON</font></b></td><td>\n\
+        <a  href=outlet?3=OFF>Switch OFF</a>\n</td><td>\n<a  href=outlet?3=CCL>Cycle</a>\n\
+        </td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>4</td>\n<td>Server\
+        \ 1</td><td>\n<b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?4=ON>Switch\
+        \ ON</a>\n</td><td>\n<!-- <a  href=outlet?4=CCL>Cycle</a> -->\n</td></tr>\n\
+        \n\n<tr bgcolor=\"#F4F4F4\"><td align=center>5</td>\n<td>Network Switch</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?5=OFF>Switch\
+        \ OFF</a>\n</td><td>\n<a  href=outlet?5=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
+        \ bgcolor=\"#F4F4F4\"><td align=center>6</td>\n<td>Alexa Device 1</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?6=OFF>Switch\
         \ OFF</a>\n</td><td>\n<a  href=outlet?6=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
-        \ bgcolor=\"#F4F4F4\"><td align=center>7</td>\n<td>Test</td><td>\n<b><font\
-        \ color=green>ON</font></b></td><td>\n<a  href=outlet?7=OFF>Switch OFF</a>\n\
-        </td><td>\n<a  href=outlet?7=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>8</td>\n<td>Vibrator charger</td><td>\n<b><font\
+        \ bgcolor=\"#F4F4F4\"><td align=center>7</td>\n<td>Test Outlet</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?7=OFF>Switch\
+        \ OFF</a>\n</td><td>\n<a  href=outlet?7=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
+        \ bgcolor=\"#F4F4F4\"><td align=center>8</td>\n<td>Charger</td><td>\n<b><font\
         \ color=green>ON</font></b></td><td>\n<a  href=outlet?8=OFF>Switch OFF</a>\n\
         </td><td>\n<a  href=outlet?8=CCL>Cycle</a>\n</td></tr>\n\n\n    </table>\n\
         \    <!-- /individual control table -->\n\n    <br>\n\n<table width=\"100%\"\
@@ -213,7 +214,7 @@ interactions:
         \  href=outlet?a=OFF>All Outlets OFF</a></td></tr>\n<tr><td bgcolor=\"#F4F4F4\"\
         \ align=left><a href=outlet?a=ON>All Outlets ON</a></td></tr>\n<tr><td bgcolor=\"\
         #F4F4F4\" align=left><a  href=outlet?a=CCL>Cycle all Outlets</a></td></tr>\n\
-        <tr><td align=center>Sequence delay: 2 sec.</td></tr>\n\n</table>\n\n\n</td>\n\
+        <tr><td align=center>Sequence delay: 5 sec.</td></tr>\n\n</table>\n\n\n</td>\n\
         </tr>\n</table>\n\n</body>\n</html>\n"}
     headers:
       Cache-Control: ['No-cache, no-store, must-revalidate, max-age=0']
@@ -221,7 +222,7 @@ interactions:
       Content-Type: [text/html]
       Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
       Pragma: [no-cache]
-      Set-Cookie: [DLILPC="btVjY1kqhS4pHHl"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="6UqIOgQm84ISPgl"; Version=1; Path=/]
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -229,7 +230,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="btVjY1kqhS4pHHl"]
+      Cookie: [DLILPC="6UqIOgQm84ISPgl"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://lpc.digital-loggers.com/outlet?1=OFF
@@ -249,7 +250,7 @@ interactions:
       Content-Type: [text/html]
       Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
       Pragma: [no-cache]
-      Set-Cookie: [DLILPC="btVjY1kqhS4pHHl"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="6UqIOgQm84ISPgl"; Version=1; Path=/]
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -257,16 +258,16 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="btVjY1kqhS4pHHl"]
+      Cookie: [DLILPC="6UqIOgQm84ISPgl"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://lpc.digital-loggers.com/index.htm
   response:
     body: {string: "<html>\n<head>\n<META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"\
         >\n\n<META HTTP-EQUIV=\"Refresh\" CONTENT=\"60\">\n<title>Outlet Control \
-        \ - PDU 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
+        \ - LPC7 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
         \ {\nwindow.open('http://www.digital-loggers.com/register.html?SN=LPC612010');\n\
-        }\n//-->\n</script>\n</head>\n<!-- state=e0 lock=00 -->\n\n<body alink=\"\
+        }\n//-->\n</script>\n</head>\n<!-- state=f6 lock=00 -->\n\n<body alink=\"\
         #0000FF\" vlink=\"#0000FF\">\n<FONT FACE=\"Arial, Helvetica, Sans-Serif\"\
         >\n<table width=\"100%\" cellspacing=0 cellpadding=0>\n<tr>\n<td valign=top\
         \ width=\"17%\" height=\"100%\">\n\n    <table width=\"100%\" height=\"100%\"\
@@ -294,10 +295,10 @@ interactions:
         100%\" bgcolor=\"#F4F4F4\">\n    <small>S/N:LPC612010</small>\n    </td></tr>\n\
         \n    </table>\n\n</td>\n<td valign=top width=\"83%\">\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\t\n        <tr>\n\
-        \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: PDU 1\n\
+        \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: LPC7 1\n\
         \        </th>\n        </tr>\n\n        <tr bgcolor=\"#FFFFFF\" align=left>\n\
-        \        <td>\n        Fri Jun 15 23:13:45 2018 <!-- 11614056s up -->\n  \
-        \      </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
+        \        <td>\n        Tue Jul 24 08:15:51 2018 <!-- 1127272s up -->\n   \
+        \     </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\n        <tr>\n\
         \        <td bgcolor=\"#DDDDFF\" colspan=5 align=left>\n        Individual\
         \ Control\n        </td>\n        </tr>\n\n        <tr bgcolor=\"#DDDDDD\"\
@@ -306,23 +307,24 @@ interactions:
         \ bgcolor=\"#F4F4F4\"><td align=center>1</td>\n<td>goober</td><td>\n<b><font\
         \ color=red>OFF</font></b></td><td>\n<a  href=outlet?1=ON>Switch ON</a>\n\
         </td><td>\n<!-- <a  href=outlet?1=CCL>Cycle</a> -->\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>2</td>\n<td>Router</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
-        <a  href=outlet?2=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?2=CCL>Cycle</a>\
-        \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>3</td>\n<td>UBNT\
-        \ WiFi AP</td><td>\n<b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?3=ON>Switch\
-        \ ON</a>\n</td><td>\n<!-- <a  href=outlet?3=CCL>Cycle</a> -->\n</td></tr>\n\
-        \n\n<tr bgcolor=\"#F4F4F4\"><td align=center>4</td>\n<td>Server 1</td><td>\n\
-        <b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?4=ON>Switch ON</a>\n\
-        </td><td>\n<!-- <a  href=outlet?4=CCL>Cycle</a> -->\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>5</td>\n<td>Network Switch</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
-        <a  href=outlet?5=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?5=CCL>Cycle</a>\
-        \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>6</td>\n<td>Alexa\
-        \ Device 1</td><td>\n<b><font color=green>ON</font></b></td><td>\n<a  href=outlet?6=OFF>Switch\
+        #F4F4F4\"><td align=center>2</td>\n<td>DMA - Automation</td><td>\n<b><font\
+        \ color=green>ON</font></b></td><td>\n<a  href=outlet?2=OFF>Switch OFF</a>\n\
+        </td><td>\n<a  href=outlet?2=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
+        #F4F4F4\"><td align=center>3</td>\n<td>UBNT WiFi AP</td><td>\n<b><font color=green>ON</font></b></td><td>\n\
+        <a  href=outlet?3=OFF>Switch OFF</a>\n</td><td>\n<a  href=outlet?3=CCL>Cycle</a>\n\
+        </td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>4</td>\n<td>Server\
+        \ 1</td><td>\n<b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?4=ON>Switch\
+        \ ON</a>\n</td><td>\n<!-- <a  href=outlet?4=CCL>Cycle</a> -->\n</td></tr>\n\
+        \n\n<tr bgcolor=\"#F4F4F4\"><td align=center>5</td>\n<td>Network Switch</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?5=OFF>Switch\
+        \ OFF</a>\n</td><td>\n<a  href=outlet?5=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
+        \ bgcolor=\"#F4F4F4\"><td align=center>6</td>\n<td>Alexa Device 1</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?6=OFF>Switch\
         \ OFF</a>\n</td><td>\n<a  href=outlet?6=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
-        \ bgcolor=\"#F4F4F4\"><td align=center>7</td>\n<td>Test</td><td>\n<b><font\
-        \ color=green>ON</font></b></td><td>\n<a  href=outlet?7=OFF>Switch OFF</a>\n\
-        </td><td>\n<a  href=outlet?7=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>8</td>\n<td>Vibrator charger</td><td>\n<b><font\
+        \ bgcolor=\"#F4F4F4\"><td align=center>7</td>\n<td>Test Outlet</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?7=OFF>Switch\
+        \ OFF</a>\n</td><td>\n<a  href=outlet?7=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
+        \ bgcolor=\"#F4F4F4\"><td align=center>8</td>\n<td>Charger</td><td>\n<b><font\
         \ color=green>ON</font></b></td><td>\n<a  href=outlet?8=OFF>Switch OFF</a>\n\
         </td><td>\n<a  href=outlet?8=CCL>Cycle</a>\n</td></tr>\n\n\n    </table>\n\
         \    <!-- /individual control table -->\n\n    <br>\n\n<table width=\"100%\"\
@@ -331,7 +333,7 @@ interactions:
         \  href=outlet?a=OFF>All Outlets OFF</a></td></tr>\n<tr><td bgcolor=\"#F4F4F4\"\
         \ align=left><a href=outlet?a=ON>All Outlets ON</a></td></tr>\n<tr><td bgcolor=\"\
         #F4F4F4\" align=left><a  href=outlet?a=CCL>Cycle all Outlets</a></td></tr>\n\
-        <tr><td align=center>Sequence delay: 2 sec.</td></tr>\n\n</table>\n\n\n</td>\n\
+        <tr><td align=center>Sequence delay: 5 sec.</td></tr>\n\n</table>\n\n\n</td>\n\
         </tr>\n</table>\n\n</body>\n</html>\n"}
     headers:
       Cache-Control: ['No-cache, no-store, must-revalidate, max-age=0']
@@ -339,7 +341,7 @@ interactions:
       Content-Type: [text/html]
       Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
       Pragma: [no-cache]
-      Set-Cookie: [DLILPC="btVjY1kqhS4pHHl"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="6UqIOgQm84ISPgl"; Version=1; Path=/]
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -347,16 +349,16 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="btVjY1kqhS4pHHl"]
+      Cookie: [DLILPC="6UqIOgQm84ISPgl"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://lpc.digital-loggers.com/index.htm
   response:
     body: {string: "<html>\n<head>\n<META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"\
         >\n\n<META HTTP-EQUIV=\"Refresh\" CONTENT=\"60\">\n<title>Outlet Control \
-        \ - PDU 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
+        \ - LPC7 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
         \ {\nwindow.open('http://www.digital-loggers.com/register.html?SN=LPC612010');\n\
-        }\n//-->\n</script>\n</head>\n<!-- state=e0 lock=00 -->\n\n<body alink=\"\
+        }\n//-->\n</script>\n</head>\n<!-- state=f6 lock=00 -->\n\n<body alink=\"\
         #0000FF\" vlink=\"#0000FF\">\n<FONT FACE=\"Arial, Helvetica, Sans-Serif\"\
         >\n<table width=\"100%\" cellspacing=0 cellpadding=0>\n<tr>\n<td valign=top\
         \ width=\"17%\" height=\"100%\">\n\n    <table width=\"100%\" height=\"100%\"\
@@ -384,10 +386,10 @@ interactions:
         100%\" bgcolor=\"#F4F4F4\">\n    <small>S/N:LPC612010</small>\n    </td></tr>\n\
         \n    </table>\n\n</td>\n<td valign=top width=\"83%\">\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\t\n        <tr>\n\
-        \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: PDU 1\n\
+        \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: LPC7 1\n\
         \        </th>\n        </tr>\n\n        <tr bgcolor=\"#FFFFFF\" align=left>\n\
-        \        <td>\n        Fri Jun 15 23:13:45 2018 <!-- 11614056s up -->\n  \
-        \      </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
+        \        <td>\n        Tue Jul 24 08:15:51 2018 <!-- 1127272s up -->\n   \
+        \     </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\n        <tr>\n\
         \        <td bgcolor=\"#DDDDFF\" colspan=5 align=left>\n        Individual\
         \ Control\n        </td>\n        </tr>\n\n        <tr bgcolor=\"#DDDDDD\"\
@@ -396,23 +398,24 @@ interactions:
         \ bgcolor=\"#F4F4F4\"><td align=center>1</td>\n<td>goober</td><td>\n<b><font\
         \ color=red>OFF</font></b></td><td>\n<a  href=outlet?1=ON>Switch ON</a>\n\
         </td><td>\n<!-- <a  href=outlet?1=CCL>Cycle</a> -->\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>2</td>\n<td>Router</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
-        <a  href=outlet?2=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?2=CCL>Cycle</a>\
-        \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>3</td>\n<td>UBNT\
-        \ WiFi AP</td><td>\n<b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?3=ON>Switch\
-        \ ON</a>\n</td><td>\n<!-- <a  href=outlet?3=CCL>Cycle</a> -->\n</td></tr>\n\
-        \n\n<tr bgcolor=\"#F4F4F4\"><td align=center>4</td>\n<td>Server 1</td><td>\n\
-        <b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?4=ON>Switch ON</a>\n\
-        </td><td>\n<!-- <a  href=outlet?4=CCL>Cycle</a> -->\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>5</td>\n<td>Network Switch</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
-        <a  href=outlet?5=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?5=CCL>Cycle</a>\
-        \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>6</td>\n<td>Alexa\
-        \ Device 1</td><td>\n<b><font color=green>ON</font></b></td><td>\n<a  href=outlet?6=OFF>Switch\
+        #F4F4F4\"><td align=center>2</td>\n<td>DMA - Automation</td><td>\n<b><font\
+        \ color=green>ON</font></b></td><td>\n<a  href=outlet?2=OFF>Switch OFF</a>\n\
+        </td><td>\n<a  href=outlet?2=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
+        #F4F4F4\"><td align=center>3</td>\n<td>UBNT WiFi AP</td><td>\n<b><font color=green>ON</font></b></td><td>\n\
+        <a  href=outlet?3=OFF>Switch OFF</a>\n</td><td>\n<a  href=outlet?3=CCL>Cycle</a>\n\
+        </td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>4</td>\n<td>Server\
+        \ 1</td><td>\n<b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?4=ON>Switch\
+        \ ON</a>\n</td><td>\n<!-- <a  href=outlet?4=CCL>Cycle</a> -->\n</td></tr>\n\
+        \n\n<tr bgcolor=\"#F4F4F4\"><td align=center>5</td>\n<td>Network Switch</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?5=OFF>Switch\
+        \ OFF</a>\n</td><td>\n<a  href=outlet?5=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
+        \ bgcolor=\"#F4F4F4\"><td align=center>6</td>\n<td>Alexa Device 1</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?6=OFF>Switch\
         \ OFF</a>\n</td><td>\n<a  href=outlet?6=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
-        \ bgcolor=\"#F4F4F4\"><td align=center>7</td>\n<td>Test</td><td>\n<b><font\
-        \ color=green>ON</font></b></td><td>\n<a  href=outlet?7=OFF>Switch OFF</a>\n\
-        </td><td>\n<a  href=outlet?7=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>8</td>\n<td>Vibrator charger</td><td>\n<b><font\
+        \ bgcolor=\"#F4F4F4\"><td align=center>7</td>\n<td>Test Outlet</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?7=OFF>Switch\
+        \ OFF</a>\n</td><td>\n<a  href=outlet?7=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
+        \ bgcolor=\"#F4F4F4\"><td align=center>8</td>\n<td>Charger</td><td>\n<b><font\
         \ color=green>ON</font></b></td><td>\n<a  href=outlet?8=OFF>Switch OFF</a>\n\
         </td><td>\n<a  href=outlet?8=CCL>Cycle</a>\n</td></tr>\n\n\n    </table>\n\
         \    <!-- /individual control table -->\n\n    <br>\n\n<table width=\"100%\"\
@@ -421,7 +424,7 @@ interactions:
         \  href=outlet?a=OFF>All Outlets OFF</a></td></tr>\n<tr><td bgcolor=\"#F4F4F4\"\
         \ align=left><a href=outlet?a=ON>All Outlets ON</a></td></tr>\n<tr><td bgcolor=\"\
         #F4F4F4\" align=left><a  href=outlet?a=CCL>Cycle all Outlets</a></td></tr>\n\
-        <tr><td align=center>Sequence delay: 2 sec.</td></tr>\n\n</table>\n\n\n</td>\n\
+        <tr><td align=center>Sequence delay: 5 sec.</td></tr>\n\n</table>\n\n\n</td>\n\
         </tr>\n</table>\n\n</body>\n</html>\n"}
     headers:
       Cache-Control: ['No-cache, no-store, must-revalidate, max-age=0']
@@ -429,7 +432,7 @@ interactions:
       Content-Type: [text/html]
       Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
       Pragma: [no-cache]
-      Set-Cookie: [DLILPC="btVjY1kqhS4pHHl"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="6UqIOgQm84ISPgl"; Version=1; Path=/]
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -437,16 +440,16 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="btVjY1kqhS4pHHl"]
+      Cookie: [DLILPC="6UqIOgQm84ISPgl"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://lpc.digital-loggers.com/index.htm
   response:
     body: {string: "<html>\n<head>\n<META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"\
         >\n\n<META HTTP-EQUIV=\"Refresh\" CONTENT=\"60\">\n<title>Outlet Control \
-        \ - PDU 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
+        \ - LPC7 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
         \ {\nwindow.open('http://www.digital-loggers.com/register.html?SN=LPC612010');\n\
-        }\n//-->\n</script>\n</head>\n<!-- state=e0 lock=00 -->\n\n<body alink=\"\
+        }\n//-->\n</script>\n</head>\n<!-- state=f6 lock=00 -->\n\n<body alink=\"\
         #0000FF\" vlink=\"#0000FF\">\n<FONT FACE=\"Arial, Helvetica, Sans-Serif\"\
         >\n<table width=\"100%\" cellspacing=0 cellpadding=0>\n<tr>\n<td valign=top\
         \ width=\"17%\" height=\"100%\">\n\n    <table width=\"100%\" height=\"100%\"\
@@ -474,10 +477,10 @@ interactions:
         100%\" bgcolor=\"#F4F4F4\">\n    <small>S/N:LPC612010</small>\n    </td></tr>\n\
         \n    </table>\n\n</td>\n<td valign=top width=\"83%\">\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\t\n        <tr>\n\
-        \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: PDU 1\n\
+        \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: LPC7 1\n\
         \        </th>\n        </tr>\n\n        <tr bgcolor=\"#FFFFFF\" align=left>\n\
-        \        <td>\n        Fri Jun 15 23:13:48 2018 <!-- 11614059s up -->\n  \
-        \      </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
+        \        <td>\n        Tue Jul 24 08:15:55 2018 <!-- 1127276s up -->\n   \
+        \     </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\n        <tr>\n\
         \        <td bgcolor=\"#DDDDFF\" colspan=5 align=left>\n        Individual\
         \ Control\n        </td>\n        </tr>\n\n        <tr bgcolor=\"#DDDDDD\"\
@@ -486,23 +489,24 @@ interactions:
         \ bgcolor=\"#F4F4F4\"><td align=center>1</td>\n<td>goober</td><td>\n<b><font\
         \ color=red>OFF</font></b></td><td>\n<a  href=outlet?1=ON>Switch ON</a>\n\
         </td><td>\n<!-- <a  href=outlet?1=CCL>Cycle</a> -->\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>2</td>\n<td>Router</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
-        <a  href=outlet?2=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?2=CCL>Cycle</a>\
-        \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>3</td>\n<td>UBNT\
-        \ WiFi AP</td><td>\n<b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?3=ON>Switch\
-        \ ON</a>\n</td><td>\n<!-- <a  href=outlet?3=CCL>Cycle</a> -->\n</td></tr>\n\
-        \n\n<tr bgcolor=\"#F4F4F4\"><td align=center>4</td>\n<td>Server 1</td><td>\n\
-        <b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?4=ON>Switch ON</a>\n\
-        </td><td>\n<!-- <a  href=outlet?4=CCL>Cycle</a> -->\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>5</td>\n<td>Network Switch</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
-        <a  href=outlet?5=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?5=CCL>Cycle</a>\
-        \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>6</td>\n<td>Alexa\
-        \ Device 1</td><td>\n<b><font color=green>ON</font></b></td><td>\n<a  href=outlet?6=OFF>Switch\
+        #F4F4F4\"><td align=center>2</td>\n<td>DMA - Automation</td><td>\n<b><font\
+        \ color=green>ON</font></b></td><td>\n<a  href=outlet?2=OFF>Switch OFF</a>\n\
+        </td><td>\n<a  href=outlet?2=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
+        #F4F4F4\"><td align=center>3</td>\n<td>UBNT WiFi AP</td><td>\n<b><font color=green>ON</font></b></td><td>\n\
+        <a  href=outlet?3=OFF>Switch OFF</a>\n</td><td>\n<a  href=outlet?3=CCL>Cycle</a>\n\
+        </td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>4</td>\n<td>Server\
+        \ 1</td><td>\n<b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?4=ON>Switch\
+        \ ON</a>\n</td><td>\n<!-- <a  href=outlet?4=CCL>Cycle</a> -->\n</td></tr>\n\
+        \n\n<tr bgcolor=\"#F4F4F4\"><td align=center>5</td>\n<td>Network Switch</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?5=OFF>Switch\
+        \ OFF</a>\n</td><td>\n<a  href=outlet?5=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
+        \ bgcolor=\"#F4F4F4\"><td align=center>6</td>\n<td>Alexa Device 1</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?6=OFF>Switch\
         \ OFF</a>\n</td><td>\n<a  href=outlet?6=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
-        \ bgcolor=\"#F4F4F4\"><td align=center>7</td>\n<td>Test</td><td>\n<b><font\
-        \ color=green>ON</font></b></td><td>\n<a  href=outlet?7=OFF>Switch OFF</a>\n\
-        </td><td>\n<a  href=outlet?7=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>8</td>\n<td>Vibrator charger</td><td>\n<b><font\
+        \ bgcolor=\"#F4F4F4\"><td align=center>7</td>\n<td>Test Outlet</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?7=OFF>Switch\
+        \ OFF</a>\n</td><td>\n<a  href=outlet?7=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
+        \ bgcolor=\"#F4F4F4\"><td align=center>8</td>\n<td>Charger</td><td>\n<b><font\
         \ color=green>ON</font></b></td><td>\n<a  href=outlet?8=OFF>Switch OFF</a>\n\
         </td><td>\n<a  href=outlet?8=CCL>Cycle</a>\n</td></tr>\n\n\n    </table>\n\
         \    <!-- /individual control table -->\n\n    <br>\n\n<table width=\"100%\"\
@@ -511,7 +515,7 @@ interactions:
         \  href=outlet?a=OFF>All Outlets OFF</a></td></tr>\n<tr><td bgcolor=\"#F4F4F4\"\
         \ align=left><a href=outlet?a=ON>All Outlets ON</a></td></tr>\n<tr><td bgcolor=\"\
         #F4F4F4\" align=left><a  href=outlet?a=CCL>Cycle all Outlets</a></td></tr>\n\
-        <tr><td align=center>Sequence delay: 2 sec.</td></tr>\n\n</table>\n\n\n</td>\n\
+        <tr><td align=center>Sequence delay: 5 sec.</td></tr>\n\n</table>\n\n\n</td>\n\
         </tr>\n</table>\n\n</body>\n</html>\n"}
     headers:
       Cache-Control: ['No-cache, no-store, must-revalidate, max-age=0']
@@ -519,7 +523,7 @@ interactions:
       Content-Type: [text/html]
       Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
       Pragma: [no-cache]
-      Set-Cookie: [DLILPC="btVjY1kqhS4pHHl"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="6UqIOgQm84ISPgl"; Version=1; Path=/]
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -527,7 +531,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="btVjY1kqhS4pHHl"]
+      Cookie: [DLILPC="6UqIOgQm84ISPgl"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://lpc.digital-loggers.com/outlet?1=ON
@@ -547,7 +551,7 @@ interactions:
       Content-Type: [text/html]
       Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
       Pragma: [no-cache]
-      Set-Cookie: [DLILPC="btVjY1kqhS4pHHl"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="6UqIOgQm84ISPgl"; Version=1; Path=/]
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -555,16 +559,16 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="btVjY1kqhS4pHHl"]
+      Cookie: [DLILPC="6UqIOgQm84ISPgl"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://lpc.digital-loggers.com/index.htm
   response:
     body: {string: "<html>\n<head>\n<META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"\
         >\n\n<META HTTP-EQUIV=\"Refresh\" CONTENT=\"60\">\n<title>Outlet Control \
-        \ - PDU 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
+        \ - LPC7 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
         \ {\nwindow.open('http://www.digital-loggers.com/register.html?SN=LPC612010');\n\
-        }\n//-->\n</script>\n</head>\n<!-- state=e1 lock=00 -->\n\n<body alink=\"\
+        }\n//-->\n</script>\n</head>\n<!-- state=f7 lock=00 -->\n\n<body alink=\"\
         #0000FF\" vlink=\"#0000FF\">\n<FONT FACE=\"Arial, Helvetica, Sans-Serif\"\
         >\n<table width=\"100%\" cellspacing=0 cellpadding=0>\n<tr>\n<td valign=top\
         \ width=\"17%\" height=\"100%\">\n\n    <table width=\"100%\" height=\"100%\"\
@@ -592,10 +596,10 @@ interactions:
         100%\" bgcolor=\"#F4F4F4\">\n    <small>S/N:LPC612010</small>\n    </td></tr>\n\
         \n    </table>\n\n</td>\n<td valign=top width=\"83%\">\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\t\n        <tr>\n\
-        \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: PDU 1\n\
+        \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: LPC7 1\n\
         \        </th>\n        </tr>\n\n        <tr bgcolor=\"#FFFFFF\" align=left>\n\
-        \        <td>\n        Fri Jun 15 23:13:49 2018 <!-- 11614060s up -->\n  \
-        \      </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
+        \        <td>\n        Tue Jul 24 08:15:58 2018 <!-- 1127279s up -->\n   \
+        \     </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\n        <tr>\n\
         \        <td bgcolor=\"#DDDDFF\" colspan=5 align=left>\n        Individual\
         \ Control\n        </td>\n        </tr>\n\n        <tr bgcolor=\"#DDDDDD\"\
@@ -604,23 +608,24 @@ interactions:
         \ bgcolor=\"#F4F4F4\"><td align=center>1</td>\n<td>goober</td><td>\n<b><font\
         \ color=green>ON</font></b></td><td>\n<a  href=outlet?1=OFF>Switch OFF</a>\n\
         </td><td>\n<a  href=outlet?1=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>2</td>\n<td>Router</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
-        <a  href=outlet?2=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?2=CCL>Cycle</a>\
-        \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>3</td>\n<td>UBNT\
-        \ WiFi AP</td><td>\n<b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?3=ON>Switch\
-        \ ON</a>\n</td><td>\n<!-- <a  href=outlet?3=CCL>Cycle</a> -->\n</td></tr>\n\
-        \n\n<tr bgcolor=\"#F4F4F4\"><td align=center>4</td>\n<td>Server 1</td><td>\n\
-        <b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?4=ON>Switch ON</a>\n\
-        </td><td>\n<!-- <a  href=outlet?4=CCL>Cycle</a> -->\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>5</td>\n<td>Network Switch</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
-        <a  href=outlet?5=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?5=CCL>Cycle</a>\
-        \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>6</td>\n<td>Alexa\
-        \ Device 1</td><td>\n<b><font color=green>ON</font></b></td><td>\n<a  href=outlet?6=OFF>Switch\
+        #F4F4F4\"><td align=center>2</td>\n<td>DMA - Automation</td><td>\n<b><font\
+        \ color=green>ON</font></b></td><td>\n<a  href=outlet?2=OFF>Switch OFF</a>\n\
+        </td><td>\n<a  href=outlet?2=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
+        #F4F4F4\"><td align=center>3</td>\n<td>UBNT WiFi AP</td><td>\n<b><font color=green>ON</font></b></td><td>\n\
+        <a  href=outlet?3=OFF>Switch OFF</a>\n</td><td>\n<a  href=outlet?3=CCL>Cycle</a>\n\
+        </td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>4</td>\n<td>Server\
+        \ 1</td><td>\n<b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?4=ON>Switch\
+        \ ON</a>\n</td><td>\n<!-- <a  href=outlet?4=CCL>Cycle</a> -->\n</td></tr>\n\
+        \n\n<tr bgcolor=\"#F4F4F4\"><td align=center>5</td>\n<td>Network Switch</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?5=OFF>Switch\
+        \ OFF</a>\n</td><td>\n<a  href=outlet?5=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
+        \ bgcolor=\"#F4F4F4\"><td align=center>6</td>\n<td>Alexa Device 1</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?6=OFF>Switch\
         \ OFF</a>\n</td><td>\n<a  href=outlet?6=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
-        \ bgcolor=\"#F4F4F4\"><td align=center>7</td>\n<td>Test</td><td>\n<b><font\
-        \ color=green>ON</font></b></td><td>\n<a  href=outlet?7=OFF>Switch OFF</a>\n\
-        </td><td>\n<a  href=outlet?7=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>8</td>\n<td>Vibrator charger</td><td>\n<b><font\
+        \ bgcolor=\"#F4F4F4\"><td align=center>7</td>\n<td>Test Outlet</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?7=OFF>Switch\
+        \ OFF</a>\n</td><td>\n<a  href=outlet?7=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
+        \ bgcolor=\"#F4F4F4\"><td align=center>8</td>\n<td>Charger</td><td>\n<b><font\
         \ color=green>ON</font></b></td><td>\n<a  href=outlet?8=OFF>Switch OFF</a>\n\
         </td><td>\n<a  href=outlet?8=CCL>Cycle</a>\n</td></tr>\n\n\n    </table>\n\
         \    <!-- /individual control table -->\n\n    <br>\n\n<table width=\"100%\"\
@@ -629,7 +634,7 @@ interactions:
         \  href=outlet?a=OFF>All Outlets OFF</a></td></tr>\n<tr><td bgcolor=\"#F4F4F4\"\
         \ align=left><a href=outlet?a=ON>All Outlets ON</a></td></tr>\n<tr><td bgcolor=\"\
         #F4F4F4\" align=left><a  href=outlet?a=CCL>Cycle all Outlets</a></td></tr>\n\
-        <tr><td align=center>Sequence delay: 2 sec.</td></tr>\n\n</table>\n\n\n</td>\n\
+        <tr><td align=center>Sequence delay: 5 sec.</td></tr>\n\n</table>\n\n\n</td>\n\
         </tr>\n</table>\n\n</body>\n</html>\n"}
     headers:
       Cache-Control: ['No-cache, no-store, must-revalidate, max-age=0']
@@ -637,7 +642,7 @@ interactions:
       Content-Type: [text/html]
       Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
       Pragma: [no-cache]
-      Set-Cookie: [DLILPC="btVjY1kqhS4pHHl"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="6UqIOgQm84ISPgl"; Version=1; Path=/]
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -645,16 +650,16 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="btVjY1kqhS4pHHl"]
+      Cookie: [DLILPC="6UqIOgQm84ISPgl"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://lpc.digital-loggers.com/index.htm
   response:
     body: {string: "<html>\n<head>\n<META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"\
         >\n\n<META HTTP-EQUIV=\"Refresh\" CONTENT=\"60\">\n<title>Outlet Control \
-        \ - PDU 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
+        \ - LPC7 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
         \ {\nwindow.open('http://www.digital-loggers.com/register.html?SN=LPC612010');\n\
-        }\n//-->\n</script>\n</head>\n<!-- state=e1 lock=00 -->\n\n<body alink=\"\
+        }\n//-->\n</script>\n</head>\n<!-- state=f7 lock=00 -->\n\n<body alink=\"\
         #0000FF\" vlink=\"#0000FF\">\n<FONT FACE=\"Arial, Helvetica, Sans-Serif\"\
         >\n<table width=\"100%\" cellspacing=0 cellpadding=0>\n<tr>\n<td valign=top\
         \ width=\"17%\" height=\"100%\">\n\n    <table width=\"100%\" height=\"100%\"\
@@ -682,10 +687,10 @@ interactions:
         100%\" bgcolor=\"#F4F4F4\">\n    <small>S/N:LPC612010</small>\n    </td></tr>\n\
         \n    </table>\n\n</td>\n<td valign=top width=\"83%\">\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\t\n        <tr>\n\
-        \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: PDU 1\n\
+        \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: LPC7 1\n\
         \        </th>\n        </tr>\n\n        <tr bgcolor=\"#FFFFFF\" align=left>\n\
-        \        <td>\n        Fri Jun 15 23:13:49 2018 <!-- 11614060s up -->\n  \
-        \      </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
+        \        <td>\n        Tue Jul 24 08:15:59 2018 <!-- 1127280s up -->\n   \
+        \     </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\n        <tr>\n\
         \        <td bgcolor=\"#DDDDFF\" colspan=5 align=left>\n        Individual\
         \ Control\n        </td>\n        </tr>\n\n        <tr bgcolor=\"#DDDDDD\"\
@@ -694,23 +699,24 @@ interactions:
         \ bgcolor=\"#F4F4F4\"><td align=center>1</td>\n<td>goober</td><td>\n<b><font\
         \ color=green>ON</font></b></td><td>\n<a  href=outlet?1=OFF>Switch OFF</a>\n\
         </td><td>\n<a  href=outlet?1=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>2</td>\n<td>Router</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
-        <a  href=outlet?2=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?2=CCL>Cycle</a>\
-        \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>3</td>\n<td>UBNT\
-        \ WiFi AP</td><td>\n<b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?3=ON>Switch\
-        \ ON</a>\n</td><td>\n<!-- <a  href=outlet?3=CCL>Cycle</a> -->\n</td></tr>\n\
-        \n\n<tr bgcolor=\"#F4F4F4\"><td align=center>4</td>\n<td>Server 1</td><td>\n\
-        <b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?4=ON>Switch ON</a>\n\
-        </td><td>\n<!-- <a  href=outlet?4=CCL>Cycle</a> -->\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>5</td>\n<td>Network Switch</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
-        <a  href=outlet?5=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?5=CCL>Cycle</a>\
-        \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>6</td>\n<td>Alexa\
-        \ Device 1</td><td>\n<b><font color=green>ON</font></b></td><td>\n<a  href=outlet?6=OFF>Switch\
+        #F4F4F4\"><td align=center>2</td>\n<td>DMA - Automation</td><td>\n<b><font\
+        \ color=green>ON</font></b></td><td>\n<a  href=outlet?2=OFF>Switch OFF</a>\n\
+        </td><td>\n<a  href=outlet?2=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
+        #F4F4F4\"><td align=center>3</td>\n<td>UBNT WiFi AP</td><td>\n<b><font color=green>ON</font></b></td><td>\n\
+        <a  href=outlet?3=OFF>Switch OFF</a>\n</td><td>\n<a  href=outlet?3=CCL>Cycle</a>\n\
+        </td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>4</td>\n<td>Server\
+        \ 1</td><td>\n<b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?4=ON>Switch\
+        \ ON</a>\n</td><td>\n<!-- <a  href=outlet?4=CCL>Cycle</a> -->\n</td></tr>\n\
+        \n\n<tr bgcolor=\"#F4F4F4\"><td align=center>5</td>\n<td>Network Switch</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?5=OFF>Switch\
+        \ OFF</a>\n</td><td>\n<a  href=outlet?5=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
+        \ bgcolor=\"#F4F4F4\"><td align=center>6</td>\n<td>Alexa Device 1</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?6=OFF>Switch\
         \ OFF</a>\n</td><td>\n<a  href=outlet?6=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
-        \ bgcolor=\"#F4F4F4\"><td align=center>7</td>\n<td>Test</td><td>\n<b><font\
-        \ color=green>ON</font></b></td><td>\n<a  href=outlet?7=OFF>Switch OFF</a>\n\
-        </td><td>\n<a  href=outlet?7=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>8</td>\n<td>Vibrator charger</td><td>\n<b><font\
+        \ bgcolor=\"#F4F4F4\"><td align=center>7</td>\n<td>Test Outlet</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?7=OFF>Switch\
+        \ OFF</a>\n</td><td>\n<a  href=outlet?7=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
+        \ bgcolor=\"#F4F4F4\"><td align=center>8</td>\n<td>Charger</td><td>\n<b><font\
         \ color=green>ON</font></b></td><td>\n<a  href=outlet?8=OFF>Switch OFF</a>\n\
         </td><td>\n<a  href=outlet?8=CCL>Cycle</a>\n</td></tr>\n\n\n    </table>\n\
         \    <!-- /individual control table -->\n\n    <br>\n\n<table width=\"100%\"\
@@ -719,7 +725,7 @@ interactions:
         \  href=outlet?a=OFF>All Outlets OFF</a></td></tr>\n<tr><td bgcolor=\"#F4F4F4\"\
         \ align=left><a href=outlet?a=ON>All Outlets ON</a></td></tr>\n<tr><td bgcolor=\"\
         #F4F4F4\" align=left><a  href=outlet?a=CCL>Cycle all Outlets</a></td></tr>\n\
-        <tr><td align=center>Sequence delay: 2 sec.</td></tr>\n\n</table>\n\n\n</td>\n\
+        <tr><td align=center>Sequence delay: 5 sec.</td></tr>\n\n</table>\n\n\n</td>\n\
         </tr>\n</table>\n\n</body>\n</html>\n"}
     headers:
       Cache-Control: ['No-cache, no-store, must-revalidate, max-age=0']
@@ -727,7 +733,7 @@ interactions:
       Content-Type: [text/html]
       Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
       Pragma: [no-cache]
-      Set-Cookie: [DLILPC="btVjY1kqhS4pHHl"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="6UqIOgQm84ISPgl"; Version=1; Path=/]
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -735,16 +741,16 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="btVjY1kqhS4pHHl"]
+      Cookie: [DLILPC="6UqIOgQm84ISPgl"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://lpc.digital-loggers.com/index.htm
   response:
     body: {string: "<html>\n<head>\n<META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"\
         >\n\n<META HTTP-EQUIV=\"Refresh\" CONTENT=\"60\">\n<title>Outlet Control \
-        \ - PDU 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
+        \ - LPC7 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
         \ {\nwindow.open('http://www.digital-loggers.com/register.html?SN=LPC612010');\n\
-        }\n//-->\n</script>\n</head>\n<!-- state=e1 lock=00 -->\n\n<body alink=\"\
+        }\n//-->\n</script>\n</head>\n<!-- state=f7 lock=00 -->\n\n<body alink=\"\
         #0000FF\" vlink=\"#0000FF\">\n<FONT FACE=\"Arial, Helvetica, Sans-Serif\"\
         >\n<table width=\"100%\" cellspacing=0 cellpadding=0>\n<tr>\n<td valign=top\
         \ width=\"17%\" height=\"100%\">\n\n    <table width=\"100%\" height=\"100%\"\
@@ -772,10 +778,10 @@ interactions:
         100%\" bgcolor=\"#F4F4F4\">\n    <small>S/N:LPC612010</small>\n    </td></tr>\n\
         \n    </table>\n\n</td>\n<td valign=top width=\"83%\">\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\t\n        <tr>\n\
-        \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: PDU 1\n\
+        \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: LPC7 1\n\
         \        </th>\n        </tr>\n\n        <tr bgcolor=\"#FFFFFF\" align=left>\n\
-        \        <td>\n        Fri Jun 15 23:13:49 2018 <!-- 11614060s up -->\n  \
-        \      </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
+        \        <td>\n        Tue Jul 24 08:16:01 2018 <!-- 1127282s up -->\n   \
+        \     </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\n        <tr>\n\
         \        <td bgcolor=\"#DDDDFF\" colspan=5 align=left>\n        Individual\
         \ Control\n        </td>\n        </tr>\n\n        <tr bgcolor=\"#DDDDDD\"\
@@ -784,23 +790,24 @@ interactions:
         \ bgcolor=\"#F4F4F4\"><td align=center>1</td>\n<td>goober</td><td>\n<b><font\
         \ color=green>ON</font></b></td><td>\n<a  href=outlet?1=OFF>Switch OFF</a>\n\
         </td><td>\n<a  href=outlet?1=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>2</td>\n<td>Router</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
-        <a  href=outlet?2=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?2=CCL>Cycle</a>\
-        \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>3</td>\n<td>UBNT\
-        \ WiFi AP</td><td>\n<b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?3=ON>Switch\
-        \ ON</a>\n</td><td>\n<!-- <a  href=outlet?3=CCL>Cycle</a> -->\n</td></tr>\n\
-        \n\n<tr bgcolor=\"#F4F4F4\"><td align=center>4</td>\n<td>Server 1</td><td>\n\
-        <b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?4=ON>Switch ON</a>\n\
-        </td><td>\n<!-- <a  href=outlet?4=CCL>Cycle</a> -->\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>5</td>\n<td>Network Switch</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
-        <a  href=outlet?5=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?5=CCL>Cycle</a>\
-        \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>6</td>\n<td>Alexa\
-        \ Device 1</td><td>\n<b><font color=green>ON</font></b></td><td>\n<a  href=outlet?6=OFF>Switch\
+        #F4F4F4\"><td align=center>2</td>\n<td>DMA - Automation</td><td>\n<b><font\
+        \ color=green>ON</font></b></td><td>\n<a  href=outlet?2=OFF>Switch OFF</a>\n\
+        </td><td>\n<a  href=outlet?2=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
+        #F4F4F4\"><td align=center>3</td>\n<td>UBNT WiFi AP</td><td>\n<b><font color=green>ON</font></b></td><td>\n\
+        <a  href=outlet?3=OFF>Switch OFF</a>\n</td><td>\n<a  href=outlet?3=CCL>Cycle</a>\n\
+        </td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>4</td>\n<td>Server\
+        \ 1</td><td>\n<b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?4=ON>Switch\
+        \ ON</a>\n</td><td>\n<!-- <a  href=outlet?4=CCL>Cycle</a> -->\n</td></tr>\n\
+        \n\n<tr bgcolor=\"#F4F4F4\"><td align=center>5</td>\n<td>Network Switch</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?5=OFF>Switch\
+        \ OFF</a>\n</td><td>\n<a  href=outlet?5=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
+        \ bgcolor=\"#F4F4F4\"><td align=center>6</td>\n<td>Alexa Device 1</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?6=OFF>Switch\
         \ OFF</a>\n</td><td>\n<a  href=outlet?6=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
-        \ bgcolor=\"#F4F4F4\"><td align=center>7</td>\n<td>Test</td><td>\n<b><font\
-        \ color=green>ON</font></b></td><td>\n<a  href=outlet?7=OFF>Switch OFF</a>\n\
-        </td><td>\n<a  href=outlet?7=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>8</td>\n<td>Vibrator charger</td><td>\n<b><font\
+        \ bgcolor=\"#F4F4F4\"><td align=center>7</td>\n<td>Test Outlet</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?7=OFF>Switch\
+        \ OFF</a>\n</td><td>\n<a  href=outlet?7=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
+        \ bgcolor=\"#F4F4F4\"><td align=center>8</td>\n<td>Charger</td><td>\n<b><font\
         \ color=green>ON</font></b></td><td>\n<a  href=outlet?8=OFF>Switch OFF</a>\n\
         </td><td>\n<a  href=outlet?8=CCL>Cycle</a>\n</td></tr>\n\n\n    </table>\n\
         \    <!-- /individual control table -->\n\n    <br>\n\n<table width=\"100%\"\
@@ -809,7 +816,7 @@ interactions:
         \  href=outlet?a=OFF>All Outlets OFF</a></td></tr>\n<tr><td bgcolor=\"#F4F4F4\"\
         \ align=left><a href=outlet?a=ON>All Outlets ON</a></td></tr>\n<tr><td bgcolor=\"\
         #F4F4F4\" align=left><a  href=outlet?a=CCL>Cycle all Outlets</a></td></tr>\n\
-        <tr><td align=center>Sequence delay: 2 sec.</td></tr>\n\n</table>\n\n\n</td>\n\
+        <tr><td align=center>Sequence delay: 5 sec.</td></tr>\n\n</table>\n\n\n</td>\n\
         </tr>\n</table>\n\n</body>\n</html>\n"}
     headers:
       Cache-Control: ['No-cache, no-store, must-revalidate, max-age=0']
@@ -817,7 +824,7 @@ interactions:
       Content-Type: [text/html]
       Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
       Pragma: [no-cache]
-      Set-Cookie: [DLILPC="btVjY1kqhS4pHHl"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="6UqIOgQm84ISPgl"; Version=1; Path=/]
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -825,16 +832,16 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      Cookie: [DLILPC="btVjY1kqhS4pHHl"]
+      Cookie: [DLILPC="6UqIOgQm84ISPgl"]
       User-Agent: [python-requests/2.19.1]
     method: GET
     uri: http://lpc.digital-loggers.com/index.htm
   response:
     body: {string: "<html>\n<head>\n<META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"\
         >\n\n<META HTTP-EQUIV=\"Refresh\" CONTENT=\"60\">\n<title>Outlet Control \
-        \ - PDU 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
+        \ - LPC7 1</title>\n<script language=\"JavaScript\">\n<!--\nfunction reg()\
         \ {\nwindow.open('http://www.digital-loggers.com/register.html?SN=LPC612010');\n\
-        }\n//-->\n</script>\n</head>\n<!-- state=e1 lock=00 -->\n\n<body alink=\"\
+        }\n//-->\n</script>\n</head>\n<!-- state=f7 lock=00 -->\n\n<body alink=\"\
         #0000FF\" vlink=\"#0000FF\">\n<FONT FACE=\"Arial, Helvetica, Sans-Serif\"\
         >\n<table width=\"100%\" cellspacing=0 cellpadding=0>\n<tr>\n<td valign=top\
         \ width=\"17%\" height=\"100%\">\n\n    <table width=\"100%\" height=\"100%\"\
@@ -862,10 +869,10 @@ interactions:
         100%\" bgcolor=\"#F4F4F4\">\n    <small>S/N:LPC612010</small>\n    </td></tr>\n\
         \n    </table>\n\n</td>\n<td valign=top width=\"83%\">\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\t\n        <tr>\n\
-        \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: PDU 1\n\
+        \        <th bgcolor=\"#DDDDFF\" align=left>\n        Controller: LPC7 1\n\
         \        </th>\n        </tr>\n\n        <tr bgcolor=\"#FFFFFF\" align=left>\n\
-        \        <td>\n        Fri Jun 15 23:13:50 2018 <!-- 11614061s up -->\n  \
-        \      </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
+        \        <td>\n        Tue Jul 24 08:16:02 2018 <!-- 1127283s up -->\n   \
+        \     </td>\n        </tr>\n\n    </table>\n\n    <br>\n\n    <table width=\"\
         100%\" align=center border=0 cellspacing=1 cellpadding=3>\n\n        <tr>\n\
         \        <td bgcolor=\"#DDDDFF\" colspan=5 align=left>\n        Individual\
         \ Control\n        </td>\n        </tr>\n\n        <tr bgcolor=\"#DDDDDD\"\
@@ -874,23 +881,24 @@ interactions:
         \ bgcolor=\"#F4F4F4\"><td align=center>1</td>\n<td>goober</td><td>\n<b><font\
         \ color=green>ON</font></b></td><td>\n<a  href=outlet?1=OFF>Switch OFF</a>\n\
         </td><td>\n<a  href=outlet?1=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>2</td>\n<td>Router</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
-        <a  href=outlet?2=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?2=CCL>Cycle</a>\
-        \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>3</td>\n<td>UBNT\
-        \ WiFi AP</td><td>\n<b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?3=ON>Switch\
-        \ ON</a>\n</td><td>\n<!-- <a  href=outlet?3=CCL>Cycle</a> -->\n</td></tr>\n\
-        \n\n<tr bgcolor=\"#F4F4F4\"><td align=center>4</td>\n<td>Server 1</td><td>\n\
-        <b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?4=ON>Switch ON</a>\n\
-        </td><td>\n<!-- <a  href=outlet?4=CCL>Cycle</a> -->\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>5</td>\n<td>Network Switch</td><td>\n<b><font color=red>OFF</font></b></td><td>\n\
-        <a  href=outlet?5=ON>Switch ON</a>\n</td><td>\n<!-- <a  href=outlet?5=CCL>Cycle</a>\
-        \ -->\n</td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>6</td>\n<td>Alexa\
-        \ Device 1</td><td>\n<b><font color=green>ON</font></b></td><td>\n<a  href=outlet?6=OFF>Switch\
+        #F4F4F4\"><td align=center>2</td>\n<td>DMA - Automation</td><td>\n<b><font\
+        \ color=green>ON</font></b></td><td>\n<a  href=outlet?2=OFF>Switch OFF</a>\n\
+        </td><td>\n<a  href=outlet?2=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
+        #F4F4F4\"><td align=center>3</td>\n<td>UBNT WiFi AP</td><td>\n<b><font color=green>ON</font></b></td><td>\n\
+        <a  href=outlet?3=OFF>Switch OFF</a>\n</td><td>\n<a  href=outlet?3=CCL>Cycle</a>\n\
+        </td></tr>\n\n\n<tr bgcolor=\"#F4F4F4\"><td align=center>4</td>\n<td>Server\
+        \ 1</td><td>\n<b><font color=red>OFF</font></b></td><td>\n<a  href=outlet?4=ON>Switch\
+        \ ON</a>\n</td><td>\n<!-- <a  href=outlet?4=CCL>Cycle</a> -->\n</td></tr>\n\
+        \n\n<tr bgcolor=\"#F4F4F4\"><td align=center>5</td>\n<td>Network Switch</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?5=OFF>Switch\
+        \ OFF</a>\n</td><td>\n<a  href=outlet?5=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
+        \ bgcolor=\"#F4F4F4\"><td align=center>6</td>\n<td>Alexa Device 1</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?6=OFF>Switch\
         \ OFF</a>\n</td><td>\n<a  href=outlet?6=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
-        \ bgcolor=\"#F4F4F4\"><td align=center>7</td>\n<td>Test</td><td>\n<b><font\
-        \ color=green>ON</font></b></td><td>\n<a  href=outlet?7=OFF>Switch OFF</a>\n\
-        </td><td>\n<a  href=outlet?7=CCL>Cycle</a>\n</td></tr>\n\n\n<tr bgcolor=\"\
-        #F4F4F4\"><td align=center>8</td>\n<td>Vibrator charger</td><td>\n<b><font\
+        \ bgcolor=\"#F4F4F4\"><td align=center>7</td>\n<td>Test Outlet</td><td>\n\
+        <b><font color=green>ON</font></b></td><td>\n<a  href=outlet?7=OFF>Switch\
+        \ OFF</a>\n</td><td>\n<a  href=outlet?7=CCL>Cycle</a>\n</td></tr>\n\n\n<tr\
+        \ bgcolor=\"#F4F4F4\"><td align=center>8</td>\n<td>Charger</td><td>\n<b><font\
         \ color=green>ON</font></b></td><td>\n<a  href=outlet?8=OFF>Switch OFF</a>\n\
         </td><td>\n<a  href=outlet?8=CCL>Cycle</a>\n</td></tr>\n\n\n    </table>\n\
         \    <!-- /individual control table -->\n\n    <br>\n\n<table width=\"100%\"\
@@ -899,7 +907,7 @@ interactions:
         \  href=outlet?a=OFF>All Outlets OFF</a></td></tr>\n<tr><td bgcolor=\"#F4F4F4\"\
         \ align=left><a href=outlet?a=ON>All Outlets ON</a></td></tr>\n<tr><td bgcolor=\"\
         #F4F4F4\" align=left><a  href=outlet?a=CCL>Cycle all Outlets</a></td></tr>\n\
-        <tr><td align=center>Sequence delay: 2 sec.</td></tr>\n\n</table>\n\n\n</td>\n\
+        <tr><td align=center>Sequence delay: 5 sec.</td></tr>\n\n</table>\n\n\n</td>\n\
         </tr>\n</table>\n\n</body>\n</html>\n"}
     headers:
       Cache-Control: ['No-cache, no-store, must-revalidate, max-age=0']
@@ -907,6 +915,6 @@ interactions:
       Content-Type: [text/html]
       Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
       Pragma: [no-cache]
-      Set-Cookie: [DLILPC="btVjY1kqhS4pHHl"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="6UqIOgQm84ISPgl"; Version=1; Path=/]
     status: {code: 200, message: OK}
 version: 1

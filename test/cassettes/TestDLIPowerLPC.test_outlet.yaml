@@ -24,7 +24,7 @@ interactions:
         \ TYPE=\"password\" NAME=\"Password\" SIZE=16 MAXLENGTH=32></TD>\n</TR>\n\
         <TR ALIGN=RIGHT>\n<TD></TD>\n<TD><INPUT onClick=\"calcResponse(); return false;\"\
         \ TYPE=\"Submit\" VALUE=\"OK\">\n \n<input type=\"hidden\" name=\"Challenge\"\
-        \ value=\"B282THTxddVsYLe\">\n \n</TD></TR>\n</TABLE>\n</FORM>\n<script language=\"\
+        \ value=\"njMBzC6mvMZO917\">\n \n</TD></TR>\n</TABLE>\n</FORM>\n<script language=\"\
         javascript\">\n<!--\ndocument.login.Username.focus();\n//-->\n</script>\n\
         <FORM NAME=\"secin\" ID=\"secin\" ACTION=\"/login.tgi\" METHOD=post style=\"\
         display:none\">\n<INPUT TYPE=\"hidden\" NAME=\"Username\">\n<INPUT TYPE=\"\
@@ -38,7 +38,7 @@ interactions:
       Set-Cookie: [DLILPC=""; Version=1; Max-Age=0; Path=/]
     status: {code: 200, message: OK}
 - request:
-    body: Username=admin&Password=34beed9bb9aea607327ae9f09d602374
+    body: Username=admin&Password=c06ca5788ff2ca33c54ebd1f792bff44
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -64,6 +64,6 @@ interactions:
       Content-Type: [text/html]
       Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
       Pragma: [no-cache]
-      Set-Cookie: [DLILPC="s+hw14xqnvOzd7v"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="58lG0T7a6qv7fRF"; Version=1; Path=/]
     status: {code: 200, message: OK}
 version: 1
