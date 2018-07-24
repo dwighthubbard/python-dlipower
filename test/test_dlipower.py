@@ -15,6 +15,24 @@ class TestDLIPowerPro(VCRTestCase):
         super(TestDLIPowerPro, self).setUp()
         self.p = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password, use_https=self.use_https)
 
+    def test__dlipower__load_configuration(self):
+        self.p.load_configuration()
+
+    def test__dlipower__save_configuration(self):
+        self.p.save_configuration()
+
+    def test__dlipower__unicode__name(self):
+        outlet = self.p[0]
+        outlet.name = 'foo'
+        self.assertEqual(outlet.name, 'foo')
+        result = outlet.__unicode__()
+        self.assertEqual(result, 'foo:%s' % (outlet.state))
+
+    def test__dlipower__unicode__noname(self):
+        outlet = self.p[0]
+        result = outlet.__unicode__()
+        self.assertEqual(result, '%s:%s' % (outlet.name, outlet.state))
+
     def test__dlipower__statuslist(self):
         switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password, use_https=self.use_https)
         result = switch.statuslist()

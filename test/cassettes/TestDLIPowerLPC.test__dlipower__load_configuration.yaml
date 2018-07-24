@@ -1,0 +1,69 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+    method: GET
+    uri: http://lpc.digital-loggers.com/
+  response:
+    body: {string: "<html>\n<head>\n<META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"\
+        >\n \n<title>Power Controller </title>\n \n<script language=\"javascript\"\
+        \ src=\"/md5.js\"></script>\n<script language=\"javascript\">\n<!--\nfunction\
+        \ calcResponse(){\nvar str;\nstr=document.login.Challenge.value+document.login.Username.value+document.login.Password.value+document.login.Challenge.value;\n\
+        document.secin.Password.value = hex_md5(str);\ndocument.secin.Username.value\
+        \ = document.login.Username.value;\ndocument.secin.submit();\n}//-->\n</script>\n\
+        </head>\n<body>\n<noscript>\n<table width=\"100%\" border=0>\n<tr><td bgcolor=red>&nbsp;</td></tr>\n\
+        <tr><td align=center><h1>Warning: Insecure Authentication</h1></td></tr>\n\
+        <tr><td bgcolor=red>&nbsp;</td></tr></table>\n</noscript>\n<FORM NAME=\"login\"\
+        \ ID=\"login\" ACTION=\"/login.tgi\" METHOD=post>\n<TABLE BORDER=\"0\">\n\
+        <TR> \n<TD>User Name</TD>\n<TD><INPUT TYPE=\"text\" NAME=\"Username\" VALUE=\"\
+        \" SIZE=16 MAXLENGTH=32></TD>\n</TR>\n<TR> \n<TD>Password</TD>\n<TD><INPUT\
+        \ TYPE=\"password\" NAME=\"Password\" SIZE=16 MAXLENGTH=32></TD>\n</TR>\n\
+        <TR ALIGN=RIGHT>\n<TD></TD>\n<TD><INPUT onClick=\"calcResponse(); return false;\"\
+        \ TYPE=\"Submit\" VALUE=\"OK\">\n \n<input type=\"hidden\" name=\"Challenge\"\
+        \ value=\"8C0Rf5dbd9hnyj+\">\n \n</TD></TR>\n</TABLE>\n</FORM>\n<script language=\"\
+        javascript\">\n<!--\ndocument.login.Username.focus();\n//-->\n</script>\n\
+        <FORM NAME=\"secin\" ID=\"secin\" ACTION=\"/login.tgi\" METHOD=post style=\"\
+        display:none\">\n<INPUT TYPE=\"hidden\" NAME=\"Username\">\n<INPUT TYPE=\"\
+        hidden\" NAME=\"Password\">\n<INPUT TYPE=\"Submit\">\n</FORM>\n</body>\n</html>\n"}
+    headers:
+      Cache-Control: ['No-cache, no-store, must-revalidate, max-age=0']
+      Connection: [close]
+      Content-Type: [text/html]
+      Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
+      Pragma: [no-cache]
+      Set-Cookie: [DLILPC=""; Version=1; Max-Age=0; Path=/]
+    status: {code: 200, message: OK}
+- request:
+    body: Username=admin&Password=e1b286ba6d18268c7c4323153ce333ef
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['56']
+      Content-Type: [application/x-www-form-urlencoded]
+      User-Agent: [python-requests/2.19.1]
+    method: POST
+    uri: http://lpc.digital-loggers.com/login.tgi
+  response:
+    body: {string: '<HTML><HEAD>
+
+
+        <META HTTP-EQUIV="refresh" content="0; URL=/index.htm">
+
+
+        </HEAD><BODY></BODY>
+
+        </HTML>'}
+    headers:
+      Cache-Control: ['No-cache, no-store, must-revalidate, max-age=0']
+      Connection: [close]
+      Content-Type: [text/html]
+      Expires: ['Mon, 01 Jan 1990 00:00:01 GMT']
+      Pragma: [no-cache]
+      Set-Cookie: [DLILPC="ayZsA5+dXmoW7l3"; Version=1; Path=/]
+    status: {code: 200, message: OK}
+version: 1
