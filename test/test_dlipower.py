@@ -21,15 +21,15 @@ class TestDLIPowerPro(VCRTestCase):
     def test__dlipower__save_configuration(self):
         self.p.save_configuration()
 
+    def test__dlipower__unicode__description(self):
+        outlet = self.p[0]
+        outlet.use_description = True
+        result = outlet.__unicode__()
+        self.assertEqual(result, '%s:%s' % (outlet.description, outlet.state))
+
     def test__dlipower__unicode__name(self):
         outlet = self.p[0]
-        outlet.name = 'foo'
-        self.assertEqual(outlet.name, 'foo')
-        result = outlet.__unicode__()
-        self.assertEqual(result, 'foo:%s' % (outlet.state))
-
-    def test__dlipower__unicode__noname(self):
-        outlet = self.p[0]
+        outlet.use_description = True
         result = outlet.__unicode__()
         self.assertEqual(result, '%s:%s' % (outlet.name, outlet.state))
 

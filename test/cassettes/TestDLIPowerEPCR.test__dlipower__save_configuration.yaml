@@ -33,7 +33,7 @@ interactions:
         <td><input type=\"password\" name=\"Password\" size=\"16\"></td>\n</tr>\n\
         <tr class=\"right\">\n<td></td>\n<td><input onClick=\"calcResponse(); return\
         \ false;\" type=\"Submit\" value=\"OK\">\n<input type=\"hidden\" name=\"Challenge\"\
-        \ value=\"FDf75n5UaLGTSrsl\">\n</td></tr>\n</table>\n</form>\n</td></tr></table>\n\
+        \ value=\"M6YWKz+WEb0MB6hX\">\n</td></tr>\n</table>\n</form>\n</td></tr></table>\n\
         <script type=\"text/javascript\">\n<!--\ndocument.login.Username.focus();\n\
         //-->\n</script>\n<form name=\"secin\" id=\"secin\" action=\"/login.tgi\"\
         \ method=\"post\" accept-charset=\"UTF-8\">\n<div style=\"display:none\">\n\
@@ -45,7 +45,7 @@ interactions:
       Content-Type: [text/html; charset="utf-8"]
     status: {code: 200, message: OK}
 - request:
-    body: Username=admin&Password=47c50226746355d3d630354a15b09a5f
+    body: Username=admin&Password=82ac0c586ae8bf32af8cbd328df19a37
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
@@ -87,6 +87,6 @@ interactions:
       Cache-Control: ['max-age=0, private, must-revalidate']
       Connection: [close]
       Content-Type: [text/html; charset="utf-8"]
-      Set-Cookie: [DLILPC="VVk3JkJz9Xtze6mF"; Version=1; Path=/]
+      Set-Cookie: [DLILPC="bKlfB9sEtuYv/uvZ"; Version=1; Path=/]
     status: {code: 200, message: OK}
 version: 1
