@@ -437,7 +437,7 @@ class PowerSwitch(object):
                     if plug_name and plug_name.strip() == outlet.strip():
                         return plug_number
                 elif isinstance(outlet, int):
-                    if plug_number and plug_number == outlet
+                    if plug_number and plug_number == outlet:
                         return plug_number
         try:
             outlet_int = int(outlet)
