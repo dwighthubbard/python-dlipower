@@ -429,11 +429,16 @@ class PowerSwitch(object):
             returned outlet is an int
         """
         outlets = self.statuslist()
-        if outlet and outlets and isinstance(outlet, str):
+        if outlet and outlets and (isinstance(outlet, str) or isinstance(outlet, int)):
             for plug in outlets:
                 plug_name = plug[1]
-                if plug_name and plug_name.strip() == outlet.strip():
-                    return int(plug[0])
+                plug_number = int(plug[0])
+                if isinstance(outlet, str):
+                    if plug_name and plug_name.strip() == outlet.strip():
+                        return plug_number
+                elif isinstance(outlet, int):
+                    if plug_number and plug_number == outlet
+                        return plug_number
         try:
             outlet_int = int(outlet)
             if outlet_int <= 0 or outlet_int > self.__len__():
