@@ -13,7 +13,8 @@ class TestDLIPowerPro(VCRTestCase):
     def setUp(self):
         """ Set up the mock objects to do our unit tests """
         super(TestDLIPowerPro, self).setUp()
-        self.p = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password, use_https=self.use_https)
+        self.p = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password,
+                             use_https=self.use_https)
 
     def test__dlipower__load_configuration(self):
         self.p.load_configuration()
@@ -34,13 +35,15 @@ class TestDLIPowerPro(VCRTestCase):
         self.assertEqual(result, '%s:%s' % (outlet.name, outlet.state))
 
     def test__dlipower__statuslist(self):
-        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password, use_https=self.use_https)
+        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password,
+                             use_https=self.use_https)
         result = switch.statuslist()
         self.assertIsInstance(result, list)
         self.assertEqual(len(result), 8)
 
     def test__dlipower__status(self):
-        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password, use_https=self.use_https)
+        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password,
+                             use_https=self.use_https)
         result = switch.status(1)
         self.assertIn(result, ['ON', 'OFF'])
 
@@ -54,28 +57,32 @@ class TestDLIPowerPro(VCRTestCase):
 
     def test_status(self):
         """ Test the status method of the PowerSwitch object """
-        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password, use_https=self.use_https)
+        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password,
+                             use_https=self.use_https)
         switch.off(1)
         status = switch.status(1)
         self.assertEqual(status, 'OFF')
 
     def test_off(self):
         """ Test the status method of the PowerSwitch object """
-        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password, use_https=self.use_https)
+        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password,
+                             use_https=self.use_https)
         switch.off(1)
         status = switch.status(1)
         self.assertEqual(status, 'OFF')
 
     def test_on(self):
         """ Test the status method of the PowerSwitch object """
-        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password, use_https=self.use_https)
+        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password,
+                             use_https=self.use_https)
         switch.on(1)
         status = switch.status(1)
         self.assertEqual(status, 'ON')
 
     def test_cycle(self):
         """ Test the status method of the PowerSwitch object """
-        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password, use_https=self.use_https)
+        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password,
+                             use_https=self.use_https)
         switch.cycle(1)
         status = switch.status(1)
         self.assertEqual(status, 'ON')
@@ -90,7 +97,8 @@ class TestDLIPowerPro(VCRTestCase):
 
     def test_on_state_setter(self):
         """ Test the state setter to turn on an outlet """
-        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password, use_https=self.use_https)
+        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password,
+                             use_https=self.use_https)
         switch[0].state = "ON"
         status = switch.status(1)
         self.assertEqual(status, 'ON')
@@ -103,7 +111,8 @@ class TestDLIPowerPro(VCRTestCase):
 
     def test_off_state_setter(self):
         """ Test the state setter to turn off an outlet """
-        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password, use_https=self.use_https)
+        switch = PowerSwitch(hostname=self.switch_hostname, userid=self.userid, password=self.password,
+                             use_https=self.use_https)
         switch[0].state = "OFF"
         status = switch.status(1)
         self.assertEqual(status, 'OFF')
@@ -122,11 +131,11 @@ class TestDLIPowerPro(VCRTestCase):
         self.p.verify()
 
     def test_outlet_set_name(self):
-        self.p[0].name='goober'
+        self.p[0].name = 'goober'
         self.assertEqual(self.p.get_outlet_name(1), 'goober')
 
     def test_determine_outlet(self):
-        self.p[0].name='goober'
+        self.p[0].name = 'goober'
         self.assertEqual(self.p.determine_outlet('goober'), 1)
 
     def test__outlet__unicode__magic(self):
@@ -143,7 +152,7 @@ class TestDLIPowerPro(VCRTestCase):
     def test_command_on_outlets(self):
         for i in range(0, 5):
             self.p[i].off()
-        self.p.command_on_outlets('ON', range(1,6))
+        self.p.command_on_outlets('ON', range(1, 6))
         for i in range(0, 5):
             self.assertEqual(self.p[i].state, 'ON')
 

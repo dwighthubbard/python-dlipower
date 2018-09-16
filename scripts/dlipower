@@ -73,7 +73,7 @@ def __command_on_outlets(action, outlet_range):
         if not options.quiet:
             print(e, file=sys.stderr)
         sys.exit(1)
- 
+
 
 if __name__ == "__main__":
     usage = "usage: %prog [options] [status|on|off|cycle|get_outlet_name|set_outlet_name] [range|arg]"
