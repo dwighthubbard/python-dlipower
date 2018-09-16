@@ -99,22 +99,22 @@ Outlet	Name           	State
 """
 
 from __future__ import print_function
-from bs4 import BeautifulSoup
+
 import hashlib
+import json
 import logging
 import multiprocessing
 import os
-import json
+import time
+
 import requests
 import requests.exceptions
-import time
 import urllib3
+from bs4 import BeautifulSoup
 from six.moves.urllib.parse import quote
-
 
 logger = logging.getLogger(__name__)
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
 
 # Global settings
 TIMEOUT = 20
@@ -130,7 +130,7 @@ CONFIG_DEFAULTS = {
 CONFIG_FILE = os.path.expanduser('~/.dlipower.conf')
 
 
-def _call_it(params):   # pragma: no cover
+def _call_it(params):  # pragma: no cover
     """indirect caller for instance methods and multiprocessing"""
     instance, name, args = params
     kwargs = {}
@@ -229,7 +229,7 @@ class PowerSwitch(object):
     def __init__(self, userid=None, password=None, hostname=None, timeout=None,
                  cycletime=None, retries=None, use_https=False):
         """
-        Class initializaton
+        Class initialisation
         """
         if not retries:
             retries = RETRIES
@@ -349,8 +349,9 @@ class PowerSwitch(object):
         headers = {'Content-Type': 'application/x-www-form-urlencoded'}
 
         try:
-            response = self.session.post('%s/login.tgi' % self.base_url, headers=headers, data=data, timeout=self.timeout, verify=False)
-        except requests.exceptions.ConnectTimeout:
+            response = self.session.post('%s/login.tgi' % self.base_url, headers=headers, data=data,
+                                         timeout=self.timeout, verify=False)
+        except (requests.exceptions.ConnectTimeout, requests.exceptions.ChunkedEncodingError):
             self.secure_login = False
             self.session = None
             return
@@ -359,7 +360,8 @@ class PowerSwitch(object):
             if 'Set-Cookie' in response.headers:
                 self.secure_login = True
 
-    def load_configuration(self):
+    @staticmethod
+    def load_configuration():
         """ Return a configuration dictionary """
         if os.path.isfile(CONFIG_FILE):
             file_h = open(CONFIG_FILE, 'r')
@@ -412,7 +414,8 @@ class PowerSwitch(object):
                 if self.secure_login and self.session:
                     request = self.session.get(full_url, timeout=self.timeout, verify=False)
                 else:
-                    request = requests.get(full_url, auth=(self.userid, self.password,), timeout=self.timeout, verify=False)
+                    request = requests.get(full_url, auth=(self.userid, self.password,), timeout=self.timeout,
+                                           verify=False)
             except requests.exceptions.RequestException as e:
                 logger.warning("Request timed out - %d retries left.", self.retries - i - 1)
                 logger.exception("Caught exception %s", str(e))
@@ -441,7 +444,6 @@ class PowerSwitch(object):
             return outlet_int
         except ValueError:
             raise DLIPowerException('Outlet name \'%s\' unknown' % outlet)
-
 
     def get_outlet_name(self, outlet=0):
         """ Return the name of the outlet """
@@ -561,7 +563,7 @@ class PowerSwitch(object):
         result = [
             value for value in pool.imap(
                 _call_it,
-                [(self, command, (outlet, )) for outlet in outlets],
+                [(self, command, (outlet,)) for outlet in outlets],
                 chunksize=1
             )
         ]

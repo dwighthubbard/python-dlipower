@@ -6,7 +6,6 @@ from .dlipower import Outlet, PowerSwitch, DLIPowerException
 import json
 import os
 
-
 __version__ = str('0.0.0')
 __git_version__ = str("")
 __git_origin__ = str("")
@@ -31,4 +30,3 @@ if os.path.exists(__metadata_filename__):  # pragma: no cover
         if __git_origin__.endswith('.git'):  # pragma: no cover
             __git_base_url__ = __git_origin__[:-4].strip('/')
         __source_url__ = __git_base_url__ + '/tree/' + __git_hash__
-
