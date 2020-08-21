@@ -1,0 +1,321 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: https://pro.digital-loggers.com/
+  response:
+    body:
+      string: '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+
+        <html><head>
+
+        <title>301 Moved Permanently</title>
+
+        </head><body>
+
+        <h1>Moved Permanently</h1>
+
+        <p>The document has moved <a href="http://pro.digital-loggers.com:5002/">here</a>.</p>
+
+        </body></html>
+
+        '
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Length:
+      - '244'
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Date:
+      - Fri, 21 Aug 2020 07:55:17 GMT
+      Keep-Alive:
+      - timeout=900, max=100
+      Location:
+      - http://pro.digital-loggers.com:5002/
+      Server:
+      - Apache/2.4.41 (FreeBSD) OpenSSL/1.0.1u-freebsd
+    status:
+      code: 301
+      message: Moved Permanently
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: http://pro.digital-loggers.com:5002/
+  response:
+    body:
+      string: "\n\n\n\n\n\n<!DOCTYPE html>\n<html>\n<head><meta http-equiv=\"Content-Type\"
+        content=\"text/html; charset=UTF-8\">\n<meta name=\"robots\" content=\"noindex,
+        nofollow\">\n<noscript>\n<meta http-equiv=\"refresh\" content=\"285\">\n</noscript>\n<script
+        type=\"text/javascript\"> setTimeout(function() { window.location = window.location;
+        }, 285000); </script>\n\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/sanitize.26b8dd15.css\">\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/select2.d4457111.css\">\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/style.84737137.css\">\n\n<title>Power
+        Controller Station 1 - Large Mover and UULA\n</title>\n<script type=\"text/javascript\"
+        src=\"/static/js/md5.0df4dd77.js\"></script>\n<script type=\"text/javascript\">\n<!--\nwindow.addEventListener
+        && window.addEventListener(\"pageshow\", function(event)\n{\n    if (event.persisted
+        || (window.performance && window.performance.navigation && window.performance.navigation.type
+        === 2))\n    {\n        /* Reload on attempts to go back to this page to obtain
+        a new challenge. */\n        window.location = window.location;\n    }\n});\nfunction
+        calcResponse(){\nvar str;\nstr=document.login.Challenge.value+document.login.Username.value+document.login.Password.value+document.login.Challenge.value;\ndocument.secin.Password.value
+        = hex_md5(str);\ndocument.secin.Username.value = document.login.Username.value;\ndocument.secin.submit();\n}//-->\n</script>\n</head>\n<body>\n<noscript>\n<table
+        class=\"compact form\">\n<tr><td class=\"error border\">&nbsp;</td></tr>\n<tr><td
+        class=\"error message\"><h1>Warning: Insecure Authentication</h1></td></tr>\n<tr><td
+        class=\"error border\">&nbsp;</td></tr></table>\n</noscript>\n<table class=\"page\"><tr><td>\n<form
+        name=\"login\" id=\"login\" action=\"/login.tgi\" method=\"post\" accept-charset=\"UTF-8\">\n<table
+        class=\"compact form\">\n<tr>\n<td>User Name</td>\n<td><input type=\"text\"
+        name=\"Username\" value=\"\" size=\"16\"></td>\n</tr>\n<tr>\n<td>Password</td>\n<td><input
+        type=\"password\" name=\"Password\" size=\"16\"></td>\n</tr>\n<tr class=\"right\">\n<td></td>\n<td><input
+        onClick=\"calcResponse(); return false;\" type=\"Submit\" value=\"OK\">\n<input
+        type=\"hidden\" name=\"Challenge\" value=\"Yn0dyqZkvs2fJCOp\">\n</td></tr>\n</table>\n</form>\n</td></tr></table>\n<script
+        type=\"text/javascript\">\n<!--\ndocument.login.Username.focus();\n//-->\n</script>\n<form
+        name=\"secin\" id=\"secin\" action=\"/login.tgi\" method=\"post\" accept-charset=\"UTF-8\">\n<div
+        style=\"display:none\">\n<input type=\"hidden\" name=\"Username\">\n<input
+        type=\"hidden\" name=\"Password\">\n<input type=\"submit\">\n</div>\n</form>\n</body>\n</html>\n"
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset="utf-8"
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: Username=admin&Password=88adce92578c2c5f5918fde0594dbb37
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '56'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.24.0
+    method: POST
+    uri: http://pro.digital-loggers.com:5002/login.tgi
+  response:
+    body:
+      string: '
+
+
+
+
+
+
+
+        <!DOCTYPE html>
+
+        <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+        <link rel="stylesheet" type="text/css" href="/static/css/sanitize.26b8dd15.css">
+
+        <link rel="stylesheet" type="text/css" href="/static/css/select2.d4457111.css">
+
+        <link rel="stylesheet" type="text/css" href="/static/css/style.84737137.css">
+
+
+        <title>Redirecting...</title>
+
+        <noscript>
+
+        <META HTTP-EQUIV="refresh" content="0; URL=/index.htm">
+
+        </noscript>
+
+        <script type="text/javascript"> setTimeout(function() { window.location.replace("\/index.htm");
+        }, 0); </script>
+
+
+        </head>
+
+
+        <body>
+
+        </body>
+
+
+        </html>
+
+        '
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset="utf-8"
+      Set-Cookie:
+      - DLILPC="JzCRsReI1CPqYinL"; Version=1; Path=/
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - DLILPC="JzCRsReI1CPqYinL"
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: http://pro.digital-loggers.com:5002/index.htm
+  response:
+    body:
+      string: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML
+        4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n<head><meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n<meta name=\"robots\"
+        content=\"noindex, nofollow\">\n<noscript>\n<meta http-equiv=\"refresh\" content=\"60\">\n</noscript>\n<script
+        type=\"text/javascript\"> window.refreshTimeoutValue = 60000; window.refreshTimeout
+        = setTimeout(function() { window.location = window.location; }, window.refreshTimeoutValue);
+        </script>\n\n\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/sanitize.26b8dd15.css\">\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/select2.d4457111.css\">\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/style.84737137.css\">\n\n<title>Outlet
+        Control  - Station 1 - Large Mover and UULA</title>\n\n<script type=\"text/javascript\"
+        src=\"/static/js/md5.0df4dd77.js\"></script>\n<script type=\"text/javascript\"
+        src=\"/static/js/jquery.4f252523.js\"></script>\n<script type=\"text/javascript\"
+        src=\"/static/js/jquery.json.886a032e.js\"></script>\n<script type=\"text/javascript\"
+        src=\"/static/js/select2.26abb17f.js\"></script>\n<script type=\"text/javascript\">\nvar
+        dli={\n    serialNumber:\"LPC92203000348\" ,\n    outletLabel:\"Outlet\" ,\n
+        \   session: { expiry_time: new Date().getTime()+(1800)*1000 }\n};\n</script>\n<script
+        type=\"text/javascript\" src=\"/static/js/core.696d0c1b.js\"></script>\n\n<script
+        type=\"text/javascript\" src=\"/static/js/sockette.4ac0065b.js\"></script>\n<script
+        type=\"text/javascript\" src=\"/static/js/lib.c95a7a59.js\"></script>\n<script
+        type=\"text/javascript\">window.outletStateRefreshSufficient=true;</script>\n<script
+        type=\"text/javascript\">\n\nvar lib = window.require(\"/lib-js/lib.js\");\nwindow.coap_rest
+        = lib.coap_rest;\n\n</script>\n</head>\n<!-- state=e0 lock=00 -->\n<body>\n<table
+        class=\"page\">\n<tr>\n\n<td class=\"navbar\">\n    <!-- menu -->\n    <table
+        class=\"menu\">\n    <tr><td class=\"item\">\n    <table class=\"menuInner\">\n\n\n
+        \   <tr><td class=\"centered\">\n    <table><tr><td><a href=\"http://www.digital-loggers.com/O.html\"><img
+        src=\"https://www.digital-loggers.com/images/pro-small.jpg\" width=\"195\"
+        height=\"100\" alt=\"Alpha\"></a></td>\n    <td class=\"brand title\">Web
+        Power Switch</td></tr></table>\n    <hr>\n    </td></tr>\n\n\n<tr><td><a href=\"/index.htm\">Outlet
+        Control</a></td></tr>\n<tr><td><a href=\"/admin.htm\">Setup</a></td></tr>\n<tr><td><a
+        href=\"/script.htm\">Scripting</a></td></tr>\n\n<tr><td><a href=\"/notification.htm\">Event
+        Notification</a></td></tr>\n<tr><td><a href=\"/customize.htm\">Customization</a></td></tr>\n<tr><td><a
+        href=\"/apis.htm\">External APIs</a></td></tr>\n<tr><td><a href=\"/backup.htm\">Backup/Restore</a></td></tr>\n\n<tr><td><a
+        href=\"/rtc.htm\">Date/Time</a></td></tr>\n\n<tr><td><a href=\"/ap.htm\">AutoPing</a></td></tr>\n\n\n<tr><td><a
+        href=\"/meters.htm\">Energy Monitor</a></td></tr>\n\n\n<tr><td><a href=\"/syslog.htm\">System
+        Log</a></td></tr>\n<tr><td><a href=\"/logout\">Logout</a></td></tr>\n<tr><td><a
+        href=\"/support.htm\">Support</a></td></tr>\n<tr><td><a href=\"/guide/html/basic.html#basic_switch_operation\"
+        target=\"_blank\">Help</a></td></tr>\n<tr><td><hr></td></tr>\n\n\n<tr><td
+        class=\"allowWrap command-link-container\"><a href=\"http://www.digital-loggers.com/LPC9man.pdf\">Manual</a></td></tr>\n\n<tr><td
+        class=\"allowWrap command-link-container\"><a href=\"http://www.digital-loggers.com/LPC9FAQs.html\">FAQ</a></td></tr>\n\n<tr><td
+        class=\"allowWrap command-link-container\"><a href=\"http://www.digital-loggers.com/LPC9.html\">Product
+        Information</a></td></tr>\n\n<tr><td class=\"allowWrap command-link-container\"><a
+        href=\"http://www.digital-loggers.com/O.html\">Digital Loggers, Inc.</a></td></tr>\n\n<tr><td
+        class=\"allowWrap command-link-container\"><a href=\"/script.cgi?run=reverse_cycle_1\">Reverse
+        cycle outlet 1</a></td></tr>\n\n\n    </table>\n    </td></tr>\n\n\n    <tr><td
+        class=\"footer\">\n    <small>Version 1.9.2.0 / 1.9.2.0  </small>\n    </td></tr>\n
+        \   <tr><td class=\"footer\">\n    <small>S/N:LPC92203000348</small>\n    </td></tr>\n\n
+        \   </table>\n    <!-- /menu -->\n</td>\n\n<td class=\"content\">\n\n\n    <!--
+        heading table -->\n    <table class=\"heading\">\n\t\n        <tr>\n        <th
+        class=\"header\">\n        Controller: Station 1 - Large Mover and UULA\n
+        \       <div id=\"protection_status\">\n\n        <span class=\"icon imageReplaced
+        prot-off\" title=\"No protection bits effective\"></span>\n        <div class=\"details\">\n\n
+        \       <pre class=\"prot-partial\">Administrator credentials protection is
+        enabled but ineffective:\nSSH is enabled, which could be used to bypass protection</pre>\n\n
+        \       <pre class=\"prot-partial\">Protection from restore from backup is
+        enabled but ineffective:\nSSH is enabled, which could be used to bypass protection</pre>\n\n
+        \       <pre class=\"prot-off\">Notification settings protection is disabled</pre>\n\n
+        \       <pre class=\"prot-partial\">Private configuration protection is enabled
+        but ineffective:\nSSH is enabled, which could be used to bypass protection</pre>\n\n
+        \       <pre class=\"prot-partial\">Firmware protection is enabled but ineffective:\nSSH
+        is enabled, which could be used to bypass protection</pre>\n\n        <pre
+        class=\"prot-partial\">Maintenance mode lock is enabled but ineffective:\nSSH
+        is enabled, which could be used to bypass protection</pre>\n\n        <pre
+        class=\"prot-partial\">Network settings protection is enabled but ineffective:\nSSH
+        is enabled, which could be used to bypass protection</pre>\n\n        </div>\n
+        \       </div>\n        </th>\n        </tr>\n\n        <tr class=\"uptime\">\n
+        \       <td>\n        Fri Aug 21 00:55:17 2020 <!-- 44521.02s up -->\n\n        <div
+        id=\"session_timer\">Session expires in <span class=\"timeout\">00:30:00</span></div>\n\n
+        \       </td>\n        </tr>\n\n    </table>\n    <!-- /heading table -->\n\n\n
+        \   <br>\n\n    <!-- individual control table -->\n    <table class=\"form
+        command-link-container\">\n        <colgroup width=\"5%\"></colgroup>\n        <colgroup
+        width=\"35%\"></colgroup>\n        <colgroup span=\"3\" width=\"20%\"></colgroup>\n
+        \       <tr>\n        <td class=\"header\" colspan=\"5\">\n        Individual
+        Control\n        </td>\n        </tr>\n\n        <!-- heading rows -->\n        <tr
+        class=\"subheader\">\n        <th class=\"centered\">#</th>\n        <th>Name</th>\n
+        \       <th>State</th>\n        <th colspan=\"2\">Action</th>\n        </tr>\n
+        \       <!-- /heading rows -->\n\n\n<tr class=\"item outlet-state-row\" data-outlet-state-web-ui-row=\"0\"
+        \ data-outlet-state-row=\"0\"><td class=\"centered\">1</td>\n<td>Large Mover
+        Motor Driver</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n
+        \   <a  href=\"outlet?1=ON\">Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?1=CCL\">Cycle</a>\n\n
+        -->\n\n</td></tr>\n\n\n<tr class=\"item outlet-state-row\" data-outlet-state-web-ui-row=\"1\"
+        \ data-outlet-state-row=\"1\"><td class=\"centered\">2</td>\n<td>Large Mover
+        Laptop</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n    <a
+        \ href=\"outlet?2=ON\">Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?2=CCL\">Cycle</a>\n\n
+        -->\n\n</td></tr>\n\n\n<tr class=\"item outlet-state-row\" data-outlet-state-web-ui-row=\"2\"
+        \ data-outlet-state-row=\"2\"><td class=\"centered\">3</td>\n<td>Switch</td><td>\n\n<b><font
+        color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?3=ON\">Switch
+        ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n\n<tr
+        class=\"item outlet-state-row\" data-outlet-state-web-ui-row=\"3\"  data-outlet-state-row=\"3\"><td
+        class=\"centered\">4</td>\n<td>Outlet 4</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n
+        \   <a  href=\"outlet?4=ON\">Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?4=CCL\">Cycle</a>\n\n
+        -->\n\n</td></tr>\n\n\n<tr class=\"item outlet-state-row\" data-outlet-state-web-ui-row=\"4\"
+        \ data-outlet-state-row=\"4\"><td class=\"centered\">5</td>\n<td>Outlet 5</td><td>\n\n<b><font
+        color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?5=ON\">Switch
+        ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?5=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n\n<tr
+        class=\"item outlet-state-row\" data-outlet-state-web-ui-row=\"5\"  data-outlet-state-row=\"5\"><td
+        class=\"centered\">6</td>\n<td>Outlet 6</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n
+        \   <a  href=\"outlet?6=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?6=CCL\">Cycle</a>\n\n</td></tr>\n\n\n<tr
+        class=\"item outlet-state-row\" data-outlet-state-web-ui-row=\"6\"  data-outlet-state-row=\"6\"><td
+        class=\"centered\">7</td>\n<td>Outlet 7</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n
+        \   <a  href=\"outlet?7=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?7=CCL\">Cycle</a>\n\n</td></tr>\n\n\n<tr
+        class=\"item outlet-state-row\" data-outlet-state-web-ui-row=\"7\"  data-outlet-state-row=\"7\"><td
+        class=\"centered\">8</td>\n<td>Outlet 8</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n
+        \   <a  href=\"outlet?8=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?8=CCL\">Cycle</a>\n\n</td></tr>\n\n\n\n
+        \   </table>\n    <!-- /individual control table -->\n\n    <br>\n\n<table
+        class=\"form command-link-container\">\n<tr><td class=\"header\">Master Control</td></tr>\n<tr><td
+        class=\"item\">\n<a \ndata-confirm=\"You are going to switch all outlets OFF.
+        Continue?\"\n href=\"outlet?a=OFF\">All outlets OFF</a>\n</td></tr>\n<tr><td
+        class=\"item\">\n    <a href=\"outlet?a=ON\">All outlets ON</a>\n</td></tr>\n<tr><td
+        class=\"item\">\n<a \ndata-confirm=\"You are going to cycle all outlets. Continue?\"\n
+        href=\"outlet?a=CCL\">Cycle all outlets</a>\n</td></tr>\n<tr><td class=\"centered\">Sequence
+        delay: 1 sec.</td></tr>\n\n</table>\n\n</td>\n</tr>\n</table>\n\n</body>\n</html>\n"
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset="utf-8"
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+version: 1
