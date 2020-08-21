@@ -98,8 +98,6 @@ Outlet	Name           	State
 8	Cable Modem1   	OFF
 """
 
-from __future__ import print_function
-from bs4 import BeautifulSoup
 import hashlib
 import logging
 import multiprocessing
@@ -109,7 +107,9 @@ import requests
 import requests.exceptions
 import time
 import urllib3
-from six.moves.urllib.parse import quote
+from urllib.parse import quote
+
+from bs4 import BeautifulSoup
 
 
 logger = logging.getLogger(__name__)
@@ -326,7 +326,11 @@ class PowerSwitch(object):
         self.secure_login = False
         self.session = requests.Session()
         try:
-            response = self.session.get(self.base_url, verify=False, timeout=self.login_timeout)
+            response = self.session.get(self.base_url, verify=False, timeout=self.login_timeout, allow_redirects=False)
+            if response.is_redirect:
+                self.base_url = response.headers['Location'].rstrip('/')
+                logger.debug(f'Redirecting to: {self.base_url}')
+                response = self.session.get(self.base_url, verify=False, timeout=self.login_timeout)
         except (requests.exceptions.ConnectTimeout, requests.exceptions.ConnectionError):
             self.session = None
             return
@@ -387,7 +391,8 @@ class PowerSwitch(object):
         file_h = open(CONFIG_FILE, 'w')
         # Make sure the file perms are correct before we write data
         # that can include the password into it.
-        os.fchmod(file_h.fileno(), 0o0600)
+        if hasattr(os, 'fchmod'):
+            os.fchmod(file_h.fileno(), 0o0600)
         if file_h:
             json.dump(config, file_h, sort_keys=True, indent=4)
             file_h.close()
@@ -407,12 +412,13 @@ class PowerSwitch(object):
         full_url = "%s/%s" % (self.base_url, url)
         result = None
         request = None
+        logger.debug(f'Requesting url: {full_url}')
         for i in range(0, self.retries):
             try:
                 if self.secure_login and self.session:
-                    request = self.session.get(full_url, timeout=self.timeout, verify=False)
+                    request = self.session.get(full_url, timeout=self.timeout, verify=False, allow_redirects=True)
                 else:
-                    request = requests.get(full_url, auth=(self.userid, self.password,), timeout=self.timeout, verify=False)
+                    request = requests.get(full_url, auth=(self.userid, self.password,), timeout=self.timeout, verify=False, allow_redirects=True)
             except requests.exceptions.RequestException as e:
                 logger.warning("Request timed out - %d retries left.", self.retries - i - 1)
                 logger.exception("Caught exception %s", str(e))
@@ -421,6 +427,7 @@ class PowerSwitch(object):
                 result = request.content
                 break
         logger.debug('Response code: %s', request.status_code)
+        logger.debug(f'Response content: {result}')
         return result
 
     def determine_outlet(self, outlet=None):

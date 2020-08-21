@@ -1,0 +1,329 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: http://epcr.digital-loggers.com/
+  response:
+    body:
+      string: '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+
+        <html><head>
+
+        <title>301 Moved Permanently</title>
+
+        </head><body>
+
+        <h1>Moved Permanently</h1>
+
+        <p>The document has moved <a href="http://epcr.digital-loggers.com:5003/">here</a>.</p>
+
+        </body></html>
+
+        '
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Length:
+      - '245'
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Date:
+      - Fri, 21 Aug 2020 07:55:35 GMT
+      Keep-Alive:
+      - timeout=900, max=100
+      Location:
+      - http://epcr.digital-loggers.com:5003/
+      Server:
+      - Apache/2.4.41 (FreeBSD) OpenSSL/1.0.1u-freebsd
+    status:
+      code: 301
+      message: Moved Permanently
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: http://epcr.digital-loggers.com:5003/
+  response:
+    body:
+      string: "\n\n\n\n\n\n<!DOCTYPE html>\n<html>\n<head><meta http-equiv=\"Content-Type\"
+        content=\"text/html; charset=UTF-8\">\n<meta name=\"robots\" content=\"noindex,
+        nofollow\">\n<noscript>\n<meta http-equiv=\"refresh\" content=\"285\">\n</noscript>\n<script
+        type=\"text/javascript\"> setTimeout(function() { window.location = window.location;
+        }, 285000); </script>\n\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/sanitize.26b8dd15.css\">\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/select2.d4457111.css\">\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/style.84737137.css\">\n\n<title>Power
+        Controller</title>\n<script type=\"text/javascript\" src=\"/static/js/md5.0df4dd77.js\"></script>\n<script
+        type=\"text/javascript\">\n<!--\nwindow.addEventListener && window.addEventListener(\"pageshow\",
+        function(event)\n{\n    if (event.persisted || (window.performance && window.performance.navigation
+        && window.performance.navigation.type === 2))\n    {\n        /* Reload on
+        attempts to go back to this page to obtain a new challenge. */\n        window.location
+        = window.location;\n    }\n});\nfunction calcResponse(){\nvar str;\nstr=document.login.Challenge.value+document.login.Username.value+document.login.Password.value+document.login.Challenge.value;\ndocument.secin.Password.value
+        = hex_md5(str);\ndocument.secin.Username.value = document.login.Username.value;\ndocument.secin.submit();\n}//-->\n</script>\n</head>\n<body>\n<noscript>\n<table
+        class=\"compact form\">\n<tr><td class=\"error border\">&nbsp;</td></tr>\n<tr><td
+        class=\"error message\"><h1>Warning: Insecure Authentication</h1></td></tr>\n<tr><td
+        class=\"error border\">&nbsp;</td></tr></table>\n</noscript>\n<table class=\"page\"><tr><td>\n<form
+        name=\"login\" id=\"login\" action=\"/login.tgi\" method=\"post\" accept-charset=\"UTF-8\">\n<table
+        class=\"compact form\">\n<tr>\n<td>User Name</td>\n<td><input type=\"text\"
+        name=\"Username\" value=\"\" size=\"16\"></td>\n</tr>\n<tr>\n<td>Password</td>\n<td><input
+        type=\"password\" name=\"Password\" size=\"16\"></td>\n</tr>\n<tr class=\"right\">\n<td></td>\n<td><input
+        onClick=\"calcResponse(); return false;\" type=\"Submit\" value=\"OK\">\n<input
+        type=\"hidden\" name=\"Challenge\" value=\"cQyoOPZIlATo938p\">\n</td></tr>\n</table>\n</form>\n</td></tr></table>\n<script
+        type=\"text/javascript\">\n<!--\ndocument.login.Username.focus();\n//-->\n</script>\n<form
+        name=\"secin\" id=\"secin\" action=\"/login.tgi\" method=\"post\" accept-charset=\"UTF-8\">\n<div
+        style=\"display:none\">\n<input type=\"hidden\" name=\"Username\">\n<input
+        type=\"hidden\" name=\"Password\">\n<input type=\"submit\">\n</div>\n</form>\n</body>\n</html>\n"
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset="utf-8"
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: Username=admin&Password=aa0876b98e982001f17d6e3d0e28365b
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '56'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.24.0
+    method: POST
+    uri: http://epcr.digital-loggers.com:5003/login.tgi
+  response:
+    body:
+      string: '
+
+
+
+
+
+
+
+        <!DOCTYPE html>
+
+        <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+        <link rel="stylesheet" type="text/css" href="/static/css/sanitize.26b8dd15.css">
+
+        <link rel="stylesheet" type="text/css" href="/static/css/select2.d4457111.css">
+
+        <link rel="stylesheet" type="text/css" href="/static/css/style.84737137.css">
+
+
+        <title>Redirecting...</title>
+
+        <noscript>
+
+        <META HTTP-EQUIV="refresh" content="0; URL=/index.htm">
+
+        </noscript>
+
+        <script type="text/javascript"> setTimeout(function() { window.location.replace("\/index.htm");
+        }, 0); </script>
+
+
+        </head>
+
+
+        <body>
+
+        </body>
+
+
+        </html>
+
+        '
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset="utf-8"
+      Set-Cookie:
+      - DLILPC="kSbkzlmMgX1f1rKh"; Version=1; Path=/
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - DLILPC="kSbkzlmMgX1f1rKh"
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: http://epcr.digital-loggers.com:5003/index.htm
+  response:
+    body:
+      string: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML
+        4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html>\n<head><meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n<meta name=\"robots\"
+        content=\"noindex, nofollow\">\n<noscript>\n<meta http-equiv=\"refresh\" content=\"180\">\n</noscript>\n<script
+        type=\"text/javascript\"> window.refreshTimeoutValue = 180000; window.refreshTimeout
+        = setTimeout(function() { window.location = window.location; }, window.refreshTimeoutValue);
+        </script>\n\n\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/sanitize.26b8dd15.css\">\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/select2.d4457111.css\">\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/style.84737137.css\">\n\n<title>Outlet
+        Control  - Your Power Controller</title>\n\n<script type=\"text/javascript\"
+        src=\"/static/js/md5.0df4dd77.js\"></script>\n<script type=\"text/javascript\"
+        src=\"/static/js/jquery.4f252523.js\"></script>\n<script type=\"text/javascript\"
+        src=\"/static/js/jquery.json.886a032e.js\"></script>\n<script type=\"text/javascript\"
+        src=\"/static/js/select2.26abb17f.js\"></script>\n<script type=\"text/javascript\">\nvar
+        dli={\n    serialNumber:\"EPCR62303016351\" ,\n    outletLabel:\"Outlet\"
+        ,\n    session: { expiry_time: new Date().getTime()+(1800)*1000 }\n};\n</script>\n<script
+        type=\"text/javascript\" src=\"/static/js/core.696d0c1b.js\"></script>\n\n<script
+        type=\"text/javascript\" src=\"/static/js/sockette.4ac0065b.js\"></script>\n<script
+        type=\"text/javascript\" src=\"/static/js/lib.c95a7a59.js\"></script>\n<script
+        type=\"text/javascript\">window.outletStateRefreshSufficient=true;</script>\n<script
+        type=\"text/javascript\">\n\nvar lib = window.require(\"/lib-js/lib.js\");\nwindow.coap_rest
+        = lib.coap_rest;\n\n</script>\n</head>\n<!-- state=1f lock=00 -->\n<body>\n<table
+        class=\"page\">\n<tr>\n\n<td class=\"navbar\">\n    <!-- menu -->\n    <table
+        class=\"menu\">\n    <tr><td class=\"item\">\n    <table class=\"menuInner\">\n\n\n
+        \   <tr><td class=\"centered\">\n    <table><tr><td><a href=\"http://www.digital-loggers.com/O.html\"><img
+        src=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/7AARRHVja3kAAQAEAAAAZAAA/+EDoGh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4NCjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4NCgk8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPg0KCQk8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOkY5N0YxMTc0MDcyMDY4MTE5MkIwQzUyMUYwM0U0MENDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjg0MjBBQzlGRkE1MTExRTdCQUFBQTBBQjU1QkNCMjZBIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjg0MjBBQzlFRkE1MTExRTdCQUFBQTBBQjU1QkNCMjZBIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBFbGVtZW50cyAxNC4wIChXaW5kb3dzKSI+DQoJCQk8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxOWQ5ZTA0NS04ZWQ3LTY1NGMtYmQ4Mi0zM2Y1YmM4NmVmZWUiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo3MWYz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\"
+        width=\"200\" height=\"64\" alt=\"Digital Loggers, Inc.\"></a></td>\n    <td
+        class=\"brand title\">EPCR6</td></tr></table>\n    <hr>\n    </td></tr>\n\n\n<tr><td><a
+        href=\"/index.htm\">Outlet Control</a></td></tr>\n<tr><td><a href=\"/admin.htm\">Setup</a></td></tr>\n<tr><td><a
+        href=\"/script.htm\">Scripting</a></td></tr>\n\n<tr><td><a href=\"/io.htm\">Input/Output</a></td></tr>\n\n<tr><td><a
+        href=\"/notification.htm\">Event Notification</a></td></tr>\n<tr><td><a href=\"/customize.htm\">Customization</a></td></tr>\n<tr><td><a
+        href=\"/apis.htm\">External APIs</a></td></tr>\n<tr><td><a href=\"/backup.htm\">Backup/Restore</a></td></tr>\n\n<tr><td><a
+        href=\"/rtc.htm\">Date/Time</a></td></tr>\n\n<tr><td><a href=\"/ap.htm\">AutoPing</a></td></tr>\n\n\n<tr><td><a
+        href=\"/meters.htm\">Energy Monitor</a></td></tr>\n\n\n<tr><td><a href=\"/shutdown.htm\">Safety
+        Shutdown</a></td></tr>\n\n<tr><td><a href=\"/syslog.htm\">System Log</a></td></tr>\n<tr><td><a
+        href=\"/logout\">Logout</a></td></tr>\n<tr><td><a href=\"/support.htm\">Support</a></td></tr>\n<tr><td><a
+        href=\"/guide/html/basic.html#basic_switch_operation\" target=\"_blank\">Help</a></td></tr>\n<tr><td><hr></td></tr>\n\n\n<tr><td
+        class=\"allowWrap command-link-container\"><a href=\"http://www.digital-loggers.com/epcr6man.pdf\">Manual</a></td></tr>\n\n<tr><td
+        class=\"allowWrap command-link-container\"><a href=\"http://www.digital-loggers.com/epcr6faqs.html\">FAQs</a></td></tr>\n\n<tr><td
+        class=\"allowWrap command-link-container\"><a href=\"http://www.digital-loggers.com/EPCR6.html\">Product
+        Information</a></td></tr>\n\n<tr><td class=\"allowWrap command-link-container\"><a
+        href=\"http://www.digital-loggers.com/O.html\">Digital Loggers, Inc.</a></td></tr>\n\n\n
+        \   </table>\n    </td></tr>\n\n\n    <tr><td class=\"footer\">\n    <small>Version
+        1.9.2.0 / 1.9.2.0  </small>\n    </td></tr>\n    <tr><td class=\"footer\">\n
+        \   <small>S/N:EPCR62303016351</small>\n    </td></tr>\n\n    </table>\n    <!--
+        /menu -->\n</td>\n\n<td class=\"content\">\n\n\n    <!-- heading table -->\n
+        \   <table class=\"heading\">\n\t\n        <tr>\n        <th class=\"header\">\n
+        \       Controller: Your Power Controller\n        <div id=\"protection_status\">\n\n
+        \       <span class=\"icon imageReplaced prot-off\" title=\"No protection
+        bits effective\"></span>\n        <div class=\"details\">\n\n        <pre
+        class=\"prot-partial\">Administrator credentials protection is enabled but
+        ineffective:\nSSH is enabled, which could be used to bypass protection</pre>\n\n
+        \       <pre class=\"prot-partial\">Protection from restore from backup is
+        enabled but ineffective:\nSSH is enabled, which could be used to bypass protection</pre>\n\n
+        \       <pre class=\"prot-off\">Notification settings protection is disabled</pre>\n\n
+        \       <pre class=\"prot-partial\">Private configuration protection is enabled
+        but ineffective:\nSSH is enabled, which could be used to bypass protection</pre>\n\n
+        \       <pre class=\"prot-partial\">Firmware protection is enabled but ineffective:\nSSH
+        is enabled, which could be used to bypass protection</pre>\n\n        <pre
+        class=\"prot-partial\">Maintenance mode lock is enabled but ineffective:\nSSH
+        is enabled, which could be used to bypass protection</pre>\n\n        <pre
+        class=\"prot-partial\">Network settings protection is enabled but ineffective:\nSSH
+        is enabled, which could be used to bypass protection</pre>\n\n        </div>\n
+        \       </div>\n        </th>\n        </tr>\n\n        <tr class=\"uptime\">\n
+        \       <td>\n        Fri Aug 21 00:55:36 2020 <!-- 44494s up -->\n\n        <div
+        id=\"session_timer\">Session expires in <span class=\"timeout\">00:30:00</span></div>\n\n
+        \       </td>\n        </tr>\n\n    </table>\n    <!-- /heading table -->\n\n\n
+        \   <br>\n\n    <!-- individual control table -->\n    <table class=\"form
+        command-link-container\">\n        <colgroup width=\"5%\"></colgroup>\n        <colgroup
+        width=\"35%\"></colgroup>\n        <colgroup span=\"3\" width=\"20%\"></colgroup>\n
+        \       <tr>\n        <td class=\"header\" colspan=\"5\">\n        Individual
+        Control\n        </td>\n        </tr>\n\n        <!-- heading rows -->\n        <tr
+        class=\"subheader\">\n        <th class=\"centered\">#</th>\n        <th>Name</th>\n
+        \       <th>State</th>\n        <th colspan=\"2\">Action</th>\n        </tr>\n
+        \       <!-- /heading rows -->\n\n\n    <tr class=\"bus\"><th colspan=\"2\"
+        class=\"name\">Bus A:</th><th colspan=\"3\" class=\"data\">124.0V 0.0A [ 000000.0
+        kWh  ]</th></tr>\n\n<!-- RAW VA=0 CA=0 VAH=124 CAH=0 -->\n\n<tr class=\"item
+        outlet-state-row\" data-outlet-state-web-ui-row=\"0\"  data-outlet-state-row=\"0\"><td
+        class=\"centered\">1</td>\n<td>ANAN 12V Power Supply</td><td>\n\n<b><font
+        color=\"green\">ON</font></b>\n</td><td>\n\n    <a  href=\"outlet?1=OFF\">Switch
+        OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?1=CCL\">Cycle</a>\n\n</td></tr>\n\n\n<tr
+        class=\"item outlet-state-row\" data-outlet-state-web-ui-row=\"1\"  data-outlet-state-row=\"1\"><td
+        class=\"centered\">2</td>\n<td>Linear 50V Supply</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n
+        \   <a \ndata-confirm=\"You are going to switch Outlet 2 [Linear 50V Supply]
+        OFF. Continue?\"\n href=\"outlet?2=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a
+        \ndata-confirm=\"You are going to cycle Outlet 2 [Linear 50V Supply]. Continue?\"\n
+        href=\"outlet?2=CCL\">Cycle</a>\n\n</td></tr>\n\n\n<tr class=\"item outlet-state-row\"
+        data-outlet-state-web-ui-row=\"2\"  data-outlet-state-row=\"2\"><td class=\"centered\">3</td>\n<td>Linear
+        Enable</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n    <a
+        \ href=\"outlet?3=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?3=CCL\">Cycle</a>\n\n</td></tr>\n\n\n<tr
+        class=\"item outlet-state-row\" data-outlet-state-web-ui-row=\"3\"  data-outlet-state-row=\"3\"><td
+        class=\"centered\">4</td>\n<td>Outlet 4</td><td>\n\n<b><font color=\"green\">ON</font></b>\n</td><td>\n\n
+        \   <a  href=\"outlet?4=OFF\">Switch OFF</a>\n\n</td><td>\n\n<a  href=\"outlet?4=CCL\">Cycle</a>\n\n</td></tr>\n\n\n
+        \   <tr class=\"bus\"><th colspan=\"2\" class=\"name\">Bus B:</th><th colspan=\"3\"
+        class=\"data\">123.0V 0.0A [ 000000.0 kWh  ]</th></tr>\n\n<!-- RAW VB=0 CB=0
+        VBH=123 CBH=0 -->\n\n<tr class=\"item outlet-state-row\" data-outlet-state-web-ui-row=\"4\"
+        \ data-outlet-state-row=\"4\"><td class=\"centered\">5</td>\n<td>Outlet 5</td><td>\n\n<b><font
+        color=\"green\">ON</font></b>\n</td><td>\n\n    <a \ndata-confirm=\"You are
+        going to switch Outlet 5 [Outlet 5] OFF. Continue?\"\n href=\"outlet?5=OFF\">Switch
+        OFF</a>\n\n</td><td>\n\n<a \ndata-confirm=\"You are going to cycle Outlet
+        5 [Outlet 5]. Continue?\"\n href=\"outlet?5=CCL\">Cycle</a>\n\n</td></tr>\n\n\n<tr
+        class=\"item outlet-state-row\" data-outlet-state-web-ui-row=\"5\"  data-outlet-state-row=\"5\"><td
+        class=\"centered\">6</td>\n<td>Outlet 6</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n
+        \   <a  href=\"outlet?6=ON\">Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?6=CCL\">Cycle</a>\n\n
+        -->\n\n</td></tr>\n\n\n<tr class=\"item outlet-state-row\" data-outlet-state-web-ui-row=\"6\"
+        \ data-outlet-state-row=\"6\"><td class=\"centered\">7</td>\n<td>Outlet 7</td><td>\n\n<b><font
+        color=\"red\">OFF</font></b>\n</td><td>\n\n    <a  href=\"outlet?7=ON\">Switch
+        ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?7=CCL\">Cycle</a>\n\n -->\n\n</td></tr>\n\n\n<tr
+        class=\"item outlet-state-row\" data-outlet-state-web-ui-row=\"7\"  data-outlet-state-row=\"7\"><td
+        class=\"centered\">8</td>\n<td>Outlet 8</td><td>\n\n<b><font color=\"red\">OFF</font></b>\n</td><td>\n\n
+        \   <a  href=\"outlet?8=ON\">Switch ON</a>\n\n</td><td>\n\n<!-- \n\n<a  href=\"outlet?8=CCL\">Cycle</a>\n\n
+        -->\n\n</td></tr>\n\n\n\n    </table>\n    <!-- /individual control table
+        -->\n\n    <br>\n\n<table class=\"form command-link-container\">\n<tr><td
+        class=\"header\">Master Control</td></tr>\n<tr><td class=\"item\">\n<a \ndata-confirm=\"You
+        are going to switch all outlets OFF. Continue?\"\n href=\"outlet?a=OFF\">All
+        outlets OFF</a>\n</td></tr>\n<tr><td class=\"item\">\n    <a href=\"outlet?a=ON\">All
+        outlets ON</a>\n</td></tr>\n<tr><td class=\"item\">\n<a \ndata-confirm=\"You
+        are going to cycle all outlets. Continue?\"\n href=\"outlet?a=CCL\">Cycle
+        all outlets</a>\n</td></tr>\n<tr><td class=\"centered\">Sequence delay: 1
+        sec.</td></tr>\n\n</table>\n\n</td>\n</tr>\n</table>\n\n</body>\n</html>\n"
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset="utf-8"
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+version: 1

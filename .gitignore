@@ -9,4 +9,8 @@ dlipower.egg-info
 cobertura.xml
 nosetests.xml
 /venv
+/dist
+
 dlipower/package_metadata.json
+/.ipynb_checkpoints
+/Untitled.ipynb
