@@ -1,27 +1,12 @@
-Digital Loggers Network Power Switch Python Module
-**************************************************
+[![Build Status](https://cd.screwdriver.cd/pipelines/5669/badge?nocache=true)](https://cd.screwdriver.cd/pipelines/5669)
+[![Package](https://img.shields.io/badge/package-pypi-blue.svg)](https://pypi.org/project/dlipower/)
+[![Codestyle](https://img.shields.io/badge/code%20style-pep8-blue.svg)](https://www.python.org/dev/peps/pep-0008/)
+[![Documentation](https://readthedocs.org/projects/dlipower/badge/?version=latest)](http://dlipower.readthedocs.org/en/latest/)
 
-.. image:: https://img.shields.io/travis/dwighthubbard/python-dlipower.svg
-    :target: https://travis-ci.org/dwighthubbard/python-dlipower
+---
 
-.. image:: https://img.shields.io/coveralls/dwighthubbard/python-dlipower.svg
-  :target: https://coveralls.io/r/dwighthubbard/python-dlipower
+# Digital Loggers Network Power Switch Python Module
 
-.. image:: https://img.shields.io/pypi/v/dlipower.svg
-    :target: https://pypi.python.org/pypi/dlipower/
-
-.. image:: https://img.shields.io/badge/python-3.4,3.5,3.6-blue.svg
-    :target: https://pypi.python.org/pypi/dlipower/
-
-.. image:: https://img.shields.io/pypi/l/dlipower.svg
-    :target: https://pypi.python.org/pypi/dlipower/
-
-.. image:: https://readthedocs.org/projects/dlipower/badge/?version=latest
-    :target: http://dlipower.readthedocs.org/en/latest/
-    :alt: Documentation Status
-
-
-# DESCRIPTION
 This is a python module and a script to mange the 
 Digital Loggers Web Power switch.
               
@@ -31,7 +16,6 @@ switch from python programs.
 
 When run as a script this acts as a command
 line utility to manage the DLI Power switch.
-
 
 # SUPPORTED DEVICES
 This module has been tested against the following 

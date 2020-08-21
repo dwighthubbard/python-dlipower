@@ -2,7 +2,7 @@ version: 4
 shared:
   environment:
     CHANGELOG_FILENAME: docs/changelog.md
-    PACKAGE_DIRECTORY: serviceping
+    PACKAGE_DIRECTORY: dlipower
 
 jobs:
   validate_test:
