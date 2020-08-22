@@ -2,7 +2,7 @@ version: 4
 shared:
   environment:
     CHANGELOG_FILENAME: docs/changelog.md
-    PACKAGE_DIRECTORY: serviceping
+    PACKAGE_DIRECTORY: dlipower
 
 jobs:
   validate_test:
@@ -31,14 +31,14 @@ jobs:
     template: python/documentation
     environment:
       DOCUMENTATION_PUBLISH: False
-    requires: [~pr]
+    requires: [~commit, ~pr]
 
   validate_package:
     template: python/package_python
     environment:
       PACKAGE_TAG: False
       PUBLISH: False
-    requires: [~pr]
+    requires: [~commit, ~pr]
 
   generate_version:
     template: python/generate_version

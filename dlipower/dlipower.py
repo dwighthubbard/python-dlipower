@@ -9,7 +9,7 @@ The module provides a python class named
 powerswitch that allows managing the web power
 switch from python programs.
 
-When run as a script this acts as a command line utility to 
+When run as a script this acts as a command line utility to
 manage the DLI Power switch.
 
 Notes
@@ -347,7 +347,7 @@ class PowerSwitch(object):
 
         form_response = fields['Challenge'] + fields['Username'] + fields['Password'] + fields['Challenge']
 
-        m = hashlib.md5()
+        m = hashlib.md5()  # nosec - The switch we are talking to uses md5 hashes
         m.update(form_response.encode())
         data = {'Username': 'admin', 'Password': m.hexdigest()}
         headers = {'Content-Type': 'application/x-www-form-urlencoded'}
@@ -406,8 +406,8 @@ class PowerSwitch(object):
         return False
 
     def geturl(self, url='index.htm'):
-        """ Get a URL from the userid/password protected powerswitch page
-            Return None on failure
+        """
+        Get a URL from the userid/password protected powerswitch page Return None on failure
         """
         full_url = "%s/%s" % (self.base_url, url)
         result = None
@@ -418,7 +418,7 @@ class PowerSwitch(object):
                 if self.secure_login and self.session:
                     request = self.session.get(full_url, timeout=self.timeout, verify=False, allow_redirects=True)
                 else:
-                    request = requests.get(full_url, auth=(self.userid, self.password,), timeout=self.timeout, verify=False, allow_redirects=True)
+                    request = requests.get(full_url, auth=(self.userid, self.password,), timeout=self.timeout, verify=False, allow_redirects=True)  # nosec
             except requests.exceptions.RequestException as e:
                 logger.warning("Request timed out - %d retries left.", self.retries - i - 1)
                 logger.exception("Caught exception %s", str(e))
@@ -448,7 +448,6 @@ class PowerSwitch(object):
             return outlet_int
         except ValueError:
             raise DLIPowerException('Outlet name \'%s\' unknown' % outlet)
-
 
     def get_outlet_name(self, outlet=0):
         """ Return the name of the outlet """
