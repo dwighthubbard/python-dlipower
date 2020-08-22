@@ -31,14 +31,14 @@ jobs:
     template: python/documentation
     environment:
       DOCUMENTATION_PUBLISH: False
-    requires: [~pr]
+    requires: [~commit, ~pr]
 
   validate_package:
     template: python/package_python
     environment:
       PACKAGE_TAG: False
       PUBLISH: False
-    requires: [~pr]
+    requires: [~commit, ~pr]
 
   generate_version:
     template: python/generate_version
