@@ -9,7 +9,7 @@ The module provides a python class named
 powerswitch that allows managing the web power
 switch from python programs.
 
-When run as a script this acts as a command line utility to 
+When run as a script this acts as a command line utility to
 manage the DLI Power switch.
 
 Notes
@@ -448,7 +448,6 @@ class PowerSwitch(object):
             return outlet_int
         except ValueError:
             raise DLIPowerException('Outlet name \'%s\' unknown' % outlet)
-
 
     def get_outlet_name(self, outlet=0):
         """ Return the name of the outlet """
