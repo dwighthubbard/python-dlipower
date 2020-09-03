@@ -485,15 +485,12 @@ class PowerSwitch(object):
 
     def cycle(self, outlet=0):
         """ Cycle power to an outlet
-            False = Power off Success
-            True = Power off Fail
-            Note, does not return any status info about the power on part of
-            the operation by design
+            Note: If an outlet is powered off, it will turn it on
         """
-        if self.off(outlet):
-            return True
-        time.sleep(self.cycletime)
-        self.on(outlet)
+        if self.status(outlet) == 'OFF':
+            self.on(outlet)
+        else:
+            self.geturl(url='outlet?%d=CCL' % self.determine_outlet(outlet))
         return False
 
     def statuslist(self):
