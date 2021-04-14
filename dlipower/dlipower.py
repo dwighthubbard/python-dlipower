@@ -349,7 +349,7 @@ class PowerSwitch(object):
 
         m = hashlib.md5()  # nosec - The switch we are talking to uses md5 hashes
         m.update(form_response.encode())
-        data = {'Username': 'admin', 'Password': m.hexdigest()}
+        data = {'Username': self.userid, 'Password': m.hexdigest()}
         headers = {'Content-Type': 'application/x-www-form-urlencoded'}
 
         try:
@@ -510,7 +510,7 @@ class PowerSwitch(object):
         except IndexError:
             # Finding the root of the table with the outlet info failed
             # try again assuming we're seeing the table for a user
-            # account insteaed of the admin account (tables are different)
+            # account instead of the admin account (tables are different)
             try:
                 self._is_admin = False
                 root = soup.findAll('th', text='#')[0].parent.parent.parent
