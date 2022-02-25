@@ -426,7 +426,8 @@ class PowerSwitch(object):
             if request.status_code == 200:
                 result = request.content
                 break
-        logger.debug('Response code: %s', request.status_code)
+        if request is not None:
+            logger.debug('Response code: %s', request.status_code)
         logger.debug(f'Response content: {result}')
         return result
 
