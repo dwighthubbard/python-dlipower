@@ -349,7 +349,7 @@ class PowerSwitch(object):
 
         m = hashlib.md5()  # nosec - The switch we are talking to uses md5 hashes
         m.update(form_response.encode())
-        data = {'Username': 'admin', 'Password': m.hexdigest()}
+        data = {'Username': fields['Username'], 'Password': m.hexdigest(), 'Challenge': fields['Challenge']}
         headers = {'Content-Type': 'application/x-www-form-urlencoded'}
 
         try:
